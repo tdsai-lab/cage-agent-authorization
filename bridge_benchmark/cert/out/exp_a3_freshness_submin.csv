@@ -1,0 +1,5 @@
+delta_t_sec,coverage_hit_rate,n_hits_mean,n_allowed_hits_mean,eps_emp_p95_mean,eps_emp_p95_std,declared_eps,system_false_allow_mean,system_false_allow_std,cert_false_allow
+15,0.0,0.0,0.0,nan,nan,0.1,0.0,0.0,0.0
+30,0.0013,2.0,1.0,0.1376,0.0,0.1,0.0,0.0,0.0
+60,0.006,9.0,6.0,0.1245,0.0,0.1,0.0,0.0,0.0
+120,0.024,36.0,22.0,0.1566,0.0,0.1,0.0,0.0,0.0

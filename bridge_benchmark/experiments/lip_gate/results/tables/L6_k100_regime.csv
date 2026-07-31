@@ -1,0 +1,9 @@
+setting,k,backend,clean_acc,R_allow,C_allow,U_allow,cert_false_allow
+synthetic_dimension_study,10,lipgate_deterministic,0.8667,0.35,0.05,0.0125,0.1515
+synthetic_dimension_study,10,mlp_smoothing,1.0,0.45,0.0,0.0,0.0
+synthetic_dimension_study,50,lipgate_deterministic,0.85,0.025,0.0,0.0,0.0
+synthetic_dimension_study,50,mlp_smoothing,0.9958,0.4125,0.0,0.0,0.0
+synthetic_dimension_study,100,lipgate_deterministic,0.825,0.1125,0.0,0.0,0.0
+synthetic_dimension_study,100,mlp_smoothing,0.9792,0.4,0.0,0.0,0.0
+synthetic_dimension_study,150,lipgate_deterministic,0.8292,0.0625,0.0,0.0,0.0
+synthetic_dimension_study,150,mlp_smoothing,0.975,0.275,0.0,0.0,0.0

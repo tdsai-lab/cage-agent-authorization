@@ -1,0 +1,9 @@
+domain,eps,regime,C_pct,R_pct,naive_C_falseallow,cert_false_allow,C_allow,R_allow,U_allow,clean_acc
+finance,0.05,integrity+freshness,4.9,24.7,1.0,0.0,0.0,0.625,0.0,0.995
+finance,0.1,integrity+freshness,8.7,21.4,1.0,0.0,0.0,0.625,0.0,0.9956
+finance,0.2,integrity (real/IEEE),15.2,15.5,1.0,0.0,0.0,0.0,0.0,0.9944
+finance,0.35,integrity (synthetic),19.3,7.9,1.0,0.0,0.0,0.0,0.0,0.995
+monitoring,0.05,integrity+freshness,4.8,8.9,1.0,0.0,0.0,0.325,0.0,0.9875
+monitoring,0.1,integrity+freshness,7.6,6.6,1.0,0.0,0.0,0.325,0.0,0.9887
+monitoring,0.2,integrity (real/IEEE),10.1,3.1,1.0,0.0,0.0,0.0,0.0,0.9875
+monitoring,0.35,integrity (synthetic),9.8,0.7,1.0,0.0,0.0,0.0,0.0,0.9881

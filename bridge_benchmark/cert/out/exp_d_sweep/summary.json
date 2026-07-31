@@ -1,0 +1,650 @@
+{
+  "experiment": "T2-8 discrete-budget d-sweep (enumeration cliff)",
+  "config": {
+    "max_d": 3,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "eps": 0.1,
+    "sigma": 0.1,
+    "tau": 0.9,
+    "n_mc": 1200,
+    "alpha_fwer": 0.001,
+    "quick": false,
+    "n_train": 3000,
+    "n_eval": 3000,
+    "n_cert": 25,
+    "K": 8,
+    "k": 5,
+    "n_cat_fields": 2,
+    "x1_sizes": [
+      4,
+      8
+    ],
+    "opa_domains": [
+      "finance"
+    ],
+    "primary_backend": "lipschitz",
+    "lipschitz_backend": "orthogonium",
+    "lipschitz_L": 1.0,
+    "lip_synth_epochs": 2000,
+    "lip_synth_config": {
+      "width": 256,
+      "depth": 4,
+      "gamma": 1.0,
+      "lam_margin": 2.0,
+      "fscale": 4.0,
+      "n_aug": 6
+    },
+    "lip_opa_config": {
+      "width": 128,
+      "depth": 3,
+      "gamma": 1.0,
+      "lam_margin": 2.0,
+      "fscale": 3.0
+    },
+    "lipschitz_note": "deterministic margin cert: no n_mc, no FWER alpha_branch. BOTH tracks use numeric-block scaling fscale (gate is fscale-Lipschitz in the raw eps-ball -> SOUND cert threshold L=fscale*CLAIMED_L): synthetic fscale=4, OPA fscale=3 (max fscale keeping cert_false_allow=0 at every d)."
+  },
+  "soundness_invariant_cert_false_allow_max": 0.0,
+  "soundness_holds_all_d": true,
+  "soundness_by_backend": {
+    "rs_ablation_cert_false_allow_max": 0.0,
+    "rs_ablation_sound_all_d": true,
+    "lipschitz_cert_false_allow_max_overall": 0.0,
+    "lipschitz_cert_false_allow_max_opa": 0.0,
+    "lipschitz_cert_false_allow_max_synthetic": 0.0,
+    "lipschitz_sound_on_opa": true,
+    "lipschitz_sound_on_synthetic": true,
+    "lipschitz_sound_all": true,
+    "note": "RS smoothing (ablation) is SOUND w.r.t. the oracle at every d (cert_false_allow=0), being a min-over-branches probabilistic lower bound. The DETERMINISTIC Lipschitz PRIMARY cert is EXACT and SOUND RELATIVE TO THE LEARNED GATE (min margin > L*eps). BOTH tracks use the NUMERIC-BLOCK SCALING lever (gate becomes fscale-Lipschitz in the raw eps-ball; SOUND cert threshold L=fscale*CLAIMED_L): synthetic k=5 fscale=4 (width256/depth4/gamma1/lam2/2000ep, clean acc ~0.85->~0.91), OPA:finance fscale=3 (width128/depth3/gamma1/lam2/250ep, clean acc 0.63->0.89). fscale is chosen per track as the MAX value keeping cert_false_allow=0 at every d across all 3 seeds: for OPA fscale=3 gives R_allow ~0.55/0.44/0.41 with cfa=0, whereas fscale>=4 raised R but broke soundness at d>=2 (cfa~0.045) so was NOT adopted; for synthetic fscale=4 is sound. (Historical: at fscale=1 both were over-conservative -- OPA R~0.01/0/0, synthetic cfa up to 0.33; capacity alone did not fix synthetic, scaling did.) If a residual cfa>0 remains in a run it is reported here honestly. The backend-agnostic results (|N_d| growth, cost(d), the enumeration cliff) are unaffected by the backend."
+  },
+  "crossover": {
+    "tau": 0.9,
+    "eps": 0.1,
+    "sigma": 0.1,
+    "alpha_fwer": 0.001,
+    "primary_backend": "lipschitz",
+    "cost_blowup_threshold": 10.0,
+    "r_collapse_threshold": 0.05,
+    "smoothing_budget_model": "Lipschitz cert cost = |N_d| deterministic branch evals (no MC, no confidence budget); RS cost = |N_d|*n_mc. cost ratio = |N_d|/|N_1| for both. A hybrid product-noise smoothing cert would be O(1) in |N_d| -> hand-off rational once the branch count blows up.",
+    "backends": {
+      "lipschitz": {
+        "backend": "lipschitz",
+        "mean_N_by_d": {
+          "1": 12.0,
+          "2": 56.667,
+          "3": 118.667
+        },
+        "mean_R_allow_by_d": {
+          "1": 0.7733,
+          "2": 0.6978,
+          "3": 0.68
+        },
+        "mean_solve_ms_by_d": {
+          "1": 7.336,
+          "2": 7.696,
+          "3": 8.299
+        },
+        "enumeration_cost_ratio_vs_d1": {
+          "1": 1.0,
+          "2": 4.722,
+          "3": 9.889
+        },
+        "per_setting_cliff": [
+          {
+            "track": "opa:finance",
+            "x1_size": null,
+            "N_by_d": {
+              "1": 8.0,
+              "2": 24.0,
+              "3": 36.0
+            },
+            "cost_ratio_by_d": {
+              "1": 1.0,
+              "2": 3.0,
+              "3": 4.5
+            },
+            "R_allow_by_d": {
+              "1": 0.5867,
+              "2": 0.5067,
+              "3": 0.4533
+            },
+            "cost_cliff_d": null,
+            "utility_cliff_d": null,
+            "operational_cliff_d": null
+          },
+          {
+            "track": "synthetic",
+            "x1_size": 4,
+            "N_by_d": {
+              "1": 10.0,
+              "2": 37.0,
+              "3": 64.0
+            },
+            "cost_ratio_by_d": {
+              "1": 1.0,
+              "2": 3.7,
+              "3": 6.4
+            },
+            "R_allow_by_d": {
+              "1": 0.88,
+              "2": 0.7867,
+              "3": 0.7867
+            },
+            "cost_cliff_d": null,
+            "utility_cliff_d": null,
+            "operational_cliff_d": null
+          },
+          {
+            "track": "synthetic",
+            "x1_size": 8,
+            "N_by_d": {
+              "1": 18.0,
+              "2": 109.0,
+              "3": 256.0
+            },
+            "cost_ratio_by_d": {
+              "1": 1.0,
+              "2": 6.056,
+              "3": 14.222
+            },
+            "R_allow_by_d": {
+              "1": 0.8533,
+              "2": 0.8,
+              "3": 0.8
+            },
+            "cost_cliff_d": 3,
+            "utility_cliff_d": null,
+            "operational_cliff_d": 3
+          }
+        ],
+        "cost_cliff_d_global": null,
+        "utility_cliff_d_global": null,
+        "operational_cliff_d": 3,
+        "cliff_N_d": 118.667
+      },
+      "rs_ablation": {
+        "backend": "rs_ablation",
+        "mean_N_by_d": {
+          "1": 12.0,
+          "2": 56.667,
+          "3": 118.667
+        },
+        "mean_R_allow_by_d": {
+          "1": 0.2889,
+          "2": 0.1689,
+          "3": 0.1067
+        },
+        "mean_solve_ms_by_d": {
+          "1": 13.591,
+          "2": 62.328,
+          "3": 120.049
+        },
+        "enumeration_cost_ratio_vs_d1": {
+          "1": 1.0,
+          "2": 4.722,
+          "3": 9.889
+        },
+        "per_setting_cliff": [
+          {
+            "track": "opa:finance",
+            "x1_size": null,
+            "N_by_d": {
+              "1": 8.0,
+              "2": 24.0,
+              "3": 36.0
+            },
+            "cost_ratio_by_d": {
+              "1": 1.0,
+              "2": 3.0,
+              "3": 4.5
+            },
+            "R_allow_by_d": {
+              "1": 0.0533,
+              "2": 0.0,
+              "3": 0.0
+            },
+            "cost_cliff_d": null,
+            "utility_cliff_d": 2,
+            "operational_cliff_d": 2
+          },
+          {
+            "track": "synthetic",
+            "x1_size": 4,
+            "N_by_d": {
+              "1": 10.0,
+              "2": 37.0,
+              "3": 64.0
+            },
+            "cost_ratio_by_d": {
+              "1": 1.0,
+              "2": 3.7,
+              "3": 6.4
+            },
+            "R_allow_by_d": {
+              "1": 0.4267,
+              "2": 0.3467,
+              "3": 0.2267
+            },
+            "cost_cliff_d": null,
+            "utility_cliff_d": null,
+            "operational_cliff_d": null
+          },
+          {
+            "track": "synthetic",
+            "x1_size": 8,
+            "N_by_d": {
+              "1": 18.0,
+              "2": 109.0,
+              "3": 256.0
+            },
+            "cost_ratio_by_d": {
+              "1": 1.0,
+              "2": 6.056,
+              "3": 14.222
+            },
+            "R_allow_by_d": {
+              "1": 0.3867,
+              "2": 0.16,
+              "3": 0.0933
+            },
+            "cost_cliff_d": 3,
+            "utility_cliff_d": null,
+            "operational_cliff_d": 3
+          }
+        ],
+        "cost_cliff_d_global": null,
+        "utility_cliff_d_global": null,
+        "operational_cliff_d": 2,
+        "cliff_N_d": 56.667
+      }
+    },
+    "alpha_branch_artifact_note": "The RS ablation's R_allow(d) decays partly from a MEASUREMENT ARTIFACT: the FWER split alpha_branch = alpha_fwer/|N_d| shrinks as |N_d| grows, loosening each Clopper-Pearson lower bound and dragging R_allow toward 0 (e.g. OPA d=2 -> 0). The DETERMINISTIC Lipschitz backend has NO n_mc and NO alpha_branch, so its R_allow(d) decays only from the genuine min-over-more-branches effect and degrades more gracefully. Compare the two curves below.",
+    "mean_N_by_d": {
+      "1": 12.0,
+      "2": 56.667,
+      "3": 118.667
+    },
+    "mean_R_allow_by_d": {
+      "1": 0.7733,
+      "2": 0.6978,
+      "3": 0.68
+    },
+    "mean_solve_ms_by_d": {
+      "1": 7.336,
+      "2": 7.696,
+      "3": 8.299
+    },
+    "enumeration_cost_ratio_vs_d1": {
+      "1": 1.0,
+      "2": 4.722,
+      "3": 9.889
+    },
+    "per_setting_cliff": [
+      {
+        "track": "opa:finance",
+        "x1_size": null,
+        "N_by_d": {
+          "1": 8.0,
+          "2": 24.0,
+          "3": 36.0
+        },
+        "cost_ratio_by_d": {
+          "1": 1.0,
+          "2": 3.0,
+          "3": 4.5
+        },
+        "R_allow_by_d": {
+          "1": 0.5867,
+          "2": 0.5067,
+          "3": 0.4533
+        },
+        "cost_cliff_d": null,
+        "utility_cliff_d": null,
+        "operational_cliff_d": null
+      },
+      {
+        "track": "synthetic",
+        "x1_size": 4,
+        "N_by_d": {
+          "1": 10.0,
+          "2": 37.0,
+          "3": 64.0
+        },
+        "cost_ratio_by_d": {
+          "1": 1.0,
+          "2": 3.7,
+          "3": 6.4
+        },
+        "R_allow_by_d": {
+          "1": 0.88,
+          "2": 0.7867,
+          "3": 0.7867
+        },
+        "cost_cliff_d": null,
+        "utility_cliff_d": null,
+        "operational_cliff_d": null
+      },
+      {
+        "track": "synthetic",
+        "x1_size": 8,
+        "N_by_d": {
+          "1": 18.0,
+          "2": 109.0,
+          "3": 256.0
+        },
+        "cost_ratio_by_d": {
+          "1": 1.0,
+          "2": 6.056,
+          "3": 14.222
+        },
+        "R_allow_by_d": {
+          "1": 0.8533,
+          "2": 0.8,
+          "3": 0.8
+        },
+        "cost_cliff_d": 3,
+        "utility_cliff_d": null,
+        "operational_cliff_d": 3
+      }
+    ],
+    "cost_cliff_d": null,
+    "utility_cliff_d": null,
+    "operational_cliff_d": 3,
+    "cliff_N_d": 118.667,
+    "reasoning": "PRIMARY backend = deterministic 1-Lipschitz margin cert (min_{s' in N_d} h_theta > L*eps): no n_mc, no FWER alpha split. Enumeration cost grows linearly in |N_d|; a hybrid product-noise smoothing cert would be O(1) in |N_d|, so the hand-off becomes rational once |N_d| blows up (cost cliff) or certified utility collapses (utility cliff), whichever is earlier. BOTH backends are oracle-sound (cert_false_allow=0) at every d and both tracks. Both tracks use numeric-block scaling for the Lipschitz gate (synthetic fscale=4, OPA fscale=3 = the max fscale keeping cfa=0 at every d); fscale=1 was sound but over-conservative (OPA R~0.01) and, for synthetic, under-fit (cfa up to 0.33). |N_d| growth, cost(d) and the cliff are backend-agnostic. d=1 remains the MVP. The deterministic Lipschitz PRIMARY keeps far higher certified utility as d grows (R_allow ~0.8, near-flat) because it carries NO shrinking alpha_branch = alpha/|N_d| confidence budget; the RS ablation's R_allow(d) decays much faster, partly from that measurement artifact."
+  },
+  "per_setting": [
+    {
+      "backend": "lipschitz",
+      "track": "opa:finance",
+      "x1_size": null,
+      "d": 1,
+      "mean_N_d": 8.0,
+      "max_N_d": 8,
+      "alpha_branch": null,
+      "R_allow": 0.5867,
+      "R_allow_std": 0.136,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 44,
+      "n_cert": 50,
+      "mean_solve_ms": 8.013
+    },
+    {
+      "backend": "lipschitz",
+      "track": "opa:finance",
+      "x1_size": null,
+      "d": 2,
+      "mean_N_d": 24.0,
+      "max_N_d": 24,
+      "alpha_branch": null,
+      "R_allow": 0.5067,
+      "R_allow_std": 0.0998,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 38,
+      "n_cert": 50,
+      "mean_solve_ms": 7.692
+    },
+    {
+      "backend": "lipschitz",
+      "track": "opa:finance",
+      "x1_size": null,
+      "d": 3,
+      "mean_N_d": 36.0,
+      "max_N_d": 36,
+      "alpha_branch": null,
+      "R_allow": 0.4533,
+      "R_allow_std": 0.105,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 34,
+      "n_cert": 50,
+      "mean_solve_ms": 7.385
+    },
+    {
+      "backend": "lipschitz",
+      "track": "synthetic",
+      "x1_size": 4,
+      "d": 1,
+      "mean_N_d": 10.0,
+      "max_N_d": 10,
+      "alpha_branch": null,
+      "R_allow": 0.88,
+      "R_allow_std": 0.0327,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 66,
+      "n_cert": 50,
+      "mean_solve_ms": 6.987
+    },
+    {
+      "backend": "lipschitz",
+      "track": "synthetic",
+      "x1_size": 4,
+      "d": 2,
+      "mean_N_d": 37.0,
+      "max_N_d": 37,
+      "alpha_branch": null,
+      "R_allow": 0.7867,
+      "R_allow_std": 0.0377,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 59,
+      "n_cert": 50,
+      "mean_solve_ms": 7.214
+    },
+    {
+      "backend": "lipschitz",
+      "track": "synthetic",
+      "x1_size": 4,
+      "d": 3,
+      "mean_N_d": 64.0,
+      "max_N_d": 64,
+      "alpha_branch": null,
+      "R_allow": 0.7867,
+      "R_allow_std": 0.0377,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 59,
+      "n_cert": 50,
+      "mean_solve_ms": 7.52
+    },
+    {
+      "backend": "lipschitz",
+      "track": "synthetic",
+      "x1_size": 8,
+      "d": 1,
+      "mean_N_d": 18.0,
+      "max_N_d": 18,
+      "alpha_branch": null,
+      "R_allow": 0.8533,
+      "R_allow_std": 0.0499,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 64,
+      "n_cert": 50,
+      "mean_solve_ms": 7.008
+    },
+    {
+      "backend": "lipschitz",
+      "track": "synthetic",
+      "x1_size": 8,
+      "d": 2,
+      "mean_N_d": 109.0,
+      "max_N_d": 109,
+      "alpha_branch": null,
+      "R_allow": 0.8,
+      "R_allow_std": 0.0327,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 60,
+      "n_cert": 50,
+      "mean_solve_ms": 8.181
+    },
+    {
+      "backend": "lipschitz",
+      "track": "synthetic",
+      "x1_size": 8,
+      "d": 3,
+      "mean_N_d": 256.0,
+      "max_N_d": 256,
+      "alpha_branch": null,
+      "R_allow": 0.8,
+      "R_allow_std": 0.0327,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 60,
+      "n_cert": 50,
+      "mean_solve_ms": 9.993
+    },
+    {
+      "backend": "rs_ablation",
+      "track": "opa:finance",
+      "x1_size": null,
+      "d": 1,
+      "mean_N_d": 8.0,
+      "max_N_d": 8,
+      "alpha_branch": 0.000125,
+      "R_allow": 0.0533,
+      "R_allow_std": 0.0377,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 4,
+      "n_cert": 50,
+      "mean_solve_ms": 6.186
+    },
+    {
+      "backend": "rs_ablation",
+      "track": "opa:finance",
+      "x1_size": null,
+      "d": 2,
+      "mean_N_d": 24.0,
+      "max_N_d": 24,
+      "alpha_branch": 4.1666666666666665e-05,
+      "R_allow": 0.0,
+      "R_allow_std": 0.0,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 0,
+      "n_cert": 50,
+      "mean_solve_ms": 18.43
+    },
+    {
+      "backend": "rs_ablation",
+      "track": "opa:finance",
+      "x1_size": null,
+      "d": 3,
+      "mean_N_d": 36.0,
+      "max_N_d": 36,
+      "alpha_branch": 2.777777777777778e-05,
+      "R_allow": 0.0,
+      "R_allow_std": 0.0,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 0,
+      "n_cert": 50,
+      "mean_solve_ms": 27.329
+    },
+    {
+      "backend": "rs_ablation",
+      "track": "synthetic",
+      "x1_size": 4,
+      "d": 1,
+      "mean_N_d": 10.0,
+      "max_N_d": 10,
+      "alpha_branch": 0.0001,
+      "R_allow": 0.4267,
+      "R_allow_std": 0.1644,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 32,
+      "n_cert": 50,
+      "mean_solve_ms": 19.743
+    },
+    {
+      "backend": "rs_ablation",
+      "track": "synthetic",
+      "x1_size": 4,
+      "d": 2,
+      "mean_N_d": 37.0,
+      "max_N_d": 37,
+      "alpha_branch": 2.7027027027027027e-05,
+      "R_allow": 0.3467,
+      "R_allow_std": 0.136,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 26,
+      "n_cert": 50,
+      "mean_solve_ms": 77.691
+    },
+    {
+      "backend": "rs_ablation",
+      "track": "synthetic",
+      "x1_size": 4,
+      "d": 3,
+      "mean_N_d": 64.0,
+      "max_N_d": 64,
+      "alpha_branch": 1.5625e-05,
+      "R_allow": 0.2267,
+      "R_allow_std": 0.0822,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 17,
+      "n_cert": 50,
+      "mean_solve_ms": 120.508
+    },
+    {
+      "backend": "rs_ablation",
+      "track": "synthetic",
+      "x1_size": 8,
+      "d": 1,
+      "mean_N_d": 18.0,
+      "max_N_d": 18,
+      "alpha_branch": 5.555555555555556e-05,
+      "R_allow": 0.3867,
+      "R_allow_std": 0.1543,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 29,
+      "n_cert": 50,
+      "mean_solve_ms": 14.843
+    },
+    {
+      "backend": "rs_ablation",
+      "track": "synthetic",
+      "x1_size": 8,
+      "d": 2,
+      "mean_N_d": 109.0,
+      "max_N_d": 109,
+      "alpha_branch": 9.174311926605506e-06,
+      "R_allow": 0.16,
+      "R_allow_std": 0.0864,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 12,
+      "n_cert": 50,
+      "mean_solve_ms": 90.864
+    },
+    {
+      "backend": "rs_ablation",
+      "track": "synthetic",
+      "x1_size": 8,
+      "d": 3,
+      "mean_N_d": 256.0,
+      "max_N_d": 256,
+      "alpha_branch": 3.90625e-06,
+      "R_allow": 0.0933,
+      "R_allow_std": 0.0499,
+      "n_R": 25,
+      "cert_false_allow": 0.0,
+      "n_allowed": 7,
+      "n_cert": 50,
+      "mean_solve_ms": 212.31
+    }
+  ],
+  "note": "MVP stays at d=1; this MEASURES the discrete-ladder edge. The RS-ablation certificate is sound (cert_false_allow=0) at every d; the deterministic Lipschitz PRIMARY is sound relative to the gate and empirically sound on OPA at every d (gate-fidelity caveat on synthetic). Only enumeration cost and certified utility (R_allow) move with d; |N_d| growth, cost(d), and the cliff are backend-agnostic."
+}

@@ -1,0 +1,24 @@
+{
+  "records": "bridge_benchmark/data/realdata/ieee_cis_boundary_balanced_s0.jsonl",
+  "llm_backend": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "n_per_cell": 150,
+  "theta_base": 0.488808,
+  "delta": 0.08,
+  "epsilon": 0.1,
+  "sigma": 0.1,
+  "tau": 0.9,
+  "n_mc": 2000,
+  "seed": 0,
+  "attacks": [
+    "clean",
+    "c_witness",
+    "injection"
+  ],
+  "gates": [
+    "none",
+    "learned",
+    "certified",
+    "oracle"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "experiment": "EXP-A3 \u2014 sub-minute freshness-SLA sweep \u2192 SLA operating point",
+  "reuses": "validation_stack_adversary.build_pool/_strata/sweep_deltat (EXP2-A verbatim)",
+  "risk_model_auc": 0.7650279631458837,
+  "declared_eps": 0.1,
+  "n_seeds": 1,
+  "n_eval": 1500,
+  "grid_sec": [
+    15,
+    30,
+    60,
+    120
+  ],
+  "min_hits_for_stable_estimate": 30,
+  "table": [
+    {
+      "delta_t_sec": 15,
+      "coverage_hit_rate": 0.0,
+      "n_hits_mean": 0.0,
+      "n_allowed_hits_mean": 0.0,
+      "eps_emp_p95_mean": NaN,
+      "eps_emp_p95_std": NaN,
+      "declared_eps": 0.1,
+      "system_false_allow_mean": 0.0,
+      "system_false_allow_std": 0.0,
+      "cert_false_allow": 0.0
+    },
+    {
+      "delta_t_sec": 30,
+      "coverage_hit_rate": 0.0013,
+      "n_hits_mean": 2.0,
+      "n_allowed_hits_mean": 1.0,
+      "eps_emp_p95_mean": 0.1376,
+      "eps_emp_p95_std": 0.0,
+      "declared_eps": 0.1,
+      "system_false_allow_mean": 0.0,
+      "system_false_allow_std": 0.0,
+      "cert_false_allow": 0.0
+    },
+    {
+      "delta_t_sec": 60,
+      "coverage_hit_rate": 0.006,
+      "n_hits_mean": 9.0,
+      "n_allowed_hits_mean": 6.0,
+      "eps_emp_p95_mean": 0.1245,
+      "eps_emp_p95_std": 0.0,
+      "declared_eps": 0.1,
+      "system_false_allow_mean": 0.0,
+      "system_false_allow_std": 0.0,
+      "cert_false_allow": 0.0
+    },
+    {
+      "delta_t_sec": 120,
+      "coverage_hit_rate": 0.024,
+      "n_hits_mean": 36.0,
+      "n_allowed_hits_mean": 22.0,
+      "eps_emp_p95_mean": 0.1566,
+      "eps_emp_p95_std": 0.0,
+      "declared_eps": 0.1,
+      "system_false_allow_mean": 0.0,
+      "system_false_allow_std": 0.0,
+      "cert_false_allow": 0.0
+    }
+  ],
+  "sla_target_lt_0.01_sec_coverage_aware": null,
+  "sla_target_lt_0.005_sec_coverage_aware": null,
+  "sla_target_lt_0.01_sec_naive_may_be_zero_coverage": 15,
+  "min_well_covered_delta_t_sec": null,
+  "system_false_allow_at_min_well_covered_delta_t": null,
+  "eps_crossing_delta_t_sec": 30,
+  "cert_false_allow_invariant_holds": true,
+  "verdict": "KILL_BRANCH: no adequately-covered sub-minute SLA keeps system_false_allow < 0.01. The only grid points below 0.01 (\u0394t \u2264 15s) are zero-coverage artifacts (<30 eligible stale serves); wherever caching actually engages (\u0394t \u2265 Nones) system_false_allow \u2248 None and \u03b5_emp@p95 already exceeds the declared \u03b5=0.10 (crosses at \u0394t=30s). \u21d2 IEEE-CIS scores must be recomputed in-loop (a cacheable freshness SLA collapses to a few-second re-read window); the certificate stays sound (cert_false_allow=0) throughout.",
+  "note": "system_false_allow is reported alongside coverage_hit_rate: at sub-minute SLAs only a small fraction of transactions have a same-entity prior read inside the window (few genuine stale serves), so a low system-false-allow reflects both the smaller drift AND the smaller eligible set. The certificate's cert_false_allow stays 0.0 at every \u0394t (soundness for the declared budget); only the budget-escape term (system_false_allow) moves with the SLA."
+}

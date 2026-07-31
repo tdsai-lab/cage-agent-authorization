@@ -1,0 +1,4 @@
+policy_family,source_note_id,source_type,thresholds_used,categorical_selector,numeric_field,verified
+psd2_low_value,psd2_sca_low_value,official/regulator,base[payment_channel]=remote:0.5/contactless:0.833 ; adj[customer_risk_tier]=low:0.0/medium:-0.083/high:-0.167,"payment_channel,customer_risk_tier",amount_norm,True
+psd2_tra,psd2_sca_tra,official/regulator,base[fraud_rate_tier]=tier_1:0.833/tier_2:0.417/tier_3:0.167 ; adj[merchant_category]=low_risk:0.0/standard:-0.033/high_risk:-0.083,"fraud_rate_tier,merchant_category",amount_norm,True
+aml_ctr,aml_ctr_us,regulatory_grounded_authored,base[customer_risk_tier]=low:0.6/medium:0.467/high:0.333 ; adj[source_type]=cash:0.0/wire:0.1/card:0.1/crypto:-0.1,"customer_risk_tier,source_type",amount_norm,True

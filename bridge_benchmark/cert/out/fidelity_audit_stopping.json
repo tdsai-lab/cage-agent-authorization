@@ -1,0 +1,1380 @@
+{
+  "experiment": "M4 = R7 \u2014 anytime-valid fidelity-audit stopping rule (S26 upgrade)",
+  "method": "alpha-spending union-bounded Clopper-Pearson confidence sequence (anytime-valid); establish-then-halt stopping rule",
+  "alpha": 0.05,
+  "tol_margin": 0.03,
+  "p_floor": 0.05,
+  "corrupt_frac": 0.15,
+  "corrupt_frac_severe": 0.6,
+  "delta_audit": "1d",
+  "checkpoint_n0": 50,
+  "checkpoint_ratio": 1.4,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "per_seed": [
+    {
+      "n_audited": 154024,
+      "n_clean_prefix": 61611,
+      "reg_maturation_index": 61611,
+      "baseline_false_allow": 0.01949,
+      "p_star": 0.05,
+      "guarantee_established": true,
+      "guarantee_established_N": 527,
+      "halted": false,
+      "halt_N": null,
+      "halt_p_bar": null,
+      "halt_latency_audits": null,
+      "final_p_bar_anytime": 0.01968,
+      "final_p_bar_fixedN": 0.01893,
+      "clean_guarantee_p_bar": 0.02166,
+      "clean_guarantee_N": 61611,
+      "p_bar_curve": [
+        {
+          "N": 50,
+          "k": 3,
+          "p_bar": 0.16548
+        },
+        {
+          "N": 70,
+          "k": 3,
+          "p_bar": 0.13957
+        },
+        {
+          "N": 98,
+          "k": 3,
+          "p_bar": 0.10978
+        },
+        {
+          "N": 137,
+          "k": 3,
+          "p_bar": 0.084
+        },
+        {
+          "N": 192,
+          "k": 4,
+          "p_bar": 0.07157
+        },
+        {
+          "N": 268,
+          "k": 4,
+          "p_bar": 0.05327
+        },
+        {
+          "N": 376,
+          "k": 7,
+          "p_bar": 0.05176
+        },
+        {
+          "N": 527,
+          "k": 11,
+          "p_bar": 0.049
+        },
+        {
+          "N": 737,
+          "k": 16,
+          "p_bar": 0.04519
+        },
+        {
+          "N": 1033,
+          "k": 17,
+          "p_bar": 0.03403
+        },
+        {
+          "N": 1446,
+          "k": 21,
+          "p_bar": 0.02837
+        },
+        {
+          "N": 2024,
+          "k": 36,
+          "p_bar": 0.03013
+        },
+        {
+          "N": 2834,
+          "k": 52,
+          "p_bar": 0.02873
+        },
+        {
+          "N": 3968,
+          "k": 80,
+          "p_bar": 0.02916
+        },
+        {
+          "N": 5556,
+          "k": 113,
+          "p_bar": 0.02789
+        },
+        {
+          "N": 7778,
+          "k": 180,
+          "p_bar": 0.02984
+        },
+        {
+          "N": 10889,
+          "k": 253,
+          "p_bar": 0.02887
+        },
+        {
+          "N": 15245,
+          "k": 316,
+          "p_bar": 0.02523
+        },
+        {
+          "N": 21343,
+          "k": 445,
+          "p_bar": 0.02465
+        },
+        {
+          "N": 29881,
+          "k": 596,
+          "p_bar": 0.02309
+        },
+        {
+          "N": 41834,
+          "k": 810,
+          "p_bar": 0.02198
+        },
+        {
+          "N": 58567,
+          "k": 1125,
+          "p_bar": 0.02141
+        },
+        {
+          "N": 81994,
+          "k": 1588,
+          "p_bar": 0.02123
+        },
+        {
+          "N": 114792,
+          "k": 2163,
+          "p_bar": 0.0204
+        },
+        {
+          "N": 154024,
+          "k": 2827,
+          "p_bar": 0.01968
+        }
+      ],
+      "seed": 0,
+      "regime": "control"
+    },
+    {
+      "n_audited": 153654,
+      "n_clean_prefix": 61611,
+      "reg_maturation_index": 61611,
+      "baseline_false_allow": 0.01949,
+      "p_star": 0.05,
+      "guarantee_established": true,
+      "guarantee_established_N": 527,
+      "halted": false,
+      "halt_N": null,
+      "halt_p_bar": null,
+      "halt_latency_audits": null,
+      "final_p_bar_anytime": 0.01977,
+      "final_p_bar_fixedN": 0.01901,
+      "clean_guarantee_p_bar": 0.02166,
+      "clean_guarantee_N": 61611,
+      "p_bar_curve": [
+        {
+          "N": 50,
+          "k": 3,
+          "p_bar": 0.16548
+        },
+        {
+          "N": 70,
+          "k": 3,
+          "p_bar": 0.13957
+        },
+        {
+          "N": 98,
+          "k": 3,
+          "p_bar": 0.10978
+        },
+        {
+          "N": 137,
+          "k": 3,
+          "p_bar": 0.084
+        },
+        {
+          "N": 192,
+          "k": 4,
+          "p_bar": 0.07157
+        },
+        {
+          "N": 268,
+          "k": 4,
+          "p_bar": 0.05327
+        },
+        {
+          "N": 376,
+          "k": 7,
+          "p_bar": 0.05176
+        },
+        {
+          "N": 527,
+          "k": 11,
+          "p_bar": 0.049
+        },
+        {
+          "N": 737,
+          "k": 16,
+          "p_bar": 0.04519
+        },
+        {
+          "N": 1033,
+          "k": 17,
+          "p_bar": 0.03403
+        },
+        {
+          "N": 1446,
+          "k": 21,
+          "p_bar": 0.02837
+        },
+        {
+          "N": 2024,
+          "k": 36,
+          "p_bar": 0.03013
+        },
+        {
+          "N": 2834,
+          "k": 52,
+          "p_bar": 0.02873
+        },
+        {
+          "N": 3968,
+          "k": 80,
+          "p_bar": 0.02916
+        },
+        {
+          "N": 5556,
+          "k": 113,
+          "p_bar": 0.02789
+        },
+        {
+          "N": 7778,
+          "k": 180,
+          "p_bar": 0.02984
+        },
+        {
+          "N": 10889,
+          "k": 253,
+          "p_bar": 0.02887
+        },
+        {
+          "N": 15245,
+          "k": 316,
+          "p_bar": 0.02523
+        },
+        {
+          "N": 21343,
+          "k": 445,
+          "p_bar": 0.02465
+        },
+        {
+          "N": 29881,
+          "k": 596,
+          "p_bar": 0.02309
+        },
+        {
+          "N": 41834,
+          "k": 810,
+          "p_bar": 0.02198
+        },
+        {
+          "N": 58567,
+          "k": 1125,
+          "p_bar": 0.02141
+        },
+        {
+          "N": 81994,
+          "k": 1590,
+          "p_bar": 0.02126
+        },
+        {
+          "N": 114792,
+          "k": 2166,
+          "p_bar": 0.02043
+        },
+        {
+          "N": 153654,
+          "k": 2833,
+          "p_bar": 0.01977
+        }
+      ],
+      "seed": 0,
+      "regime": "subtle"
+    },
+    {
+      "n_audited": 149868,
+      "n_clean_prefix": 61611,
+      "reg_maturation_index": 61611,
+      "baseline_false_allow": 0.01949,
+      "p_star": 0.05,
+      "guarantee_established": true,
+      "guarantee_established_N": 527,
+      "halted": false,
+      "halt_N": null,
+      "halt_p_bar": null,
+      "halt_latency_audits": null,
+      "final_p_bar_anytime": 0.01988,
+      "final_p_bar_fixedN": 0.01911,
+      "clean_guarantee_p_bar": 0.02166,
+      "clean_guarantee_N": 61611,
+      "p_bar_curve": [
+        {
+          "N": 50,
+          "k": 3,
+          "p_bar": 0.16548
+        },
+        {
+          "N": 70,
+          "k": 3,
+          "p_bar": 0.13957
+        },
+        {
+          "N": 98,
+          "k": 3,
+          "p_bar": 0.10978
+        },
+        {
+          "N": 137,
+          "k": 3,
+          "p_bar": 0.084
+        },
+        {
+          "N": 192,
+          "k": 4,
+          "p_bar": 0.07157
+        },
+        {
+          "N": 268,
+          "k": 4,
+          "p_bar": 0.05327
+        },
+        {
+          "N": 376,
+          "k": 7,
+          "p_bar": 0.05176
+        },
+        {
+          "N": 527,
+          "k": 11,
+          "p_bar": 0.049
+        },
+        {
+          "N": 737,
+          "k": 16,
+          "p_bar": 0.04519
+        },
+        {
+          "N": 1033,
+          "k": 17,
+          "p_bar": 0.03403
+        },
+        {
+          "N": 1446,
+          "k": 21,
+          "p_bar": 0.02837
+        },
+        {
+          "N": 2024,
+          "k": 36,
+          "p_bar": 0.03013
+        },
+        {
+          "N": 2834,
+          "k": 52,
+          "p_bar": 0.02873
+        },
+        {
+          "N": 3968,
+          "k": 80,
+          "p_bar": 0.02916
+        },
+        {
+          "N": 5556,
+          "k": 113,
+          "p_bar": 0.02789
+        },
+        {
+          "N": 7778,
+          "k": 180,
+          "p_bar": 0.02984
+        },
+        {
+          "N": 10889,
+          "k": 253,
+          "p_bar": 0.02887
+        },
+        {
+          "N": 15245,
+          "k": 316,
+          "p_bar": 0.02523
+        },
+        {
+          "N": 21343,
+          "k": 445,
+          "p_bar": 0.02465
+        },
+        {
+          "N": 29881,
+          "k": 596,
+          "p_bar": 0.02309
+        },
+        {
+          "N": 41834,
+          "k": 810,
+          "p_bar": 0.02198
+        },
+        {
+          "N": 58567,
+          "k": 1125,
+          "p_bar": 0.02141
+        },
+        {
+          "N": 81994,
+          "k": 1581,
+          "p_bar": 0.02114
+        },
+        {
+          "N": 114792,
+          "k": 2157,
+          "p_bar": 0.02035
+        },
+        {
+          "N": 149868,
+          "k": 2776,
+          "p_bar": 0.01988
+        }
+      ],
+      "seed": 0,
+      "regime": "severe"
+    },
+    {
+      "n_audited": 144644,
+      "n_clean_prefix": 58461,
+      "reg_maturation_index": 58461,
+      "baseline_false_allow": 0.01868,
+      "p_star": 0.05,
+      "guarantee_established": true,
+      "guarantee_established_N": 1033,
+      "halted": false,
+      "halt_N": null,
+      "halt_p_bar": null,
+      "halt_latency_audits": null,
+      "final_p_bar_anytime": 0.0187,
+      "final_p_bar_fixedN": 0.01794,
+      "clean_guarantee_p_bar": 0.02085,
+      "clean_guarantee_N": 58461,
+      "p_bar_curve": [
+        {
+          "N": 50,
+          "k": 5,
+          "p_bar": 0.21814
+        },
+        {
+          "N": 70,
+          "k": 5,
+          "p_bar": 0.18004
+        },
+        {
+          "N": 98,
+          "k": 5,
+          "p_bar": 0.14019
+        },
+        {
+          "N": 137,
+          "k": 6,
+          "p_bar": 0.1173
+        },
+        {
+          "N": 192,
+          "k": 8,
+          "p_bar": 0.10265
+        },
+        {
+          "N": 268,
+          "k": 8,
+          "p_bar": 0.07607
+        },
+        {
+          "N": 376,
+          "k": 10,
+          "p_bar": 0.06346
+        },
+        {
+          "N": 527,
+          "k": 18,
+          "p_bar": 0.06724
+        },
+        {
+          "N": 737,
+          "k": 23,
+          "p_bar": 0.05786
+        },
+        {
+          "N": 1033,
+          "k": 26,
+          "p_bar": 0.04562
+        },
+        {
+          "N": 1446,
+          "k": 31,
+          "p_bar": 0.03742
+        },
+        {
+          "N": 2024,
+          "k": 44,
+          "p_bar": 0.03509
+        },
+        {
+          "N": 2834,
+          "k": 52,
+          "p_bar": 0.02873
+        },
+        {
+          "N": 3968,
+          "k": 78,
+          "p_bar": 0.02856
+        },
+        {
+          "N": 5556,
+          "k": 115,
+          "p_bar": 0.02831
+        },
+        {
+          "N": 7778,
+          "k": 181,
+          "p_bar": 0.02998
+        },
+        {
+          "N": 10889,
+          "k": 245,
+          "p_bar": 0.02806
+        },
+        {
+          "N": 15245,
+          "k": 310,
+          "p_bar": 0.0248
+        },
+        {
+          "N": 21343,
+          "k": 420,
+          "p_bar": 0.02338
+        },
+        {
+          "N": 29881,
+          "k": 553,
+          "p_bar": 0.02154
+        },
+        {
+          "N": 41834,
+          "k": 754,
+          "p_bar": 0.02055
+        },
+        {
+          "N": 58567,
+          "k": 1094,
+          "p_bar": 0.02085
+        },
+        {
+          "N": 81994,
+          "k": 1499,
+          "p_bar": 0.0201
+        },
+        {
+          "N": 114792,
+          "k": 2010,
+          "p_bar": 0.01901
+        },
+        {
+          "N": 144644,
+          "k": 2511,
+          "p_bar": 0.0187
+        }
+      ],
+      "seed": 1,
+      "regime": "control"
+    },
+    {
+      "n_audited": 143299,
+      "n_clean_prefix": 58461,
+      "reg_maturation_index": 58461,
+      "baseline_false_allow": 0.01868,
+      "p_star": 0.05,
+      "guarantee_established": true,
+      "guarantee_established_N": 1033,
+      "halted": false,
+      "halt_N": null,
+      "halt_p_bar": null,
+      "halt_latency_audits": null,
+      "final_p_bar_anytime": 0.0186,
+      "final_p_bar_fixedN": 0.01783,
+      "clean_guarantee_p_bar": 0.02085,
+      "clean_guarantee_N": 58461,
+      "p_bar_curve": [
+        {
+          "N": 50,
+          "k": 5,
+          "p_bar": 0.21814
+        },
+        {
+          "N": 70,
+          "k": 5,
+          "p_bar": 0.18004
+        },
+        {
+          "N": 98,
+          "k": 5,
+          "p_bar": 0.14019
+        },
+        {
+          "N": 137,
+          "k": 6,
+          "p_bar": 0.1173
+        },
+        {
+          "N": 192,
+          "k": 8,
+          "p_bar": 0.10265
+        },
+        {
+          "N": 268,
+          "k": 8,
+          "p_bar": 0.07607
+        },
+        {
+          "N": 376,
+          "k": 10,
+          "p_bar": 0.06346
+        },
+        {
+          "N": 527,
+          "k": 18,
+          "p_bar": 0.06724
+        },
+        {
+          "N": 737,
+          "k": 23,
+          "p_bar": 0.05786
+        },
+        {
+          "N": 1033,
+          "k": 26,
+          "p_bar": 0.04562
+        },
+        {
+          "N": 1446,
+          "k": 31,
+          "p_bar": 0.03742
+        },
+        {
+          "N": 2024,
+          "k": 44,
+          "p_bar": 0.03509
+        },
+        {
+          "N": 2834,
+          "k": 52,
+          "p_bar": 0.02873
+        },
+        {
+          "N": 3968,
+          "k": 78,
+          "p_bar": 0.02856
+        },
+        {
+          "N": 5556,
+          "k": 115,
+          "p_bar": 0.02831
+        },
+        {
+          "N": 7778,
+          "k": 181,
+          "p_bar": 0.02998
+        },
+        {
+          "N": 10889,
+          "k": 245,
+          "p_bar": 0.02806
+        },
+        {
+          "N": 15245,
+          "k": 310,
+          "p_bar": 0.0248
+        },
+        {
+          "N": 21343,
+          "k": 420,
+          "p_bar": 0.02338
+        },
+        {
+          "N": 29881,
+          "k": 553,
+          "p_bar": 0.02154
+        },
+        {
+          "N": 41834,
+          "k": 754,
+          "p_bar": 0.02055
+        },
+        {
+          "N": 58567,
+          "k": 1093,
+          "p_bar": 0.02083
+        },
+        {
+          "N": 81994,
+          "k": 1507,
+          "p_bar": 0.0202
+        },
+        {
+          "N": 114792,
+          "k": 1994,
+          "p_bar": 0.01887
+        },
+        {
+          "N": 143299,
+          "k": 2473,
+          "p_bar": 0.0186
+        }
+      ],
+      "seed": 1,
+      "regime": "subtle"
+    },
+    {
+      "n_audited": 148644,
+      "n_clean_prefix": 58461,
+      "reg_maturation_index": 58461,
+      "baseline_false_allow": 0.01868,
+      "p_star": 0.05,
+      "guarantee_established": true,
+      "guarantee_established_N": 1033,
+      "halted": false,
+      "halt_N": null,
+      "halt_p_bar": null,
+      "halt_latency_audits": null,
+      "final_p_bar_anytime": 0.01948,
+      "final_p_bar_fixedN": 0.01872,
+      "clean_guarantee_p_bar": 0.02085,
+      "clean_guarantee_N": 58461,
+      "p_bar_curve": [
+        {
+          "N": 50,
+          "k": 5,
+          "p_bar": 0.21814
+        },
+        {
+          "N": 70,
+          "k": 5,
+          "p_bar": 0.18004
+        },
+        {
+          "N": 98,
+          "k": 5,
+          "p_bar": 0.14019
+        },
+        {
+          "N": 137,
+          "k": 6,
+          "p_bar": 0.1173
+        },
+        {
+          "N": 192,
+          "k": 8,
+          "p_bar": 0.10265
+        },
+        {
+          "N": 268,
+          "k": 8,
+          "p_bar": 0.07607
+        },
+        {
+          "N": 376,
+          "k": 10,
+          "p_bar": 0.06346
+        },
+        {
+          "N": 527,
+          "k": 18,
+          "p_bar": 0.06724
+        },
+        {
+          "N": 737,
+          "k": 23,
+          "p_bar": 0.05786
+        },
+        {
+          "N": 1033,
+          "k": 26,
+          "p_bar": 0.04562
+        },
+        {
+          "N": 1446,
+          "k": 31,
+          "p_bar": 0.03742
+        },
+        {
+          "N": 2024,
+          "k": 44,
+          "p_bar": 0.03509
+        },
+        {
+          "N": 2834,
+          "k": 52,
+          "p_bar": 0.02873
+        },
+        {
+          "N": 3968,
+          "k": 78,
+          "p_bar": 0.02856
+        },
+        {
+          "N": 5556,
+          "k": 115,
+          "p_bar": 0.02831
+        },
+        {
+          "N": 7778,
+          "k": 181,
+          "p_bar": 0.02998
+        },
+        {
+          "N": 10889,
+          "k": 245,
+          "p_bar": 0.02806
+        },
+        {
+          "N": 15245,
+          "k": 310,
+          "p_bar": 0.0248
+        },
+        {
+          "N": 21343,
+          "k": 420,
+          "p_bar": 0.02338
+        },
+        {
+          "N": 29881,
+          "k": 553,
+          "p_bar": 0.02154
+        },
+        {
+          "N": 41834,
+          "k": 754,
+          "p_bar": 0.02055
+        },
+        {
+          "N": 58567,
+          "k": 1094,
+          "p_bar": 0.02085
+        },
+        {
+          "N": 81994,
+          "k": 1537,
+          "p_bar": 0.02058
+        },
+        {
+          "N": 114792,
+          "k": 2088,
+          "p_bar": 0.01972
+        },
+        {
+          "N": 148644,
+          "k": 2696,
+          "p_bar": 0.01948
+        }
+      ],
+      "seed": 1,
+      "regime": "severe"
+    },
+    {
+      "n_audited": 145770,
+      "n_clean_prefix": 58930,
+      "reg_maturation_index": 58930,
+      "baseline_false_allow": 0.01873,
+      "p_star": 0.05,
+      "guarantee_established": true,
+      "guarantee_established_N": 1033,
+      "halted": false,
+      "halt_N": null,
+      "halt_p_bar": null,
+      "halt_latency_audits": null,
+      "final_p_bar_anytime": 0.01905,
+      "final_p_bar_fixedN": 0.01828,
+      "clean_guarantee_p_bar": 0.02091,
+      "clean_guarantee_N": 58930,
+      "p_bar_curve": [
+        {
+          "N": 50,
+          "k": 4,
+          "p_bar": 0.19234
+        },
+        {
+          "N": 70,
+          "k": 4,
+          "p_bar": 0.16024
+        },
+        {
+          "N": 98,
+          "k": 5,
+          "p_bar": 0.14019
+        },
+        {
+          "N": 137,
+          "k": 7,
+          "p_bar": 0.12768
+        },
+        {
+          "N": 192,
+          "k": 9,
+          "p_bar": 0.10996
+        },
+        {
+          "N": 268,
+          "k": 9,
+          "p_bar": 0.08143
+        },
+        {
+          "N": 376,
+          "k": 10,
+          "p_bar": 0.06346
+        },
+        {
+          "N": 527,
+          "k": 16,
+          "p_bar": 0.06216
+        },
+        {
+          "N": 737,
+          "k": 22,
+          "p_bar": 0.05608
+        },
+        {
+          "N": 1033,
+          "k": 25,
+          "p_bar": 0.04436
+        },
+        {
+          "N": 1446,
+          "k": 30,
+          "p_bar": 0.03653
+        },
+        {
+          "N": 2024,
+          "k": 41,
+          "p_bar": 0.03324
+        },
+        {
+          "N": 2834,
+          "k": 51,
+          "p_bar": 0.0283
+        },
+        {
+          "N": 3968,
+          "k": 76,
+          "p_bar": 0.02796
+        },
+        {
+          "N": 5556,
+          "k": 113,
+          "p_bar": 0.02789
+        },
+        {
+          "N": 7778,
+          "k": 182,
+          "p_bar": 0.03013
+        },
+        {
+          "N": 10889,
+          "k": 238,
+          "p_bar": 0.02734
+        },
+        {
+          "N": 15245,
+          "k": 320,
+          "p_bar": 0.02552
+        },
+        {
+          "N": 21343,
+          "k": 435,
+          "p_bar": 0.02415
+        },
+        {
+          "N": 29881,
+          "k": 580,
+          "p_bar": 0.02251
+        },
+        {
+          "N": 41834,
+          "k": 773,
+          "p_bar": 0.02104
+        },
+        {
+          "N": 58567,
+          "k": 1097,
+          "p_bar": 0.0209
+        },
+        {
+          "N": 81994,
+          "k": 1515,
+          "p_bar": 0.0203
+        },
+        {
+          "N": 114792,
+          "k": 2030,
+          "p_bar": 0.01919
+        },
+        {
+          "N": 145770,
+          "k": 2581,
+          "p_bar": 0.01905
+        }
+      ],
+      "seed": 2,
+      "regime": "control"
+    },
+    {
+      "n_audited": 146351,
+      "n_clean_prefix": 58930,
+      "reg_maturation_index": 58930,
+      "baseline_false_allow": 0.01873,
+      "p_star": 0.05,
+      "guarantee_established": true,
+      "guarantee_established_N": 1033,
+      "halted": false,
+      "halt_N": null,
+      "halt_p_bar": null,
+      "halt_latency_audits": null,
+      "final_p_bar_anytime": 0.01934,
+      "final_p_bar_fixedN": 0.01857,
+      "clean_guarantee_p_bar": 0.02091,
+      "clean_guarantee_N": 58930,
+      "p_bar_curve": [
+        {
+          "N": 50,
+          "k": 4,
+          "p_bar": 0.19234
+        },
+        {
+          "N": 70,
+          "k": 4,
+          "p_bar": 0.16024
+        },
+        {
+          "N": 98,
+          "k": 5,
+          "p_bar": 0.14019
+        },
+        {
+          "N": 137,
+          "k": 7,
+          "p_bar": 0.12768
+        },
+        {
+          "N": 192,
+          "k": 9,
+          "p_bar": 0.10996
+        },
+        {
+          "N": 268,
+          "k": 9,
+          "p_bar": 0.08143
+        },
+        {
+          "N": 376,
+          "k": 10,
+          "p_bar": 0.06346
+        },
+        {
+          "N": 527,
+          "k": 16,
+          "p_bar": 0.06216
+        },
+        {
+          "N": 737,
+          "k": 22,
+          "p_bar": 0.05608
+        },
+        {
+          "N": 1033,
+          "k": 25,
+          "p_bar": 0.04436
+        },
+        {
+          "N": 1446,
+          "k": 30,
+          "p_bar": 0.03653
+        },
+        {
+          "N": 2024,
+          "k": 41,
+          "p_bar": 0.03324
+        },
+        {
+          "N": 2834,
+          "k": 51,
+          "p_bar": 0.0283
+        },
+        {
+          "N": 3968,
+          "k": 76,
+          "p_bar": 0.02796
+        },
+        {
+          "N": 5556,
+          "k": 113,
+          "p_bar": 0.02789
+        },
+        {
+          "N": 7778,
+          "k": 182,
+          "p_bar": 0.03013
+        },
+        {
+          "N": 10889,
+          "k": 238,
+          "p_bar": 0.02734
+        },
+        {
+          "N": 15245,
+          "k": 320,
+          "p_bar": 0.02552
+        },
+        {
+          "N": 21343,
+          "k": 435,
+          "p_bar": 0.02415
+        },
+        {
+          "N": 29881,
+          "k": 580,
+          "p_bar": 0.02251
+        },
+        {
+          "N": 41834,
+          "k": 773,
+          "p_bar": 0.02104
+        },
+        {
+          "N": 58567,
+          "k": 1097,
+          "p_bar": 0.0209
+        },
+        {
+          "N": 81994,
+          "k": 1534,
+          "p_bar": 0.02054
+        },
+        {
+          "N": 114792,
+          "k": 2068,
+          "p_bar": 0.01954
+        },
+        {
+          "N": 146351,
+          "k": 2633,
+          "p_bar": 0.01934
+        }
+      ],
+      "seed": 2,
+      "regime": "subtle"
+    },
+    {
+      "n_audited": 151363,
+      "n_clean_prefix": 58930,
+      "reg_maturation_index": 58930,
+      "baseline_false_allow": 0.01873,
+      "p_star": 0.05,
+      "guarantee_established": true,
+      "guarantee_established_N": 1033,
+      "halted": false,
+      "halt_N": null,
+      "halt_p_bar": null,
+      "halt_latency_audits": null,
+      "final_p_bar_anytime": 0.0196,
+      "final_p_bar_fixedN": 0.01884,
+      "clean_guarantee_p_bar": 0.02091,
+      "clean_guarantee_N": 58930,
+      "p_bar_curve": [
+        {
+          "N": 50,
+          "k": 4,
+          "p_bar": 0.19234
+        },
+        {
+          "N": 70,
+          "k": 4,
+          "p_bar": 0.16024
+        },
+        {
+          "N": 98,
+          "k": 5,
+          "p_bar": 0.14019
+        },
+        {
+          "N": 137,
+          "k": 7,
+          "p_bar": 0.12768
+        },
+        {
+          "N": 192,
+          "k": 9,
+          "p_bar": 0.10996
+        },
+        {
+          "N": 268,
+          "k": 9,
+          "p_bar": 0.08143
+        },
+        {
+          "N": 376,
+          "k": 10,
+          "p_bar": 0.06346
+        },
+        {
+          "N": 527,
+          "k": 16,
+          "p_bar": 0.06216
+        },
+        {
+          "N": 737,
+          "k": 22,
+          "p_bar": 0.05608
+        },
+        {
+          "N": 1033,
+          "k": 25,
+          "p_bar": 0.04436
+        },
+        {
+          "N": 1446,
+          "k": 30,
+          "p_bar": 0.03653
+        },
+        {
+          "N": 2024,
+          "k": 41,
+          "p_bar": 0.03324
+        },
+        {
+          "N": 2834,
+          "k": 51,
+          "p_bar": 0.0283
+        },
+        {
+          "N": 3968,
+          "k": 76,
+          "p_bar": 0.02796
+        },
+        {
+          "N": 5556,
+          "k": 113,
+          "p_bar": 0.02789
+        },
+        {
+          "N": 7778,
+          "k": 182,
+          "p_bar": 0.03013
+        },
+        {
+          "N": 10889,
+          "k": 238,
+          "p_bar": 0.02734
+        },
+        {
+          "N": 15245,
+          "k": 320,
+          "p_bar": 0.02552
+        },
+        {
+          "N": 21343,
+          "k": 435,
+          "p_bar": 0.02415
+        },
+        {
+          "N": 29881,
+          "k": 580,
+          "p_bar": 0.02251
+        },
+        {
+          "N": 41834,
+          "k": 773,
+          "p_bar": 0.02104
+        },
+        {
+          "N": 58567,
+          "k": 1097,
+          "p_bar": 0.0209
+        },
+        {
+          "N": 81994,
+          "k": 1548,
+          "p_bar": 0.02072
+        },
+        {
+          "N": 114792,
+          "k": 2102,
+          "p_bar": 0.01985
+        },
+        {
+          "N": 151363,
+          "k": 2764,
+          "p_bar": 0.0196
+        }
+      ],
+      "seed": 2,
+      "regime": "severe"
+    }
+  ],
+  "summary": {
+    "control": {
+      "regime": "control",
+      "n_seeds": 3,
+      "guarantee_established_rate": 1.0,
+      "halt_rate": 0.0,
+      "mean_halt_latency_audits": null,
+      "mean_clean_guarantee_p_bar": 0.02114,
+      "mean_final_p_bar": 0.01914,
+      "mean_baseline": 0.01897
+    },
+    "subtle": {
+      "regime": "subtle",
+      "n_seeds": 3,
+      "guarantee_established_rate": 1.0,
+      "halt_rate": 0.0,
+      "mean_halt_latency_audits": null,
+      "mean_clean_guarantee_p_bar": 0.02114,
+      "mean_final_p_bar": 0.01924,
+      "mean_baseline": 0.01897
+    },
+    "severe": {
+      "regime": "severe",
+      "n_seeds": 3,
+      "guarantee_established_rate": 1.0,
+      "halt_rate": 0.0,
+      "mean_halt_latency_audits": null,
+      "mean_clean_guarantee_p_bar": 0.02114,
+      "mean_final_p_bar": 0.01965,
+      "mean_baseline": 0.01897
+    }
+  },
+  "synthetic_halt_demo": {
+    "p_clean": 0.02,
+    "p_post": 0.12,
+    "n_clean": 20000,
+    "n_post": 20000,
+    "p_star": 0.05,
+    "guarantee_established_N": 737,
+    "halted": true,
+    "halt_N": 29881,
+    "halt_p_bar": 0.05831,
+    "halt_latency_audits": 9881
+  },
+  "control_false_halt": false,
+  "verdict": "FINITE-AUDIT DEPLOYMENT GUARANTEE for rungs 2\u20133: a rigorous anytime-valid CI + stopping rule. On the real S26 stream the lifetime guarantee 'audited false-allow \u2264 p\u0304(N) at \u226595%, \u2200N' establishes early (N\u2248500\u20131000) at p\u0304\u22640.02114 and NEVER halts \u2014 even under the SEVERE injected over-permissive gate (corrupt_frac=0.6), because the robustness-certified allow-set is largely insensitive to gate label-corruption (cumulative p\u0304 stays 0.01965\u226ap*=0.049). So the deployment guarantee is robust and autonomy correctly continues; the machinery is NON-VACUOUS \u2014 on a semi-synthetic stream whose true rate crosses p* the rule HALTS at N=29881 (latency 9881 audits). Local change-detection remains A4's complementary windowed monitor.",
+  "note": "Ground truth is the imperfect held-out isFraud label, so the bounded quantity is the EMPIRICAL audited false-allow rate (the rung-2/3 fidelity regime), not a predicate-soundness theorem \u2014 the certificate itself keeps cert_false_allow=0 w.r.t. the smoothed/Lipschitz gate; this bounds the gate\u2194oracle fidelity gap with a finite-sample guarantee."
+}

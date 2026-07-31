@@ -1,0 +1,6 @@
+study,base_gate,backend,clean_acc,R_allow,C_allow,U_allow,cert_false_allow
+G4_base_gate,mlp,smoothing,1.0,0.15,0.0,0.0,0.0
+G4_base_gate,gbt,smoothing,1.0,0.15,0.0,0.0,0.0
+G4_base_gate,logistic,smoothing,1.0,0.15,0.0,0.0,0.0
+G4_base_gate,lipgate,smoothing,0.9667,0.0,0.0,0.0,0.0
+G4_base_gate,lipgate,deterministic,0.9667,0.3,0.0,0.0,0.0

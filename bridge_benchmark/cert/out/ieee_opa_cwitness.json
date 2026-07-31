@@ -1,0 +1,70 @@
+{
+  "opa_version": "1.17.1",
+  "policy_hash": "df47234e472bac80",
+  "n_records": 4000,
+  "eps": 0.1,
+  "engine_category_distribution": {
+    "U": 800,
+    "A": 800,
+    "B": 800,
+    "C": 800,
+    "R": 800
+  },
+  "engine_C_count": 800,
+  "engine_C_pct": 20.0,
+  "engine_vs_analytic_agreement": 1.0,
+  "C_set_jaccard_engine_vs_analytic": 1.0,
+  "C_fraud_rate_external_plausibility": 0.035,
+  "witnesses": [
+    {
+      "tool": "payment_gateway_loose",
+      "swap_to": "identity_risk_strict",
+      "risk_score": 0.4466,
+      "eps": 0.1,
+      "engine_clean_safe": true,
+      "engine_after_swap_only": true,
+      "engine_after_eps_only": true,
+      "engine_after_joint": false
+    },
+    {
+      "tool": "payment_gateway_loose",
+      "swap_to": "identity_risk_strict",
+      "risk_score": 0.4671,
+      "eps": 0.1,
+      "engine_clean_safe": true,
+      "engine_after_swap_only": true,
+      "engine_after_eps_only": true,
+      "engine_after_joint": false
+    },
+    {
+      "tool": "payment_gateway_loose",
+      "swap_to": "identity_risk_strict",
+      "risk_score": 0.3905,
+      "eps": 0.1,
+      "engine_clean_safe": true,
+      "engine_after_swap_only": true,
+      "engine_after_eps_only": true,
+      "engine_after_joint": false
+    },
+    {
+      "tool": "manual_screen_loose",
+      "swap_to": "device_risk_strict",
+      "risk_score": 0.4565,
+      "eps": 0.1,
+      "engine_clean_safe": true,
+      "engine_after_swap_only": true,
+      "engine_after_eps_only": true,
+      "engine_after_joint": false
+    },
+    {
+      "tool": "payment_gateway_loose",
+      "swap_to": "identity_risk_strict",
+      "risk_score": 0.4092,
+      "eps": 0.1,
+      "engine_clean_safe": true,
+      "engine_after_swap_only": true,
+      "engine_after_eps_only": true,
+      "engine_after_joint": false
+    }
+  ]
+}

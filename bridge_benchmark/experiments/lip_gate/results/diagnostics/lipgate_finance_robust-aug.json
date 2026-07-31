@@ -1,0 +1,11 @@
+{
+  "domain": "finance",
+  "variant": "robust-aug",
+  "backend": "orthogonium",
+  "claimed_L": 1.0,
+  "empirical_lipschitz": 0.433,
+  "in_dim": 16,
+  "lipschitz_ok": true,
+  "model_path": "lipgate_finance_robust-aug.pt",
+  "policy_provenance": "authored_provenance_conditioned_rego"
+}

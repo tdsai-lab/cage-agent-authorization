@@ -1,0 +1,71 @@
+{
+  "engine": "GoRules ZEN/JDM",
+  "engine_pkg": "zen-engine",
+  "rule": "safe = risk_score < theta(provenance); theta_strict=0.488808, theta_loose=0.568808",
+  "s_semantics": "provenance_upstream (screening-tool / list-source class; pipeline-set)",
+  "n_records": 4000,
+  "eps": 0.1,
+  "engine_category_distribution": {
+    "U": 800,
+    "A": 800,
+    "B": 800,
+    "C": 800,
+    "R": 800
+  },
+  "engine_C_count": 800,
+  "engine_C_pct": 20.0,
+  "engine_vs_analytic_agreement": 1.0,
+  "C_set_jaccard_engine_vs_analytic": 1.0,
+  "witnesses": [
+    {
+      "category": "C",
+      "provenance": "loose",
+      "swap_to": "strict",
+      "risk_score": 0.4466,
+      "engine_clean_safe": true,
+      "engine_swap_only": true,
+      "engine_eps_only": true,
+      "engine_joint": false
+    },
+    {
+      "category": "C",
+      "provenance": "loose",
+      "swap_to": "strict",
+      "risk_score": 0.4671,
+      "engine_clean_safe": true,
+      "engine_swap_only": true,
+      "engine_eps_only": true,
+      "engine_joint": false
+    },
+    {
+      "category": "C",
+      "provenance": "loose",
+      "swap_to": "strict",
+      "risk_score": 0.3905,
+      "engine_clean_safe": true,
+      "engine_swap_only": true,
+      "engine_eps_only": true,
+      "engine_joint": false
+    },
+    {
+      "category": "C",
+      "provenance": "loose",
+      "swap_to": "strict",
+      "risk_score": 0.4565,
+      "engine_clean_safe": true,
+      "engine_swap_only": true,
+      "engine_eps_only": true,
+      "engine_joint": false
+    },
+    {
+      "category": "C",
+      "provenance": "loose",
+      "swap_to": "strict",
+      "risk_score": 0.4092,
+      "engine_clean_safe": true,
+      "engine_swap_only": true,
+      "engine_eps_only": true,
+      "engine_joint": false
+    }
+  ]
+}

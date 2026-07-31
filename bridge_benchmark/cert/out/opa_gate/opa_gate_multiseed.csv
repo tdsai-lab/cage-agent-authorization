@@ -1,0 +1,4 @@
+domain,n_seeds,n_eval,policy_provenance,opa_version,policy_hash,C_prevalence_mean,C_prevalence_std,R_allow_certified_mean,R_allow_certified_std,oracle_cert_false_allow_mean,oracle_cert_false_allow_std,C_allow_certified_mean,C_allow_certified_std,U_allow_certified_mean,U_allow_certified_std
+finance,5,400,authored_rego,1.17.1,9346478737a97681,0.1115,0.007,0.0667,0.0098,0.0,0.0,0.0,0.0,0.0,0.0
+sre,5,400,authored_rego,1.17.1,1121eb9e0e633a62,0.1075,0.0156,0.0734,0.0181,0.0,0.0,0.0,0.0,0.0,0.0
+ops,5,400,authored_rego,1.17.1,eb3e820b56e57217,0.1225,0.0115,0.065,0.0172,0.0,0.0,0.0,0.0,0.0,0.0

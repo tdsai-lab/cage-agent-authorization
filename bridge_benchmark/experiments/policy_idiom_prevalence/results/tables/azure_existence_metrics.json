@@ -1,0 +1,27 @@
+{
+  "source_name": "Azure built-in Key Vault policy family (key-size / key-type)",
+  "author": "Microsoft",
+  "policy_provenance": "third_party_logic_reimplemented",
+  "files_scanned": 3,
+  "parsed_policies": 3,
+  "candidate_policies": 2,
+  "validated_T1_families": 1,
+  "validated_T1_policy_instances": 7,
+  "idiom_rate_policy_family": 0.6667,
+  "idiom_rate_policy_instance": 1.0,
+  "categorical_field": "keyType",
+  "numeric_field": "keySize",
+  "thresholds": [
+    128,
+    192,
+    256,
+    512,
+    2048,
+    3072,
+    4096
+  ],
+  "delta_max": 3968,
+  "continuous_channel_quality": "quantized",
+  "C_witness_substrate": "weak",
+  "manual_review_verdict": "validated T1"
+}

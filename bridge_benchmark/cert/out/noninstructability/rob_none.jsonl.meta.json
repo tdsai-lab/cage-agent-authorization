@@ -1,0 +1,34 @@
+{
+  "llm_backend": "mock_injection",
+  "model": "mock_injection",
+  "endpoint": null,
+  "quantization": null,
+  "param_size": null,
+  "family": null,
+  "attack": "clean",
+  "typed_attack": "clean",
+  "display_attack": "all",
+  "prompt_mode": "robust",
+  "gate": "none",
+  "domains": [
+    "finance",
+    "sre"
+  ],
+  "categories": [
+    "U",
+    "R",
+    "C"
+  ],
+  "n_per_category": 25,
+  "seed": 0,
+  "certificate": {
+    "type": "enumerate_discrete_gaussian_rs",
+    "tau": 0.9,
+    "sigma": 0.1,
+    "epsilon": 0.1,
+    "n_mc": 1500,
+    "alpha": 0.001,
+    "d": 1
+  },
+  "n_episodes": 600
+}

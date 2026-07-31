@@ -1,0 +1,7 @@
+judge_stage,variant,allow_on_W,allow_on_W_std,allow_on_W_min,allow_on_W_max,cert_FA,cert_FA_std,cert_FA_min,cert_FA_max,n_W,n
+certified_gate_reference,-,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,20,40
+point,canonical,0.900,0.000,0.900,0.900,0.450,0.000,0.450,0.450,20,40
+threat_aware,v0_s0,0.100,0.000,0.100,0.100,0.050,0.000,0.050,0.050,20,40
+threat_aware,v1_s0,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,20,40
+threat_aware,AGG(mean+/-std),0.050,0.050,0.000,0.100,0.025,0.025,0.000,0.050,-,-
+guard,llama-guard3:1b,0.450,0.000,0.450,0.450,0.225,0.000,0.225,0.225,20,40

@@ -1,0 +1,1 @@
+third_party slot — drop a vendored Rego/Gatekeeper bundle here (record source, license, commit/tag, hash). Empty = no reproducible third-party bundle available this run; see run_opa_gate.py policy_provenance.

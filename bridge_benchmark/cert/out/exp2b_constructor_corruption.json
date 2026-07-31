@@ -1,0 +1,30 @@
+{
+  "table": [
+    {
+      "flip_prob": 0.0,
+      "false_allow_mean": 0.0,
+      "false_allow_std": 0.0
+    },
+    {
+      "flip_prob": 0.05,
+      "false_allow_mean": 0.002534,
+      "false_allow_std": 0.000895
+    },
+    {
+      "flip_prob": 0.1,
+      "false_allow_mean": 0.004725,
+      "false_allow_std": 0.001031
+    },
+    {
+      "flip_prob": 0.2,
+      "false_allow_mean": 0.007699,
+      "false_allow_std": 0.002117
+    },
+    {
+      "flip_prob": 0.4,
+      "false_allow_mean": 0.016726,
+      "false_allow_std": 0.00335
+    }
+  ],
+  "note": "OUTSIDE B_{d,\u03b5}: provenance corrupted at the z-constructor, before the typed interface. This delimits where the guarantee stops \u2014 the gate certifies within the typed interface, the constructor is in the TCB."
+}

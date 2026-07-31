@@ -1,0 +1,85 @@
+{
+  "workstream": "PLAN_2_RESCAN_BIS B1 \u2014 per-engine idiomaticity inventory",
+  "emits_rate": false,
+  "epistemic_placement": "below structural prevalence (A); above permits-in-principle. No prevalence number. Establishes the idiom is FIRST-CLASS/idiomatic in real engines, NOT that it is deployed at any rate.",
+  "summary": {
+    "n_engines": 7,
+    "first_class_yes": 4,
+    "first_class_partial": 3,
+    "first_class_no": 0,
+    "on_disk_verified": 6,
+    "public_docs": 1
+  },
+  "inventory": [
+    {
+      "engine": "DMN / FEEL decision table",
+      "kind": "OMG-standard decision table",
+      "first_class": "yes",
+      "construct": "<decisionTable>: a categorical <input> column selects, per <rule> row, the numeric unary-test threshold in a sibling numeric <input> column \u2014 \u03b8-by-category IS the table",
+      "shipped": "dmn-tck_tck/.../0087-chapter-11-example.dmn (DMN spec's own lending example: CreditScore/ApplicationRiskScore thresholds keyed by ExistingCustomer); kogito_examples/.../LoanEligibility.dmn (debt-ratio limit keyed by salary bracket)",
+      "evidence_tier": "on_disk_verified",
+      "s_typical": "subject_self_reported",
+      "note": "the idiom IS the textbook decision-table semantics \u2014 strongest expressibility evidence"
+    },
+    {
+      "engine": "GoRules ZEN / JDM",
+      "kind": "embeddable decision-table engine (B2 substrate)",
+      "first_class": "yes",
+      "construct": "JDM 'decisionTableNode': input columns (incl. a categorical/provenance key) \u2192 output columns; numeric threshold per row selected by the key column",
+      "shipped": "experiments/zen_engine_cwitness.py authored rule (loose/strict threshold keyed by a provenance field) \u2014 engine-verified C-witnesses, agreement 1.0 (RESULTS Experiment B2)",
+      "evidence_tier": "on_disk_verified",
+      "s_typical": "provenance_upstream",
+      "note": "zen-engine importable; our authored rule keys \u03b8 on an upstream-set field"
+    },
+    {
+      "engine": "Tazama (tazama-lf)",
+      "kind": "real-time AML/fraud engine (ISO 20022)",
+      "first_class": "yes",
+      "construct": "RuleConfig.config.bands: an ordered list of {lowerLimit, upperLimit} \u2192 subRuleRef; the numeric value is mapped to a discrete band by CONFIGURABLE thresholds (per typology)",
+      "shipped": "tazama-lf_rule-executer/src/helpers/determineOutcome.ts (the `bands` evaluator); bands are runtime rule-config, parameterized per typology/rule",
+      "evidence_tier": "on_disk_verified",
+      "s_typical": "typology",
+      "note": "thresholds are deployment config (not committed) \u2014 band CONSTRUCT is first-class & verified"
+    },
+    {
+      "engine": "Checkmarble (Marble)",
+      "kind": "open-source decisioning/AML engine",
+      "first_class": "yes",
+      "construct": "JSON rule AST (comparison nodes GreaterOrEqual/Less, IsInList, CustomListAccess) feeding a scenario score with per-scenario score review/block thresholds (score-banding)",
+      "shipped": "checkmarble/marble scenarios + custom lists (public docs; the vendored tree here is the docker deployment, not the Go engine \u2014 see RUNBOOK_REAL_AML_ENGINE.md for the live probe)",
+      "evidence_tier": "public_docs",
+      "s_typical": "mixed",
+      "note": "engine present as deployment; grammar from public docs \u2014 lower tier, not on-disk verified"
+    },
+    {
+      "engine": "Drools (DRL / decision tables)",
+      "kind": "production rule system",
+      "first_class": "partial",
+      "construct": "DRL LHS field constraint `Field(amount >= $theta)` with `$theta` bound from a config fact keyed on a categorical field; spreadsheet decision tables are first-class",
+      "shipped": "kogito_examples/.../*.drl (44 DRL files); Drools decision-table spreadsheets (public)",
+      "evidence_tier": "on_disk_verified",
+      "s_typical": "mixed",
+      "note": "general pattern-match facility expresses \u03b8(s); the spreadsheet decision table is dedicated"
+    },
+    {
+      "engine": "OPA / Rego",
+      "kind": "general policy engine",
+      "first_class": "partial",
+      "construct": "no dedicated threshold-by-category element, but `\u03b8(s)` via a function `threshold(s)` or a dict indexed by a discrete var `limits[channel]` compared to a numeric input",
+      "shipped": "experiments/opa_gate/policies/authored/ieee_fraud.rego (#9b authored rule; engine\u2194analytic agreement 1.0 on real IEEE-CIS, RESULTS Experiment 9b)",
+      "evidence_tier": "on_disk_verified",
+      "s_typical": "provenance_upstream",
+      "note": "idiom expressible & authored, but it is a general-purpose construct, not a first-class one"
+    },
+    {
+      "engine": "json-rules-engine / Jube",
+      "kind": "JSON fact-rule engine (AML/fraud)",
+      "first_class": "partial",
+      "construct": "operator (greaterThanInclusive/lessThan) whose `value` may be a FACT reference resolved from a categorical fact \u2014 i.e. the threshold is selected by another fact",
+      "shipped": "jube-home_aml-fraud-transaction-monitoring (392 greaterThan / 377 lessThan operators over facts; thresholds typically runtime-configured)",
+      "evidence_tier": "on_disk_verified",
+      "s_typical": "provenance_upstream",
+      "note": "value-as-fact-ref expresses \u03b8(s); no dedicated category\u2192threshold element"
+    }
+  ]
+}

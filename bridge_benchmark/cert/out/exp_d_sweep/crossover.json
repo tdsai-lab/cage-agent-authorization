@@ -1,0 +1,296 @@
+{
+  "tau": 0.9,
+  "eps": 0.1,
+  "sigma": 0.1,
+  "alpha_fwer": 0.001,
+  "primary_backend": "lipschitz",
+  "cost_blowup_threshold": 10.0,
+  "r_collapse_threshold": 0.05,
+  "smoothing_budget_model": "Lipschitz cert cost = |N_d| deterministic branch evals (no MC, no confidence budget); RS cost = |N_d|*n_mc. cost ratio = |N_d|/|N_1| for both. A hybrid product-noise smoothing cert would be O(1) in |N_d| -> hand-off rational once the branch count blows up.",
+  "backends": {
+    "lipschitz": {
+      "backend": "lipschitz",
+      "mean_N_by_d": {
+        "1": 12.0,
+        "2": 56.667,
+        "3": 118.667
+      },
+      "mean_R_allow_by_d": {
+        "1": 0.7733,
+        "2": 0.6978,
+        "3": 0.68
+      },
+      "mean_solve_ms_by_d": {
+        "1": 7.336,
+        "2": 7.696,
+        "3": 8.299
+      },
+      "enumeration_cost_ratio_vs_d1": {
+        "1": 1.0,
+        "2": 4.722,
+        "3": 9.889
+      },
+      "per_setting_cliff": [
+        {
+          "track": "opa:finance",
+          "x1_size": null,
+          "N_by_d": {
+            "1": 8.0,
+            "2": 24.0,
+            "3": 36.0
+          },
+          "cost_ratio_by_d": {
+            "1": 1.0,
+            "2": 3.0,
+            "3": 4.5
+          },
+          "R_allow_by_d": {
+            "1": 0.5867,
+            "2": 0.5067,
+            "3": 0.4533
+          },
+          "cost_cliff_d": null,
+          "utility_cliff_d": null,
+          "operational_cliff_d": null
+        },
+        {
+          "track": "synthetic",
+          "x1_size": 4,
+          "N_by_d": {
+            "1": 10.0,
+            "2": 37.0,
+            "3": 64.0
+          },
+          "cost_ratio_by_d": {
+            "1": 1.0,
+            "2": 3.7,
+            "3": 6.4
+          },
+          "R_allow_by_d": {
+            "1": 0.88,
+            "2": 0.7867,
+            "3": 0.7867
+          },
+          "cost_cliff_d": null,
+          "utility_cliff_d": null,
+          "operational_cliff_d": null
+        },
+        {
+          "track": "synthetic",
+          "x1_size": 8,
+          "N_by_d": {
+            "1": 18.0,
+            "2": 109.0,
+            "3": 256.0
+          },
+          "cost_ratio_by_d": {
+            "1": 1.0,
+            "2": 6.056,
+            "3": 14.222
+          },
+          "R_allow_by_d": {
+            "1": 0.8533,
+            "2": 0.8,
+            "3": 0.8
+          },
+          "cost_cliff_d": 3,
+          "utility_cliff_d": null,
+          "operational_cliff_d": 3
+        }
+      ],
+      "cost_cliff_d_global": null,
+      "utility_cliff_d_global": null,
+      "operational_cliff_d": 3,
+      "cliff_N_d": 118.667
+    },
+    "rs_ablation": {
+      "backend": "rs_ablation",
+      "mean_N_by_d": {
+        "1": 12.0,
+        "2": 56.667,
+        "3": 118.667
+      },
+      "mean_R_allow_by_d": {
+        "1": 0.2889,
+        "2": 0.1689,
+        "3": 0.1067
+      },
+      "mean_solve_ms_by_d": {
+        "1": 13.591,
+        "2": 62.328,
+        "3": 120.049
+      },
+      "enumeration_cost_ratio_vs_d1": {
+        "1": 1.0,
+        "2": 4.722,
+        "3": 9.889
+      },
+      "per_setting_cliff": [
+        {
+          "track": "opa:finance",
+          "x1_size": null,
+          "N_by_d": {
+            "1": 8.0,
+            "2": 24.0,
+            "3": 36.0
+          },
+          "cost_ratio_by_d": {
+            "1": 1.0,
+            "2": 3.0,
+            "3": 4.5
+          },
+          "R_allow_by_d": {
+            "1": 0.0533,
+            "2": 0.0,
+            "3": 0.0
+          },
+          "cost_cliff_d": null,
+          "utility_cliff_d": 2,
+          "operational_cliff_d": 2
+        },
+        {
+          "track": "synthetic",
+          "x1_size": 4,
+          "N_by_d": {
+            "1": 10.0,
+            "2": 37.0,
+            "3": 64.0
+          },
+          "cost_ratio_by_d": {
+            "1": 1.0,
+            "2": 3.7,
+            "3": 6.4
+          },
+          "R_allow_by_d": {
+            "1": 0.4267,
+            "2": 0.3467,
+            "3": 0.2267
+          },
+          "cost_cliff_d": null,
+          "utility_cliff_d": null,
+          "operational_cliff_d": null
+        },
+        {
+          "track": "synthetic",
+          "x1_size": 8,
+          "N_by_d": {
+            "1": 18.0,
+            "2": 109.0,
+            "3": 256.0
+          },
+          "cost_ratio_by_d": {
+            "1": 1.0,
+            "2": 6.056,
+            "3": 14.222
+          },
+          "R_allow_by_d": {
+            "1": 0.3867,
+            "2": 0.16,
+            "3": 0.0933
+          },
+          "cost_cliff_d": 3,
+          "utility_cliff_d": null,
+          "operational_cliff_d": 3
+        }
+      ],
+      "cost_cliff_d_global": null,
+      "utility_cliff_d_global": null,
+      "operational_cliff_d": 2,
+      "cliff_N_d": 56.667
+    }
+  },
+  "alpha_branch_artifact_note": "The RS ablation's R_allow(d) decays partly from a MEASUREMENT ARTIFACT: the FWER split alpha_branch = alpha_fwer/|N_d| shrinks as |N_d| grows, loosening each Clopper-Pearson lower bound and dragging R_allow toward 0 (e.g. OPA d=2 -> 0). The DETERMINISTIC Lipschitz backend has NO n_mc and NO alpha_branch, so its R_allow(d) decays only from the genuine min-over-more-branches effect and degrades more gracefully. Compare the two curves below.",
+  "mean_N_by_d": {
+    "1": 12.0,
+    "2": 56.667,
+    "3": 118.667
+  },
+  "mean_R_allow_by_d": {
+    "1": 0.7733,
+    "2": 0.6978,
+    "3": 0.68
+  },
+  "mean_solve_ms_by_d": {
+    "1": 7.336,
+    "2": 7.696,
+    "3": 8.299
+  },
+  "enumeration_cost_ratio_vs_d1": {
+    "1": 1.0,
+    "2": 4.722,
+    "3": 9.889
+  },
+  "per_setting_cliff": [
+    {
+      "track": "opa:finance",
+      "x1_size": null,
+      "N_by_d": {
+        "1": 8.0,
+        "2": 24.0,
+        "3": 36.0
+      },
+      "cost_ratio_by_d": {
+        "1": 1.0,
+        "2": 3.0,
+        "3": 4.5
+      },
+      "R_allow_by_d": {
+        "1": 0.5867,
+        "2": 0.5067,
+        "3": 0.4533
+      },
+      "cost_cliff_d": null,
+      "utility_cliff_d": null,
+      "operational_cliff_d": null
+    },
+    {
+      "track": "synthetic",
+      "x1_size": 4,
+      "N_by_d": {
+        "1": 10.0,
+        "2": 37.0,
+        "3": 64.0
+      },
+      "cost_ratio_by_d": {
+        "1": 1.0,
+        "2": 3.7,
+        "3": 6.4
+      },
+      "R_allow_by_d": {
+        "1": 0.88,
+        "2": 0.7867,
+        "3": 0.7867
+      },
+      "cost_cliff_d": null,
+      "utility_cliff_d": null,
+      "operational_cliff_d": null
+    },
+    {
+      "track": "synthetic",
+      "x1_size": 8,
+      "N_by_d": {
+        "1": 18.0,
+        "2": 109.0,
+        "3": 256.0
+      },
+      "cost_ratio_by_d": {
+        "1": 1.0,
+        "2": 6.056,
+        "3": 14.222
+      },
+      "R_allow_by_d": {
+        "1": 0.8533,
+        "2": 0.8,
+        "3": 0.8
+      },
+      "cost_cliff_d": 3,
+      "utility_cliff_d": null,
+      "operational_cliff_d": 3
+    }
+  ],
+  "cost_cliff_d": null,
+  "utility_cliff_d": null,
+  "operational_cliff_d": 3,
+  "cliff_N_d": 118.667,
+  "reasoning": "PRIMARY backend = deterministic 1-Lipschitz margin cert (min_{s' in N_d} h_theta > L*eps): no n_mc, no FWER alpha split. Enumeration cost grows linearly in |N_d|; a hybrid product-noise smoothing cert would be O(1) in |N_d|, so the hand-off becomes rational once |N_d| blows up (cost cliff) or certified utility collapses (utility cliff), whichever is earlier. BOTH backends are oracle-sound (cert_false_allow=0) at every d and both tracks. Both tracks use numeric-block scaling for the Lipschitz gate (synthetic fscale=4, OPA fscale=3 = the max fscale keeping cfa=0 at every d); fscale=1 was sound but over-conservative (OPA R~0.01) and, for synthetic, under-fit (cfa up to 0.33). |N_d| growth, cost(d) and the cliff are backend-agnostic. d=1 remains the MVP. The deterministic Lipschitz PRIMARY keeps far higher certified utility as d grows (R_allow ~0.8, near-flat) because it carries NO shrinking alpha_branch = alpha/|N_d| confidence budget; the RS ablation's R_allow(d) decays much faster, partly from that measurement artifact."
+}

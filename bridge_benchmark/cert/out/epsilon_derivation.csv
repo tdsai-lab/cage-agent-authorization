@@ -1,0 +1,10 @@
+pipeline,substrate,regime,n,d_budget,eps_p90,eps_p95,eps_p99,eps_max,frac_le_010
+fraud_risk,ieee_cis,none,6000,1,0.330,0.652,1.024,1.517,0.780
+fraud_risk,ieee_cis,integrity,6000,1,0.114,0.193,0.460,1.028,0.878
+fraud_risk,ieee_cis,integrity_plus_freshness,6000,1,0.070,0.078,0.099,0.191,0.990
+finance_compliance,financial_compliance,none,6000,1,0.399,0.692,1.084,1.452,0.580
+finance_compliance,financial_compliance,integrity,6000,1,0.276,0.322,0.403,0.575,0.637
+finance_compliance,financial_compliance,integrity_plus_freshness,6000,1,0.083,0.093,0.114,0.238,0.967
+alerting_monitoring,sre_monitoring,none,6000,1,0.407,0.742,1.095,1.512,0.575
+alerting_monitoring,sre_monitoring,integrity,6000,1,0.276,0.323,0.424,0.598,0.634
+alerting_monitoring,sre_monitoring,integrity_plus_freshness,6000,1,0.084,0.095,0.118,0.180,0.965

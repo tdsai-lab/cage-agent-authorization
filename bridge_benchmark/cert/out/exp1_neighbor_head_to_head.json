@@ -1,0 +1,178 @@
+{
+  "config": {
+    "n_records": 10000,
+    "n_train": 600,
+    "n_eval": 600,
+    "eps": 0.1,
+    "sigma": 0.1,
+    "tau": 0.9,
+    "n_mc": 800,
+    "alpha": 0.001,
+    "seeds": "0"
+  },
+  "n_witness_per_seed": [
+    356
+  ],
+  "n_witness_C_per_seed": [
+    110
+  ],
+  "n_eval_per_seed": [
+    600
+  ],
+  "witness_total": 356,
+  "witness_C_total": 110,
+  "eval_total": 600,
+  "witness_sets": {
+    "W_abc": "clean_safe \u2227 category\u2208{A,B,C} (broad exploit set)",
+    "W_c": "category==C (P[execute|C], joint-gap witnesses)"
+  },
+  "table": [
+    {
+      "row": "no_gate",
+      "cell": "baseline",
+      "attack_false_allow_mean": 1.0,
+      "attack_false_allow_std": 0.0,
+      "attack_false_allow_C_mean": 1.0,
+      "attack_false_allow_C_std": 0.0,
+      "clean_acc_mean": 0.805,
+      "clean_acc_std": 0.0,
+      "Rallow_mean": 1.0,
+      "Rallow_std": 0.0,
+      "cert_false_allow_mean": 0.7883
+    },
+    {
+      "row": "learned_point",
+      "cell": "implicit \u00d7 point",
+      "attack_false_allow_mean": 0.9916,
+      "attack_false_allow_std": 0.0,
+      "attack_false_allow_C_mean": 1.0,
+      "attack_false_allow_C_std": 0.0,
+      "clean_acc_mean": 0.9933,
+      "clean_acc_std": 0.0,
+      "Rallow_mean": 1.0,
+      "Rallow_std": 0.0,
+      "cert_false_allow_mean": 0.736
+    },
+    {
+      "row": "verified_point_predicate",
+      "cell": "explicit \u00d7 point (NEW)",
+      "attack_false_allow_mean": 1.0,
+      "attack_false_allow_std": 0.0,
+      "attack_false_allow_C_mean": 1.0,
+      "attack_false_allow_C_std": 0.0,
+      "clean_acc_mean": 1.0,
+      "clean_acc_std": 0.0,
+      "Rallow_mean": 1.0,
+      "Rallow_std": 0.0,
+      "cert_false_allow_mean": 0.7371
+    },
+    {
+      "row": "exact_rung1",
+      "cell": "explicit \u00d7 neighborhood",
+      "attack_false_allow_mean": 0.0,
+      "attack_false_allow_std": 0.0,
+      "attack_false_allow_C_mean": 0.0,
+      "attack_false_allow_C_std": 0.0,
+      "clean_acc_mean": 0.4067,
+      "clean_acc_std": 0.0,
+      "Rallow_mean": 1.0,
+      "Rallow_std": 0.0,
+      "cert_false_allow_mean": 0.0
+    },
+    {
+      "row": "certified_rs",
+      "cell": "implicit \u00d7 neighborhood",
+      "attack_false_allow_mean": 0.0,
+      "attack_false_allow_std": 0.0,
+      "attack_false_allow_C_mean": 0.0,
+      "attack_false_allow_C_std": 0.0,
+      "clean_acc_mean": 0.225,
+      "clean_acc_std": 0.0,
+      "Rallow_mean": 0.1417,
+      "Rallow_std": 0.0,
+      "cert_false_allow_mean": 0.0
+    },
+    {
+      "row": "certified_lip",
+      "cell": "implicit \u00d7 neighborhood",
+      "attack_false_allow_mean": 0.0028,
+      "attack_false_allow_std": 0.0,
+      "attack_false_allow_C_mean": 0.0091,
+      "attack_false_allow_C_std": 0.0,
+      "clean_acc_mean": 0.2917,
+      "clean_acc_std": 0.0,
+      "Rallow_mean": 0.4488,
+      "Rallow_std": 0.0,
+      "cert_false_allow_mean": 0.0172
+    }
+  ],
+  "correctness_invariants": {
+    "verified_point_eq_1": true,
+    "verified_point_C_eq_1": true,
+    "learned_le_verified": true,
+    "sound_rows_zero_afa": true,
+    "sound_rows_zero_afa_C": true,
+    "sound_rows_cert_false_allow_zero": true,
+    "lip_empirical_cert_false_allow": 0.0172
+  },
+  "per_seed": [
+    {
+      "n_eval": 600,
+      "n_witness": 356,
+      "witness_prevalence": 0.5933,
+      "n_witness_C": 110,
+      "witness_C_prevalence": 0.1833,
+      "category_dist": {
+        "R": 127,
+        "B": 126,
+        "C": 110,
+        "A": 120,
+        "U": 117
+      },
+      "rows": {
+        "no_gate": {
+          "attack_false_allow": 1.0,
+          "attack_false_allow_C": 1.0,
+          "clean_acc": 0.805,
+          "Rallow": 1.0,
+          "cert_false_allow": 0.7883333333333333
+        },
+        "learned_point": {
+          "attack_false_allow": 0.9915730337078652,
+          "attack_false_allow_C": 1.0,
+          "clean_acc": 0.9933333333333333,
+          "Rallow": 1.0,
+          "cert_false_allow": 0.735966735966736
+        },
+        "verified_point_predicate": {
+          "attack_false_allow": 1.0,
+          "attack_false_allow_C": 1.0,
+          "clean_acc": 1.0,
+          "Rallow": 1.0,
+          "cert_false_allow": 0.7370600414078675
+        },
+        "exact_rung1": {
+          "attack_false_allow": 0.0,
+          "attack_false_allow_C": 0.0,
+          "clean_acc": 0.4066666666666667,
+          "Rallow": 1.0,
+          "cert_false_allow": 0.0
+        },
+        "certified_rs": {
+          "attack_false_allow": 0.0,
+          "attack_false_allow_C": 0.0,
+          "clean_acc": 0.225,
+          "Rallow": 0.14173228346456693,
+          "cert_false_allow": 0.0
+        },
+        "certified_lip": {
+          "attack_false_allow": 0.0028089887640449437,
+          "attack_false_allow_C": 0.00909090909090909,
+          "clean_acc": 0.2916666666666667,
+          "Rallow": 0.44881889763779526,
+          "cert_false_allow": 0.017241379310344827
+        }
+      }
+    }
+  ]
+}

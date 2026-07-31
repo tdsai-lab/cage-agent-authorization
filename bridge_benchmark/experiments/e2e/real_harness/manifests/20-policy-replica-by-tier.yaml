@@ -1,0 +1,40 @@
+# The provenance-conditioned admission policy: a Deployment's replica count must stay under a cap that
+# depends on the namespace TIER, resolved from the tier-registry ConfigMap (a separate data source) via
+# context.apiCall -- exactly the `x |> theta(s)` idiom, with `s` = tier (upstream-set, not in the request).
+#
+# This is the deployed admission control. It TRUSTS the served binding: if the registry is stale (serves
+# `lax`, cap 10), it admits an over-strict-cap workload -> the real side effect. Sound only if the served
+# binding is fresh.
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: replica-cap-by-tier
+spec:
+  validationFailureAction: Enforce
+  background: false
+  rules:
+    - name: enforce-replica-cap-by-tier
+      match:
+        any:
+          - resources:
+              kinds: [Deployment]
+              namespaces: [payments]
+      context:
+        - name: registry
+          configMap:
+            name: tier-registry
+            namespace: cage-system
+        - name: cap
+          variable:
+            jmesPath: 'to_number(registry.data.cap)'
+            default: 3
+      validate:
+        message: >-
+          replicas {{ request.object.spec.replicas }} exceed the cap {{ cap }} for tier
+          '{{ registry.data.tier }}' resolved from the tier-registry.
+        deny:
+          conditions:
+            any:
+              - key: '{{ request.object.spec.replicas }}'
+                operator: GreaterThan
+                value: '{{ cap }}'

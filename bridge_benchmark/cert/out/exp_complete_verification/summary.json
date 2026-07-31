@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "eps": 0.1,
+    "sigma": 0.1,
+    "tau": 0.9,
+    "rs_mc": 10000,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "domains": [
+      "finance",
+      "sre",
+      "ops"
+    ],
+    "per_dim": 8,
+    "cv_cap": 120,
+    "do_lip": true,
+    "max_port_diff": 8.470329472543003e-22,
+    "validation_agreement": 1.0,
+    "backend": "milp_complete_verification",
+    "note": "alpha_beta_crown_unavailable"
+  },
+  "summary": [
+    {
+      "domain": "finance",
+      "backend": "complete_verif",
+      "R_allow_mean": 1.0,
+      "R_allow_std": 0.0,
+      "cert_false_allow": 0.0,
+      "mean_solve_ms": 1777.639,
+      "polytope_slack": 1.25488,
+      "mean_branches": 9.0,
+      "n_eval_total": 360
+    },
+    {
+      "domain": "finance",
+      "backend": "randomized_smoothing",
+      "R_allow_mean": 0.317,
+      "R_allow_std": 0.117,
+      "cert_false_allow": 0.0,
+      "mean_solve_ms": 61.077,
+      "polytope_slack": 1.25488,
+      "mean_branches": 9.0,
+      "n_eval_total": 360
+    },
+    {
+      "domain": "finance",
+      "backend": "lipschitz",
+      "R_allow_mean": 0.3235,
+      "R_allow_std": 0.0994,
+      "cert_false_allow": 0.0,
+      "mean_solve_ms": 7.152,
+      "polytope_slack": 1.25488,
+      "mean_branches": 9.0,
+      "n_eval_total": 360
+    },
+    {
+      "domain": "sre",
+      "backend": "complete_verif",
+      "R_allow_mean": 1.0,
+      "R_allow_std": 0.0,
+      "cert_false_allow": 0.0,
+      "mean_solve_ms": 1630.798,
+      "polytope_slack": 1.25488,
+      "mean_branches": 9.0,
+      "n_eval_total": 360
+    },
+    {
+      "domain": "sre",
+      "backend": "randomized_smoothing",
+      "R_allow_mean": 0.3332,
+      "R_allow_std": 0.149,
+      "cert_false_allow": 0.0,
+      "mean_solve_ms": 83.764,
+      "polytope_slack": 1.25488,
+      "mean_branches": 9.0,
+      "n_eval_total": 360
+    },
+    {
+      "domain": "sre",
+      "backend": "lipschitz",
+      "R_allow_mean": 0.3461,
+      "R_allow_std": 0.1604,
+      "cert_false_allow": 0.0,
+      "mean_solve_ms": 11.317,
+      "polytope_slack": 1.25488,
+      "mean_branches": 9.0,
+      "n_eval_total": 360
+    },
+    {
+      "domain": "ops",
+      "backend": "complete_verif",
+      "R_allow_mean": 1.0,
+      "R_allow_std": 0.0,
+      "cert_false_allow": 0.0085,
+      "mean_solve_ms": 1763.205,
+      "polytope_slack": 1.25488,
+      "mean_branches": 9.0,
+      "n_eval_total": 360
+    },
+    {
+      "domain": "ops",
+      "backend": "randomized_smoothing",
+      "R_allow_mean": 0.342,
+      "R_allow_std": 0.1372,
+      "cert_false_allow": 0.0,
+      "mean_solve_ms": 132.001,
+      "polytope_slack": 1.25488,
+      "mean_branches": 9.0,
+      "n_eval_total": 360
+    },
+    {
+      "domain": "ops",
+      "backend": "lipschitz",
+      "R_allow_mean": 0.3677,
+      "R_allow_std": 0.0954,
+      "cert_false_allow": 0.0,
+      "mean_solve_ms": 16.594,
+      "polytope_slack": 1.25488,
+      "mean_branches": 9.0,
+      "n_eval_total": 360
+    }
+  ]
+}

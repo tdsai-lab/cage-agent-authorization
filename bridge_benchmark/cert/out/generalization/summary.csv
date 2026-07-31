@@ -1,0 +1,4 @@
+condition,n,clean_acc,R_allow,C_allow,U_allow,cert_false_allow,learned_adaptive_false_allow,certified_adaptive_false_allow
+in_distribution,180,1.0,0.4333,0.0,0.0,0.0,0.0167,0.0
+held_out_threshold,180,0.95,0.5667,0.0,0.0,0.0,0.475,0.0
+held_out_tool,180,1.0,0.2333,0.0,0.0,0.0,0.0917,0.0

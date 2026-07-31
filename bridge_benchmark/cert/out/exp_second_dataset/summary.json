@@ -1,0 +1,330 @@
+{
+  "config": {
+    "dataset": "nab",
+    "source": "nab_numenta_anomaly_benchmark",
+    "license": "MIT",
+    "n": 6000,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "eps": 0.1,
+    "d": 1,
+    "delta": 0.08,
+    "theta_quantile": 0.7,
+    "sigma": 0.1,
+    "tau": 0.9,
+    "n_mc": 2000,
+    "alpha": 0.001,
+    "n_cert": 60,
+    "quick": false,
+    "n_real_rows": 58370,
+    "n_machines": 11,
+    "primary_certified_backend": "lipschitz_orthogonal",
+    "lipschitz_backend_available": true,
+    "lipschitz_import_error": "",
+    "lip_fscale": 4.0,
+    "lip_cert_L_mult": 3.0,
+    "lip_certified_L_raw": 4.0,
+    "lip_cert_L_used": 12.0,
+    "lip_variant": "robust-aug",
+    "lip_epochs": 2000,
+    "lip_n_aug": 8,
+    "lip_lam_margin": 5.0,
+    "lip_gamma": 0.8
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "theta_base": 0.333911,
+      "n_natural": 29184,
+      "n_balanced": 6000,
+      "C_pct": 8.3368,
+      "R_pct": 46.1006,
+      "A_pct": 5.9416,
+      "B_pct": 15.5633,
+      "U_pct": 24.0577,
+      "clean_acc": 0.83,
+      "cert_false_allow": 0.0,
+      "R_allow": 1.0,
+      "C_allow": 0.0,
+      "U_allow": 0.0,
+      "abstention_rate": 0.8,
+      "naive_C_falseallow": 1.0,
+      "backend_primary": "lipschitz",
+      "lip": {
+        "available": true,
+        "clean_acc": 0.83,
+        "point_false_allow": 0.0,
+        "empirical_lipschitz_feat": 0.3999,
+        "fscale": 4.0,
+        "certified_L_raw": 4.0,
+        "cert_L_used": 12.0,
+        "backend": "orthogonium",
+        "variant": "robust-aug",
+        "epochs": 2000,
+        "R_allow": 1.0,
+        "C_allow": 0.0,
+        "U_allow": 0.0,
+        "cert_false_allow": 0.0,
+        "abstention_rate": 0.8
+      },
+      "rs": {
+        "R_allow": 1.0,
+        "C_allow": 0.0,
+        "U_allow": 0.0,
+        "cert_false_allow": 0.0,
+        "abstention_rate": 0.8,
+        "clean_acc": 0.9975
+      },
+      "exact": {
+        "R_allow": 1.0,
+        "C_allow": 0.0,
+        "U_allow": 0.0,
+        "cert_false_allow": 0.0,
+        "abstention_rate": 0.8
+      },
+      "n_c_witness": 200,
+      "balanced_category_counts": {
+        "A": 1200,
+        "B": 1200,
+        "C": 1200,
+        "R": 1200,
+        "U": 1200
+      },
+      "runtime_seconds": 114.0
+    },
+    {
+      "seed": 1,
+      "theta_base": 0.33392,
+      "n_natural": 29186,
+      "n_balanced": 6000,
+      "C_pct": 11.1629,
+      "R_pct": 46.0974,
+      "A_pct": 7.9182,
+      "B_pct": 12.7424,
+      "U_pct": 22.0791,
+      "clean_acc": 0.8458,
+      "cert_false_allow": 0.0,
+      "R_allow": 1.0,
+      "C_allow": 0.0,
+      "U_allow": 0.0,
+      "abstention_rate": 0.8,
+      "naive_C_falseallow": 1.0,
+      "backend_primary": "lipschitz",
+      "lip": {
+        "available": true,
+        "clean_acc": 0.8458,
+        "point_false_allow": 0.0,
+        "empirical_lipschitz_feat": 0.454,
+        "fscale": 4.0,
+        "certified_L_raw": 4.0,
+        "cert_L_used": 12.0,
+        "backend": "orthogonium",
+        "variant": "robust-aug",
+        "epochs": 2000,
+        "R_allow": 1.0,
+        "C_allow": 0.0,
+        "U_allow": 0.0,
+        "cert_false_allow": 0.0,
+        "abstention_rate": 0.8
+      },
+      "rs": {
+        "R_allow": 1.0,
+        "C_allow": 0.0,
+        "U_allow": 0.0,
+        "cert_false_allow": 0.0,
+        "abstention_rate": 0.8,
+        "clean_acc": 0.9992
+      },
+      "exact": {
+        "R_allow": 1.0,
+        "C_allow": 0.0,
+        "U_allow": 0.0,
+        "cert_false_allow": 0.0,
+        "abstention_rate": 0.8
+      },
+      "n_c_witness": 200,
+      "balanced_category_counts": {
+        "A": 1200,
+        "B": 1200,
+        "C": 1200,
+        "R": 1200,
+        "U": 1200
+      },
+      "runtime_seconds": 112.1
+    },
+    {
+      "seed": 2,
+      "theta_base": 0.33343,
+      "n_natural": 29186,
+      "n_balanced": 6000,
+      "C_pct": 13.2358,
+      "R_pct": 46.0735,
+      "A_pct": 9.4669,
+      "B_pct": 10.6901,
+      "U_pct": 20.5338,
+      "clean_acc": 0.8167,
+      "cert_false_allow": 0.0,
+      "R_allow": 1.0,
+      "C_allow": 0.0,
+      "U_allow": 0.0,
+      "abstention_rate": 0.8,
+      "naive_C_falseallow": 1.0,
+      "backend_primary": "lipschitz",
+      "lip": {
+        "available": true,
+        "clean_acc": 0.8167,
+        "point_false_allow": 0.0,
+        "empirical_lipschitz_feat": 0.4717,
+        "fscale": 4.0,
+        "certified_L_raw": 4.0,
+        "cert_L_used": 12.0,
+        "backend": "orthogonium",
+        "variant": "robust-aug",
+        "epochs": 2000,
+        "R_allow": 1.0,
+        "C_allow": 0.0,
+        "U_allow": 0.0,
+        "cert_false_allow": 0.0,
+        "abstention_rate": 0.8
+      },
+      "rs": {
+        "R_allow": 1.0,
+        "C_allow": 0.0,
+        "U_allow": 0.0,
+        "cert_false_allow": 0.0,
+        "abstention_rate": 0.8,
+        "clean_acc": 1.0
+      },
+      "exact": {
+        "R_allow": 1.0,
+        "C_allow": 0.0,
+        "U_allow": 0.0,
+        "cert_false_allow": 0.0,
+        "abstention_rate": 0.8
+      },
+      "n_c_witness": 200,
+      "balanced_category_counts": {
+        "A": 1200,
+        "B": 1200,
+        "C": 1200,
+        "R": 1200,
+        "U": 1200
+      },
+      "runtime_seconds": 117.3
+    }
+  ],
+  "mean_std": {
+    "C_pct": {
+      "mean": 10.9118,
+      "std": 2.0079
+    },
+    "R_pct": {
+      "mean": 46.0905,
+      "std": 0.0121
+    },
+    "A_pct": {
+      "mean": 7.7756,
+      "std": 1.4427
+    },
+    "B_pct": {
+      "mean": 12.9986,
+      "std": 1.9977
+    },
+    "U_pct": {
+      "mean": 22.2235,
+      "std": 1.4422
+    },
+    "naive_C_falseallow": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "n_c_witness": {
+      "mean": 200.0,
+      "std": 0.0
+    }
+  },
+  "mean_std_by_backend": {
+    "lipschitz_primary": {
+      "clean_acc": {
+        "mean": 0.8308,
+        "std": 0.0119
+      },
+      "cert_false_allow": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "R_allow": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "C_allow": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "U_allow": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abstention_rate": {
+        "mean": 0.8,
+        "std": 0.0
+      }
+    },
+    "smoothing_ablation": {
+      "clean_acc": {
+        "mean": 0.9989,
+        "std": 0.001
+      },
+      "cert_false_allow": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "R_allow": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "C_allow": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "U_allow": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abstention_rate": {
+        "mean": 0.8,
+        "std": 0.0
+      }
+    },
+    "exact_ceiling": {
+      "clean_acc": {
+        "mean": NaN,
+        "std": 0.0
+      },
+      "cert_false_allow": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "R_allow": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "C_allow": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "U_allow": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abstention_rate": {
+        "mean": 0.8,
+        "std": 0.0
+      }
+    }
+  },
+  "n_c_witnesses_total": 600
+}

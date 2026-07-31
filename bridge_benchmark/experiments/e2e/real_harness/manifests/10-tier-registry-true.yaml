@@ -1,0 +1,11 @@
+# The TRUE (fresh) tier binding for `payments`: tier `strict`, cap 3. Applying this makes the deployed
+# admission controller reject the 6-replica C-witness -- i.e. what SHOULD happen absent the stale-cache
+# fault. Used to show the oracle/ground-truth verdict and that the certified gate matches it.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tier-registry
+  namespace: cage-system
+data:
+  tier: "strict"
+  cap: "3"

@@ -1,0 +1,2 @@
+source,policy_family,author,policy_provenance,files_scanned,parsed_policies,validated_families,validated_instances,categorical_field,numeric_field,thresholds,delta_max,continuous_channel_quality,manual_review_verdict
+Azure built-in policy,Key Vault key size,Microsoft,third_party_logic_reimplemented,3,3,1,7,keyType,keySize,128/192/256/512/2048/3072/4096,3968,quantized,validated T1

@@ -1,0 +1,13 @@
+policy_family,policy_provenance,sampling_mode,epsilon,sigma,tau,M,R_allow,learned_C_allow,marginal_C_falseallow,certified_C_allow,C_allow,U_allow,cert_false_allow
+psd2_low_value,regulatory_grounded_authored_policy,natural,0.03,0.1,0.9,2000,0.5125,1.0,1.0,0.0,0.0,0.0,0.0
+psd2_low_value,regulatory_grounded_authored_policy,natural,0.1,0.1,0.9,2000,0.3375,1.0,1.0,0.0,0.0,0.0,0.0
+psd2_low_value,regulatory_grounded_authored_policy,boundary,0.03,0.1,0.9,2000,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+psd2_low_value,regulatory_grounded_authored_policy,boundary,0.1,0.1,0.9,2000,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+psd2_tra,regulatory_grounded_authored_policy,natural,0.03,0.1,0.9,2000,0.4375,1.0,1.0,0.0,0.0,0.0,0.0
+psd2_tra,regulatory_grounded_authored_policy,natural,0.1,0.1,0.9,2000,0.1951,1.0,1.0,0.0,0.0,0.0,0.0
+psd2_tra,regulatory_grounded_authored_policy,boundary,0.03,0.1,0.9,2000,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+psd2_tra,regulatory_grounded_authored_policy,boundary,0.1,0.1,0.9,2000,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+aml_ctr,regulatory_grounded_authored_policy,natural,0.03,0.1,0.9,2000,0.55,1.0,1.0,0.0,0.0,0.0,0.0
+aml_ctr,regulatory_grounded_authored_policy,natural,0.1,0.1,0.9,2000,0.3375,1.0,1.0,0.0,0.0,0.0,0.0
+aml_ctr,regulatory_grounded_authored_policy,boundary,0.03,0.1,0.9,2000,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+aml_ctr,regulatory_grounded_authored_policy,boundary,0.1,0.1,0.9,2000,0.0,1.0,1.0,0.0,0.0,0.0,0.0

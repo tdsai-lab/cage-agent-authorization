@@ -1,0 +1,78 @@
+{
+  "source_repo": "open-policy-agent/gatekeeper-library",
+  "commit": "6364bd191edb",
+  "license": "Apache-2.0",
+  "fetched_via": "raw.githubusercontent.com",
+  "policies": [
+    {
+      "name": "allowedrepos",
+      "package": "k8sallowedrepos",
+      "kind": "discrete (image prefix)",
+      "source_url": "https://raw.githubusercontent.com/open-policy-agent/gatekeeper-library/6364bd191edb/library/general/allowedrepos/template.yaml",
+      "rego_sha256_16": "1ac9d51e622f2e31",
+      "libs": [],
+      "constraint_kind": "K8sAllowedRepos"
+    },
+    {
+      "name": "requiredlabels",
+      "package": "k8srequiredlabels",
+      "kind": "discrete (labels/regex)",
+      "source_url": "https://raw.githubusercontent.com/open-policy-agent/gatekeeper-library/6364bd191edb/library/general/requiredlabels/template.yaml",
+      "rego_sha256_16": "208d2f1d44ce05be",
+      "libs": [],
+      "constraint_kind": "K8sRequiredLabels"
+    },
+    {
+      "name": "containerlimits",
+      "package": "k8scontainerlimits",
+      "kind": "numeric (cpu/memory)",
+      "source_url": "https://raw.githubusercontent.com/open-policy-agent/gatekeeper-library/6364bd191edb/library/general/containerlimits/template.yaml",
+      "rego_sha256_16": "4c02b8b689d7fc6e",
+      "libs": [
+        "lib_0.rego"
+      ],
+      "constraint_kind": "K8sContainerLimits"
+    },
+    {
+      "name": "hostnetworkports",
+      "package": "k8spsphostnetworkingports",
+      "kind": "numeric/discrete (hostPort)",
+      "source_url": "https://raw.githubusercontent.com/open-policy-agent/gatekeeper-library/6364bd191edb/library/pod-security-policy/host-network-ports/template.yaml",
+      "rego_sha256_16": "b33e9f13620080f9",
+      "libs": [
+        "lib_0.rego",
+        "lib_1.rego"
+      ],
+      "constraint_kind": "K8sPSPHostNetworkingPorts"
+    },
+    {
+      "name": "privileged",
+      "package": "k8spspprivileged",
+      "kind": "discrete (privileged)",
+      "source_url": "https://raw.githubusercontent.com/open-policy-agent/gatekeeper-library/6364bd191edb/library/pod-security-policy/privileged-containers/template.yaml",
+      "rego_sha256_16": "4afcb7e7d50fc600",
+      "libs": [
+        "lib_0.rego",
+        "lib_1.rego"
+      ],
+      "constraint_kind": "K8sPSPPrivilegedContainer"
+    }
+  ],
+  "license_redistribution_check": {
+    "license": "Apache-2.0",
+    "redistribution": "permitted (vendored unmodified template.yaml + extracted policy.rego; attribution + source_url/commit recorded above)",
+    "considered_but_excluded": {
+      "hashicorp_sentinel": "HashiCorp BSL-1.1 — redistribution of Sentinel policies is restricted; NOT vendored. If used, evaluate logic out-of-tree and record only hashes/links, not the policy text.",
+      "psd2_sca_rts": "EU regulatory text (PSD2 SCA RTS Art. 16 low-value exemptions): the 5-transaction / EUR 100 cumulative VELOCITY COUNTERS are discrete INTEGER fields sitting next to the continuous amount — a documented hybrid discrete-continuous structure worth a dedicated track; not yet vendored."
+    }
+  },
+  "normalization_constants": {
+    "doc": "NEW_EXPS_8 gap 3 — normalization is derived from the documented field ranges in the policy/operational source and recorded here so the implied Delta/eps is auditable. eps lives in this normalized space.",
+    "k8s_gatekeeper": {"cpu_cap_millicores": 2000.0, "mem_cap_mib": 4096.0,
+      "policy_limits": {"containerlimits_cpu_m": 1000, "containerlimits_mem_mib": 2048, "hostport_max": 0}},
+    "authored_rego": {"policy_field_range": [0.20, 0.80], "unit": "normalized_[0,1]",
+      "note": "risk_score/signal/login_risk are already in [0,1]; Delta is the threshold gap between provenance regimes (base/adj dicts), reported per-domain in opa_gate_results.* as min_delta and min_delta_over_eps."}
+  },
+  "discrete_neighborhood_registry": "discrete_neighborhoods.json (frozen, mechanism-tagged; k8s_gatekeeper edges: registry/owner/privileged/hostport; env EXCLUDED — no TM2 mechanism). See OPA_PREREGISTRATION.md.",
+  "idiom_detector": "methodology.has_category_conditioned_threshold — funnel idiom_rate over this corpus = 0/10 (no provenance-conditioned numeric threshold)."
+}

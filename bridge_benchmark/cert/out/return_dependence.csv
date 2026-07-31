@@ -1,0 +1,4 @@
+domain,n_records,safe_rate,rho_matched,rho_same_tool,rho_tool_swap_same_x1,rho_same_categorical_context,pre_return_majority_error,n_pairs
+finance_compliance,20000,0.6595,0.4557,0.3745,0.4668,0.4535,0.3405,10000
+sre_monitoring,20000,0.6843,0.4253,0.4006,0.4395,0.4228,0.3157,10000
+ops_security,20000,0.6704,0.4401,0.3816,0.4639,0.4332,0.3296,10000

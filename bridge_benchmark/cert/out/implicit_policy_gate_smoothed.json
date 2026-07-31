@@ -1,0 +1,22 @@
+{
+  "backend": "smoothed",
+  "n_train": 7000,
+  "n_eval_fraud": 68,
+  "n_eval_safe": 600,
+  "sigma": 0.1,
+  "eps": 0.1,
+  "tau": 0.9,
+  "n_mc": 1000,
+  "gate_auc": 0.7191,
+  "gate_acc": 0.959,
+  "point_false_allow_clean": 0.8088,
+  "point_false_allow_attacked": 0.9706,
+  "point_matched_thr": 0.9993,
+  "point_matched_false_allow_clean": 0.1176,
+  "point_matched_false_allow_attacked": 0.4853,
+  "point_matched_allow_rate_safe": 0.4033,
+  "cert_false_allow": 0.0441,
+  "cert_allow_rate_safe": 0.4033,
+  "point_allow_rate_safe": 0.9867,
+  "exact_marginal_certificate": "UNDEFINED (no executable predicate to enumerate B_{1,eps})"
+}

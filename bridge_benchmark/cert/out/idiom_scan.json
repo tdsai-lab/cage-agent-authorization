@@ -1,0 +1,66 @@
+{
+  "prereg": {
+    "detector_sha256": "4620bb6be4d8911be5c8dd63e83fef770280e86f57a07040045b7263925c23a3",
+    "idiom_predicate": "op(f_num, theta) with theta=theta(s); f_num a numeric INPUT ref; theta NON-scalar selected by a DISCRETE key s (function call / dict-index-by-variable / conditional keyed on a discrete field); op in {<,<=,>,>=}; s has >=2 distinct threshold values.",
+    "sampling": "all policy files matching the language glob (kyverno: kind in {ClusterPolicy,Policy})",
+    "funnel": "Pr[C|corpus] = idiom_rate * Pr[C|idiom]; Pr[C|idiom]~1 for continuous theta",
+    "corpora": [
+      {
+        "name": "gatekeeper_library_NULLCTRL",
+        "source": "open-policy-agent/gatekeeper-library (vendored)",
+        "language": "rego",
+        "commit": "ebf08c474209",
+        "files_scanned": 10
+      },
+      {
+        "name": "kyverno_policies",
+        "source": "github.com/kyverno/policies",
+        "language": "kyverno",
+        "commit": "76be98a25d49",
+        "files_scanned": 1188
+      },
+      {
+        "name": "cloud_custodian",
+        "source": "github.com/cloud-custodian/cloud-custodian",
+        "language": "cloud_custodian",
+        "commit": "726657d593fa",
+        "files_scanned": 226
+      }
+    ]
+  },
+  "prereg_hash": "9cf6325dadd5f5e0",
+  "decision": "NULL",
+  "null_control_reproduced": true,
+  "results": [
+    {
+      "corpus": "gatekeeper_library_NULLCTRL",
+      "language": "rego",
+      "files_scanned": 10,
+      "files_with_numeric_threshold": 0,
+      "files_with_idiom": 0,
+      "idiom_rate": 0.0,
+      "Pr_C_given_corpus_continuous": 0.0,
+      "hits": []
+    },
+    {
+      "corpus": "kyverno_policies",
+      "language": "kyverno",
+      "files_scanned": 1188,
+      "files_with_numeric_threshold": 37,
+      "files_with_idiom": 0,
+      "idiom_rate": 0.0,
+      "Pr_C_given_corpus_continuous": 0.0,
+      "hits": []
+    },
+    {
+      "corpus": "cloud_custodian",
+      "language": "cloud_custodian",
+      "files_scanned": 226,
+      "files_with_numeric_threshold": 2,
+      "files_with_idiom": 0,
+      "idiom_rate": 0.0,
+      "Pr_C_given_corpus_continuous": 0.0,
+      "hits": []
+    }
+  ]
+}

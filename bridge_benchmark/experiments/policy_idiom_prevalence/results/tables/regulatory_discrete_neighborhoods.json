@@ -1,0 +1,36 @@
+{
+  "_doc": "FROZEN, mechanism-tagged discrete neighborhoods for the PSD2/AML regulatory-grounded policies (Experiment 2). Only PLAUSIBLE categorical binding confusions are registered as edges; arbitrary category swaps are NOT allowed. Every edge carries a `mechanism` and `allowed=true`. Frozen before the oracle runs. The numeric/continuous channel is the amount; these edges are the d=1 discrete moves N_1(s).",
+  "psd2_low_value": {
+    "payment_channel": [
+      {"edge": ["remote", "contactless"], "mechanism": "channel binding ambiguity (POS vs CNP route mislabelled)", "allowed": true}
+    ],
+    "customer_risk_tier": [
+      {"edge": ["low", "medium"], "mechanism": "risk-tier binding ambiguity (stale risk score)", "allowed": true},
+      {"edge": ["medium", "high"], "mechanism": "risk-tier binding ambiguity (stale risk score)", "allowed": true}
+    ]
+  },
+  "psd2_tra": {
+    "fraud_rate_tier": [
+      {"edge": ["tier_1", "tier_2"], "mechanism": "fraud-rate-band binding ambiguity (rolling-window recompute)", "allowed": true},
+      {"edge": ["tier_2", "tier_3"], "mechanism": "fraud-rate-band binding ambiguity (rolling-window recompute)", "allowed": true}
+    ],
+    "merchant_category": [
+      {"edge": ["low_risk", "standard"], "mechanism": "MCC binding ambiguity (merchant-category remap)", "allowed": true},
+      {"edge": ["standard", "high_risk"], "mechanism": "MCC binding ambiguity (merchant-category remap)", "allowed": true}
+    ]
+  },
+  "aml_ctr": {
+    "source_type": [
+      {"edge": ["cash", "wire"], "mechanism": "instrument binding ambiguity (cash vs wire mis-typed)", "allowed": true},
+      {"edge": ["wire", "card"], "mechanism": "instrument binding ambiguity (rail mis-typed)", "allowed": true}
+    ],
+    "customer_risk_tier": [
+      {"edge": ["low", "medium"], "mechanism": "risk-tier binding ambiguity (stale KYC tier)", "allowed": true},
+      {"edge": ["medium", "high"], "mechanism": "risk-tier binding ambiguity (stale KYC tier)", "allowed": true}
+    ]
+  },
+  "excluded": {
+    "aml_ctr.jurisdiction": "EU/JP/other excluded — thresholds not source-locked (see aml_jurisdictional_thresholds.md); jurisdiction fixed at US.",
+    "note": "No edge without a mechanism is allowed; non-adjacent swaps (e.g. tier_1<->tier_3) are intentionally NOT registered."
+  }
+}

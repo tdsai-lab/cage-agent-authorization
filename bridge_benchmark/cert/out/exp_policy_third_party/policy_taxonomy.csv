@@ -1,0 +1,673 @@
+policy_id,source,path,idiom,has_numeric_comparison,has_conditioned_threshold,n_numeric_fields,opa_executable,notes
+gatekeeper_library:policy.rego,third_party,bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/allowedrepos/policy.rego,unknown_or_unsupported,False,False,5,True,"parse_error:opa parse failed: {
+  ""errors"": [
+    {
+      ""message"": ""`if` keyword is required before rule body"",
+      ""code"": ""rego_parse_error"",
+      ""location"": {
+        ""file"": ""bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/allowedrepos/policy.rego"",
+        ""row"": 3,
+        ""col"": 1
+      }
+    },
+    {
+      ""message"": ""`contains` keyword is re"
+gatekeeper_library:lib_0.rego,third_party,bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/containerlimits/lib_0.rego,unknown_or_unsupported,False,False,0,True,"parse_error:opa parse failed: {
+  ""errors"": [
+    {
+      ""message"": ""`if` keyword is required before function body"",
+      ""code"": ""rego_parse_error"",
+      ""location"": {
+        ""file"": ""bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/containerlimits/lib_0.rego"",
+        ""row"": 3,
+        ""col"": 1
+      }
+    },
+    {
+      ""message"": ""`if` keyword is re"
+gatekeeper_library:policy.rego,third_party,bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/containerlimits/policy.rego,unknown_or_unsupported,False,False,6,True,"parse_error:opa parse failed: {
+  ""errors"": [
+    {
+      ""message"": ""`if` keyword is required before function body"",
+      ""code"": ""rego_parse_error"",
+      ""location"": {
+        ""file"": ""bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/containerlimits/policy.rego"",
+        ""row"": 5,
+        ""col"": 1
+      }
+    },
+    {
+      ""message"": ""`if` keyword is r"
+gatekeeper_library:lib_0.rego,third_party,bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/hostnetworkports/lib_0.rego,unknown_or_unsupported,False,False,0,True,"parse_error:opa parse failed: {
+  ""errors"": [
+    {
+      ""message"": ""`if` keyword is required before function body"",
+      ""code"": ""rego_parse_error"",
+      ""location"": {
+        ""file"": ""bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/hostnetworkports/lib_0.rego"",
+        ""row"": 3,
+        ""col"": 1
+      }
+    }
+  ]
+}
+"
+gatekeeper_library:lib_1.rego,third_party,bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/hostnetworkports/lib_1.rego,unknown_or_unsupported,False,False,0,True,"parse_error:opa parse failed: {
+  ""errors"": [
+    {
+      ""message"": ""`if` keyword is required before function body"",
+      ""code"": ""rego_parse_error"",
+      ""location"": {
+        ""file"": ""bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/hostnetworkports/lib_1.rego"",
+        ""row"": 3,
+        ""col"": 1
+      }
+    },
+    {
+      ""message"": ""`if` keyword is r"
+gatekeeper_library:policy.rego,third_party,bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/hostnetworkports/policy.rego,unknown_or_unsupported,False,False,1,True,"parse_error:opa parse failed: {
+  ""errors"": [
+    {
+      ""message"": ""`if` keyword is required before rule body"",
+      ""code"": ""rego_parse_error"",
+      ""location"": {
+        ""file"": ""bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/hostnetworkports/policy.rego"",
+        ""row"": 6,
+        ""col"": 1
+      }
+    },
+    {
+      ""message"": ""`contains` keyword i"
+gatekeeper_library:lib_0.rego,third_party,bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/privileged/lib_0.rego,unknown_or_unsupported,False,False,0,True,"parse_error:opa parse failed: {
+  ""errors"": [
+    {
+      ""message"": ""`if` keyword is required before function body"",
+      ""code"": ""rego_parse_error"",
+      ""location"": {
+        ""file"": ""bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/privileged/lib_0.rego"",
+        ""row"": 3,
+        ""col"": 1
+      }
+    }
+  ]
+}
+"
+gatekeeper_library:lib_1.rego,third_party,bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/privileged/lib_1.rego,unknown_or_unsupported,False,False,0,True,"parse_error:opa parse failed: {
+  ""errors"": [
+    {
+      ""message"": ""`if` keyword is required before function body"",
+      ""code"": ""rego_parse_error"",
+      ""location"": {
+        ""file"": ""bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/privileged/lib_1.rego"",
+        ""row"": 3,
+        ""col"": 1
+      }
+    },
+    {
+      ""message"": ""`if` keyword is require"
+gatekeeper_library:policy.rego,third_party,bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/privileged/policy.rego,unknown_or_unsupported,False,False,0,True,"parse_error:opa parse failed: {
+  ""errors"": [
+    {
+      ""message"": ""`if` keyword is required before rule body"",
+      ""code"": ""rego_parse_error"",
+      ""location"": {
+        ""file"": ""bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/privileged/policy.rego"",
+        ""row"": 6,
+        ""col"": 1
+      }
+    },
+    {
+      ""message"": ""`contains` keyword is requ"
+gatekeeper_library:policy.rego,third_party,bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/requiredlabels/policy.rego,unknown_or_unsupported,False,False,2,True,"parse_error:opa parse failed: {
+  ""errors"": [
+    {
+      ""message"": ""`if` keyword is required before function body"",
+      ""code"": ""rego_parse_error"",
+      ""location"": {
+        ""file"": ""bridge_benchmark/experiments/opa_gate/policies/third_party/gatekeeper_library/requiredlabels/policy.rego"",
+        ""row"": 3,
+        ""col"": 1
+      }
+    },
+    {
+      ""message"": ""`if` keyword is re"
+kyverno_policies:chainsaw-step-02-assert-1.yaml,third_party,external/corpora/kyverno_policies/argo/application-field-validation/.chainsaw-test/chainsaw-step-02-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/argo/application-field-validation/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:application-field-validation.yaml,third_party,external/corpora/kyverno_policies/argo/application-field-validation/application-field-validation.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-02-assert-1.yaml,third_party,external/corpora/kyverno_policies/argo/application-prevent-default-project/.chainsaw-test/chainsaw-step-02-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/argo/application-prevent-default-project/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:application-prevent-default-project.yaml,third_party,external/corpora/kyverno_policies/argo/application-prevent-default-project/application-prevent-default-project.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-02-assert-1.yaml,third_party,external/corpora/kyverno_policies/argo/application-prevent-updates-project/.chainsaw-test/chainsaw-step-02-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/argo/application-prevent-updates-project/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:application-prevent-updates-project.yaml,third_party,external/corpora/kyverno_policies/argo/application-prevent-updates-project/application-prevent-updates-project.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-02-assert-1.yaml,third_party,external/corpora/kyverno_policies/argo/applicationset-name-matches-project/.chainsaw-test/chainsaw-step-02-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/argo/applicationset-name-matches-project/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:applicationset-name-matches-project.yaml,third_party,external/corpora/kyverno_policies/argo/applicationset-name-matches-project/applicationset-name-matches-project.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-02-assert-1.yaml,third_party,external/corpora/kyverno_policies/argo/appproject-clusterresourceblacklist/.chainsaw-test/chainsaw-step-02-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/argo/appproject-clusterresourceblacklist/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:appproject-clusterresourceblacklist.yaml,third_party,external/corpora/kyverno_policies/argo/appproject-clusterresourceblacklist/appproject-clusterresourceblacklist.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/argo/argo-cluster-generation-from-rancher-capi/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:argo-cluster-generation-from-rancher-capi.yaml,third_party,external/corpora/kyverno_policies/argo/argo-cluster-generation-from-rancher-capi/argo-cluster-generation-from-rancher-capi.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/argo-cel/application-field-validation/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/argo-cel/application-field-validation/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:application-field-validation.yaml,third_party,external/corpora/kyverno_policies/argo-cel/application-field-validation/application-field-validation.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/argo-cel/application-prevent-default-project/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/argo-cel/application-prevent-default-project/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:application-prevent-default-project.yaml,third_party,external/corpora/kyverno_policies/argo-cel/application-prevent-default-project/application-prevent-default-project.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/argo-cel/application-prevent-updates-project/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/argo-cel/application-prevent-updates-project/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:application-prevent-updates-project.yaml,third_party,external/corpora/kyverno_policies/argo-cel/application-prevent-updates-project/application-prevent-updates-project.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/argo-cel/applicationset-name-matches-project/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/argo-cel/applicationset-name-matches-project/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:applicationset-name-matches-project.yaml,third_party,external/corpora/kyverno_policies/argo-cel/applicationset-name-matches-project/applicationset-name-matches-project.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/argo-cel/appproject-clusterresourceblacklist/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/argo-cel/appproject-clusterresourceblacklist/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:appproject-clusterresourceblacklist.yaml,third_party,external/corpora/kyverno_policies/argo-cel/appproject-clusterresourceblacklist/appproject-clusterresourceblacklist.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-aws-node-irsa.yaml,third_party,external/corpora/kyverno_policies/aws/require-aws-node-irsa/require-aws-node-irsa.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/aws/require-encryption-aws-loadbalancers/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/aws/require-encryption-aws-loadbalancers/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-encryption-aws-loadbalancers.yaml,third_party,external/corpora/kyverno_policies/aws/require-encryption-aws-loadbalancers/require-encryption-aws-loadbalancers.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/aws-cel/require-encryption-aws-loadbalancers/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/aws-cel/require-encryption-aws-loadbalancers/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-encryption-aws-loadbalancers.yaml,third_party,external/corpora/kyverno_policies/aws-cel/require-encryption-aws-loadbalancers/require-encryption-aws-loadbalancers.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/add-network-policy/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-network-policy.yaml,third_party,external/corpora/kyverno_policies/best-practices/add-network-policy/add-network-policy.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/add-networkpolicy-dns/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-networkpolicy-dns.yaml,third_party,external/corpora/kyverno_policies/best-practices/add-networkpolicy-dns/add-networkpolicy-dns.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/add-ns-quota/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-ns-quota.yaml,third_party,external/corpora/kyverno_policies/best-practices/add-ns-quota/add-ns-quota.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/add-rolebinding/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-rolebinding.yaml,third_party,external/corpora/kyverno_policies/best-practices/add-rolebinding/add-rolebinding.yaml,discrete_only,False,False,1,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/add-safe-to-evict/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-safe-to-evict.yaml,third_party,external/corpora/kyverno_policies/best-practices/add-safe-to-evict/add-safe-to-evict.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:check-deprecated-apis.yaml,third_party,external/corpora/kyverno_policies/best-practices/check-deprecated-apis/check-deprecated-apis.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-cri-sock-mount/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-cri-sock-mount/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:disallow-cri-sock-mount.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-cri-sock-mount/disallow-cri-sock-mount.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-default-namespace/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-default-namespace/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:disallow-default-namespace.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-default-namespace/disallow-default-namespace.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-empty-ingress-host/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-empty-ingress-host/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:disallow-empty-ingress-host.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-empty-ingress-host/disallow-empty-ingress-host.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-helm-tiller/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-helm-tiller/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:disallow-helm-tiller.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-helm-tiller/disallow-helm-tiller.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-latest-tag/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-latest-tag/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:disallow-latest-tag.yaml,third_party,external/corpora/kyverno_policies/best-practices/disallow-latest-tag/disallow-latest-tag.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-drop-all/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-drop-all/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-drop-all.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-drop-all/require-drop-all.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-drop-cap-net-raw/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-drop-cap-net-raw/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-drop-cap-net-raw.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-drop-cap-net-raw/require-drop-cap-net-raw.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-labels/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-labels/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-labels.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-labels/require-labels.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-pod-requests-limits/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-pod-requests-limits/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-pod-requests-limits.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-pod-requests-limits/require-pod-requests-limits.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-probes/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-probes/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-probes.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-probes/require-probes.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-ro-rootfs/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-ro-rootfs/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-ro-rootfs.yaml,third_party,external/corpora/kyverno_policies/best-practices/require-ro-rootfs/require-ro-rootfs.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/restrict-image-registries/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/restrict-image-registries/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:restrict-image-registries.yaml,third_party,external/corpora/kyverno_policies/best-practices/restrict-image-registries/restrict-image-registries.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/restrict-node-port/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/restrict-node-port/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:restrict-node-port.yaml,third_party,external/corpora/kyverno_policies/best-practices/restrict-node-port/restrict-node-port.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices/restrict-service-external-ips/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices/restrict-service-external-ips/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:restrict-service-external-ips.yaml,third_party,external/corpora/kyverno_policies/best-practices/restrict-service-external-ips/restrict-service-external-ips.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:check-deprecated-apis.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/check-deprecated-apis/check-deprecated-apis.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-cri-sock-mount/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-cri-sock-mount/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:disallow-cri-sock-mount.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-cri-sock-mount/disallow-cri-sock-mount.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-default-namespace/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-default-namespace/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:disallow-default-namespace.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-default-namespace/disallow-default-namespace.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-empty-ingress-host/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-empty-ingress-host/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:disallow-empty-ingress-host.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-empty-ingress-host/disallow-empty-ingress-host.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-helm-tiller/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-helm-tiller/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:disallow-helm-tiller.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-helm-tiller/disallow-helm-tiller.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-latest-tag/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-latest-tag/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:disallow-latest-tag.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/disallow-latest-tag/disallow-latest-tag.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-drop-all/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-drop-all/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-drop-all.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-drop-all/require-drop-all.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-drop-cap-net-raw/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-drop-cap-net-raw/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-drop-cap-net-raw.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-drop-cap-net-raw/require-drop-cap-net-raw.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-labels/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-labels/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-labels.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-labels/require-labels.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-pod-requests-limits/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-pod-requests-limits/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-pod-requests-limits.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-pod-requests-limits/require-pod-requests-limits.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-probes/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-probes/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-probes.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-probes/require-probes.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-ro-rootfs/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-ro-rootfs/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-ro-rootfs.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/require-ro-rootfs/require-ro-rootfs.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/restrict-image-registries/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/restrict-image-registries/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:restrict-image-registries.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/restrict-image-registries/restrict-image-registries.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/restrict-node-port/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/restrict-node-port/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:restrict-node-port.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/restrict-node-port/restrict-node-port.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/restrict-service-external-ips/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/restrict-service-external-ips/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:restrict-service-external-ips.yaml,third_party,external/corpora/kyverno_policies/best-practices-cel/restrict-service-external-ips/restrict-service-external-ips.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/castai/add-castai-removal-disabled/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-castai-removal-disabled.yaml,third_party,external/corpora/kyverno_policies/castai/add-castai-removal-disabled/add-castai-removal-disabled.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/cert-manager/limit-dnsnames/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/cert-manager/limit-dnsnames/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:limit-dnsnames.yaml,third_party,external/corpora/kyverno_policies/cert-manager/limit-dnsnames/limit-dnsnames.yaml,fixed_numeric_threshold,True,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/cert-manager/limit-duration/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/cert-manager/limit-duration/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:limit-duration.yaml,third_party,external/corpora/kyverno_policies/cert-manager/limit-duration/limit-duration.yaml,fixed_numeric_threshold,True,False,1,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/cert-manager/restrict-issuer/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/cert-manager/restrict-issuer/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:restrict-issuer.yaml,third_party,external/corpora/kyverno_policies/cert-manager/restrict-issuer/restrict-issuer.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/consul/enforce-min-tls-version/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:enforce-min-tls-version.yaml,third_party,external/corpora/kyverno_policies/consul/enforce-min-tls-version/enforce-min-tls-version.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/consul-cel/enforce-min-tls-version/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:enforce-min-tls-version.yaml,third_party,external/corpora/kyverno_policies/consul-cel/enforce-min-tls-version/enforce-min-tls-version.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:test.yaml,third_party,external/corpora/kyverno_policies/cost-optimization/.chainsaw-test/01-business-hours/test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:test.yaml,third_party,external/corpora/kyverno_policies/cost-optimization/.chainsaw-test/02-non-business-hours/test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:test.yaml,third_party,external/corpora/kyverno_policies/cost-optimization/.chainsaw-test/03-weekend/test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:test.yaml,third_party,external/corpora/kyverno_policies/cost-optimization/schedule-based-quotas/.chainsaw-test/01-business-hours/test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:test.yaml,third_party,external/corpora/kyverno_policies/cost-optimization/schedule-based-quotas/.chainsaw-test/02-non-business-hours/test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:test.yaml,third_party,external/corpora/kyverno_policies/cost-optimization/schedule-based-quotas/.chainsaw-test/03-weekend/test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:schedule-based-quotas.yaml,third_party,external/corpora/kyverno_policies/cost-optimization/schedule-based-quotas/schedule-based-quotas.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/external-secret-operator/add-external-secret-prefix/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-external-secret-prefix.yaml,third_party,external/corpora/kyverno_policies/external-secret-operator/add-external-secret-prefix/add-external-secret-prefix.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/flux/generate-flux-multi-tenant-resources/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:generate-flux-multi-tenant-resources.yaml,third_party,external/corpora/kyverno_policies/flux/generate-flux-multi-tenant-resources/generate-flux-multi-tenant-resources.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/flux/verify-flux-images/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/flux/verify-flux-images/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:verify-flux-images.yaml,third_party,external/corpora/kyverno_policies/flux/verify-flux-images/verify-flux-images.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/flux/verify-flux-sources/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/flux/verify-flux-sources/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:verify-flux-sources.yaml,third_party,external/corpora/kyverno_policies/flux/verify-flux-sources/verify-flux-sources.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/flux/verify-git-repositories/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/flux/verify-git-repositories/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:verify-git-repositories.yaml,third_party,external/corpora/kyverno_policies/flux/verify-git-repositories/verify-git-repositories.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/flux-cel/verify-flux-sources/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/flux-cel/verify-flux-sources/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:verify-flux-sources.yaml,third_party,external/corpora/kyverno_policies/flux-cel/verify-flux-sources/verify-flux-sources.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test-rename-after-issue-10313-fix.yaml,third_party,external/corpora/kyverno_policies/flux-cel/verify-git-repositories/.chainsaw-test-rename-after-issue-10313-fix/chainsaw-test-rename-after-issue-10313-fix.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/flux-cel/verify-git-repositories/.chainsaw-test-rename-after-issue-10313-fix/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:verify-git-repositories.yaml,third_party,external/corpora/kyverno_policies/flux-cel/verify-git-repositories/verify-git-repositories.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/istio/add-ambient-mode-namespace/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-ambient-mode-namespace.yaml,third_party,external/corpora/kyverno_policies/istio/add-ambient-mode-namespace/add-ambient-mode-namespace.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/istio/add-sidecar-injection-namespace/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-sidecar-injection-namespace.yaml,third_party,external/corpora/kyverno_policies/istio/add-sidecar-injection-namespace/add-sidecar-injection-namespace.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/istio/create-authorizationpolicy/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:create-authorizationpolicy.yaml,third_party,external/corpora/kyverno_policies/istio/create-authorizationpolicy/create-authorizationpolicy.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-ambient-mode-namespace/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-ambient-mode-namespace/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:enforce-ambient-mode-namespace.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-ambient-mode-namespace/enforce-ambient-mode-namespace.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-sidecar-injection-namespace/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-sidecar-injection-namespace/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:enforce-sidecar-injection-namespace.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-sidecar-injection-namespace/enforce-sidecar-injection-namespace.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-strict-mtls/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-strict-mtls/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:enforce-strict-mtls.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-strict-mtls/enforce-strict-mtls.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-tls-hosts-host-subnets/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-tls-hosts-host-subnets/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:enforce-tls-hosts-host-subnets.yaml,third_party,external/corpora/kyverno_policies/istio/enforce-tls-hosts-host-subnets/enforce-tls-hosts-host-subnets.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/istio/prevent-disabling-injection-pods/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/istio/prevent-disabling-injection-pods/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:prevent-disabling-injection-pods.yaml,third_party,external/corpora/kyverno_policies/istio/prevent-disabling-injection-pods/prevent-disabling-injection-pods.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/istio/require-authorizationpolicy/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-authorizationpolicy.yaml,third_party,external/corpora/kyverno_policies/istio/require-authorizationpolicy/require-authorizationpolicy.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/istio/restrict-virtual-service-wildcard/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/istio/restrict-virtual-service-wildcard/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:restrict-virtual-service-wildcard.yaml,third_party,external/corpora/kyverno_policies/istio/restrict-virtual-service-wildcard/restrict-virtual-service-wildcard.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/istio/service-mesh-disallow-capabilities/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/istio/service-mesh-disallow-capabilities/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:service-mesh-disallow-capabilities.yaml,third_party,external/corpora/kyverno_policies/istio/service-mesh-disallow-capabilities/service-mesh-disallow-capabilities.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/istio/service-mesh-require-run-as-nonroot/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/istio/service-mesh-require-run-as-nonroot/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:service-mesh-require-run-as-nonroot.yaml,third_party,external/corpora/kyverno_policies/istio/service-mesh-require-run-as-nonroot/service-mesh-require-run-as-nonroot.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/istio-cel/enforce-sidecar-injection-namespace/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/istio-cel/enforce-sidecar-injection-namespace/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:enforce-sidecar-injection-namespace.yaml,third_party,external/corpora/kyverno_policies/istio-cel/enforce-sidecar-injection-namespace/enforce-sidecar-injection-namespace.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/istio-cel/enforce-strict-mtls/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/istio-cel/enforce-strict-mtls/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:enforce-strict-mtls.yaml,third_party,external/corpora/kyverno_policies/istio-cel/enforce-strict-mtls/enforce-strict-mtls.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/istio-cel/prevent-disabling-injection-pods/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/istio-cel/prevent-disabling-injection-pods/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:prevent-disabling-injection-pods.yaml,third_party,external/corpora/kyverno_policies/istio-cel/prevent-disabling-injection-pods/prevent-disabling-injection-pods.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/karpenter/add-karpenter-daemonset-priority-class/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-karpenter-daemonset-priority-class.yaml,third_party,external/corpora/kyverno_policies/karpenter/add-karpenter-daemonset-priority-class/add-karpenter-daemonset-priority-class.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/karpenter/add-karpenter-donot-evict/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-karpenter-donot-evict.yaml,third_party,external/corpora/kyverno_policies/karpenter/add-karpenter-donot-evict/add-karpenter-donot-evict.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/karpenter/add-karpenter-nodeselector/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-karpenter-nodeselector.yaml,third_party,external/corpora/kyverno_policies/karpenter/add-karpenter-nodeselector/add-karpenter-nodeselector.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/karpenter/set-karpenter-non-cpu-limits/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:set-karpenter-non-cpu-limits.yaml,third_party,external/corpora/kyverno_policies/karpenter/set-karpenter-non-cpu-limits/set-karpenter-non-cpu-limits.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-3-2-1-backup/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-3-2-1-backup/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:kyverno-test.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-3-2-1-backup/.kyverno-test/kyverno-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:kasten-3-2-1-backup.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-3-2-1-backup/kasten-3-2-1-backup.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-data-protection-by-label/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-data-protection-by-label/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:kasten-data-protection-by-label.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-data-protection-by-label/kasten-data-protection-by-label.yaml,discrete_only,False,False,1,False,no_keyed_threshold
+kyverno_policies:kasten-generate-example-backup-policy.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-generate-example-backup-policy/kasten-generate-example-backup-policy.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-generate-policy-by-preset-label/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:kasten-generate-policy-by-preset-label.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-generate-policy-by-preset-label/kasten-generate-policy-by-preset-label.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-hourly-rpo/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-hourly-rpo/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:kyverno-test.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-hourly-rpo/.kyverno-test/kyverno-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:kasten-hourly-rpo.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-hourly-rpo/kasten-hourly-rpo.yaml,fixed_numeric_threshold,True,False,0,False,no_keyed_threshold
+kyverno_policies:kasten-immutable-location-profile.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-immutable-location-profile/kasten-immutable-location-profile.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-minimum-retention/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:kyverno-test.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-minimum-retention/.kyverno-test/kyverno-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:kasten-minimum-retention.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-minimum-retention/kasten-minimum-retention.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-validate-ns-by-preset-label/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-validate-ns-by-preset-label/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:kasten-validate-ns-by-preset-label.yaml,third_party,external/corpora/kyverno_policies/kasten/kasten-validate-ns-by-preset-label/kasten-validate-ns-by-preset-label.yaml,discrete_only,False,False,2,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/kasten-cel/k10-data-protection-by-label/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/kasten-cel/k10-data-protection-by-label/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:k10-data-protection-by-label.yaml,third_party,external/corpora/kyverno_policies/kasten-cel/k10-data-protection-by-label/k10-data-protection-by-label.yaml,discrete_only,False,False,1,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/kasten-cel/k10-hourly-rpo/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/kasten-cel/k10-hourly-rpo/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:kyverno-test.yaml,third_party,external/corpora/kyverno_policies/kasten-cel/k10-hourly-rpo/.kyverno-test/kyverno-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:k10-hourly-rpo.yaml,third_party,external/corpora/kyverno_policies/kasten-cel/k10-hourly-rpo/k10-hourly-rpo.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/kasten-cel/k10-validate-ns-by-preset-label/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/kasten-cel/k10-validate-ns-by-preset-label/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:k10-validate-ns-by-preset-label.yaml,third_party,external/corpora/kyverno_policies/kasten-cel/k10-validate-ns-by-preset-label/k10-validate-ns-by-preset-label.yaml,discrete_only,False,False,2,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/kubecost/enable-kubecost-continuous-rightsizing/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:enable-kubecost-continuous-rightsizing.yaml,third_party,external/corpora/kyverno_policies/kubecost/enable-kubecost-continuous-rightsizing/enable-kubecost-continuous-rightsizing.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:kubecost-proactive-cost-control.yaml,third_party,external/corpora/kyverno_policies/kubecost/kubecost-proactive-cost-control/kubecost-proactive-cost-control.yaml,fixed_numeric_threshold,True,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/kubecost/require-kubecost-labels/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/kubecost/require-kubecost-labels/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-kubecost-labels.yaml,third_party,external/corpora/kyverno_policies/kubecost/require-kubecost-labels/require-kubecost-labels.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/kubecost-cel/require-kubecost-labels/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/kubecost-cel/require-kubecost-labels/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-kubecost-labels.yaml,third_party,external/corpora/kyverno_policies/kubecost-cel/require-kubecost-labels/require-kubecost-labels.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/kubeops/config-syncer-secret-generation-from-rancher-capi/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:config-syncer-secret-generation-from-rancher-capi.yaml,third_party,external/corpora/kyverno_policies/kubeops/config-syncer-secret-generation-from-rancher-capi/config-syncer-secret-generation-from-rancher-capi.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/kubevirt/add-services/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-services.yaml,third_party,external/corpora/kyverno_policies/kubevirt/add-services/add-services.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/kubevirt/enforce-instancetype/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:enforce-instancetype.yaml,third_party,external/corpora/kyverno_policies/kubevirt/enforce-instancetype/enforce-instancetype.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/linkerd/add-linkerd-mesh-injection/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-linkerd-mesh-injection.yaml,third_party,external/corpora/kyverno_policies/linkerd/add-linkerd-mesh-injection/add-linkerd-mesh-injection.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/linkerd/add-linkerd-policy-annotation/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:add-linkerd-policy-annotation.yaml,third_party,external/corpora/kyverno_policies/linkerd/add-linkerd-policy-annotation/add-linkerd-policy-annotation.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/linkerd/check-linkerd-authorizationpolicy/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/linkerd/check-linkerd-authorizationpolicy/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:check-linkerd-authorizationpolicy.yaml,third_party,external/corpora/kyverno_policies/linkerd/check-linkerd-authorizationpolicy/check-linkerd-authorizationpolicy.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/linkerd/prevent-linkerd-pod-injection-override/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/linkerd/prevent-linkerd-pod-injection-override/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:prevent-linkerd-pod-injection-override.yaml,third_party,external/corpora/kyverno_policies/linkerd/prevent-linkerd-pod-injection-override/prevent-linkerd-pod-injection-override.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/linkerd/prevent-linkerd-port-skipping/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/linkerd/prevent-linkerd-port-skipping/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:prevent-linkerd-port-skipping.yaml,third_party,external/corpora/kyverno_policies/linkerd/prevent-linkerd-port-skipping/prevent-linkerd-port-skipping.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/linkerd/require-linkerd-mesh-injection/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/linkerd/require-linkerd-mesh-injection/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-linkerd-mesh-injection.yaml,third_party,external/corpora/kyverno_policies/linkerd/require-linkerd-mesh-injection/require-linkerd-mesh-injection.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-step-01-assert-1.yaml,third_party,external/corpora/kyverno_policies/linkerd/require-linkerd-server/.chainsaw-test/chainsaw-step-01-assert-1.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/linkerd/require-linkerd-server/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-linkerd-server.yaml,third_party,external/corpora/kyverno_policies/linkerd/require-linkerd-server/require-linkerd-server.yaml,fixed_numeric_threshold,True,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/linkerd-cel/prevent-linkerd-pod-injection-override/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/linkerd-cel/prevent-linkerd-pod-injection-override/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:prevent-linkerd-pod-injection-override.yaml,third_party,external/corpora/kyverno_policies/linkerd-cel/prevent-linkerd-pod-injection-override/prevent-linkerd-pod-injection-override.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/linkerd-cel/prevent-linkerd-port-skipping/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/linkerd-cel/prevent-linkerd-port-skipping/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:prevent-linkerd-port-skipping.yaml,third_party,external/corpora/kyverno_policies/linkerd-cel/prevent-linkerd-port-skipping/prevent-linkerd-port-skipping.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:chainsaw-test.yaml,third_party,external/corpora/kyverno_policies/linkerd-cel/require-linkerd-mesh-injection/.chainsaw-test/chainsaw-test.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/linkerd-cel/require-linkerd-mesh-injection/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:require-linkerd-mesh-injection.yaml,third_party,external/corpora/kyverno_policies/linkerd-cel/require-linkerd-mesh-injection/require-linkerd-mesh-injection.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+kyverno_policies:policy-ready.yaml,third_party,external/corpora/kyverno_policies/nginx-ingress/disallow-ingress-nginx-custom-snippets/.chainsaw-test/policy-ready.yaml,discrete_only,False,False,0,False,no_keyed_threshold
+cloud_custodian:.codecov.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/.codecov.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:bug-report.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/.github/ISSUE_TEMPLATE/bug-report.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:config.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/.github/ISSUE_TEMPLATE/config.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:feature-request.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/.github/ISSUE_TEMPLATE/feature-request.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:action.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/.github/composites/docker-build-push/action.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:action.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/.github/composites/docs-publish/action.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:action.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/.github/composites/install/action.yaml,discrete_only,False,False,5,False,no_value_from_threshold
+cloud_custodian:dependabot.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/.github/dependabot.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:ci.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/.github/workflows/ci.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:docker.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/.github/workflows/docker.yml,discrete_only,False,False,2,False,no_value_from_threshold
+cloud_custodian:functional.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/.github/workflows/functional.yaml,discrete_only,False,False,2,False,no_value_from_threshold
+cloud_custodian:release.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/.github/workflows/release.yml,discrete_only,False,False,2,False,no_value_from_threshold
+cloud_custodian:.pre-commit-hooks.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/.pre-commit-hooks.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:ami-GOODVALIDATION.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/test_policies/ami-GOODVALIDATION.yml,fixed_numeric_threshold,True,False,0,False,no_value_from_threshold
+cloud_custodian:dup-policies.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/test_policies/dup-policies.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:dup-policy-keys.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/test_policies/dup-policy-keys.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:ebs-BADVALIDATION.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/test_policies/ebs-BADVALIDATION.yml,fixed_numeric_threshold,True,False,0,False,no_value_from_threshold
+cloud_custodian:vars-test.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vars-test.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:bucket_not_found.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_output/bucket_not_found.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:cross_region.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_output/cross_region.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:default_bucket_not_found.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_output/default_bucket_not_found.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:default_bucket_region.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_output/default_bucket_region.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:same_region.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_output/same_region.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:test_get_bucket_region_http[govcloud-cross-region].yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_output/test_get_bucket_region_http[govcloud-cross-region].yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:test_get_bucket_region_http[govcloud-same-region].yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_output/test_get_bucket_region_http[govcloud-same-region].yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:test_get_bucket_region_http[us-cross-region].yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_output/test_get_bucket_region_http[us-cross-region].yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:test_get_bucket_region_http[us-same-region].yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_output/test_get_bucket_region_http[us-same-region].yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:test_resolver.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_resolver.yaml,unknown_or_unsupported,False,False,0,False,"yaml_error:could not determine a constructor for the tag 'tag:yaml.org,2002:python/unicode'
+  in ""external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_resolver.yaml"", line 8, column 9"
+cloud_custodian:no_replication_rule.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_s3/no_replication_rule.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:replication_filter_count.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_s3/replication_filter_count.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:replication_rule.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_s3/replication_rule.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:replication_rule_no_bucket.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tests/data/vcr_cassettes/test_s3/replication_rule_no_bucket.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:policies.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_azure/tests_azure/azure-functions/templates/policies.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:example.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_guardian/example.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:namespace.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/.skaffold/namespace.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:config.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/.skaffold/templates/config.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:invalid.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/.skaffold/tests/invalid.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:valid.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/.skaffold/tests/valid.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:values.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/.skaffold/values.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:skaffold.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/skaffold.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:ClusterRoleTest.test_cluster_role_query.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/ClusterRoleTest.test_cluster_role_query.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:NamespaceTest.test_ns_delete.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/NamespaceTest.test_ns_delete.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:NamespaceTest.test_ns_query.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/NamespaceTest.test_ns_query.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:RoleTest.test_cluster_role_query.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/RoleTest.test_cluster_role_query.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCustomResource.test_custom_cluster_resource_query.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/TestCustomResource.test_custom_cluster_resource_query.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCustomResource.test_custom_namespaced_resource_query.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/TestCustomResource.test_custom_namespaced_resource_query.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestDeleteAction.test_delete_action.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/TestDeleteAction.test_delete_action.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestDeleteAction.test_delete_namespaced_resource.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/TestDeleteAction.test_delete_namespaced_resource.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestKube.test_kube_cache.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/TestKube.test_kube_cache.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestLabelAction.test_label_action.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/TestLabelAction.test_label_action.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestLabelAction.test_namespaced_label_action.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/TestLabelAction.test_namespaced_label_action.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestPatchAction.test_patch_action.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_kube/tests/data/flights/TestPatchAction.test_patch_action.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:cfn.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_logexporter/cfn.yml,unknown_or_unsupported,False,False,0,False,"yaml_error:could not determine a constructor for the tag '!Ref'
+  in ""external/corpora/cloud-custodian_cloud-custodian/tools/c7n_logexporter/cfn.yml"", line 24, column 12"
+cloud_custodian:config.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_logexporter/config.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:example.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_mailer/example.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:mailer.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_mailer/tests/azure/templates/mailer.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:mailer_sendgrid.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_mailer/tests/azure/templates/mailer_sendgrid.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:notify_policy.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_mailer/tests/azure/templates/notify_policy.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_attributes_user.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_attributes_user.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_identity_compartment.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_identity_compartment.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_identity_group.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_identity_group.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_identity_update_compartment.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_identity_update_compartment.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_identity_update_group.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_identity_update_group.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_identity_user_cross_age_size.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_identity_user_cross_age_size.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_identity_user_cross_filter_age.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_identity_user_cross_filter_age.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_identity_user_cross_filter_size.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_identity_user_cross_filter_size.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_identity_user_cross_size_age.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_identity_user_cross_size_age.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_identity_user_tag.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_identity_user_tag.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_remove_invalidtag_compartment.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_remove_invalidtag_compartment.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_remove_invalidtag_group.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_remove_invalidtag_group.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_remove_invalidtag_user.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_remove_invalidtag_user.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_remove_tag_compartment.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_remove_tag_compartment.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_remove_tag_group.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_remove_tag_group.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestIdentityTerraformTest.test_remove_tag_user.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestIdentityTerraformTest.test_remove_tag_user.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_add_defined_tag_to_instance.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_add_defined_tag_to_instance.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_add_defined_tag_to_instance_new.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_add_defined_tag_to_instance_new.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_add_freeform_tag_to_instance.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_add_freeform_tag_to_instance.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_get_freeform_tagged_instance.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_get_freeform_tagged_instance.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_instance_metrics.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_instance_metrics.yml,discrete_only,False,False,2,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_instance_metrics_by_chunks.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_instance_metrics_by_chunks.yml,discrete_only,False,False,2,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_instance_power_off.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_instance_power_off.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_instance_reboot.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_instance_reboot.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_instance_reboot_force.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_instance_reboot_force.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_instance_start.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_instance_start.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_instance_stop.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_instance_stop.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_instance_stop_force.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_instance_stop_force.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_remove_defined_tag.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_remove_defined_tag.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_remove_freeform_tag.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_remove_freeform_tag.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_update_defined_tag_of_instance.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_update_defined_tag_of_instance.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstance.test_update_freeform_tag_of_instance.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstance.test_update_freeform_tag_of_instance.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestInstancePrincipalAuth.test_list_bucket.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestInstancePrincipalAuth.test_list_bucket.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestObjectStorage.test_add_defined_tag_to_bucket.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestObjectStorage.test_add_defined_tag_to_bucket.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestObjectStorage.test_add_freeform_tag_to_bucket.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestObjectStorage.test_add_freeform_tag_to_bucket.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestObjectStorage.test_change_public_bucket_to_private.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestObjectStorage.test_change_public_bucket_to_private.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestObjectStorage.test_get_freeform_tagged_bucket.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestObjectStorage.test_get_freeform_tagged_bucket.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestObjectStorage.test_remove_defined_tag.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestObjectStorage.test_remove_defined_tag.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestObjectStorage.test_remove_freeform_tag.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestObjectStorage.test_remove_freeform_tag.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestObjectStorage.test_tag_public_bucket.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestObjectStorage.test_tag_public_bucket.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestObjectStorage.test_update_bucket.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestObjectStorage.test_update_bucket.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestObjectStorage.test_update_defined_tag_of_bucket.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestObjectStorage.test_update_defined_tag_of_bucket.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestObjectStorage.test_update_freeform_tag_of_bucket.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestObjectStorage.test_update_freeform_tag_of_bucket.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestObjectStorage.test_update_public_bucket_to_private.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestObjectStorage.test_update_public_bucket_to_private.yml,discrete_only,False,False,3,False,no_value_from_threshold
+cloud_custodian:TestPolicyCollection.test_all_region.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestPolicyCollection.test_all_region.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestPolicyCollection.test_invalid_region.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestPolicyCollection.test_invalid_region.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestPolicyCollection.test_multi_region.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestPolicyCollection.test_multi_region.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestSubnet.test_add_defined_tag_to_subnet.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestSubnet.test_add_defined_tag_to_subnet.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestSubnet.test_add_freeform_tag_to_subnet.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestSubnet.test_add_freeform_tag_to_subnet.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestSubnet.test_get_freeform_tagged_subnet.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestSubnet.test_get_freeform_tagged_subnet.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestSubnet.test_remove_defined_tag.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestSubnet.test_remove_defined_tag.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestSubnet.test_remove_freeform_tag.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestSubnet.test_remove_freeform_tag.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestSubnet.test_update_defined_tag_of_subnet.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestSubnet.test_update_defined_tag_of_subnet.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestSubnet.test_update_freeform_tag_of_subnet.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestSubnet.test_update_freeform_tag_of_subnet.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestSubnet.test_update_subnet.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestSubnet.test_update_subnet.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestVcn.test_add_defined_tag_to_vcn.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestVcn.test_add_defined_tag_to_vcn.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestVcn.test_add_freeform_tag_to_vcn.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestVcn.test_add_freeform_tag_to_vcn.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestVcn.test_get_freeform_tagged_vcn.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestVcn.test_get_freeform_tagged_vcn.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestVcn.test_remove_defined_tag.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestVcn.test_remove_defined_tag.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestVcn.test_remove_freeform_tag.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestVcn.test_remove_freeform_tag.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestVcn.test_update_defined_tag_of_vcn.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestVcn.test_update_defined_tag_of_vcn.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestVcn.test_update_freeform_tag_of_vcn.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestVcn.test_update_freeform_tag_of_vcn.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestVcn.test_update_vcn.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestVcn.test_update_vcn.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestZone.test_add_defined_tag_to_zone.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestZone.test_add_defined_tag_to_zone.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestZone.test_add_freeform_tag_to_zone.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestZone.test_add_freeform_tag_to_zone.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestZone.test_get_freeform_tagged_zone.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestZone.test_get_freeform_tagged_zone.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestZone.test_remove_defined_tag.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestZone.test_remove_defined_tag.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestZone.test_remove_freeform_tag.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestZone.test_remove_freeform_tag.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestZone.test_update_defined_tag_of_zone.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestZone.test_update_defined_tag_of_zone.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestZone.test_update_freeform_tag_of_zone.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestZone.test_update_freeform_tag_of_zone.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:TestZone.test_update_zone.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_oci/tests/cassettes/TestZone.test_update_zone.yml,discrete_only,False,False,1,False,no_value_from_threshold
+cloud_custodian:default.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_openstack/tests/data/flights/default.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:accounts-with-vars.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/accounts-with-vars.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:deprecated-policy.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/deprecated-policy.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:duplicate-names-policy.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/duplicate-names-policy.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:flow-logs-deprecated-policy.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/flow-logs-deprecated-policy.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:invalid-schema-policy.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/invalid-schema-policy.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:invalid-structure-policy.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/invalid-structure-policy.yml,unknown_or_unsupported,False,False,0,False,"yaml_error:mapping values are not allowed here
+  in ""external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/invalid-structure-policy.yml"", line 2, column 22"
+cloud_custodian:multicloud-policy.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/multicloud-policy.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:policy-missing-vars.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/policy-missing-vars.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:policy-with-runtime-vars.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/policy-with-runtime-vars.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:policy-with-vars.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/policy-with-vars.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:simple-valid-policy.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/simple-valid-policy.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:test-accounts.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/test-accounts.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:valid-policy.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_org/tests/fixtures/valid-policy.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:config.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_salactus/config.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestFilterMetrics.test_average.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_filter_metrics/TestFilterMetrics.test_average.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestFilterMetrics.test_max.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_filter_metrics/TestFilterMetrics.test_max.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestAmi.test_ami_old_and_not_used.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_ami/TestAmi.test_ami_old_and_not_used.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_credential_rotation.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_credential_rotation.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_group.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_group.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_mfa_missing.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_mfa_missing.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_missing_group.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_missing_group.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_new_user_with_credential.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_new_user_with_credential.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_policy_check_permissions.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_policy_check_permissions.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_policy_unused.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_policy_unused.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_policy_used.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_policy_used.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_policy_with_admin_privileges.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_policy_with_admin_privileges.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_stale_credentials.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_stale_credentials.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_too_many_credentials.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_too_many_credentials.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_unused_credentials.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_unused_credentials.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_unused_credentials_in_period_third.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_unused_credentials_in_period_third.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCAM.test_user_credentials_in_tracking_period.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cam/TestCAM.test_user_credentials_in_tracking_period.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCbs.test_cbs_available.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cbs/TestCbs.test_cbs_available.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCbs.test_cbs_copy_instance_tags.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cbs/TestCbs.test_cbs_copy_instance_tags.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCbs.test_cbs_not_encrypt.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cbs/TestCbs.test_cbs_not_encrypt.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCbs.test_metrics.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cbs/TestCbs.test_metrics.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCbsSnapshot.test_cbs_old_snapshot.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cbs_snapshot/TestCbsSnapshot.test_cbs_old_snapshot.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestClb.test_clb_filter_value.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_clb/TestClb.test_clb_filter_value.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestClb.test_clb_no_instances_attached.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_clb/TestClb.test_clb_no_instances_attached.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestClb.test_metrics_filter.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_clb/TestClb.test_metrics_filter.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestClient.test_paging_offset.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_client/TestClient.test_paging_offset.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestClient.test_paging_over_request_limit.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_client/TestClient.test_paging_over_request_limit.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestClient.test_paging_token.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_client/TestClient.test_paging_token.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestClient.test_query_simple.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_client/TestClient.test_query_simple.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestLogGroup.test_cls_period.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cls/TestLogGroup.test_cls_period.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestLogGroup.test_metrics.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cls/TestLogGroup.test_metrics.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCos.test_bucket_encryption.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cos/TestCos.test_bucket_encryption.yaml,discrete_only,False,False,47,False,no_value_from_threshold
+cloud_custodian:TestCos.test_bucket_has_statement.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cos/TestCos.test_bucket_has_statement.yaml,discrete_only,False,False,32,False,no_value_from_threshold
+cloud_custodian:TestCos.test_bucket_lifecycle.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cos/TestCos.test_bucket_lifecycle.yaml,discrete_only,False,False,62,False,no_value_from_threshold
+cloud_custodian:TestCos.test_bucket_logging.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cos/TestCos.test_bucket_logging.yaml,discrete_only,False,False,36,False,no_value_from_threshold
+cloud_custodian:TestCos.test_bucket_tag.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cos/TestCos.test_bucket_tag.yaml,discrete_only,False,False,32,False,no_value_from_threshold
+cloud_custodian:TestCvmAction.test_cvm_exec_exception.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cvm/TestCvmAction.test_cvm_exec_exception.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCvmAction.test_cvm_start.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cvm/TestCvmAction.test_cvm_start.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCvmAction.test_cvm_stop.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cvm/TestCvmAction.test_cvm_stop.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCvmAction.test_cvm_terminate.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_cvm/TestCvmAction.test_cvm_terminate.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestDnsRecord.test_dns_records.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_dns_record/TestDnsRecord.test_dns_records.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestEIP.test_eip_list.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_eip/TestEIP.test_eip_list.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestElasticsearch.test_elasticsearch_key.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_elasticsearch/TestElasticsearch.test_elasticsearch_key.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestElasticsearch.test_metrics.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_elasticsearch/TestElasticsearch.test_metrics.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestMySQL.test_metrics_filter.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_mysql/TestMySQL.test_metrics_filter.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestMySQL.test_mysql_create_time.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_mysql/TestMySQL.test_mysql_create_time.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestMySQL.test_mysql_encryption_not_enabled_filter.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_mysql/TestMySQL.test_mysql_encryption_not_enabled_filter.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestMySQL.test_mysql_engine_value.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_mysql/TestMySQL.test_mysql_engine_value.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestMySQLBackUp.test_mysql_backup_create_time.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_mysql_backup/TestMySQLBackUp.test_mysql_backup_create_time.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestMySQLBackUp.test_mysql_backup_create_time_running.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_mysql_backup/TestMySQLBackUp.test_mysql_backup_create_time_running.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestNatGateway.test_metrics.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_nat_gateway/TestNatGateway.test_metrics.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestNatGateway.test_nat_gateway_unused.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_nat_gateway/TestNatGateway.test_nat_gateway_unused.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestQueryResourceManager.test_resources.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_query/TestQueryResourceManager.test_resources.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestQueryResourceManager.test_resources_no_pagination.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_query/TestQueryResourceManager.test_resources_no_pagination.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestResourcetQuery.test_filter.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_query/TestResourcetQuery.test_filter.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestResourcetQuery.test_paged_filter.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_query/TestResourcetQuery.test_paged_filter.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestSecurityGroup.test_security_group_default_restrict.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_security_group/TestSecurityGroup.test_security_group_default_restrict.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestSecurityGroup.test_security_group_used.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_security_group/TestSecurityGroup.test_security_group_used.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestSubnet.test_tencentcloud_subnet_list.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_subnet/TestSubnet.test_tencentcloud_subnet_list.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCvmTagAction.test_add_tag.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_tags/TestCvmTagAction.test_add_tag.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCvmTagAction.test_cvm_mark_op_stop.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_tags/TestCvmTagAction.test_cvm_mark_op_stop.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCvmTagAction.test_cvm_mark_op_terminate_and_stop.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_tags/TestCvmTagAction.test_cvm_mark_op_terminate_and_stop.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCvmTagAction.test_cvm_marked_op_stop.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_tags/TestCvmTagAction.test_cvm_marked_op_stop.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCvmTagAction.test_cvm_marked_op_stop_not_filter.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_tags/TestCvmTagAction.test_cvm_marked_op_stop_not_filter.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCvmTagAction.test_cvm_marked_op_terminate.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_tags/TestCvmTagAction.test_cvm_marked_op_terminate.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCvmTagAction.test_modify_tag.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_tags/TestCvmTagAction.test_modify_tag.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestCvmTagAction.test_remove_tag.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_tags/TestCvmTagAction.test_remove_tag.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestTCR.test_tcr.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_tcr/TestTCR.test_tcr.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:TestVpc.test_vpc_flowlogs_enabled_pull.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/cassettes/test_tc_vpc/TestVpc.test_vpc_flowlogs_enabled_pull.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:cvm.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/c7n_tencentcloud/tests/data/policies/cvm.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:Chart.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/chart/Chart.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:default-secret-environment.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/chart/templates/default-secret-environment.yaml,unknown_or_unsupported,False,False,0,False,"yaml_error:while parsing a flow node
+expected the node content, but found '-'
+  in ""external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/chart/templates/default-secret-environment.yaml"", line 1, column 3"
+cloud_custodian:deployments.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/chart/templates/deployments.yaml,unknown_or_unsupported,False,False,0,False,"yaml_error:while parsing a flow node
+expected the node content, but found '-'
+  in ""external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/chart/templates/deployments.yaml"", line 1, column 3"
+cloud_custodian:mailer.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/chart/templates/mailer.yaml,unknown_or_unsupported,False,False,0,False,"yaml_error:while parsing a flow node
+expected the node content, but found '-'
+  in ""external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/chart/templates/mailer.yaml"", line 1, column 3"
+cloud_custodian:secret-environments.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/chart/templates/secret-environments.yaml,unknown_or_unsupported,False,False,0,False,"yaml_error:while parsing a flow node
+expected the node content, but found '-'
+  in ""external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/chart/templates/secret-environments.yaml"", line 1, column 3"
+cloud_custodian:values.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/chart/values.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:azure-pipelines.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/devops-flow/azure-pipelines.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:validation-pipeline.yaml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/ops/azure/container-host/devops-flow/validation-pipeline.yaml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:example_config_file.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/sandbox/c7n_autodoc/example_config_file.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:api.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/sandbox/c7n_sphere11/cfn/api.yml,unknown_or_unsupported,False,False,0,False,"yaml_error:could not determine a constructor for the tag '!Ref'
+  in ""external/corpora/cloud-custodian_cloud-custodian/tools/sandbox/c7n_sphere11/cfn/api.yml"", line 141, column 12"
+cloud_custodian:stack-db.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/sandbox/c7n_sphere11/cfn/stack-db.yml,discrete_only,False,False,0,False,no_value_from_threshold
+cloud_custodian:config.yml,third_party,external/corpora/cloud-custodian_cloud-custodian/tools/sandbox/c7n_sphere11/config.yml,discrete_only,False,False,0,False,no_value_from_threshold
+authored__ieee_fraud:ieee_fraud.rego,authored_control,bridge_benchmark/experiments/opa_gate/policies/authored/ieee_fraud.rego,conditioned_numeric_threshold,True,True,1,True,ast:function_call
+authored__constant_control:constant_threshold_control.rego,authored_control,bridge_benchmark/experiments/opa_gate/policies/authored/constant_threshold_control.rego,discrete_only,False,False,1,True,no_provenance_threshold

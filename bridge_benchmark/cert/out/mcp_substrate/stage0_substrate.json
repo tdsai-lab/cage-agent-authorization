@@ -1,0 +1,248 @@
+{
+  "corpus": "MCP reference servers (modelcontextprotocol/servers)",
+  "corpus_commit": "b2a94a21a53f",
+  "execution": "none (static parse, Stage 0)",
+  "frozen_detector_sha256": "221aa906dca8a79e5ad3d47abfad1756d93a6ea44a825a0a21e241834b9b57f6",
+  "criteria": "substrate(return) = typed return with >=1 continuous_x AND >=1 pipeline_set_s; continuous_x = numeric & operational-lexicon & not quantized; pipeline_set_s = discrete transport/provenance-assigned; subject_keyed (entity attribute) EXCLUDED; ambiguous discrete -> subject_keyed (conservative).",
+  "n_servers": 7,
+  "servers": [
+    "everything",
+    "fetch",
+    "filesystem",
+    "git",
+    "memory",
+    "sequentialthinking",
+    "time"
+  ],
+  "n_tools": 43,
+  "parse_coverage": 1.0,
+  "n_parse_fail_outputschema": 0,
+  "n_typed_return": 14,
+  "n_untyped_return": 29,
+  "n_typed_with_continuous_x": 1,
+  "n_typed_with_pipeline_set_s": 0,
+  "n_substrate_hits": 0,
+  "substrate_rate": 0.0,
+  "funnel": "Pr[native C|corpus] = Pr[substrate] x Pr[theta-cond|substrate] x Pr[\u0394/\u03b5|cond]",
+  "funnel_location_of_null": "substrate stage (typed-return): returns are untyped or carry no pipeline-set provenance alongside a continuous field",
+  "outcome": "NULL_no_typed_return_substrate",
+  "substrate_hits": [],
+  "typed_return_inventory": [
+    {
+      "server": "everything",
+      "tool": "get-structured-content",
+      "return_fields": [
+        {
+          "name": "temperature",
+          "type": "number",
+          "label": "continuous_x"
+        },
+        {
+          "name": "conditions",
+          "type": "string",
+          "label": "other"
+        },
+        {
+          "name": "humidity",
+          "type": "number",
+          "label": "continuous_x"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "read_file",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "read_text_file",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "read_multiple_files",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "write_file",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "edit_file",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "create_directory",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "list_directory",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "list_directory_with_sizes",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "directory_tree",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "move_file",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "search_files",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "get_file_info",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "server": "filesystem",
+      "tool": "list_allowed_directories",
+      "return_fields": [
+        {
+          "name": "content",
+          "type": "string",
+          "label": "other"
+        }
+      ]
+    }
+  ],
+  "mcptox_population": {
+    "n_servers": 45,
+    "names": [
+      "12306-mcp",
+      "AWSKnowledgeBase",
+      "AdFin",
+      "AgentQL",
+      "AlphaVantage",
+      "AmapMap",
+      "Apify",
+      "BaiduMap",
+      "BraveSearch",
+      "Claude Post",
+      "ClickHouse",
+      "Codacy",
+      "Commander",
+      "DoDo Payments",
+      "DumplingAI",
+      "E2B",
+      "Email",
+      "EverArt",
+      "Everything",
+      "Fetch",
+      "FileSystem",
+      "Financial Dataset",
+      "Flomo",
+      "Git",
+      "Github",
+      "Gitlab",
+      "Google Maps",
+      "GoogleDrive",
+      "Gyazo",
+      "HyperBrowser",
+      "KeywordsPeopleUse",
+      "Memory",
+      "OP.GG",
+      "Prisma",
+      "Puppeteer",
+      "QuickChart",
+      "Redis",
+      "SQLite",
+      "Sentry",
+      "Sequential Thinking",
+      "Slack",
+      "Tavily",
+      "gNucleus Text to CAD",
+      "mcp-simple-arxiv",
+      "wechat"
+    ],
+    "note": "MCPTox (arXiv 2508.14925) 45-server population; its released artifact (anonymous.4open.science/r/AAAI26-7C02) ships poisoning cases only, not the 353 tool schemas (obtained by live introspection). Reference corpus overlaps it on filesystem/git/fetch/memory/sequentialthinking/time/everything; live introspection of the third-party remainder is DECLINED (supply-chain risk > bonus-experiment upside)."
+  },
+  "limitation": "Static parse of the reference servers only (zero execution); parse_coverage reported. outputSchema is resolved from inline/named zod object literals; dynamically-built schemas may be missed (undercounts typed returns, never inflates substrate)."
+}

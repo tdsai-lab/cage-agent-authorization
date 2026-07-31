@@ -1,0 +1,119 @@
+{
+  "experiment": "EXP-POLICY-THIRD-PARTY",
+  "frozen_detector_sha256": "4620bb6be4d8911be5c8dd63e83fef770280e86f57a07040045b7263925c23a3",
+  "idiom_predicate": "op(f_num, theta) with theta=theta(s); f_num a numeric INPUT ref; theta NON-scalar selected by a DISCRETE key s (function call / dict-index-by-variable / conditional keyed on a discrete field); op in {<,<=,>,>=}; s has >=2 distinct threshold values.",
+  "epsilon": 0.1,
+  "max_files_per_corpus": 300,
+  "seed": 0,
+  "policy_dir": "external/corpora",
+  "num_policies": 538,
+  "num_policies_third_party": 536,
+  "parse_success": 520,
+  "parse_fail_unknown": 18,
+  "tax_counts_third_party": {
+    "discrete_only": 511,
+    "fixed_numeric_threshold": 7,
+    "conditioned_numeric_threshold": 0,
+    "affine_or_multivariate_numeric": 0,
+    "unknown_or_unsupported": 18
+  },
+  "tax_counts_all": {
+    "discrete_only": 512,
+    "fixed_numeric_threshold": 7,
+    "conditioned_numeric_threshold": 1,
+    "affine_or_multivariate_numeric": 0,
+    "unknown_or_unsupported": 18
+  },
+  "num_executable_with_opa_third_party": 10,
+  "num_with_C_witness_third_party": 0,
+  "C_count_third_party": 0,
+  "C_rate_third_party": 0.0,
+  "opa_categorize_gatekeeper": {
+    "engine": "opa_eval(gatekeeper_set,unmodified)",
+    "n_manifests": 300,
+    "category_distribution": {
+      "U": 169,
+      "A": 131
+    },
+    "C_count": 0,
+    "C_rate": 0.0
+  },
+  "authored_mechanism_control": {
+    "policy_id": "authored__ieee_fraud:ieee_fraud.rego",
+    "n_probed": 400,
+    "C_count": 31,
+    "C_rate": 0.0775
+  },
+  "per_corpus": {
+    "gatekeeper_library": {
+      "source": "third_party",
+      "origin": "open-policy-agent/gatekeeper-library (vendored in-tree)",
+      "language": "rego",
+      "files_available": 10,
+      "files_scanned": 10,
+      "capped": false,
+      "tax_counts": {
+        "unknown_or_unsupported": 10
+      },
+      "n_conditioned": 0,
+      "opa_executable": true
+    },
+    "kyverno_policies": {
+      "source": "third_party",
+      "origin": "github.com/kyverno/policies",
+      "language": "kyverno",
+      "files_available": 1188,
+      "files_scanned": 300,
+      "capped": true,
+      "tax_counts": {
+        "discrete_only": 295,
+        "fixed_numeric_threshold": 5
+      },
+      "n_conditioned": 0,
+      "opa_executable": false
+    },
+    "cloud_custodian": {
+      "source": "third_party",
+      "origin": "github.com/cloud-custodian/cloud-custodian",
+      "language": "cloud_custodian",
+      "files_available": 226,
+      "files_scanned": 226,
+      "capped": false,
+      "tax_counts": {
+        "discrete_only": 216,
+        "fixed_numeric_threshold": 2,
+        "unknown_or_unsupported": 8
+      },
+      "n_conditioned": 0,
+      "opa_executable": false
+    },
+    "authored__ieee_fraud": {
+      "source": "authored_control",
+      "origin": "authored conditioned-threshold positive (\u03b8(provenance))",
+      "language": "rego",
+      "files_available": 1,
+      "files_scanned": 1,
+      "capped": false,
+      "tax_counts": {
+        "conditioned_numeric_threshold": 1
+      },
+      "n_conditioned": 1,
+      "opa_executable": true
+    },
+    "authored__constant_control": {
+      "source": "authored_control",
+      "origin": "authored fixed-threshold negative control",
+      "language": "rego",
+      "files_available": 1,
+      "files_scanned": 1,
+      "capped": false,
+      "tax_counts": {
+        "discrete_only": 1
+      },
+      "n_conditioned": 0,
+      "opa_executable": true
+    }
+  },
+  "skipped_corpora": [],
+  "decision": "INFORMATIVE_NULL"
+}

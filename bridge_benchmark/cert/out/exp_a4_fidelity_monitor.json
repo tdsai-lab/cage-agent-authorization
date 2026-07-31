@@ -1,0 +1,783 @@
+{
+  "experiment": "EXP-A4 \u2014 operational fidelity monitor (delayed-oracle audit)",
+  "reuses": "implicit_policy_gate (#32) Featurizer + LipschitzBackend; ieee_cis_adapter natural pool",
+  "eps": 0.1,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_windows": [
+    500,
+    2000,
+    5000
+  ],
+  "thetas_alarm": [
+    0.02,
+    0.05
+  ],
+  "deltas_audit": [
+    "1h",
+    "1d",
+    "7d"
+  ],
+  "label_corrupt_frac_for_underfit_gate": 0.85,
+  "gate_diagnostics": [
+    {
+      "seed": 0,
+      "n_stream": 87500,
+      "n_fraud": 2995,
+      "good_cert_false_allow": 0.3396,
+      "bad_cert_false_allow": 0.428,
+      "good_cert_allow_safe": 0.7194
+    },
+    {
+      "seed": 1,
+      "n_stream": 87500,
+      "n_fraud": 3030,
+      "good_cert_false_allow": 0.2815,
+      "bad_cert_false_allow": 0.3891,
+      "good_cert_allow_safe": 0.6562
+    },
+    {
+      "seed": 2,
+      "n_stream": 87500,
+      "n_fraud": 3129,
+      "good_cert_false_allow": 0.2969,
+      "bad_cert_false_allow": 0.3279,
+      "good_cert_allow_safe": 0.6871
+    }
+  ],
+  "detection_table": [
+    {
+      "regime": "control",
+      "n_window": 500,
+      "theta_alarm": 0.02,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 500,
+      "theta_alarm": 0.02,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 500,
+      "theta_alarm": 0.02,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "control",
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 688.0,
+      "mean_no_monitor_exposure": 688.0,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 500,
+      "theta_alarm": 0.02,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.667,
+      "mean_latency_decisions": 2475.0,
+      "mean_latency_wall_days": 1.095,
+      "mean_fraud_exposure_before_alarm": 1998.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.677
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 500,
+      "theta_alarm": 0.02,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.667,
+      "mean_latency_decisions": 498.5,
+      "mean_latency_wall_days": 0.137,
+      "mean_fraud_exposure_before_alarm": 1905.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.692
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 500,
+      "theta_alarm": 0.02,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.667,
+      "mean_latency_decisions": 12463.0,
+      "mean_latency_wall_days": 7.095,
+      "mean_fraud_exposure_before_alarm": 2595.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.581
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 2770.0,
+      "mean_latency_wall_days": 1.19,
+      "mean_fraud_exposure_before_alarm": 162.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.974
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 855.7,
+      "mean_latency_wall_days": 0.232,
+      "mean_fraud_exposure_before_alarm": 63.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.99
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 12673.0,
+      "mean_latency_wall_days": 7.19,
+      "mean_fraud_exposure_before_alarm": 1038.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.832
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 2879.7,
+      "mean_latency_wall_days": 1.224,
+      "mean_fraud_exposure_before_alarm": 162.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.974
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 982.3,
+      "mean_latency_wall_days": 0.265,
+      "mean_fraud_exposure_before_alarm": 69.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.989
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 12768.0,
+      "mean_latency_wall_days": 7.224,
+      "mean_fraud_exposure_before_alarm": 1044.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.831
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 3730.7,
+      "mean_latency_wall_days": 1.736,
+      "mean_fraud_exposure_before_alarm": 273.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.956
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 1891.7,
+      "mean_latency_wall_days": 0.778,
+      "mean_fraud_exposure_before_alarm": 123.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.98
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 13482.3,
+      "mean_latency_wall_days": 7.736,
+      "mean_fraud_exposure_before_alarm": 1167.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.812
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 4219.3,
+      "mean_latency_wall_days": 1.933,
+      "mean_fraud_exposure_before_alarm": 321.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.948
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 2360.0,
+      "mean_latency_wall_days": 0.973,
+      "mean_fraud_exposure_before_alarm": 150.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.976
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 13866.7,
+      "mean_latency_wall_days": 7.93,
+      "mean_fraud_exposure_before_alarm": 1200.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.806
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 6030.0,
+      "mean_latency_wall_days": 2.952,
+      "mean_fraud_exposure_before_alarm": 489.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.921
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 4224.3,
+      "mean_latency_wall_days": 1.994,
+      "mean_fraud_exposure_before_alarm": 306.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.951
+    },
+    {
+      "regime": "label_shift",
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 1.0,
+      "mean_latency_decisions": 15545.3,
+      "mean_latency_wall_days": 8.953,
+      "mean_fraud_exposure_before_alarm": 1365.0,
+      "mean_no_monitor_exposure": 6192.0,
+      "exposure_reduction": 0.78
+    },
+    {
+      "regime": "underfit",
+      "n_window": 500,
+      "theta_alarm": 0.02,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.667,
+      "mean_latency_decisions": 7304.5,
+      "mean_latency_wall_days": 4.066,
+      "mean_fraud_exposure_before_alarm": 335.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.599
+    },
+    {
+      "regime": "underfit",
+      "n_window": 500,
+      "theta_alarm": 0.02,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.667,
+      "mean_latency_decisions": 5689.0,
+      "mean_latency_wall_days": 3.105,
+      "mean_fraud_exposure_before_alarm": 322.0,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.615
+    },
+    {
+      "regime": "underfit",
+      "n_window": 500,
+      "theta_alarm": 0.02,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.667,
+      "mean_latency_decisions": 15965.5,
+      "mean_latency_wall_days": 10.063,
+      "mean_fraud_exposure_before_alarm": 423.67,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.493
+    },
+    {
+      "regime": "underfit",
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "underfit",
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "underfit",
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "underfit",
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.333,
+      "mean_latency_decisions": 26524.0,
+      "mean_latency_wall_days": 17.177,
+      "mean_fraud_exposure_before_alarm": 703.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.159
+    },
+    {
+      "regime": "underfit",
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.333,
+      "mean_latency_decisions": 25132.0,
+      "mean_latency_wall_days": 16.219,
+      "mean_fraud_exposure_before_alarm": 689.67,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.175
+    },
+    {
+      "regime": "underfit",
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.333,
+      "mean_latency_decisions": 34841.0,
+      "mean_latency_wall_days": 23.177,
+      "mean_fraud_exposure_before_alarm": 743.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.111
+    },
+    {
+      "regime": "underfit",
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "underfit",
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "underfit",
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "underfit",
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "underfit",
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "underfit",
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "underfit",
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "underfit",
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    },
+    {
+      "regime": "underfit",
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d",
+      "detection_rate_over_seeds": 0.0,
+      "mean_latency_decisions": null,
+      "mean_latency_wall_days": null,
+      "mean_fraud_exposure_before_alarm": 836.33,
+      "mean_no_monitor_exposure": 836.33,
+      "exposure_reduction": 0.0
+    }
+  ],
+  "control_false_alarm_rate": 0.1667,
+  "control_any_alarm_rate": 0.1667,
+  "zero_false_alarm_operating_points_both_regressions": [],
+  "zero_false_alarm_operating_points_strong_regression": [
+    {
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h"
+    },
+    {
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d"
+    },
+    {
+      "n_window": 500,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d"
+    },
+    {
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1h"
+    },
+    {
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1d"
+    },
+    {
+      "n_window": 2000,
+      "theta_alarm": 0.02,
+      "delta_audit": "7d"
+    },
+    {
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h"
+    },
+    {
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d"
+    },
+    {
+      "n_window": 2000,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d"
+    },
+    {
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1h"
+    },
+    {
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "1d"
+    },
+    {
+      "n_window": 5000,
+      "theta_alarm": 0.02,
+      "delta_audit": "7d"
+    },
+    {
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1h"
+    },
+    {
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "1d"
+    },
+    {
+      "n_window": 5000,
+      "theta_alarm": 0.05,
+      "delta_audit": "7d"
+    }
+  ],
+  "verdict": "MONITOR VALIDATED (design sketch, ): the strong regression (label-shift toward the certified-safe subpopulation) is detected at 100% with ZERO control false alarms at 15 operating point(s), cutting fraud exposure ~90\u201396% and detecting within \u2248\u0394_audit of the regression; the SUBTLE regression (a lightly over-permissive gate) trades detection off against the control false-alarm rate \u2014 the honest detection/false-alarm curve. Either way the fidelity conditional gets a concrete runtime control that bounds exposure.",
+  "note": "Ground truth is the real (imperfect) isFraud label, so this is an EMPIRICAL fidelity control, not a predicate-soundness theorem \u2014 exactly the rung-2/3 regime. The certificate itself stays sound w.r.t. the smoothed/Lipschitz classifier; what the monitor tracks is the classifier\u2194oracle FIDELITY drifting, which no static certificate can see. Detection latency trades off against window size n and \u0394_audit; a larger \u0394_audit shifts every detection later by \u2248\u0394_audit in wall-time (the label simply arrives later)."
+}

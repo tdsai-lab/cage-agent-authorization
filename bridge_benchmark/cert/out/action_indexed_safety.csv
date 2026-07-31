@@ -1,0 +1,4 @@
+domain,n,n_actions,action_dependence_rate,same_z_different_action_rate,gate_decision_variation_over_actions,privileged_unsafe_rate
+finance_compliance,20000,4,0.3405,0.3405,0.1135,0.3405
+sre_monitoring,20000,4,0.3157,0.3157,0.1052,0.3157
+ops_security,20000,4,0.3296,0.3296,0.1098,0.3296

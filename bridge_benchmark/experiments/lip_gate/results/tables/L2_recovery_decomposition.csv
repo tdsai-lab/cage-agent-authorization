@@ -1,0 +1,7 @@
+domain,epsilon,exact_recovery,smooth_lowM_lipgate,smooth_highM_lipgate,lip_deterministic,finite_mc_tax,smoothing_transition_tax,learned_margin_deficiency,deterministic_gain_over_lowM,mlp_smoothing_lowM_context,decomposition_valid
+finance,0.03,1.0,0.0375,0.0625,0.55,0.025,0.4875,0.45,0.5125,0.55,True
+finance,0.1,1.0,0.0,0.0,0.2625,0.0,0.2625,0.7375,0.2625,0.15,True
+ops,0.03,1.0,0.075,0.075,0.6,0.0,0.525,0.4,0.525,0.5625,True
+ops,0.1,1.0,0.0,0.0,0.4,0.0,0.4,0.6,0.4,0.1625,True
+sre,0.03,1.0,0.05,0.075,0.5625,0.025,0.4875,0.4375,0.5125,0.5125,True
+sre,0.1,1.0,0.0,0.0,0.2375,0.0,0.2375,0.7625,0.2375,0.1375,True

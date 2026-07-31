@@ -1,0 +1,85 @@
+{
+  "experiment": "CX6 \u2014 real adapter-stack budget calibration through the Marble AML engine",
+  "engine": "Marble v1.4.0 decision API",
+  "eps_cal_p95": 0.0524,
+  "n_calibration_drifts": 1158,
+  "n_calibrate": 400,
+  "n_holdout": 400,
+  "marble_unique_decisions": 1658,
+  "integrity_freshness_escape_mean": 0.0062,
+  "out_of_budget_tail_escape_mean": 0.2067,
+  "per_mechanism": {
+    "wrong_provenance_binding": {
+      "applied": 400,
+      "d_mean": 1.0,
+      "max_d": 1,
+      "eps_p50": 0.0,
+      "eps_p95": 0.0,
+      "frac_in_budget": 1.0,
+      "decision_flip_rate": 0.235,
+      "covered_flips": 94,
+      "budget_escape_flips": 0,
+      "budget_escape_rate": 0.0
+    },
+    "stale_cache": {
+      "applied": 358,
+      "d_mean": 0.0,
+      "max_d": 0,
+      "eps_p50": 0.0137,
+      "eps_p95": 0.105,
+      "frac_in_budget": 0.855,
+      "decision_flip_rate": 0.0251,
+      "covered_flips": 2,
+      "budget_escape_flips": 7,
+      "budget_escape_rate": 0.0196
+    },
+    "numeric_jitter": {
+      "applied": 400,
+      "d_mean": 0.0,
+      "max_d": 0,
+      "eps_p50": 0.0106,
+      "eps_p95": 0.0297,
+      "frac_in_budget": 1.0,
+      "decision_flip_rate": 0.025,
+      "covered_flips": 10,
+      "budget_escape_flips": 0,
+      "budget_escape_rate": 0.0
+    },
+    "normalization_skew": {
+      "applied": 400,
+      "d_mean": 0.0,
+      "max_d": 0,
+      "eps_p50": 0.0154,
+      "eps_p95": 0.0502,
+      "frac_in_budget": 0.96,
+      "decision_flip_rate": 0.03,
+      "covered_flips": 10,
+      "budget_escape_flips": 2,
+      "budget_escape_rate": 0.005
+    },
+    "schema_skew": {
+      "applied": 377,
+      "d_mean": 0.0,
+      "max_d": 0,
+      "eps_p50": 0.0,
+      "eps_p95": 0.5304,
+      "frac_in_budget": 0.695,
+      "decision_flip_rate": 0.1088,
+      "covered_flips": 2,
+      "budget_escape_flips": 39,
+      "budget_escape_rate": 0.1034
+    },
+    "cache_key_collision": {
+      "applied": 400,
+      "d_mean": 0.0,
+      "max_d": 0,
+      "eps_p50": 0.1263,
+      "eps_p95": 0.417,
+      "frac_in_budget": 0.292,
+      "decision_flip_rate": 0.3175,
+      "covered_flips": 3,
+      "budget_escape_flips": 124,
+      "budget_escape_rate": 0.31
+    }
+  }
+}

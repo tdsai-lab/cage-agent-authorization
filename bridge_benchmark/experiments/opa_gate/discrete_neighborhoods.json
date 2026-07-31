@@ -1,0 +1,51 @@
+{
+  "_doc": "FROZEN discrete-neighborhood registry for the OPA-gate experiment (NEW_EXPS_8 gap 4). Each d=1 discrete edge an adversary may traverse carries a MECHANISM tag from the TM2 attacker taxonomy. Edges with no assignable mechanism do NOT go in (they are listed under excluded_fields with a reason). This converts the discrete neighborhood from a free parameter into a threat-model-derived object. Freeze this table BEFORE running the oracle; the runners enforce that the oracle only traverses registered edges.",
+  "tm2_mechanisms": {
+    "multiplexing_confusion": "The agent multiplexes several tools/endpoints; a typed return is attributed to the WRONG tool identity (tool swap). The numeric value is read under a different tool's threshold.",
+    "schema_migration": "A field's schema/label set changed across versions; an old value is interpreted under a new schema (categorical value swap within a field whose meaning migrated).",
+    "stale_cache": "A provenance attribute (jurisdiction, network/geo, KYC tier) is served from a stale cache and no longer matches the live binding, so the threshold selected for it is wrong.",
+    "policy_pack_confusion": "The wrong policy pack / environment binding is applied (env/tier/registry pack), selecting a different threshold for the same numeric value."
+  },
+  "provenance_tiers": {
+    "third_party_rego": "Unmodified third-party policy (Gatekeeper/OPA bundle). Strongest evidence: removes authorship of threshold logic.",
+    "third_party_logic_reimplemented": "The documented idiom of a third-party policy re-expressed as executable Rego for this experiment (logic faithful to a public source, but re-typed). Intermediate evidence.",
+    "authored_rego": "Rego authored for this experiment (provenance-conditioned thresholds), evaluated by OPA. Controlled-mechanism evidence; labels flow through an executable engine but authorship is ours.",
+    "python_fallback": "Debugging only; must NOT appear in main results."
+  },
+  "domains": {
+    "finance": {
+      "policy_provenance": "authored_rego",
+      "registered_edges": {
+        "__tool__": {"values": ["t_credit", "t_sanctions", "t_txmon"], "mechanism": "multiplexing_confusion", "affects_threshold": true},
+        "jurisdiction": {"values": ["domestic", "eu", "high_risk", "sanctioned"], "mechanism": "stale_cache", "affects_threshold": true}
+      },
+      "excluded_fields": {"entity_type": "inert: the authored policy threshold does not depend on entity_type, and no TM2 mechanism re-binds it across a threshold."}
+    },
+    "sre": {
+      "policy_provenance": "authored_rego",
+      "registered_edges": {
+        "__tool__": {"values": ["t_latency", "t_errbudget", "t_saturation"], "mechanism": "multiplexing_confusion", "affects_threshold": true},
+        "service_tier": {"values": ["tier3", "tier2", "tier1", "prod"], "mechanism": "policy_pack_confusion", "affects_threshold": true}
+      },
+      "excluded_fields": {"region": "inert: the suppression threshold does not depend on region; no mechanism re-binds it across a threshold."}
+    },
+    "ops": {
+      "policy_provenance": "authored_rego",
+      "registered_edges": {
+        "__tool__": {"values": ["t_authn", "t_geoip", "t_device"], "mechanism": "multiplexing_confusion", "affects_threshold": true},
+        "network": {"values": ["trusted", "normal", "new_device", "tor_exit"], "mechanism": "stale_cache", "affects_threshold": true}
+      },
+      "excluded_fields": {"device": "inert: the login threshold does not depend on device posture; no mechanism re-binds it across a threshold."}
+    },
+    "k8s_gatekeeper": {
+      "policy_provenance": "third_party_rego",
+      "registered_edges": {
+        "registry": {"values": ["registry.company.com/", "docker.io/", "gcr.io/"], "mechanism": "policy_pack_confusion", "affects_threshold": false},
+        "owner": {"values": ["team-a", "platform", "team-b", "__none__"], "mechanism": "schema_migration", "affects_threshold": false},
+        "privileged": {"values": [false, true], "mechanism": "schema_migration", "affects_threshold": false},
+        "hostport": {"values": [0, 8080], "mechanism": "schema_migration", "affects_threshold": false}
+      },
+      "excluded_fields": {"env": "inert: no vendored Gatekeeper policy reads the env label, and no TM2 mechanism crosses a policy boundary by re-binding env."}
+    }
+  }
+}

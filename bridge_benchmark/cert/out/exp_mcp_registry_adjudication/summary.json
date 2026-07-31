@@ -1,0 +1,721 @@
+{
+  "experiment": "EXP-A2 \u2014 registry-scale substrate adjudication (audited subsample, zero execution)",
+  "stage1_detector_sha256": "221aa906dca8a79e5ad3d47abfad1756d93a6ea44a825a0a21e241834b9b57f6",
+  "adjudication_module_sha256": "f26b57a976210cb8257c867f1aa7266dcbf360958d6b58d11b27814ce0b49f73",
+  "protocol": "two independent passes (lexical + frozen semantic table), disagreement \u2192 OUT; CONFIRMED_PIPELINE iff BOTH passes agree; Step-3 requires a DOCUMENTED third-party \u03b8(s) for a strong C-substrate hit.",
+  "n_candidate_tools": 31,
+  "n_candidate_servers": 8,
+  "n_typed_returns_corpus": 622,
+  "n_distinct_candidate_s_fields": 17,
+  "field_verdicts": {
+    "acceptedSources": {
+      "final": "SCHEMA_RESOURCE_META",
+      "lexical": "DUALUSE_AMBIGUOUS",
+      "semantic": "SCHEMA_RESOURCE_META",
+      "rationale": "nausika_describe_place_schema: a list describing the schema \u2014 schema metadata",
+      "documented_theta_s": null
+    },
+    "cache_respected": {
+      "final": "CONFIRMED_PIPELINE",
+      "lexical": "CONFIRMED_PIPELINE",
+      "semantic": "CONFIRMED_PIPELINE",
+      "rationale": "contrastapi seo_audit: boolean \u2014 did the return-assembly honour the cache (cache-freshness of THIS response); a genuine transport/freshness key",
+      "documented_theta_s": null
+    },
+    "cloud_provider": {
+      "final": "SUBJECT_INSTRUMENT",
+      "lexical": "DUALUSE_AMBIGUOUS",
+      "semantic": "SUBJECT_INSTRUMENT",
+      "rationale": "contrastapi: which cloud hosts the QUERIED IP \u2014 an attribute of the IP being looked up",
+      "documented_theta_s": null
+    },
+    "data_origin_unverified": {
+      "final": "DUALUSE_AMBIGUOUS",
+      "lexical": "DUALUSE_AMBIGUOUS",
+      "semantic": "CONFIRMED_PIPELINE",
+      "rationale": "nausika: a TRUST qualifier the adapter attaches to the data's origin \u2014 assembly-layer provenance; closest structural pipeline-set field",
+      "documented_theta_s": null
+    },
+    "data_source": {
+      "final": "DUALUSE_AMBIGUOUS",
+      "lexical": "DUALUSE_AMBIGUOUS",
+      "semantic": "DUALUSE_AMBIGUOUS",
+      "rationale": "nausika_tides: the upstream data source \u2014 dual-use attribution",
+      "documented_theta_s": null
+    },
+    "feed": {
+      "final": "SUBJECT_INSTRUMENT",
+      "lexical": "SUBJECT_INSTRUMENT",
+      "semantic": "SUBJECT_INSTRUMENT",
+      "rationale": "hn_get_stories: which HN feed was requested \u2014 a reflected query parameter",
+      "documented_theta_s": null
+    },
+    "first_seen_source": {
+      "final": "DUALUSE_AMBIGUOUS",
+      "lexical": "DUALUSE_AMBIGUOUS",
+      "semantic": "DUALUSE_AMBIGUOUS",
+      "rationale": "contrastapi cve_lookup: where the CVE was first observed \u2014 provenance of the subject, dual-use",
+      "documented_theta_s": null
+    },
+    "forbiddenSources": {
+      "final": "SCHEMA_RESOURCE_META",
+      "lexical": "DUALUSE_AMBIGUOUS",
+      "semantic": "SCHEMA_RESOURCE_META",
+      "rationale": "nausika_describe_place_schema: a list describing the schema \u2014 schema metadata",
+      "documented_theta_s": null
+    },
+    "product_url": {
+      "final": "SUBJECT_INSTRUMENT",
+      "lexical": "SUBJECT_INSTRUMENT",
+      "semantic": "SUBJECT_INSTRUMENT",
+      "rationale": "surprise-buddy find_gifts: the gift product's URL \u2014 a subject attribute",
+      "documented_theta_s": null
+    },
+    "refRoute": {
+      "final": "SUBJECT_INSTRUMENT",
+      "lexical": "DUALUSE_AMBIGUOUS",
+      "semantic": "SUBJECT_INSTRUMENT",
+      "rationale": "TRIALPATH get_credit_transactions: the payment route/rail of the transaction \u2014 an instrument attribute",
+      "documented_theta_s": null
+    },
+    "source": {
+      "final": "DUALUSE_AMBIGUOUS",
+      "lexical": "DUALUSE_AMBIGUOUS",
+      "semantic": "DUALUSE_AMBIGUOUS",
+      "rationale": "generic attribution field (arxiv/pubmed/nausika) \u2014 dual-use",
+      "documented_theta_s": null
+    },
+    "sourcePmid": {
+      "final": "SUBJECT_INSTRUMENT",
+      "lexical": "SUBJECT_INSTRUMENT",
+      "semantic": "SUBJECT_INSTRUMENT",
+      "rationale": "pubmed: the source PMID \u2014 a subject identifier",
+      "documented_theta_s": null
+    },
+    "source_external_url": {
+      "final": "SUBJECT_INSTRUMENT",
+      "lexical": "DUALUSE_AMBIGUOUS",
+      "semantic": "SUBJECT_INSTRUMENT",
+      "rationale": "memestack: the external URL hosting the image \u2014 a property of the reported image",
+      "documented_theta_s": null
+    },
+    "source_origin": {
+      "final": "SUBJECT_INSTRUMENT",
+      "lexical": "DUALUSE_AMBIGUOUS",
+      "semantic": "SUBJECT_INSTRUMENT",
+      "rationale": "memestack: where the meme image originally came from \u2014 an attribute of the image entity",
+      "documented_theta_s": null
+    },
+    "source_url": {
+      "final": "DUALUSE_AMBIGUOUS",
+      "lexical": "DUALUSE_AMBIGUOUS",
+      "semantic": "DUALUSE_AMBIGUOUS",
+      "rationale": "nausika: the upstream URL the geodata was fetched from \u2014 attribution/dual-use, not a policy-conditioning transport key",
+      "documented_theta_s": null
+    },
+    "version": {
+      "final": "SCHEMA_RESOURCE_META",
+      "lexical": "SCHEMA_RESOURCE_META",
+      "semantic": "SCHEMA_RESOURCE_META",
+      "rationale": "contrastapi: CVSS spec version \u2014 schema/version metadata",
+      "documented_theta_s": null
+    },
+    "vhf_channel": {
+      "final": "SUBJECT_INSTRUMENT",
+      "lexical": "SUBJECT_INSTRUMENT",
+      "semantic": "SUBJECT_INSTRUMENT",
+      "rationale": "nausika: a marina/place's VHF radio channel \u2014 a property of the reported place",
+      "documented_theta_s": null
+    }
+  },
+  "s_fields_by_final_category": {
+    "SCHEMA_RESOURCE_META": [
+      "acceptedSources",
+      "forbiddenSources",
+      "version"
+    ],
+    "CONFIRMED_PIPELINE": [
+      "cache_respected"
+    ],
+    "SUBJECT_INSTRUMENT": [
+      "cloud_provider",
+      "feed",
+      "product_url",
+      "refRoute",
+      "sourcePmid",
+      "source_external_url",
+      "source_origin",
+      "vhf_channel"
+    ],
+    "DUALUSE_AMBIGUOUS": [
+      "data_origin_unverified",
+      "data_source",
+      "first_seen_source",
+      "source",
+      "source_url"
+    ]
+  },
+  "n_structurally_confirmed_tools": 1,
+  "n_structurally_confirmed_servers": 1,
+  "n_strong_confirmed_tools_with_documented_theta_s": 0,
+  "structural_confirmed_rate_over_candidates": 0.032258,
+  "wilson95_structural_over_candidates": [
+    0.005717,
+    0.161941
+  ],
+  "structural_confirmed_rate_over_typed": 0.001608,
+  "wilson95_structural_over_typed": [
+    0.000284,
+    0.00905
+  ],
+  "strong_confirmed_rate_over_typed": 0.0,
+  "wilson95_strong_over_typed": [
+    0.0,
+    0.006138
+  ],
+  "worked_examples": [
+    {
+      "server": "contrastcyber/contrastapi",
+      "tool": "threat_report / ip_lookup",
+      "continuous_x": "risk_score (0-100 integer, operational)",
+      "candidate_s": "cloud_provider",
+      "verdict": {
+        "final": "SUBJECT_INSTRUMENT",
+        "lexical": "DUALUSE_AMBIGUOUS",
+        "semantic": "SUBJECT_INSTRUMENT",
+        "rationale": "contrastapi: which cloud hosts the QUERIED IP \u2014 an attribute of the IP being looked up",
+        "documented_theta_s": null
+      },
+      "note": "The Stage-1 detector fired on `provider`. But cloud_provider is an attribute of the IP being LOOKED UP (alongside is_datacenter, asn_name) \u2014 the response DESCRIBES that IP. A d=1 swap of cloud_provider fabricates a different lookup subject, it is not a return-assembly adapter fault \u2192 SUBJECT_INSTRUMENT, OUT. No policy documents a risk_score threshold conditioned on cloud_provider."
+    },
+    {
+      "server": "contrastcyber/contrastapi",
+      "tool": "seo_audit",
+      "continuous_x": "score / h1_count / external_link_count (operational)",
+      "candidate_s": "cache_respected",
+      "verdict": {
+        "final": "CONFIRMED_PIPELINE",
+        "lexical": "CONFIRMED_PIPELINE",
+        "semantic": "CONFIRMED_PIPELINE",
+        "rationale": "contrastapi seo_audit: boolean \u2014 did the return-assembly honour the cache (cache-freshness of THIS response); a genuine transport/freshness key",
+        "documented_theta_s": null
+      },
+      "note": "cache_respected is a boolean about whether THIS response's assembly honoured the cache \u2014 a genuine transport/freshness key set by the pipeline, so BOTH passes confirm it (structurally CONFIRMED_PIPELINE). But Step-3: NO published policy documents an SEO-score threshold \u03b8(cache_respected). So it is a structural pipeline-set field with no documented \u03b8(s) \u2192 NOT a strong C-substrate hit."
+    }
+  ],
+  "per_tool": [
+    {
+      "server": "contrastcyber/contrastapi",
+      "tool": "threat_report",
+      "s_fields": [
+        "cloud_provider"
+      ],
+      "x_fields": [
+        "risk_score"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "contrastcyber/contrastapi",
+      "tool": "seo_audit",
+      "s_fields": [
+        "cache_respected"
+      ],
+      "x_fields": [
+        "external_link_count",
+        "h1_count",
+        "h2_count",
+        "h3_count",
+        "images_total",
+        "internal_link_count",
+        "score"
+      ],
+      "confirmed_pipeline_s_fields": [
+        "cache_respected"
+      ],
+      "structurally_confirmed": true,
+      "theta_s_documented": false
+    },
+    {
+      "server": "contrastcyber/contrastapi",
+      "tool": "ip_lookup",
+      "s_fields": [
+        "cloud_provider"
+      ],
+      "x_fields": [
+        "risk_score"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "contrastcyber/contrastapi",
+      "tool": "cve_lookup",
+      "s_fields": [
+        "first_seen_source"
+      ],
+      "x_fields": [
+        "total_products",
+        "total_references",
+        "total_references_unique"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "contrastcyber/contrastapi",
+      "tool": "get_cvss_details",
+      "s_fields": [
+        "version"
+      ],
+      "x_fields": [
+        "base_score",
+        "environmental_score",
+        "temporal_score"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "cyanheads/arxiv-mcp-server",
+      "tool": "arxiv_read_paper",
+      "s_fields": [
+        "source"
+      ],
+      "x_fields": [
+        "total_characters"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "cyanheads/hn-mcp-server",
+      "tool": "hn_get_stories",
+      "s_fields": [
+        "feed"
+      ],
+      "x_fields": [
+        "score",
+        "total"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "cyanheads/pubmed-mcp-server",
+      "tool": "pubmed_search_articles",
+      "s_fields": [
+        "source"
+      ],
+      "x_fields": [
+        "totalFound"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "cyanheads/pubmed-mcp-server",
+      "tool": "pubmed_find_related",
+      "s_fields": [
+        "source",
+        "sourcePmid"
+      ],
+      "x_fields": [
+        "score",
+        "totalFound"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "search_images",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "like_count",
+        "save_count",
+        "total",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "get_image",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "like_count",
+        "quality_score",
+        "save_count",
+        "size",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "find_similar",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "count",
+        "like_count",
+        "relevance_score",
+        "save_count",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "find_related",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "count",
+        "like_count",
+        "relevance_score",
+        "save_count",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "browse_images",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "like_count",
+        "save_count",
+        "total",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "get_leaderboard",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "approved_image_count",
+        "like_count",
+        "save_count",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "browse_by_tag",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "image_count",
+        "like_count",
+        "save_count",
+        "total",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "browse_by_category",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "like_count",
+        "save_count",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "get_mutation_group",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "like_count",
+        "quality_score",
+        "save_count",
+        "size",
+        "total_variants",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "search_text_in_image",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "like_count",
+        "save_count",
+        "total",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "find_meme_for_text",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "like_count",
+        "save_count",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "memestack/mcp",
+      "tool": "reverse_image_search",
+      "s_fields": [
+        "source_external_url",
+        "source_origin"
+      ],
+      "x_fields": [
+        "like_count",
+        "relevance_score",
+        "save_count",
+        "size_bytes",
+        "zap_count",
+        "zap_total_sats"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "nausika/nausika",
+      "tool": "nausika_seasonal_forecast",
+      "s_fields": [
+        "source_url"
+      ],
+      "x_fields": [
+        "distance_km"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "nausika/nausika",
+      "tool": "nausika_tides",
+      "s_fields": [
+        "data_source",
+        "source_url"
+      ],
+      "x_fields": [
+        "count",
+        "distance_nm",
+        "level_m"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "nausika/nausika",
+      "tool": "nausika_search_places",
+      "s_fields": [
+        "data_origin_unverified",
+        "source_url",
+        "vhf_channel"
+      ],
+      "x_fields": [
+        "count",
+        "coverage_score",
+        "distance_km",
+        "rating_count"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "nausika/nausika",
+      "tool": "nausika_get_place",
+      "s_fields": [
+        "data_origin_unverified",
+        "source_url",
+        "vhf_channel"
+      ],
+      "x_fields": [
+        "coverage_score",
+        "distance_km",
+        "rating_count"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "nausika/nausika",
+      "tool": "nausika_sea_route",
+      "s_fields": [
+        "source_url"
+      ],
+      "x_fields": [
+        "dest_snap_distance_nm",
+        "distance",
+        "estimated_duration_hours",
+        "length",
+        "origin_snap_distance_nm",
+        "speed_knots",
+        "waypoints_count"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "nausika/nausika",
+      "tool": "nausika_geocode",
+      "s_fields": [
+        "source",
+        "source_url"
+      ],
+      "x_fields": [
+        "count",
+        "distance_m"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "nausika/nausika",
+      "tool": "nausika_describe_place_schema",
+      "s_fields": [
+        "acceptedSources",
+        "forbiddenSources"
+      ],
+      "x_fields": [
+        "maxCount"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "nausika/nausika",
+      "tool": "nausika_is_water",
+      "s_fields": [
+        "source",
+        "source_url"
+      ],
+      "x_fields": [
+        "distance_to_coast_m"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "spencerdgarrett/TRIALPATH",
+      "tool": "get_credit_transactions",
+      "s_fields": [
+        "refRoute"
+      ],
+      "x_fields": [
+        "amountMicros",
+        "amountUsd",
+        "balanceAfterMicros",
+        "balanceAfterUsd",
+        "count"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    },
+    {
+      "server": "surprise-buddy/mcp-server",
+      "tool": "find_gifts",
+      "s_fields": [
+        "product_url"
+      ],
+      "x_fields": [
+        "price_cents"
+      ],
+      "confirmed_pipeline_s_fields": [],
+      "structurally_confirmed": false,
+      "theta_s_documented": false
+    }
+  ],
+  "outcome": "STRUCTURAL_PIPELINE_SET_no_documented_theta",
+  "interpretation": "The T2-6 Stage-1 candidate habitat (5.0% of typed returns, 31 tools/8 servers) collapses under conservative Stage-2 adjudication to 1/31 STRUCTURALLY pipeline-set tool (only `cache_respected`, a cache-freshness key, survives both passes; every source/origin/channel/provider field resolves SUBJECT or DUALUSE \u2192 OUT) and to 0/31 with a documented \u03b8(s). So the security-relevant (\u03b8(s)-conditioned) confirmed rate is 0.0 of typed returns [Wilson (0.0, 0.006138)] \u2014 a FOURTH informative null joining the k8s policy-half, MCP data-half and OpenAPI data-half nulls: the C substrate is not spontaneous in commodity typed ecosystems. The paper's necessity + soundness story never rested on prevalence; the honest structural residual (cache_respected) is named, not hidden.",
+  "kill_criterion_note": " kill: 0 strong-confirmed \u2192 replace 'candidate habitat' by a fourth informative null (done). The one structural pipeline-set field is reported as an honest residual, with no documented \u03b8(s).",
+  "limitation": "Zero-execution schema adjudication (published Smithery schemas, not runtime returns). 8 servers / 31 tools = the full T2-6 candidate set (R1 suggested \u226520 servers; the candidate population spans 8). The semantic pass is frozen per-field; disagreements with the lexical pass resolve OUT (conservative). A documented \u03b8(s) discovered later would upgrade the corresponding structural field to a strong hit."
+}

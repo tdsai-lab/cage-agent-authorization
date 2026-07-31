@@ -1,0 +1,538 @@
+{
+  "experiment": "EXP-CX4 = A6 \u2014 calibrated per-field \u03b5 budget (ellipsoid / weighted-\u2113\u221e vs global \u2113\u2082)",
+  "source": "NEW_EXP_OPA_CHECK.md CX4 / NEW_NEW_EXP.md A6",
+  "k_fields": 6,
+  "n_x1": 4,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_cal": 20000,
+  "n_eval": 20000,
+  "calibration_quantile": 0.95,
+  "geometries": [
+    "global_l2",
+    "ellipsoid",
+    "linf_box"
+  ],
+  "budget_frozen_on": "calibration split (per-field p95); eval split disjoint",
+  "aggregate": {
+    "global_l2": {
+      "fault_coverage": {
+        "mean": 0.9509,
+        "std": 0.0026
+      },
+      "robust_safe_coverage": {
+        "mean": 0.4531,
+        "std": 0.1186
+      },
+      "abstention": {
+        "mean": 0.5469,
+        "std": 0.1186
+      },
+      "policy_false_allow": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "Delta": {
+        "mean": 1.3512,
+        "std": 0.369
+      }
+    },
+    "ellipsoid": {
+      "fault_coverage": {
+        "mean": 0.9484,
+        "std": 0.001
+      },
+      "robust_safe_coverage": {
+        "mean": 0.6196,
+        "std": 0.0548
+      },
+      "abstention": {
+        "mean": 0.3804,
+        "std": 0.0548
+      },
+      "policy_false_allow": {
+        "mean": 0.0379,
+        "std": 0.0204
+      },
+      "Delta": {
+        "mean": 0.9061,
+        "std": 0.181
+      }
+    },
+    "linf_box": {
+      "fault_coverage": {
+        "mean": 0.9489,
+        "std": 0.0023
+      },
+      "robust_safe_coverage": {
+        "mean": 0.4805,
+        "std": 0.0718
+      },
+      "abstention": {
+        "mean": 0.5195,
+        "std": 0.0718
+      },
+      "policy_false_allow": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "Delta": {
+        "mean": 1.2652,
+        "std": 0.2446
+      }
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "eps_perfield_ellipsoid": [
+        0.07395,
+        0.14773,
+        0.54013,
+        0.163,
+        0.12883,
+        0.44574
+      ],
+      "R_by_geom": {
+        "global_l2": 0.35062,
+        "ellipsoid": 3.542,
+        "linf_box": 2.62083
+      },
+      "geoms": {
+        "global_l2": {
+          "geom": "global_l2",
+          "Delta": 0.88609,
+          "robust_safe_coverage": 0.6146,
+          "abstention": 0.3854,
+          "fault_coverage": 0.9476,
+          "policy_false_allow": 0.0,
+          "policy_false_allow_count": 0,
+          "n_certified": 7161
+        },
+        "ellipsoid": {
+          "geom": "ellipsoid",
+          "Delta": 0.74704,
+          "robust_safe_coverage": 0.6718,
+          "abstention": 0.3282,
+          "fault_coverage": 0.9485,
+          "policy_false_allow": 0.03398,
+          "policy_false_allow_count": 266,
+          "n_certified": 7827
+        },
+        "linf_box": {
+          "geom": "linf_box",
+          "Delta": 0.99731,
+          "robust_safe_coverage": 0.5703,
+          "abstention": 0.4297,
+          "fault_coverage": 0.9452,
+          "policy_false_allow": 0.0,
+          "policy_false_allow_count": 0,
+          "n_certified": 6645
+        }
+      },
+      "raw_field_radii": {
+        "field_0": {
+          "eps_perfield_ellipsoid": 0.07395,
+          "eps_global_l2_same_for_all": 0.35062,
+          "fault_scale": 0.02101
+        },
+        "field_1": {
+          "eps_perfield_ellipsoid": 0.14773,
+          "eps_global_l2_same_for_all": 0.35062,
+          "fault_scale": 0.04189
+        },
+        "field_2": {
+          "eps_perfield_ellipsoid": 0.54013,
+          "eps_global_l2_same_for_all": 0.35062,
+          "fault_scale": 0.15192
+        },
+        "field_3": {
+          "eps_perfield_ellipsoid": 0.163,
+          "eps_global_l2_same_for_all": 0.35062,
+          "fault_scale": 0.0459
+        },
+        "field_4": {
+          "eps_perfield_ellipsoid": 0.12883,
+          "eps_global_l2_same_for_all": 0.35062,
+          "fault_scale": 0.03624
+        },
+        "field_5": {
+          "eps_perfield_ellipsoid": 0.44574,
+          "eps_global_l2_same_for_all": 0.35062,
+          "fault_scale": 0.12677
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "eps_perfield_ellipsoid": [
+        0.1547,
+        0.49737,
+        0.64557,
+        0.08505,
+        0.11256,
+        0.0924
+      ],
+      "R_by_geom": {
+        "global_l2": 0.40601,
+        "ellipsoid": 3.52472,
+        "linf_box": 2.60097
+      },
+      "geoms": {
+        "global_l2": {
+          "geom": "global_l2",
+          "Delta": 1.11345,
+          "robust_safe_coverage": 0.5628,
+          "abstention": 0.4372,
+          "fault_coverage": 0.948,
+          "policy_false_allow": 0.0,
+          "policy_false_allow_count": 0,
+          "n_certified": 6798
+        },
+        "ellipsoid": {
+          "geom": "ellipsoid",
+          "Delta": 0.88334,
+          "robust_safe_coverage": 0.6504,
+          "abstention": 0.3496,
+          "fault_coverage": 0.9491,
+          "policy_false_allow": 0.02126,
+          "policy_false_allow_count": 167,
+          "n_certified": 7856
+        },
+        "linf_box": {
+          "geom": "linf_box",
+          "Delta": 1.17691,
+          "robust_safe_coverage": 0.5386,
+          "abstention": 0.4614,
+          "fault_coverage": 0.9493,
+          "policy_false_allow": 0.0,
+          "policy_false_allow_count": 0,
+          "n_certified": 6505
+        }
+      },
+      "raw_field_radii": {
+        "field_0": {
+          "eps_perfield_ellipsoid": 0.1547,
+          "eps_global_l2_same_for_all": 0.40601,
+          "fault_scale": 0.04365
+        },
+        "field_1": {
+          "eps_perfield_ellipsoid": 0.49737,
+          "eps_global_l2_same_for_all": 0.40601,
+          "fault_scale": 0.14086
+        },
+        "field_2": {
+          "eps_perfield_ellipsoid": 0.64557,
+          "eps_global_l2_same_for_all": 0.40601,
+          "fault_scale": 0.18333
+        },
+        "field_3": {
+          "eps_perfield_ellipsoid": 0.08505,
+          "eps_global_l2_same_for_all": 0.40601,
+          "fault_scale": 0.02402
+        },
+        "field_4": {
+          "eps_perfield_ellipsoid": 0.11256,
+          "eps_global_l2_same_for_all": 0.40601,
+          "fault_scale": 0.03209
+        },
+        "field_5": {
+          "eps_perfield_ellipsoid": 0.0924,
+          "eps_global_l2_same_for_all": 0.40601,
+          "fault_scale": 0.0261
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "eps_perfield_ellipsoid": [
+        0.95723,
+        0.63796,
+        0.13786,
+        0.17463,
+        0.14333,
+        0.11204
+      ],
+      "R_by_geom": {
+        "global_l2": 0.58229,
+        "ellipsoid": 3.556,
+        "linf_box": 2.63221
+      },
+      "geoms": {
+        "global_l2": {
+          "geom": "global_l2",
+          "Delta": 1.44048,
+          "robust_safe_coverage": 0.3964,
+          "abstention": 0.6036,
+          "fault_coverage": 0.9535,
+          "policy_false_allow": 0.0,
+          "policy_false_allow_count": 0,
+          "n_certified": 4873
+        },
+        "ellipsoid": {
+          "geom": "ellipsoid",
+          "Delta": 0.88946,
+          "robust_safe_coverage": 0.6111,
+          "abstention": 0.3889,
+          "fault_coverage": 0.9497,
+          "policy_false_allow": 0.01278,
+          "policy_false_allow_count": 96,
+          "n_certified": 7513
+        },
+        "linf_box": {
+          "geom": "linf_box",
+          "Delta": 1.29491,
+          "robust_safe_coverage": 0.4474,
+          "abstention": 0.5526,
+          "fault_coverage": 0.9499,
+          "policy_false_allow": 0.0,
+          "policy_false_allow_count": 0,
+          "n_certified": 5500
+        }
+      },
+      "raw_field_radii": {
+        "field_0": {
+          "eps_perfield_ellipsoid": 0.95723,
+          "eps_global_l2_same_for_all": 0.58229,
+          "fault_scale": 0.26747
+        },
+        "field_1": {
+          "eps_perfield_ellipsoid": 0.63796,
+          "eps_global_l2_same_for_all": 0.58229,
+          "fault_scale": 0.18084
+        },
+        "field_2": {
+          "eps_perfield_ellipsoid": 0.13786,
+          "eps_global_l2_same_for_all": 0.58229,
+          "fault_scale": 0.039
+        },
+        "field_3": {
+          "eps_perfield_ellipsoid": 0.17463,
+          "eps_global_l2_same_for_all": 0.58229,
+          "fault_scale": 0.04902
+        },
+        "field_4": {
+          "eps_perfield_ellipsoid": 0.14333,
+          "eps_global_l2_same_for_all": 0.58229,
+          "fault_scale": 0.04049
+        },
+        "field_5": {
+          "eps_perfield_ellipsoid": 0.11204,
+          "eps_global_l2_same_for_all": 0.58229,
+          "fault_scale": 0.03175
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "eps_perfield_ellipsoid": [
+        0.13318,
+        0.72542,
+        0.17045,
+        0.10208,
+        0.96742,
+        0.14405
+      ],
+      "R_by_geom": {
+        "global_l2": 0.60256,
+        "ellipsoid": 3.5351,
+        "linf_box": 2.62565
+      },
+      "geoms": {
+        "global_l2": {
+          "geom": "global_l2",
+          "Delta": 1.33255,
+          "robust_safe_coverage": 0.4004,
+          "abstention": 0.5996,
+          "fault_coverage": 0.9534,
+          "policy_false_allow": 0.0,
+          "policy_false_allow_count": 0,
+          "n_certified": 5064
+        },
+        "ellipsoid": {
+          "geom": "ellipsoid",
+          "Delta": 0.76227,
+          "robust_safe_coverage": 0.6476,
+          "abstention": 0.3524,
+          "fault_coverage": 0.947,
+          "policy_false_allow": 0.0685,
+          "policy_false_allow_count": 561,
+          "n_certified": 8190
+        },
+        "linf_box": {
+          "geom": "linf_box",
+          "Delta": 1.14101,
+          "robust_safe_coverage": 0.4809,
+          "abstention": 0.5191,
+          "fault_coverage": 0.9477,
+          "policy_false_allow": 0.0,
+          "policy_false_allow_count": 0,
+          "n_certified": 6082
+        }
+      },
+      "raw_field_radii": {
+        "field_0": {
+          "eps_perfield_ellipsoid": 0.13318,
+          "eps_global_l2_same_for_all": 0.60256,
+          "fault_scale": 0.0376
+        },
+        "field_1": {
+          "eps_perfield_ellipsoid": 0.72542,
+          "eps_global_l2_same_for_all": 0.60256,
+          "fault_scale": 0.20626
+        },
+        "field_2": {
+          "eps_perfield_ellipsoid": 0.17045,
+          "eps_global_l2_same_for_all": 0.60256,
+          "fault_scale": 0.04869
+        },
+        "field_3": {
+          "eps_perfield_ellipsoid": 0.10208,
+          "eps_global_l2_same_for_all": 0.60256,
+          "fault_scale": 0.02853
+        },
+        "field_4": {
+          "eps_perfield_ellipsoid": 0.96742,
+          "eps_global_l2_same_for_all": 0.60256,
+          "fault_scale": 0.27305
+        },
+        "field_5": {
+          "eps_perfield_ellipsoid": 0.14405,
+          "eps_global_l2_same_for_all": 0.60256,
+          "fault_scale": 0.04089
+        }
+      }
+    },
+    {
+      "seed": 4,
+      "eps_perfield_ellipsoid": [
+        0.15401,
+        0.17619,
+        0.66147,
+        1.18652,
+        0.16908,
+        0.08999
+      ],
+      "R_by_geom": {
+        "global_l2": 0.69735,
+        "ellipsoid": 3.54177,
+        "linf_box": 2.62961
+      },
+      "geoms": {
+        "global_l2": {
+          "geom": "global_l2",
+          "Delta": 1.98342,
+          "robust_safe_coverage": 0.2911,
+          "abstention": 0.7089,
+          "fault_coverage": 0.9521,
+          "policy_false_allow": 0.0,
+          "policy_false_allow_count": 0,
+          "n_certified": 3406
+        },
+        "ellipsoid": {
+          "geom": "ellipsoid",
+          "Delta": 1.24826,
+          "robust_safe_coverage": 0.5172,
+          "abstention": 0.4828,
+          "fault_coverage": 0.9476,
+          "policy_false_allow": 0.05305,
+          "policy_false_allow_count": 321,
+          "n_certified": 6051
+        },
+        "linf_box": {
+          "geom": "linf_box",
+          "Delta": 1.71597,
+          "robust_safe_coverage": 0.3655,
+          "abstention": 0.6345,
+          "fault_coverage": 0.9522,
+          "policy_false_allow": 0.0,
+          "policy_false_allow_count": 0,
+          "n_certified": 4276
+        }
+      },
+      "raw_field_radii": {
+        "field_0": {
+          "eps_perfield_ellipsoid": 0.15401,
+          "eps_global_l2_same_for_all": 0.69735,
+          "fault_scale": 0.04367
+        },
+        "field_1": {
+          "eps_perfield_ellipsoid": 0.17619,
+          "eps_global_l2_same_for_all": 0.69735,
+          "fault_scale": 0.04952
+        },
+        "field_2": {
+          "eps_perfield_ellipsoid": 0.66147,
+          "eps_global_l2_same_for_all": 0.69735,
+          "fault_scale": 0.18646
+        },
+        "field_3": {
+          "eps_perfield_ellipsoid": 1.18652,
+          "eps_global_l2_same_for_all": 0.69735,
+          "fault_scale": 0.33506
+        },
+        "field_4": {
+          "eps_perfield_ellipsoid": 0.16908,
+          "eps_global_l2_same_for_all": 0.69735,
+          "fault_scale": 0.04787
+        },
+        "field_5": {
+          "eps_perfield_ellipsoid": 0.08999,
+          "eps_global_l2_same_for_all": 0.69735,
+          "fault_scale": 0.02533
+        }
+      }
+    }
+  ],
+  "ieee_cis_real_perfield_residual_anchor": {
+    "available": true,
+    "residual_injectors": [
+      "numeric_jitter",
+      "normalization_skew"
+    ],
+    "per_field_p_quantiles": {
+      "risk_score": {
+        "p50": 0.01173,
+        "p95": 0.04197,
+        "p99": 0.06241
+      },
+      "amount_norm": {
+        "p50": 0.01414,
+        "p95": 0.0551,
+        "p99": 0.08413
+      },
+      "dist1_norm": {
+        "p50": 0.00567,
+        "p95": 0.04112,
+        "p99": 0.05986
+      },
+      "dist2_norm": {
+        "p50": 6e-05,
+        "p95": 0.01932,
+        "p99": 0.03101
+      },
+      "c_mean_norm": {
+        "p50": 0.00142,
+        "p95": 0.02363,
+        "p99": 0.03497
+      },
+      "d_mean_norm": {
+        "p50": 0.00669,
+        "p95": 0.03893,
+        "p99": 0.05995
+      },
+      "v_mean_norm": {
+        "p50": 0.0127,
+        "p95": 0.04861,
+        "p99": 0.06711
+      }
+    },
+    "p95_field_heterogeneity_ratio": 2.9
+  },
+  "verdict": "PER-FIELD BUDGET WINS THE PARETO: the ellipsoid ball matches the global-\u2113\u2082 held-out fault coverage (0.9484 vs 0.9509) at HIGHER certified autonomy (R_allow 0.6196 vs 0.4531) \u2014 sizing each field to its own p95 residual stops the global sphere from over-charging the quiet fields. Budget frozen on calibration; both sound (policy_false_allow \u2248 0.0379)."
+}

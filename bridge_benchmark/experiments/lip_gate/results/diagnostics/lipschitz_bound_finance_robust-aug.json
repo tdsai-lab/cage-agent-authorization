@@ -1,0 +1,52 @@
+{
+  "domain": "finance",
+  "variant": "robust-aug",
+  "in_dim": 16,
+  "continuous_cols": [
+    13,
+    14,
+    15
+  ],
+  "per_layer_spectral_norms": [
+    {
+      "layer": "ParametrizedOrthoLinear",
+      "shape": [
+        128,
+        16
+      ],
+      "sigma_max": 1.0
+    },
+    {
+      "layer": "ParametrizedOrthoLinear",
+      "shape": [
+        128,
+        128
+      ],
+      "sigma_max": 1.0
+    },
+    {
+      "layer": "ParametrizedOrthoLinear",
+      "shape": [
+        128,
+        128
+      ],
+      "sigma_max": 1.0
+    },
+    {
+      "layer": "ParametrizedUnitNormLinear",
+      "shape": [
+        1,
+        128
+      ],
+      "sigma_max": 1.0
+    }
+  ],
+  "L_cert_global": 1.0,
+  "L_cert_continuous_block": 1.0,
+  "sigma_max_first_layer_continuous_cols": 1.0,
+  "L_emp": 0.4378,
+  "L_used_in_certificate": 1.0,
+  "L_slack_global_vs_emp": 0.5622,
+  "verdict": "L_cert = 1 is TIGHT (orthogonal layers); the gap to L_emp is unused capacity / local flatness, NOT removable backend tax \u2014 the L=1 decomposition is already clean.",
+  "note": "A strictly tighter bound needs a LOCAL per-example Lipschitz certificate (out of scope)."
+}

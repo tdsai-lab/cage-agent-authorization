@@ -1,0 +1,24 @@
+# The C-witness workload: a Deployment requesting 6 replicas. Under the TRUE tier `strict` (cap 3) this
+# MUST be denied (6 > 3). Under the STALE served tier `lax` (cap 10) it is admitted (6 <= 10). The
+# admission verdict flips purely on the provenance binding `s` (tier) -- a d=1 swap -- with the request
+# object byte-identical. That is the joint-gap / TOCTOU the certified gate must catch.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: settlement-batch
+  namespace: payments
+  labels: { app: settlement-batch, cage-p3-witness: "true" }
+spec:
+  replicas: 6
+  selector:
+    matchLabels: { app: settlement-batch }
+  template:
+    metadata:
+      labels: { app: settlement-batch }
+    spec:
+      containers:
+        - name: worker
+          image: registry.k8s.io/pause:3.10
+          resources:
+            requests: { cpu: "10m", memory: "16Mi" }
+            limits: { cpu: "50m", memory: "32Mi" }

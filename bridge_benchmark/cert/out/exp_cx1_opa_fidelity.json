@@ -1,0 +1,2490 @@
+{
+  "experiment": "EXP-CX1 \u2014 learned-policy vs exact-OPA gate-policy fidelity benchmark",
+  "source": "NEW_EXP_OPA_CHECK.md (P0)",
+  "eps": 0.1,
+  "sigma": 0.1,
+  "tau": 0.9,
+  "n_mc": 800,
+  "alpha": 0.001,
+  "d": 1,
+  "domains": [
+    "finance",
+    "sre",
+    "ops"
+  ],
+  "tiers": {
+    "finance": "provenance-scalar-threshold (field=risk_score)",
+    "sre": "provenance-scalar-threshold (field=signal, renamed)",
+    "ops": "provenance-scalar-threshold (field=login_risk, renamed)"
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_train": 5000,
+  "n_eval": 800,
+  "systems": [
+    "opa_point",
+    "cage_exact",
+    "point_mlp",
+    "cage_lip",
+    "cage_rs"
+  ],
+  "ground_truth": "R_OPA = exact robust-safe set via opa_joint_unsafe_map (engine, batched)",
+  "results": {
+    "finance": {
+      "tier": "provenance-scalar-threshold (field=risk_score)",
+      "per_seed": [
+        {
+          "domain": "finance",
+          "tier": "provenance-scalar-threshold (field=risk_score)",
+          "seed": 0,
+          "fscale": 3.0,
+          "n_eval": 800,
+          "n_R_OPA_natural": 267,
+          "systems": {
+            "opa_point": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 481,
+                "policy_false_allow": 0.44490644490644493,
+                "policy_false_allow_wilson_upper": 0.489580895986152,
+                "policy_false_allow_count": 214,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.5550935550935551,
+                "recall": 1.0,
+                "jaccard": 0.5550935550935551,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0013
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 368,
+                "policy_false_allow": 0.27445652173913043,
+                "policy_false_allow_wilson_upper": 0.3222036210247325,
+                "policy_false_allow_count": 101,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7255434782608695,
+                "recall": 1.0,
+                "jaccard": 0.7255434782608695,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0013
+              }
+            },
+            "cage_exact": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 267,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014183936293390674,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.7325,
+                "mean_ms_per_decision": 0.0013
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 267,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014183936293390674,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.8108614232209738,
+                "mean_ms_per_decision": 0.0013
+              }
+            },
+            "point_mlp": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 424,
+                "policy_false_allow": 0.37028301886792453,
+                "policy_false_allow_wilson_upper": 0.4172192167491849,
+                "policy_false_allow_count": 157,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6297169811320755,
+                "recall": 1.0,
+                "jaccard": 0.6297169811320755,
+                "point_accuracy": 0.91125,
+                "mean_ms_per_decision": 4.8425
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 343,
+                "policy_false_allow": 0.22157434402332363,
+                "policy_false_allow_wilson_upper": 0.26847461205060325,
+                "policy_false_allow_count": 76,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7784256559766763,
+                "recall": 1.0,
+                "jaccard": 0.7784256559766763,
+                "point_accuracy": 0.9382022471910112,
+                "mean_ms_per_decision": 4.7393
+              }
+            },
+            "cage_lip": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 139,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.026894126080917603,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.5205992509363296,
+                "precision": 1.0,
+                "recall": 0.5205992509363296,
+                "jaccard": 0.5205992509363296,
+                "point_accuracy": 0.5725,
+                "mean_ms_per_decision": 4.9236
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 139,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.026894126080917603,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.5205992509363296,
+                "precision": 1.0,
+                "recall": 0.5205992509363296,
+                "jaccard": 0.5205992509363296,
+                "point_accuracy": 0.5711610486891385,
+                "mean_ms_per_decision": 4.92
+              }
+            },
+            "cage_rs": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 2,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.6576280471103807,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.00749063670411985,
+                "precision": 1.0,
+                "recall": 0.00749063670411985,
+                "jaccard": 0.00749063670411985,
+                "point_accuracy": 0.40125,
+                "mean_ms_per_decision": 5.077
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 2,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.6576280471103807,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.00749063670411985,
+                "precision": 1.0,
+                "recall": 0.00749063670411985,
+                "jaccard": 0.00749063670411985,
+                "point_accuracy": 0.3146067415730337,
+                "mean_ms_per_decision": 5.0549
+              }
+            }
+          }
+        },
+        {
+          "domain": "finance",
+          "tier": "provenance-scalar-threshold (field=risk_score)",
+          "seed": 1,
+          "fscale": 3.0,
+          "n_eval": 800,
+          "n_R_OPA_natural": 262,
+          "systems": {
+            "opa_point": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 486,
+                "policy_false_allow": 0.4609053497942387,
+                "policy_false_allow_wilson_upper": 0.5053565015195141,
+                "policy_false_allow_count": 224,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.5390946502057613,
+                "recall": 1.0,
+                "jaccard": 0.5390946502057613,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0013
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 381,
+                "policy_false_allow": 0.3123359580052493,
+                "policy_false_allow_wilson_upper": 0.36055069612058865,
+                "policy_false_allow_count": 119,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6876640419947506,
+                "recall": 1.0,
+                "jaccard": 0.6876640419947506,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0012
+              }
+            },
+            "cage_exact": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 262,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014450710498281682,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.72,
+                "mean_ms_per_decision": 0.0013
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 262,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014450710498281682,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.7729007633587787,
+                "mean_ms_per_decision": 0.0013
+              }
+            },
+            "point_mlp": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 416,
+                "policy_false_allow": 0.3701923076923077,
+                "policy_false_allow_wilson_upper": 0.41758353004897775,
+                "policy_false_allow_count": 154,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6298076923076923,
+                "recall": 1.0,
+                "jaccard": 0.6298076923076923,
+                "point_accuracy": 0.9125,
+                "mean_ms_per_decision": 4.8495
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 338,
+                "policy_false_allow": 0.22485207100591717,
+                "policy_false_allow_wilson_upper": 0.27230929931100345,
+                "policy_false_allow_count": 76,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7751479289940828,
+                "recall": 1.0,
+                "jaccard": 0.7751479289940828,
+                "point_accuracy": 0.9179389312977099,
+                "mean_ms_per_decision": 4.7775
+              }
+            },
+            "cage_lip": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 192,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.019615852811660034,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.732824427480916,
+                "precision": 1.0,
+                "recall": 0.732824427480916,
+                "jaccard": 0.732824427480916,
+                "point_accuracy": 0.6325,
+                "mean_ms_per_decision": 4.9361
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 192,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.019615852811660034,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.732824427480916,
+                "precision": 1.0,
+                "recall": 0.732824427480916,
+                "jaccard": 0.732824427480916,
+                "point_accuracy": 0.6393129770992366,
+                "mean_ms_per_decision": 4.927
+              }
+            },
+            "cage_rs": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 2,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.6576280471103807,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.007633587786259542,
+                "precision": 1.0,
+                "recall": 0.007633587786259542,
+                "jaccard": 0.007633587786259542,
+                "point_accuracy": 0.395,
+                "mean_ms_per_decision": 5.068
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 2,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.6576280471103807,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.007633587786259542,
+                "precision": 1.0,
+                "recall": 0.007633587786259542,
+                "jaccard": 0.007633587786259542,
+                "point_accuracy": 0.2767175572519084,
+                "mean_ms_per_decision": 5.0583
+              }
+            }
+          }
+        },
+        {
+          "domain": "finance",
+          "tier": "provenance-scalar-threshold (field=risk_score)",
+          "seed": 2,
+          "fscale": 3.0,
+          "n_eval": 800,
+          "n_R_OPA_natural": 268,
+          "systems": {
+            "opa_point": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 504,
+                "policy_false_allow": 0.46825396825396826,
+                "policy_false_allow_wilson_upper": 0.511894284582396,
+                "policy_false_allow_count": 236,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.5317460317460317,
+                "recall": 1.0,
+                "jaccard": 0.5317460317460317,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0015
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 393,
+                "policy_false_allow": 0.31806615776081426,
+                "policy_false_allow_wilson_upper": 0.3656835373561517,
+                "policy_false_allow_count": 125,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6819338422391857,
+                "recall": 1.0,
+                "jaccard": 0.6819338422391857,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0012
+              }
+            },
+            "cage_exact": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 268,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014131759083230822,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.705,
+                "mean_ms_per_decision": 0.0013
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 268,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014131759083230822,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.7667910447761194,
+                "mean_ms_per_decision": 0.0013
+              }
+            },
+            "point_mlp": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 438,
+                "policy_false_allow": 0.3881278538812785,
+                "policy_false_allow_wilson_upper": 0.43455116707250974,
+                "policy_false_allow_count": 170,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6118721461187214,
+                "recall": 1.0,
+                "jaccard": 0.6118721461187214,
+                "point_accuracy": 0.9175,
+                "mean_ms_per_decision": 5.4174
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 357,
+                "policy_false_allow": 0.24929971988795518,
+                "policy_false_allow_wilson_upper": 0.29668514250676226,
+                "policy_false_allow_count": 89,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7507002801120448,
+                "recall": 1.0,
+                "jaccard": 0.7507002801120448,
+                "point_accuracy": 0.9328358208955224,
+                "mean_ms_per_decision": 5.2344
+              }
+            },
+            "cage_lip": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 187,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.020129783024246284,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.6977611940298507,
+                "precision": 1.0,
+                "recall": 0.6977611940298507,
+                "jaccard": 0.6977611940298507,
+                "point_accuracy": 0.60375,
+                "mean_ms_per_decision": 5.4614
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 187,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.020129783024246284,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.6977611940298507,
+                "precision": 1.0,
+                "recall": 0.6977611940298507,
+                "jaccard": 0.6977611940298507,
+                "point_accuracy": 0.6156716417910447,
+                "mean_ms_per_decision": 5.372
+              }
+            },
+            "cage_rs": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 5,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.43449149475208104,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.018656716417910446,
+                "precision": 1.0,
+                "recall": 0.018656716417910446,
+                "jaccard": 0.018656716417910446,
+                "point_accuracy": 0.37625,
+                "mean_ms_per_decision": 5.2557
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 5,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.43449149475208104,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.018656716417910446,
+                "precision": 1.0,
+                "recall": 0.018656716417910446,
+                "jaccard": 0.018656716417910446,
+                "point_accuracy": 0.27611940298507465,
+                "mean_ms_per_decision": 5.2473
+              }
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "opa_point": {
+          "natural": {
+            "policy_false_allow": [
+              0.458,
+              0.0097
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.542,
+              0.0097
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.542,
+              0.0097
+            ],
+            "point_accuracy": [
+              1.0,
+              0.0
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.5023,
+              0.0094
+            ],
+            "policy_false_allow_count_total": 674,
+            "n_allow_total": 1471
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.3016,
+              0.0193
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.6984,
+              0.0193
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.6984,
+              0.0193
+            ],
+            "point_accuracy": [
+              1.0,
+              0.0
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.3495,
+              0.0194
+            ],
+            "policy_false_allow_count_total": 345,
+            "n_allow_total": 1142
+          }
+        },
+        "cage_exact": {
+          "natural": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              1.0,
+              0.0
+            ],
+            "point_accuracy": [
+              0.7192,
+              0.0112
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0143,
+              0.0001
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 797
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              1.0,
+              0.0
+            ],
+            "point_accuracy": [
+              0.7835,
+              0.0195
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0143,
+              0.0001
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 797
+          }
+        },
+        "point_mlp": {
+          "natural": {
+            "policy_false_allow": [
+              0.3762,
+              0.0084
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.6238,
+              0.0084
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.6238,
+              0.0084
+            ],
+            "point_accuracy": [
+              0.9137,
+              0.0027
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.4231,
+              0.0081
+            ],
+            "policy_false_allow_count_total": 481,
+            "n_allow_total": 1278
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.2319,
+              0.0124
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.7681,
+              0.0124
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.7681,
+              0.0124
+            ],
+            "point_accuracy": [
+              0.9297,
+              0.0086
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.2792,
+              0.0125
+            ],
+            "policy_false_allow_count_total": 241,
+            "n_allow_total": 1038
+          }
+        },
+        "cage_lip": {
+          "natural": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.6504,
+              0.0929
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.6504,
+              0.0929
+            ],
+            "jaccard": [
+              0.6504,
+              0.0929
+            ],
+            "point_accuracy": [
+              0.6029,
+              0.0245
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0222,
+              0.0033
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 518
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.6504,
+              0.0929
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.6504,
+              0.0929
+            ],
+            "jaccard": [
+              0.6504,
+              0.0929
+            ],
+            "point_accuracy": [
+              0.6087,
+              0.0283
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0222,
+              0.0033
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 518
+          }
+        },
+        "cage_rs": {
+          "natural": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.0113,
+              0.0052
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.0113,
+              0.0052
+            ],
+            "jaccard": [
+              0.0113,
+              0.0052
+            ],
+            "point_accuracy": [
+              0.3908,
+              0.0106
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.5832,
+              0.1052
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 9
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.0113,
+              0.0052
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.0113,
+              0.0052
+            ],
+            "jaccard": [
+              0.0113,
+              0.0052
+            ],
+            "point_accuracy": [
+              0.2891,
+              0.018
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.5832,
+              0.1052
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 9
+          }
+        }
+      }
+    },
+    "sre": {
+      "tier": "provenance-scalar-threshold (field=signal, renamed)",
+      "per_seed": [
+        {
+          "domain": "sre",
+          "tier": "provenance-scalar-threshold (field=signal, renamed)",
+          "seed": 0,
+          "fscale": 3.0,
+          "n_eval": 800,
+          "n_R_OPA_natural": 267,
+          "systems": {
+            "opa_point": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 481,
+                "policy_false_allow": 0.44490644490644493,
+                "policy_false_allow_wilson_upper": 0.489580895986152,
+                "policy_false_allow_count": 214,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.5550935550935551,
+                "recall": 1.0,
+                "jaccard": 0.5550935550935551,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.001
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 368,
+                "policy_false_allow": 0.27445652173913043,
+                "policy_false_allow_wilson_upper": 0.3222036210247325,
+                "policy_false_allow_count": 101,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7255434782608695,
+                "recall": 1.0,
+                "jaccard": 0.7255434782608695,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.001
+              }
+            },
+            "cage_exact": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 267,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014183936293390674,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.7325,
+                "mean_ms_per_decision": 0.001
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 267,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014183936293390674,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.8108614232209738,
+                "mean_ms_per_decision": 0.0011
+              }
+            },
+            "point_mlp": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 422,
+                "policy_false_allow": 0.36729857819905215,
+                "policy_false_allow_wilson_upper": 0.4142982313857197,
+                "policy_false_allow_count": 155,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6327014218009479,
+                "recall": 1.0,
+                "jaccard": 0.6327014218009479,
+                "point_accuracy": 0.91375,
+                "mean_ms_per_decision": 4.8646
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 342,
+                "policy_false_allow": 0.21929824561403508,
+                "policy_false_allow_wilson_upper": 0.26613674928815556,
+                "policy_false_allow_count": 75,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7807017543859649,
+                "recall": 1.0,
+                "jaccard": 0.7807017543859649,
+                "point_accuracy": 0.9363295880149812,
+                "mean_ms_per_decision": 4.8123
+              }
+            },
+            "cage_lip": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 134,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.0278696706944783,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.50187265917603,
+                "precision": 1.0,
+                "recall": 0.50187265917603,
+                "jaccard": 0.50187265917603,
+                "point_accuracy": 0.56625,
+                "mean_ms_per_decision": 4.9921
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 134,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.0278696706944783,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.50187265917603,
+                "precision": 1.0,
+                "recall": 0.50187265917603,
+                "jaccard": 0.50187265917603,
+                "point_accuracy": 0.5617977528089888,
+                "mean_ms_per_decision": 4.9779
+              }
+            },
+            "cage_rs": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 1,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.7934567085261071,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.003745318352059925,
+                "precision": 1.0,
+                "recall": 0.003745318352059925,
+                "jaccard": 0.003745318352059925,
+                "point_accuracy": 0.4,
+                "mean_ms_per_decision": 5.103
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 1,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.7934567085261071,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.003745318352059925,
+                "precision": 1.0,
+                "recall": 0.003745318352059925,
+                "jaccard": 0.003745318352059925,
+                "point_accuracy": 0.31273408239700373,
+                "mean_ms_per_decision": 5.1034
+              }
+            }
+          }
+        },
+        {
+          "domain": "sre",
+          "tier": "provenance-scalar-threshold (field=signal, renamed)",
+          "seed": 1,
+          "fscale": 3.0,
+          "n_eval": 800,
+          "n_R_OPA_natural": 262,
+          "systems": {
+            "opa_point": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 486,
+                "policy_false_allow": 0.4609053497942387,
+                "policy_false_allow_wilson_upper": 0.5053565015195141,
+                "policy_false_allow_count": 224,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.5390946502057613,
+                "recall": 1.0,
+                "jaccard": 0.5390946502057613,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0006
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 381,
+                "policy_false_allow": 0.3123359580052493,
+                "policy_false_allow_wilson_upper": 0.36055069612058865,
+                "policy_false_allow_count": 119,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6876640419947506,
+                "recall": 1.0,
+                "jaccard": 0.6876640419947506,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0005
+              }
+            },
+            "cage_exact": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 262,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014450710498281682,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.72,
+                "mean_ms_per_decision": 0.0006
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 262,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014450710498281682,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.7729007633587787,
+                "mean_ms_per_decision": 0.0006
+              }
+            },
+            "point_mlp": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 420,
+                "policy_false_allow": 0.3761904761904762,
+                "policy_false_allow_wilson_upper": 0.4234457632887195,
+                "policy_false_allow_count": 158,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6238095238095238,
+                "recall": 1.0,
+                "jaccard": 0.6238095238095238,
+                "point_accuracy": 0.9175,
+                "mean_ms_per_decision": 6.2963
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 339,
+                "policy_false_allow": 0.22713864306784662,
+                "policy_false_allow_wilson_upper": 0.27465258950256377,
+                "policy_false_allow_count": 77,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7728613569321534,
+                "recall": 1.0,
+                "jaccard": 0.7728613569321534,
+                "point_accuracy": 0.9198473282442748,
+                "mean_ms_per_decision": 6.2445
+              }
+            },
+            "cage_lip": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 165,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.02275268654170536,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.6297709923664122,
+                "precision": 1.0,
+                "recall": 0.6297709923664122,
+                "jaccard": 0.6297709923664122,
+                "point_accuracy": 0.59875,
+                "mean_ms_per_decision": 6.532
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 165,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.02275268654170536,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.6297709923664122,
+                "precision": 1.0,
+                "recall": 0.6297709923664122,
+                "jaccard": 0.6297709923664122,
+                "point_accuracy": 0.5877862595419847,
+                "mean_ms_per_decision": 6.4849
+              }
+            },
+            "cage_rs": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 1,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.7934567085261071,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.003816793893129771,
+                "precision": 1.0,
+                "recall": 0.003816793893129771,
+                "jaccard": 0.003816793893129771,
+                "point_accuracy": 0.39375,
+                "mean_ms_per_decision": 5.0354
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 1,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.7934567085261071,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.003816793893129771,
+                "precision": 1.0,
+                "recall": 0.003816793893129771,
+                "jaccard": 0.003816793893129771,
+                "point_accuracy": 0.2748091603053435,
+                "mean_ms_per_decision": 5.0226
+              }
+            }
+          }
+        },
+        {
+          "domain": "sre",
+          "tier": "provenance-scalar-threshold (field=signal, renamed)",
+          "seed": 2,
+          "fscale": 3.0,
+          "n_eval": 800,
+          "n_R_OPA_natural": 268,
+          "systems": {
+            "opa_point": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 504,
+                "policy_false_allow": 0.46825396825396826,
+                "policy_false_allow_wilson_upper": 0.511894284582396,
+                "policy_false_allow_count": 236,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.5317460317460317,
+                "recall": 1.0,
+                "jaccard": 0.5317460317460317,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0008
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 393,
+                "policy_false_allow": 0.31806615776081426,
+                "policy_false_allow_wilson_upper": 0.3656835373561517,
+                "policy_false_allow_count": 125,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6819338422391857,
+                "recall": 1.0,
+                "jaccard": 0.6819338422391857,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0008
+              }
+            },
+            "cage_exact": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 268,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014131759083230822,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.705,
+                "mean_ms_per_decision": 0.0008
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 268,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014131759083230822,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.7667910447761194,
+                "mean_ms_per_decision": 0.0008
+              }
+            },
+            "point_mlp": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 426,
+                "policy_false_allow": 0.37089201877934275,
+                "policy_false_allow_wilson_upper": 0.41772596133318196,
+                "policy_false_allow_count": 158,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6291079812206573,
+                "recall": 1.0,
+                "jaccard": 0.6291079812206573,
+                "point_accuracy": 0.9025,
+                "mean_ms_per_decision": 6.7911
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 351,
+                "policy_false_allow": 0.23646723646723647,
+                "policy_false_allow_wilson_upper": 0.28362406000844675,
+                "policy_false_allow_count": 83,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7635327635327636,
+                "recall": 1.0,
+                "jaccard": 0.7635327635327636,
+                "point_accuracy": 0.9216417910447762,
+                "mean_ms_per_decision": 6.8405
+              }
+            },
+            "cage_lip": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 148,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.02530004952529478,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.5522388059701493,
+                "precision": 1.0,
+                "recall": 0.5522388059701493,
+                "jaccard": 0.5522388059701493,
+                "point_accuracy": 0.555,
+                "mean_ms_per_decision": 6.9614
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 148,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.02530004952529478,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.5522388059701493,
+                "precision": 1.0,
+                "recall": 0.5522388059701493,
+                "jaccard": 0.5522388059701493,
+                "point_accuracy": 0.542910447761194,
+                "mean_ms_per_decision": 6.9908
+              }
+            },
+            "cage_rs": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 4,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.48990002040399916,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.014925373134328358,
+                "precision": 1.0,
+                "recall": 0.014925373134328358,
+                "jaccard": 0.014925373134328358,
+                "point_accuracy": 0.375,
+                "mean_ms_per_decision": 5.1184
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 4,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.48990002040399916,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.014925373134328358,
+                "precision": 1.0,
+                "recall": 0.014925373134328358,
+                "jaccard": 0.014925373134328358,
+                "point_accuracy": 0.27425373134328357,
+                "mean_ms_per_decision": 5.1185
+              }
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "opa_point": {
+          "natural": {
+            "policy_false_allow": [
+              0.458,
+              0.0097
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.542,
+              0.0097
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.542,
+              0.0097
+            ],
+            "point_accuracy": [
+              1.0,
+              0.0
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.5023,
+              0.0094
+            ],
+            "policy_false_allow_count_total": 674,
+            "n_allow_total": 1471
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.3016,
+              0.0193
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.6984,
+              0.0193
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.6984,
+              0.0193
+            ],
+            "point_accuracy": [
+              1.0,
+              0.0
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.3495,
+              0.0194
+            ],
+            "policy_false_allow_count_total": 345,
+            "n_allow_total": 1142
+          }
+        },
+        "cage_exact": {
+          "natural": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              1.0,
+              0.0
+            ],
+            "point_accuracy": [
+              0.7192,
+              0.0112
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0143,
+              0.0001
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 797
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              1.0,
+              0.0
+            ],
+            "point_accuracy": [
+              0.7835,
+              0.0195
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0143,
+              0.0001
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 797
+          }
+        },
+        "point_mlp": {
+          "natural": {
+            "policy_false_allow": [
+              0.3715,
+              0.0037
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.6285,
+              0.0037
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.6285,
+              0.0037
+            ],
+            "point_accuracy": [
+              0.9112,
+              0.0064
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.4185,
+              0.0038
+            ],
+            "policy_false_allow_count_total": 471,
+            "n_allow_total": 1268
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.2276,
+              0.007
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.7724,
+              0.007
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.7724,
+              0.007
+            ],
+            "point_accuracy": [
+              0.9259,
+              0.0074
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.2748,
+              0.0071
+            ],
+            "policy_false_allow_count_total": 235,
+            "n_allow_total": 1032
+          }
+        },
+        "cage_lip": {
+          "natural": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.5613,
+              0.0526
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.5613,
+              0.0526
+            ],
+            "jaccard": [
+              0.5613,
+              0.0526
+            ],
+            "point_accuracy": [
+              0.5733,
+              0.0185
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0253,
+              0.0021
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 447
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.5613,
+              0.0526
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.5613,
+              0.0526
+            ],
+            "jaccard": [
+              0.5613,
+              0.0526
+            ],
+            "point_accuracy": [
+              0.5642,
+              0.0184
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0253,
+              0.0021
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 447
+          }
+        },
+        "cage_rs": {
+          "natural": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.0075,
+              0.0053
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.0075,
+              0.0053
+            ],
+            "jaccard": [
+              0.0075,
+              0.0053
+            ],
+            "point_accuracy": [
+              0.3896,
+              0.0106
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.6923,
+              0.1431
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 6
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.0075,
+              0.0053
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.0075,
+              0.0053
+            ],
+            "jaccard": [
+              0.0075,
+              0.0053
+            ],
+            "point_accuracy": [
+              0.2873,
+              0.018
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.6923,
+              0.1431
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 6
+          }
+        }
+      }
+    },
+    "ops": {
+      "tier": "provenance-scalar-threshold (field=login_risk, renamed)",
+      "per_seed": [
+        {
+          "domain": "ops",
+          "tier": "provenance-scalar-threshold (field=login_risk, renamed)",
+          "seed": 0,
+          "fscale": 3.0,
+          "n_eval": 800,
+          "n_R_OPA_natural": 267,
+          "systems": {
+            "opa_point": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 481,
+                "policy_false_allow": 0.44490644490644493,
+                "policy_false_allow_wilson_upper": 0.489580895986152,
+                "policy_false_allow_count": 214,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.5550935550935551,
+                "recall": 1.0,
+                "jaccard": 0.5550935550935551,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0007
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 368,
+                "policy_false_allow": 0.27445652173913043,
+                "policy_false_allow_wilson_upper": 0.3222036210247325,
+                "policy_false_allow_count": 101,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7255434782608695,
+                "recall": 1.0,
+                "jaccard": 0.7255434782608695,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0006
+              }
+            },
+            "cage_exact": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 267,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014183936293390674,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.7325,
+                "mean_ms_per_decision": 0.0007
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 267,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014183936293390674,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.8108614232209738,
+                "mean_ms_per_decision": 0.0007
+              }
+            },
+            "point_mlp": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 425,
+                "policy_false_allow": 0.37176470588235294,
+                "policy_false_allow_wilson_upper": 0.41866857711302496,
+                "policy_false_allow_count": 158,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6282352941176471,
+                "recall": 1.0,
+                "jaccard": 0.6282352941176471,
+                "point_accuracy": 0.91,
+                "mean_ms_per_decision": 5.3103
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 344,
+                "policy_false_allow": 0.2238372093023256,
+                "policy_false_allow_wilson_upper": 0.270796639213981,
+                "policy_false_allow_count": 77,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7761627906976745,
+                "recall": 1.0,
+                "jaccard": 0.7761627906976745,
+                "point_accuracy": 0.9363295880149812,
+                "mean_ms_per_decision": 5.2787
+              }
+            },
+            "cage_lip": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 142,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.02634090684688045,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.5318352059925093,
+                "precision": 1.0,
+                "recall": 0.5318352059925093,
+                "jaccard": 0.5318352059925093,
+                "point_accuracy": 0.57625,
+                "mean_ms_per_decision": 5.4824
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 142,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.02634090684688045,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.5318352059925093,
+                "precision": 1.0,
+                "recall": 0.5318352059925093,
+                "jaccard": 0.5318352059925093,
+                "point_accuracy": 0.5767790262172284,
+                "mean_ms_per_decision": 5.446
+              }
+            },
+            "cage_rs": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 267,
+                "n_allow": 3,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.5615060804490177,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.011235955056179775,
+                "precision": 1.0,
+                "recall": 0.011235955056179775,
+                "jaccard": 0.011235955056179775,
+                "point_accuracy": 0.4025,
+                "mean_ms_per_decision": 5.1461
+              },
+              "boundary": {
+                "n": 534,
+                "n_in_R_OPA": 267,
+                "n_allow": 3,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.5615060804490177,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.011235955056179775,
+                "precision": 1.0,
+                "recall": 0.011235955056179775,
+                "jaccard": 0.011235955056179775,
+                "point_accuracy": 0.31647940074906367,
+                "mean_ms_per_decision": 5.1446
+              }
+            }
+          }
+        },
+        {
+          "domain": "ops",
+          "tier": "provenance-scalar-threshold (field=login_risk, renamed)",
+          "seed": 1,
+          "fscale": 3.0,
+          "n_eval": 800,
+          "n_R_OPA_natural": 262,
+          "systems": {
+            "opa_point": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 486,
+                "policy_false_allow": 0.4609053497942387,
+                "policy_false_allow_wilson_upper": 0.5053565015195141,
+                "policy_false_allow_count": 224,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.5390946502057613,
+                "recall": 1.0,
+                "jaccard": 0.5390946502057613,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0012
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 381,
+                "policy_false_allow": 0.3123359580052493,
+                "policy_false_allow_wilson_upper": 0.36055069612058865,
+                "policy_false_allow_count": 119,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6876640419947506,
+                "recall": 1.0,
+                "jaccard": 0.6876640419947506,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0012
+              }
+            },
+            "cage_exact": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 262,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014450710498281682,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.72,
+                "mean_ms_per_decision": 0.0013
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 262,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014450710498281682,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.7729007633587787,
+                "mean_ms_per_decision": 0.0013
+              }
+            },
+            "point_mlp": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 413,
+                "policy_false_allow": 0.36561743341404357,
+                "policy_false_allow_wilson_upper": 0.41310628598223326,
+                "policy_false_allow_count": 151,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6343825665859564,
+                "recall": 1.0,
+                "jaccard": 0.6343825665859564,
+                "point_accuracy": 0.90875,
+                "mean_ms_per_decision": 6.3314
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 337,
+                "policy_false_allow": 0.22255192878338279,
+                "policy_false_allow_wilson_upper": 0.26994981749861685,
+                "policy_false_allow_count": 75,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7774480712166172,
+                "recall": 1.0,
+                "jaccard": 0.7774480712166172,
+                "point_accuracy": 0.916030534351145,
+                "mean_ms_per_decision": 6.2004
+              }
+            },
+            "cage_lip": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 205,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.018394802568070728,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.7824427480916031,
+                "precision": 1.0,
+                "recall": 0.7824427480916031,
+                "jaccard": 0.7824427480916031,
+                "point_accuracy": 0.64875,
+                "mean_ms_per_decision": 7.41
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 205,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.018394802568070728,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.7824427480916031,
+                "precision": 1.0,
+                "recall": 0.7824427480916031,
+                "jaccard": 0.7824427480916031,
+                "point_accuracy": 0.6641221374045801,
+                "mean_ms_per_decision": 6.6179
+              }
+            },
+            "cage_rs": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 262,
+                "n_allow": 2,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.6576280471103807,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.007633587786259542,
+                "precision": 1.0,
+                "recall": 0.007633587786259542,
+                "jaccard": 0.007633587786259542,
+                "point_accuracy": 0.395,
+                "mean_ms_per_decision": 5.2017
+              },
+              "boundary": {
+                "n": 524,
+                "n_in_R_OPA": 262,
+                "n_allow": 2,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.6576280471103807,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.007633587786259542,
+                "precision": 1.0,
+                "recall": 0.007633587786259542,
+                "jaccard": 0.007633587786259542,
+                "point_accuracy": 0.2767175572519084,
+                "mean_ms_per_decision": 5.1998
+              }
+            }
+          }
+        },
+        {
+          "domain": "ops",
+          "tier": "provenance-scalar-threshold (field=login_risk, renamed)",
+          "seed": 2,
+          "fscale": 3.0,
+          "n_eval": 800,
+          "n_R_OPA_natural": 268,
+          "systems": {
+            "opa_point": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 504,
+                "policy_false_allow": 0.46825396825396826,
+                "policy_false_allow_wilson_upper": 0.511894284582396,
+                "policy_false_allow_count": 236,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.5317460317460317,
+                "recall": 1.0,
+                "jaccard": 0.5317460317460317,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0014
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 393,
+                "policy_false_allow": 0.31806615776081426,
+                "policy_false_allow_wilson_upper": 0.3656835373561517,
+                "policy_false_allow_count": 125,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6819338422391857,
+                "recall": 1.0,
+                "jaccard": 0.6819338422391857,
+                "point_accuracy": 1.0,
+                "mean_ms_per_decision": 0.0014
+              }
+            },
+            "cage_exact": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 268,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014131759083230822,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.705,
+                "mean_ms_per_decision": 0.0014
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 268,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.014131759083230822,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "jaccard": 1.0,
+                "point_accuracy": 0.7667910447761194,
+                "mean_ms_per_decision": 0.0014
+              }
+            },
+            "point_mlp": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 430,
+                "policy_false_allow": 0.3767441860465116,
+                "policy_false_allow_wilson_upper": 0.4234467755382926,
+                "policy_false_allow_count": 162,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.6232558139534884,
+                "recall": 1.0,
+                "jaccard": 0.6232558139534884,
+                "point_accuracy": 0.9075,
+                "mean_ms_per_decision": 5.9783
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 354,
+                "policy_false_allow": 0.24293785310734464,
+                "policy_false_allow_wilson_upper": 0.29021803275318137,
+                "policy_false_allow_count": 86,
+                "robust_safe_coverage": 1.0,
+                "precision": 0.7570621468926554,
+                "recall": 1.0,
+                "jaccard": 0.7570621468926554,
+                "point_accuracy": 0.9272388059701493,
+                "mean_ms_per_decision": 5.9238
+              }
+            },
+            "cage_lip": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 183,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.020560731657189836,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.6828358208955224,
+                "precision": 1.0,
+                "recall": 0.6828358208955224,
+                "jaccard": 0.6828358208955224,
+                "point_accuracy": 0.59875,
+                "mean_ms_per_decision": 6.0606
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 183,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.020560731657189836,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.6828358208955224,
+                "precision": 1.0,
+                "recall": 0.6828358208955224,
+                "jaccard": 0.6828358208955224,
+                "point_accuracy": 0.6082089552238806,
+                "mean_ms_per_decision": 6.0785
+              }
+            },
+            "cage_rs": {
+              "natural": {
+                "n": 800,
+                "n_in_R_OPA": 268,
+                "n_allow": 3,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.5615060804490177,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.011194029850746268,
+                "precision": 1.0,
+                "recall": 0.011194029850746268,
+                "jaccard": 0.011194029850746268,
+                "point_accuracy": 0.37375,
+                "mean_ms_per_decision": 5.0253
+              },
+              "boundary": {
+                "n": 536,
+                "n_in_R_OPA": 268,
+                "n_allow": 3,
+                "policy_false_allow": 0.0,
+                "policy_false_allow_wilson_upper": 0.5615060804490177,
+                "policy_false_allow_count": 0,
+                "robust_safe_coverage": 0.011194029850746268,
+                "precision": 1.0,
+                "recall": 0.011194029850746268,
+                "jaccard": 0.011194029850746268,
+                "point_accuracy": 0.27238805970149255,
+                "mean_ms_per_decision": 5.0288
+              }
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "opa_point": {
+          "natural": {
+            "policy_false_allow": [
+              0.458,
+              0.0097
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.542,
+              0.0097
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.542,
+              0.0097
+            ],
+            "point_accuracy": [
+              1.0,
+              0.0
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.5023,
+              0.0094
+            ],
+            "policy_false_allow_count_total": 674,
+            "n_allow_total": 1471
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.3016,
+              0.0193
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.6984,
+              0.0193
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.6984,
+              0.0193
+            ],
+            "point_accuracy": [
+              1.0,
+              0.0
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.3495,
+              0.0194
+            ],
+            "policy_false_allow_count_total": 345,
+            "n_allow_total": 1142
+          }
+        },
+        "cage_exact": {
+          "natural": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              1.0,
+              0.0
+            ],
+            "point_accuracy": [
+              0.7192,
+              0.0112
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0143,
+              0.0001
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 797
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              1.0,
+              0.0
+            ],
+            "point_accuracy": [
+              0.7835,
+              0.0195
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0143,
+              0.0001
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 797
+          }
+        },
+        "point_mlp": {
+          "natural": {
+            "policy_false_allow": [
+              0.3714,
+              0.0046
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.6286,
+              0.0046
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.6286,
+              0.0046
+            ],
+            "point_accuracy": [
+              0.9088,
+              0.001
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.4184,
+              0.0042
+            ],
+            "policy_false_allow_count_total": 471,
+            "n_allow_total": 1268
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.2298,
+              0.0093
+            ],
+            "robust_safe_coverage": [
+              1.0,
+              0.0
+            ],
+            "precision": [
+              0.7702,
+              0.0093
+            ],
+            "recall": [
+              1.0,
+              0.0
+            ],
+            "jaccard": [
+              0.7702,
+              0.0093
+            ],
+            "point_accuracy": [
+              0.9265,
+              0.0083
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.277,
+              0.0094
+            ],
+            "policy_false_allow_count_total": 238,
+            "n_allow_total": 1035
+          }
+        },
+        "cage_lip": {
+          "natural": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.6657,
+              0.103
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.6657,
+              0.103
+            ],
+            "jaccard": [
+              0.6657,
+              0.103
+            ],
+            "point_accuracy": [
+              0.6079,
+              0.0303
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0218,
+              0.0034
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 530
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.6657,
+              0.103
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.6657,
+              0.103
+            ],
+            "jaccard": [
+              0.6657,
+              0.103
+            ],
+            "point_accuracy": [
+              0.6164,
+              0.0361
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.0218,
+              0.0034
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 530
+          }
+        },
+        "cage_rs": {
+          "natural": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.01,
+              0.0017
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.01,
+              0.0017
+            ],
+            "jaccard": [
+              0.01,
+              0.0017
+            ],
+            "point_accuracy": [
+              0.3904,
+              0.0122
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.5935,
+              0.0453
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 8
+          },
+          "boundary": {
+            "policy_false_allow": [
+              0.0,
+              0.0
+            ],
+            "robust_safe_coverage": [
+              0.01,
+              0.0017
+            ],
+            "precision": [
+              1.0,
+              0.0
+            ],
+            "recall": [
+              0.01,
+              0.0017
+            ],
+            "jaccard": [
+              0.01,
+              0.0017
+            ],
+            "point_accuracy": [
+              0.2885,
+              0.0198
+            ],
+            "policy_false_allow_wilson_upper": [
+              0.5935,
+              0.0453
+            ],
+            "policy_false_allow_count_total": 0,
+            "n_allow_total": 8
+          }
+        }
+      }
+    }
+  },
+  "verdict": "STRONG: learned certs keep policy_false_allow=0 (Lip & RS, both eval sets, all tiers) AND recover a substantial fraction of R_OPA (Lip natural coverage mean 0.626) \u2014 tight surrogate with modest learning tax; the point baselines pay the boundary price.",
+  "framing": "gate-policy fidelity benchmark (price of a surrogate under known ground truth), NOT evidence a learned gate should replace OPA; the exact backend is the deployment choice when the policy is robustly evaluable at low cost. VERIFIED SCOPE: the three authored OPA domains are the SAME provenance-conditioned scalar-threshold policy with the numeric field renamed (categorize identical across them) \u2014 a renaming-invariance check, not three complexity tiers; the multivariate-affine tier is covered by EXP-CX4."
+}

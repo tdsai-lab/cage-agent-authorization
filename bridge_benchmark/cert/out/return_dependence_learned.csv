@@ -1,0 +1,4 @@
+domain,n,majority_error,pre_return_error,pre_return_auc,post_return_error,post_return_auc,rho_matched
+finance_compliance,20000,0.3406,0.2773,0.7501,0.0035,0.9999,0.4557
+sre_monitoring,20000,0.3158,0.3158,0.6691,0.007,0.9998,0.4253
+ops_security,20000,0.3297,0.3297,0.7029,0.005,0.9999,0.4401

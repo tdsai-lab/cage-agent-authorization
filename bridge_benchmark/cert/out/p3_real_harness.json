@@ -1,0 +1,64 @@
+{
+  "experiment": "PLAN_2 P3 \u2014 real kind+Kyverno harness, externally-inspectable side effect",
+  "cluster": "kind cage-p3",
+  "admission_controller": "Kyverno v1.13",
+  "policy": "replicas <= cap(tier); tier from a separate ConfigMap via context.apiCall (TOCTOU)",
+  "fault": "stale tier-registry serves lax(cap 10) while true tier is strict(cap 3) \u2014 wrong_provenance_binding",
+  "tier_caps": {
+    "strict": 3,
+    "lax": 10
+  },
+  "witness_replicas": 6,
+  "safe_replicas": 2,
+  "gate_overhead_us": 0.25,
+  "rows": [
+    {
+      "arm": "deployed_admission",
+      "replicas": 6,
+      "served_tier": "lax",
+      "applied": true,
+      "admitted": true,
+      "side_effect": true,
+      "committed_replicas": "6",
+      "detail": "deployment.apps/settlement-batch created"
+    },
+    {
+      "arm": "certified_gate",
+      "replicas": 6,
+      "served_tier": "lax",
+      "gate_allow": false,
+      "gate_worst_branch": [
+        "strict",
+        3
+      ],
+      "applied": false,
+      "admitted": false,
+      "side_effect": false,
+      "committed_replicas": "",
+      "detail": "blocked by certified gate before apply"
+    },
+    {
+      "arm": "oracle_true_tier",
+      "replicas": 6,
+      "served_tier": "strict",
+      "applied": true,
+      "admitted": false,
+      "side_effect": false,
+      "committed_replicas": "",
+      "detail": "Error from server: error when creating \"STDIN\": admission webhook \"validate.kyverno.svc-fail\" denied the request: resource Deployment/payments/settlement-batch was blocked due to t\u2026"
+    },
+    {
+      "arm": "certified_gate",
+      "replicas": 2,
+      "served_tier": "lax",
+      "gate_allow": true,
+      "gate_worst_branch": null,
+      "applied": true,
+      "admitted": true,
+      "side_effect": true,
+      "committed_replicas": "2",
+      "detail": "deployment.apps/settlement-batch created",
+      "case": "safe_nonvacuity"
+    }
+  ]
+}

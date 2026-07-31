@@ -1,0 +1,9 @@
+# Realistic-schema results
+
+sigma=0.1, tau=0.9, eps=0.1, n_mc=2000, 50000 records/domain. Real-looking schemas, synthetic policies. Certificate = enumerate_discrete_gaussian_rs.
+
+| label | k | n_records | A_pct | B_pct | C_pct | R_pct | U_pct | clean_acc | attack_false_allow | naive_C_falseallow | C_allow | R_allow | U_allow | cert_false_allow | sigma | tau | eps | n_mc | runtime_seconds |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| finance_compliance | 4 | 50000 | 35.5 | 1.2 | 8.1 | 20.8 | 34.4 | 0.9968 | 0.9625 | 1.0 | 0.0 | 0.38 | 0.0 | 0.0 | 0.1 | 0.9 | 0.1 | 2000 | 29.8 |
+| sre_monitoring | 4 | 50000 | 52.4 | 1.3 | 8.0 | 7.0 | 31.2 | 0.9934 | 0.9875 | 1.0 | 0.0 | 0.24 | 0.0 | 0.0 | 0.1 | 0.9 | 0.1 | 2000 | 41.4 |
+| ops_security | 4 | 50000 | 48.8 | 1.1 | 8.6 | 9.2 | 32.3 | 0.9958 | 0.9625 | 1.0 | 0.0 | 0.24 | 0.0 | 0.0 | 0.1 | 0.9 | 0.1 | 2000 | 42.9 |

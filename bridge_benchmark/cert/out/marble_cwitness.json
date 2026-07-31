@@ -1,0 +1,77 @@
+{
+  "engine": "Marble (checkmarble/marble) v1.4.0",
+  "engine_type": "purpose-built AML/fraud engine",
+  "engine_transport": "decision API (POST /v1/decisions), X-Api-Key",
+  "infra": "rootless podman, host-net",
+  "rule": "safe = risk_score < theta(provenance); theta_strict=0.488808, theta_loose=0.568808",
+  "encoding": "score classifier: rule fires (+score) iff risk>=theta(prov); score>=review_threshold => REVIEW(unsafe)",
+  "s_semantics": "provenance_upstream (screening-tool / list-source class; pipeline-set)",
+  "scenario_id": "019f2d55-1193-707a-917c-17b976cf3216",
+  "n_records": 800,
+  "n_decisions": 3200,
+  "eps": 0.1,
+  "seconds": 32.5,
+  "engine_category_distribution": {
+    "U": 160,
+    "A": 160,
+    "B": 160,
+    "C": 160,
+    "R": 160
+  },
+  "engine_C_count": 160,
+  "engine_C_pct": 20.0,
+  "engine_vs_analytic_agreement": 1.0,
+  "C_set_jaccard_engine_vs_analytic": 1.0,
+  "witnesses": [
+    {
+      "category": "C",
+      "provenance": "loose",
+      "swap_to": "strict",
+      "risk_score": 0.4664,
+      "engine_clean_safe": true,
+      "engine_swap_only": true,
+      "engine_eps_only": true,
+      "engine_joint": false
+    },
+    {
+      "category": "C",
+      "provenance": "loose",
+      "swap_to": "strict",
+      "risk_score": 0.4466,
+      "engine_clean_safe": true,
+      "engine_swap_only": true,
+      "engine_eps_only": true,
+      "engine_joint": false
+    },
+    {
+      "category": "C",
+      "provenance": "loose",
+      "swap_to": "strict",
+      "risk_score": 0.454,
+      "engine_clean_safe": true,
+      "engine_swap_only": true,
+      "engine_eps_only": true,
+      "engine_joint": false
+    },
+    {
+      "category": "C",
+      "provenance": "loose",
+      "swap_to": "strict",
+      "risk_score": 0.3905,
+      "engine_clean_safe": true,
+      "engine_swap_only": true,
+      "engine_eps_only": true,
+      "engine_joint": false
+    },
+    {
+      "category": "C",
+      "provenance": "loose",
+      "swap_to": "strict",
+      "risk_score": 0.4647,
+      "engine_clean_safe": true,
+      "engine_swap_only": true,
+      "engine_eps_only": true,
+      "engine_joint": false
+    }
+  ]
+}

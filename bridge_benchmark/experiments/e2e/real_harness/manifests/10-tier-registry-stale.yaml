@@ -1,0 +1,15 @@
+# The tier registry: the SEPARATE data source the Kyverno policy resolves the provenance `s` (tier) from,
+# via `context.apiCall` -> NOT from the admitted request object. This is the TOCTOU surface (CWE-367 /
+# CWE-441): the admission decision trusts a served binding that can be stale.
+#
+# STALE variant: it serves tier `lax` (cap 10) for `payments` while the TRUE tier is `strict` (cap 3).
+# This is the `wrong_provenance_binding` fault (fault_injection.py) realized in a real cluster:
+# s(strict, cap 3) -> s'(lax, cap 10).
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tier-registry
+  namespace: cage-system
+data:
+  tier: "lax"
+  cap: "10"

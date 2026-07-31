@@ -1,0 +1,578 @@
+{
+  "input_scan_detector_sha256": "466e9dfb8f2da0dacb26be8e21a3c20d5603f5631ef9dd2be1e1427444a329b0",
+  "candidate_substrate_rate_full": 0.09787,
+  "candidate_substrate_rate_habitat": 0.22414,
+  "n_candidate_hits": 3840,
+  "adjudication_rule": "conservative: SCHEMA_RESOURCE_META / SUBJECT_INSTRUMENT / DUALUSE_AMBIGUOUS all -> OUT (ambiguous -> subject-keyed); CONFIRMED_PIPELINE = unambiguous transport/adapter origin only.",
+  "candidate_hit_counts_by_category_top60": {
+    "SCHEMA_RESOURCE_META": 5248,
+    "SUBJECT_INSTRUMENT": 1194,
+    "DUALUSE_AMBIGUOUS": 1694,
+    "CONFIRMED_PIPELINE": 0
+  },
+  "confirmed_pipeline_fraction_of_top60": 0.0,
+  "confirmed_pipeline_s_fields": [],
+  "category_inventory": {
+    "SCHEMA_RESOURCE_META": [
+      {
+        "s_field": "apiVersion",
+        "candidate_hits": 2654
+      },
+      {
+        "s_field": "resourceVersion",
+        "candidate_hits": 1532
+      },
+      {
+        "s_field": "resource_key",
+        "candidate_hits": 357
+      },
+      {
+        "s_field": "resourceGuid",
+        "candidate_hits": 181
+      },
+      {
+        "s_field": "resourceId",
+        "candidate_hits": 150
+      },
+      {
+        "s_field": "resourceState",
+        "candidate_hits": 103
+      },
+      {
+        "s_field": "resourceName",
+        "candidate_hits": 49
+      },
+      {
+        "s_field": "resourceUrl",
+        "candidate_hits": 48
+      },
+      {
+        "s_field": "resourceGroup",
+        "candidate_hits": 47
+      },
+      {
+        "s_field": "resourceUri",
+        "candidate_hits": 28
+      },
+      {
+        "s_field": "resourceOwner",
+        "candidate_hits": 21
+      },
+      {
+        "s_field": "ChannelPrimaryImageTag",
+        "candidate_hits": 21
+      },
+      {
+        "s_field": "resourceImageUrl",
+        "candidate_hits": 20
+      },
+      {
+        "s_field": "api_version",
+        "candidate_hits": 19
+      },
+      {
+        "s_field": "apiVersionSetId",
+        "candidate_hits": 18
+      }
+    ],
+    "SUBJECT_INSTRUMENT": [
+      {
+        "s_field": "routing_number",
+        "candidate_hits": 518
+      },
+      {
+        "s_field": "originalCode",
+        "candidate_hits": 72
+      },
+      {
+        "s_field": "inventorySourceId",
+        "candidate_hits": 66
+      },
+      {
+        "s_field": "inventorySourceGroupId",
+        "candidate_hits": 66
+      },
+      {
+        "s_field": "OriginalFileName",
+        "candidate_hits": 55
+      },
+      {
+        "s_field": "originalMessage",
+        "candidate_hits": 48
+      },
+      {
+        "s_field": "originationName",
+        "candidate_hits": 48
+      },
+      {
+        "s_field": "routeCode",
+        "candidate_hits": 48
+      },
+      {
+        "s_field": "channelShortCode",
+        "candidate_hits": 36
+      },
+      {
+        "s_field": "fundingSource",
+        "candidate_hits": 27
+      },
+      {
+        "s_field": "MaxAudioChannels",
+        "candidate_hits": 24
+      },
+      {
+        "s_field": "ChannelName",
+        "candidate_hits": 24
+      },
+      {
+        "s_field": "routingNumber",
+        "candidate_hits": 23
+      },
+      {
+        "s_field": "originalOrderId",
+        "candidate_hits": 21
+      },
+      {
+        "s_field": "SourceTechnology",
+        "candidate_hits": 20
+      },
+      {
+        "s_field": "SourceText",
+        "candidate_hits": 20
+      },
+      {
+        "s_field": "ShippingProviderName",
+        "candidate_hits": 20
+      },
+      {
+        "s_field": "ShippingProviderProductName",
+        "candidate_hits": 20
+      },
+      {
+        "s_field": "paymentSource",
+        "candidate_hits": 19
+      },
+      {
+        "s_field": "originalImageUri",
+        "candidate_hits": 19
+      }
+    ],
+    "DUALUSE_AMBIGUOUS": [
+      {
+        "s_field": "source",
+        "candidate_hits": 334
+      },
+      {
+        "s_field": "sourceSystemKey",
+        "candidate_hits": 232
+      },
+      {
+        "s_field": "urlOriginal",
+        "candidate_hits": 162
+      },
+      {
+        "s_field": "channelId",
+        "candidate_hits": 121
+      },
+      {
+        "s_field": "origin",
+        "candidate_hits": 104
+      },
+      {
+        "s_field": "provider",
+        "candidate_hits": 87
+      },
+      {
+        "s_field": "channel",
+        "candidate_hits": 85
+      },
+      {
+        "s_field": "Channel",
+        "candidate_hits": 63
+      },
+      {
+        "s_field": "channel_chat_created",
+        "candidate_hits": 59
+      },
+      {
+        "s_field": "sourceModifiedDate",
+        "candidate_hits": 53
+      },
+      {
+        "s_field": "isEntireRouteSection",
+        "candidate_hits": 48
+      },
+      {
+        "s_field": "memsource",
+        "candidate_hits": 46
+      },
+      {
+        "s_field": "ChannelId",
+        "candidate_hits": 33
+      },
+      {
+        "s_field": "rateOrigin",
+        "candidate_hits": 30
+      },
+      {
+        "s_field": "dataSourceReferenceId",
+        "candidate_hits": 30
+      },
+      {
+        "s_field": "Source",
+        "candidate_hits": 25
+      },
+      {
+        "s_field": "source_id",
+        "candidate_hits": 24
+      },
+      {
+        "s_field": "channels",
+        "candidate_hits": 23
+      },
+      {
+        "s_field": "endpoint",
+        "candidate_hits": 22
+      },
+      {
+        "s_field": "originHostHeader",
+        "candidate_hits": 22
+      },
+      {
+        "s_field": "source_created_at",
+        "candidate_hits": 19
+      },
+      {
+        "s_field": "acquirerId",
+        "candidate_hits": 18
+      },
+      {
+        "s_field": "source_url",
+        "candidate_hits": 18
+      },
+      {
+        "s_field": "ChannelNumber",
+        "candidate_hits": 18
+      },
+      {
+        "s_field": "deliveryChannel",
+        "candidate_hits": 18
+      }
+    ],
+    "CONFIRMED_PIPELINE": []
+  },
+  "step3_documented_theta_s": "none found (would require a documented third-party \u03b8(s); authoring one is a protocol violation) -> NO strong hit",
+  "outcome": "NULL_security_relevant_substrate",
+  "habitat_field_breakdown": {
+    "n_habitat_specs_scanned": 116,
+    "n_habitat_specs_with_substrate": 26,
+    "s_field_breakdown": [
+      {
+        "s_field": "fundingSource",
+        "n_habitat_specs": 11,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "adyen.com"
+        ]
+      },
+      {
+        "s_field": "acquirerId",
+        "n_habitat_specs": 5,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "adyen.com"
+        ]
+      },
+      {
+        "s_field": "channel",
+        "n_habitat_specs": 4,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "adyen.com"
+        ]
+      },
+      {
+        "s_field": "splitCardFundingSources",
+        "n_habitat_specs": 4,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "adyen.com"
+        ]
+      },
+      {
+        "s_field": "sourceAccountCode",
+        "n_habitat_specs": 3,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "adyen.com"
+        ]
+      },
+      {
+        "s_field": "routingNumber",
+        "n_habitat_specs": 2,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "paylocity.com",
+          "velopayments.com"
+        ]
+      },
+      {
+        "s_field": "AcquirerPOIID",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "adyen.com"
+        ]
+      },
+      {
+        "s_field": "StoredValueProvider",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "adyen.com"
+        ]
+      },
+      {
+        "s_field": "SaleToAcquirerData",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "adyen.com"
+        ]
+      },
+      {
+        "s_field": "LoyaltyAcquirerID",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "adyen.com"
+        ]
+      },
+      {
+        "s_field": "ProviderEmployerRef",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "payrun.io"
+        ]
+      },
+      {
+        "s_field": "ProviderName",
+        "n_habitat_specs": 1,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "payrun.io"
+        ]
+      },
+      {
+        "s_field": "routing",
+        "n_habitat_specs": 1,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "plaid.com"
+        ]
+      },
+      {
+        "s_field": "wire_routing",
+        "n_habitat_specs": 1,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "plaid.com"
+        ]
+      },
+      {
+        "s_field": "payment_channel",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "plaid.com"
+        ]
+      },
+      {
+        "s_field": "original_description",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "plaid.com"
+        ]
+      },
+      {
+        "s_field": "income_source_id",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "plaid.com"
+        ]
+      },
+      {
+        "s_field": "paystub_provider",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "plaid.com"
+        ]
+      },
+      {
+        "s_field": "origination_date",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "plaid.com"
+        ]
+      },
+      {
+        "s_field": "payment_processor",
+        "n_habitat_specs": 1,
+        "category": "CONFIRMED_PIPELINE",
+        "providers": [
+          "plaid.com"
+        ]
+      },
+      {
+        "s_field": "routing_number",
+        "n_habitat_specs": 1,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "stripe.com"
+        ]
+      },
+      {
+        "s_field": "original_transaction",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "stripe.com"
+        ]
+      },
+      {
+        "s_field": "refund_routing_number",
+        "n_habitat_specs": 1,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "stripe.com"
+        ]
+      },
+      {
+        "s_field": "source",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "stripe.com"
+        ]
+      },
+      {
+        "s_field": "address_source",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "stripe.com"
+        ]
+      },
+      {
+        "s_field": "origin_payment_method",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "stripe.com"
+        ]
+      },
+      {
+        "s_field": "source_flow",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "stripe.com"
+        ]
+      },
+      {
+        "s_field": "sourceAccountId",
+        "n_habitat_specs": 1,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "velopayments.com"
+        ]
+      },
+      {
+        "s_field": "sourceAccountName",
+        "n_habitat_specs": 1,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "velopayments.com"
+        ]
+      },
+      {
+        "s_field": "provider",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "velopayments.com"
+        ]
+      },
+      {
+        "s_field": "paymentChannelId",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "velopayments.com"
+        ]
+      },
+      {
+        "s_field": "paymentChannelName",
+        "n_habitat_specs": 1,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "velopayments.com"
+        ]
+      },
+      {
+        "s_field": "returnFeeDescription",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "velopayments.com"
+        ]
+      },
+      {
+        "s_field": "sourceAccount",
+        "n_habitat_specs": 1,
+        "category": "SUBJECT_INSTRUMENT",
+        "providers": [
+          "velopayments.com"
+        ]
+      },
+      {
+        "s_field": "payment_provider",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "payments.service.gov.uk"
+        ]
+      },
+      {
+        "s_field": "provider_id",
+        "n_habitat_specs": 1,
+        "category": "DUALUSE_AMBIGUOUS",
+        "providers": [
+          "payments.service.gov.uk"
+        ]
+      }
+    ],
+    "s_field_specs_by_category": {
+      "SUBJECT_INSTRUMENT": 29,
+      "DUALUSE_AMBIGUOUS": 29,
+      "CONFIRMED_PIPELINE": 1
+    },
+    "confirmed_pipeline_in_habitat": [
+      {
+        "s_field": "payment_processor",
+        "n_habitat_specs": 1,
+        "category": "CONFIRMED_PIPELINE",
+        "providers": [
+          "plaid.com"
+        ]
+      }
+    ],
+    "note": "The 22.4% habitat is dominated by adyen.com (~20/26 specs) and within it by fundingSource (instrument type -> SUBJECT, clearly OUT), then dual-use acquirerId / channel. routing-family fields (routingNumber/routing/wire_routing/routing_number) carry only ~5/26 and are NOT load-bearing: a bank routing number is a property of the account the response describes (which institution holds it) -> SUBJECT per the \u00a76.5 rule; reclassifying the whole routing family as pipeline-set would move ~5 specs and not overturn the verdict. The security-relevant ceiling in the habitat is the dual-use acquirerId (adyen score+acquirerId, excluded only by the conservative ambiguous->OUT rule) plus exactly ONE confirmed-pipeline field (plaid payment_processor, 1 spec) \u2014 i.e. <=~6/116 specs, ALL without a documented \u03b8(s): a small medium-hit at most, never a strong hit. Each exclusion defended individually above."
+  },
+  "interpretation": "The frozen detector's candidate substrate (9.8% full / 22.4% habitat) is driven, after conservative adjudication, by API/resource SCHEMA-VERSION metadata (apiVersion/resourceVersion/resource*, overwhelmingly from the SAME k8s/cloud specs that gave the \u00a76.5 policy-half null) and by SUBJECT/INSTRUMENT attributes (routing_number, fundingSource, paymentSource \u2014 entity/instrument properties, not transport-assigned). No s-field is unambiguously pipeline-set; every borderline case (source/origin/channel/provider/acquirer) resolves OUT. The security-relevant (pipeline-set) substrate therefore collapses to \u22480, and no documented \u03b8(s) conditions it -> the cross-ecosystem NULL, consistent with the MCP data-half null and the k8s policy-half null. Same shape as \u00a76.5 OpenFisca: structural co-occurrence is common, the security-relevant key is not."
+}

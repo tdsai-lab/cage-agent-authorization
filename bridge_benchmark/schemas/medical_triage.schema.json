@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tooldecisionbench/medical_triage.schema.json",
+  "title": "ToolDecisionBench medical_triage record",
+  "description": "One (tool, text_fields, numeric_fields) -> action record for the medical triage domain. See notes/benchmark_spec.md.",
+  "type": "object",
+  "required": ["id", "domain", "tool_id", "text_fields", "numeric_fields", "action_label", "safety_label", "source"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string"},
+    "domain": {"const": "medical_triage"},
+    "tool_id": {"type": "string", "enum": ["blood_pressure", "glucose", "cholesterol", "symptom_checker"]},
+    "text_fields": {
+      "type": "object",
+      "description": "x_1: categorical / text channel.",
+      "additionalProperties": {"type": "string"}
+    },
+    "numeric_fields": {
+      "type": "object",
+      "description": "x_2: continuous channel. All values must be numbers.",
+      "additionalProperties": {"type": "number"}
+    },
+    "action_label": {"type": "string", "enum": ["normal", "follow_up", "urgent", "critical"]},
+    "safety_label": {"type": "string", "enum": ["safe", "unsafe_if_undertriaged", "requires_human"]},
+    "source": {"type": "string", "enum": ["agentdojo_pattern", "synthetic_schema", "real_api_schema"]},
+    "notes": {"type": "string"}
+  }
+}

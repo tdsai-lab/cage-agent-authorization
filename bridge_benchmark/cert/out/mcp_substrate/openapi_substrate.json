@@ -1,0 +1,2493 @@
+{
+  "corpus": "APIs.guru openapi-directory",
+  "corpus_commit": "f04b8d0bcd39",
+  "execution": "none (static YAML parse)",
+  "frozen_detector_sha256": "466e9dfb8f2da0dacb26be8e21a3c20d5603f5631ef9dd2be1e1427444a329b0",
+  "criteria": "substrate(response) = typed response object with >=1 continuous_x AND >=1 pipeline_set_s; continuous_x = numeric & operational-lexicon & not id/count/enum; pipeline_set_s = transport/adapter-assigned discrete; subject_keyed (entity attr, incl. region/country) EXCLUDED; ambiguous -> subject_keyed (conservative undercount).",
+  "n_specs": 4138,
+  "n_apis": 701,
+  "n_habitat_specs": 116,
+  "n_habitat_apis": 17,
+  "parse_coverage": 0.9886,
+  "parse_failures": {
+    "no_paths": 9,
+    "skip_too_big": 21,
+    "error:ConstructorError": 8,
+    "error:ParserError": 1,
+    "error:ScannerError": 2,
+    "error:ReaderError": 2,
+    "error:ValueError": 4
+  },
+  "full_corpus": {
+    "parsed": 4091,
+    "typed_resp": 3371,
+    "continuous": 1025,
+    "pipeline": 1761,
+    "substrate": 405,
+    "substrate_rate": 0.09787
+  },
+  "habitat_financial_risk": {
+    "parsed": 107,
+    "typed_resp": 99,
+    "continuous": 73,
+    "pipeline": 36,
+    "substrate": 26,
+    "substrate_rate": 0.22414
+  },
+  "funnel": "Pr[native C|corpus] = Pr[substrate] x Pr[\u03b8-cond|substrate] x Pr[\u0394/\u03b5|cond]",
+  "outcome": "SUBSTRATE_PRESENT_candidate_hits",
+  "n_substrate_candidate_hits": 3840,
+  "n_specs_with_candidate_substrate": 405,
+  "distinct_s_fields_in_hits": {
+    "apiVersion": 2654,
+    "resourceVersion": 1532,
+    "routing_number": 518,
+    "resource_key": 357,
+    "source": 334,
+    "sourceSystemKey": 232,
+    "resourceGuid": 181,
+    "urlOriginal": 162,
+    "resourceId": 150,
+    "channelId": 121,
+    "origin": 104,
+    "resourceState": 103,
+    "provider": 87,
+    "channel": 85,
+    "originalCode": 72,
+    "inventorySourceId": 66,
+    "inventorySourceGroupId": 66,
+    "Channel": 63,
+    "channel_chat_created": 59,
+    "OriginalFileName": 55,
+    "sourceModifiedDate": 53,
+    "resourceName": 49,
+    "resourceUrl": 48,
+    "originalMessage": 48,
+    "isEntireRouteSection": 48,
+    "originationName": 48,
+    "routeCode": 48,
+    "resourceGroup": 47,
+    "memsource": 46,
+    "channelShortCode": 36,
+    "ChannelId": 33,
+    "rateOrigin": 30,
+    "dataSourceReferenceId": 30,
+    "resourceUri": 28,
+    "fundingSource": 27,
+    "Source": 25,
+    "source_id": 24,
+    "MaxAudioChannels": 24,
+    "ChannelName": 24,
+    "routingNumber": 23,
+    "channels": 23,
+    "endpoint": 22,
+    "originHostHeader": 22,
+    "resourceOwner": 21,
+    "ChannelPrimaryImageTag": 21,
+    "originalOrderId": 21,
+    "SourceTechnology": 20,
+    "SourceText": 20,
+    "ShippingProviderName": 20,
+    "ShippingProviderProductName": 20,
+    "resourceImageUrl": 20,
+    "paymentSource": 19,
+    "source_created_at": 19,
+    "originalImageUri": 19,
+    "api_version": 19,
+    "acquirerId": 18,
+    "source_url": 18,
+    "ChannelNumber": 18,
+    "deliveryChannel": 18,
+    "apiVersionSetId": 18
+  },
+  "distinct_x_fields_in_hits": {
+    "amount": 1387,
+    "generation": 1103,
+    "value": 493,
+    "amount_received": 457,
+    "amount_capturable": 452,
+    "application_fee_amount": 452,
+    "price": 324,
+    "duration": 322,
+    "failureThreshold": 303,
+    "successThreshold": 230,
+    "unhealthyThreshold": 154,
+    "limit": 142,
+    "score": 136,
+    "probability": 135,
+    "proximityRadiusAmount": 132,
+    "revisionHistoryLimit": 130,
+    "pretaxCost": 81,
+    "observedGeneration": 75,
+    "TaxAmount": 72,
+    "SubTotalAmount": 65,
+    "avgLatencyInMs": 64,
+    "maxLatencyInMs": 64,
+    "minLatencyInMs": 64,
+    "baseScore": 58,
+    "TotalAmount": 56,
+    "fileUploadLimitInMb": 54,
+    "ratio": 51,
+    "ratingScore": 51,
+    "Cost": 50,
+    "email_open_rate": 49
+  },
+  "substrate_candidate_hits": [
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/BalancePlatformService/2/openapi.yaml",
+      "habitat": true,
+      "path": "/paymentInstrumentGroups/{id}/transactionRules",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value",
+        "value",
+        "value",
+        "score"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/BalancePlatformService/2/openapi.yaml",
+      "habitat": true,
+      "path": "/paymentInstruments/{id}/transactionRules",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value",
+        "value",
+        "value",
+        "score"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/BalancePlatformService/2/openapi.yaml",
+      "habitat": true,
+      "path": "/transactionRules",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value",
+        "value",
+        "value",
+        "score"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/BalancePlatformService/2/openapi.yaml",
+      "habitat": true,
+      "path": "/transactionRules/{transactionRuleId}",
+      "method": "delete",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value",
+        "value",
+        "value",
+        "score"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/BalancePlatformService/2/openapi.yaml",
+      "habitat": true,
+      "path": "/transactionRules/{transactionRuleId}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value",
+        "value",
+        "value",
+        "score"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/BalancePlatformService/2/openapi.yaml",
+      "habitat": true,
+      "path": "/transactionRules/{transactionRuleId}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value",
+        "value",
+        "value",
+        "score"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/BinLookupService/40/openapi.yaml",
+      "habitat": true,
+      "path": "/getCostEstimate",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/BinLookupService/50/openapi.yaml",
+      "habitat": true,
+      "path": "/getCostEstimate",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/BinLookupService/52/openapi.yaml",
+      "habitat": true,
+      "path": "/getCostEstimate",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/BinLookupService/53/openapi.yaml",
+      "habitat": true,
+      "path": "/getCostEstimate",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/BinLookupService/54/openapi.yaml",
+      "habitat": true,
+      "path": "/getCostEstimate",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService/68/openapi.yaml",
+      "habitat": true,
+      "path": "/sessions",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "value",
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount"
+      ],
+      "s_fields": [
+        "channel",
+        "fundingSource",
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService/69/openapi.yaml",
+      "habitat": true,
+      "path": "/paymentLinks",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount",
+        "value"
+      ],
+      "s_fields": [
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService/69/openapi.yaml",
+      "habitat": true,
+      "path": "/paymentLinks/{linkId}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount",
+        "value"
+      ],
+      "s_fields": [
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService/69/openapi.yaml",
+      "habitat": true,
+      "path": "/paymentLinks/{linkId}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount",
+        "value"
+      ],
+      "s_fields": [
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService/69/openapi.yaml",
+      "habitat": true,
+      "path": "/sessions",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "value",
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount"
+      ],
+      "s_fields": [
+        "channel",
+        "fundingSource",
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService/70/openapi.yaml",
+      "habitat": true,
+      "path": "/paymentLinks",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount",
+        "value"
+      ],
+      "s_fields": [
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService/70/openapi.yaml",
+      "habitat": true,
+      "path": "/paymentLinks/{linkId}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount",
+        "value"
+      ],
+      "s_fields": [
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService/70/openapi.yaml",
+      "habitat": true,
+      "path": "/paymentLinks/{linkId}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount",
+        "value"
+      ],
+      "s_fields": [
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService/70/openapi.yaml",
+      "habitat": true,
+      "path": "/sessions",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "value",
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount"
+      ],
+      "s_fields": [
+        "channel",
+        "fundingSource",
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService-v71/71/openapi.yaml",
+      "habitat": true,
+      "path": "/paymentLinks",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount",
+        "value"
+      ],
+      "s_fields": [
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService-v71/71/openapi.yaml",
+      "habitat": true,
+      "path": "/paymentLinks/{linkId}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount",
+        "value"
+      ],
+      "s_fields": [
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService-v71/71/openapi.yaml",
+      "habitat": true,
+      "path": "/paymentLinks/{linkId}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount",
+        "value"
+      ],
+      "s_fields": [
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/CheckoutService-v71/71/openapi.yaml",
+      "habitat": true,
+      "path": "/sessions",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "value",
+        "value",
+        "amountExcludingTax",
+        "amountIncludingTax",
+        "taxAmount"
+      ],
+      "s_fields": [
+        "channel",
+        "fundingSource",
+        "splitCardFundingSources"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/FundService/3/openapi.yaml",
+      "habitat": true,
+      "path": "/accountHolderTransactionList",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "sourceAccountCode"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/FundService/3/openapi.yaml",
+      "habitat": true,
+      "path": "/accountHolderTransactionList",
+      "method": "post",
+      "code": "202",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "sourceAccountCode"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/FundService/5/openapi.yaml",
+      "habitat": true,
+      "path": "/accountHolderTransactionList",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "sourceAccountCode"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/FundService/5/openapi.yaml",
+      "habitat": true,
+      "path": "/accountHolderTransactionList",
+      "method": "post",
+      "code": "202",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "sourceAccountCode"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/FundService/6/openapi.yaml",
+      "habitat": true,
+      "path": "/accountHolderTransactionList",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "sourceAccountCode"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/FundService/6/openapi.yaml",
+      "habitat": true,
+      "path": "/accountHolderTransactionList",
+      "method": "post",
+      "code": "202",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "sourceAccountCode"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService/1/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService/1/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService/1/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}",
+      "method": "delete",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService/1/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService/1/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService/1/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService/1/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}/rules/{ruleId}",
+      "method": "delete",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService/1/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}/rules/{ruleId}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService/1/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}/rules/{ruleId}/splitLogic/{splitLogicId}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService-v3/3/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService-v3/3/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService-v3/3/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}",
+      "method": "delete",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService-v3/3/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService-v3/3/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService-v3/3/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService-v3/3/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}/rules/{ruleId}",
+      "method": "delete",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService-v3/3/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}/rules/{ruleId}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/ManagementService-v3/3/openapi.yaml",
+      "habitat": true,
+      "path": "/merchants/{merchantId}/splitConfigurations/{splitConfigurationId}/rules/{ruleId}/splitLogic/{splitLogicId}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "fixedAmount",
+        "fixedAmount"
+      ],
+      "s_fields": [
+        "fundingSource"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TerminalAPI-v1/1/openapi.yaml",
+      "habitat": true,
+      "path": "/balanceinquiry",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "CurrentBalance",
+        "CurrentBalance",
+        "CurrentAmount",
+        "ForecastedAmount"
+      ],
+      "s_fields": [
+        "AcquirerPOIID",
+        "StoredValueProvider"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TerminalAPI-v1/1/openapi.yaml",
+      "habitat": true,
+      "path": "/cardacquisition",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "CurrentAmount",
+        "ForecastedAmount"
+      ],
+      "s_fields": [
+        "StoredValueProvider",
+        "SaleToAcquirerData"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TerminalAPI-v1/1/openapi.yaml",
+      "habitat": true,
+      "path": "/loyalty",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "CurrentBalance",
+        "AmountValue",
+        "ItemAmount"
+      ],
+      "s_fields": [
+        "LoyaltyAcquirerID",
+        "SaleToAcquirerData"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TerminalAPI-v1/1/openapi.yaml",
+      "habitat": true,
+      "path": "/payment",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "CurrentAmount",
+        "ForecastedAmount",
+        "CurrentBalance",
+        "AmountValue",
+        "ItemAmount"
+      ],
+      "s_fields": [
+        "LoyaltyAcquirerID",
+        "AcquirerPOIID",
+        "StoredValueProvider",
+        "SaleToAcquirerData"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TerminalAPI-v1/1/openapi.yaml",
+      "habitat": true,
+      "path": "/storedvalue",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "ItemAmount",
+        "CurrentBalance"
+      ],
+      "s_fields": [
+        "SaleToAcquirerData",
+        "StoredValueProvider"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TerminalAPI-v1/1/openapi.yaml",
+      "habitat": true,
+      "path": "/transactionstatus",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "CurrentBalance",
+        "AmountValue",
+        "CurrentAmount",
+        "ForecastedAmount",
+        "CurrentBalance"
+      ],
+      "s_fields": [
+        "StoredValueProvider",
+        "SaleToAcquirerData",
+        "LoyaltyAcquirerID",
+        "SaleToAcquirerData",
+        "LoyaltyAcquirerID"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService/1/openapi.yaml",
+      "habitat": true,
+      "path": "/transactions",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService/1/openapi.yaml",
+      "habitat": true,
+      "path": "/transactions/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService/2/openapi.yaml",
+      "habitat": true,
+      "path": "/transactions",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService/2/openapi.yaml",
+      "habitat": true,
+      "path": "/transactions/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService/2/openapi.yaml",
+      "habitat": true,
+      "path": "/transfers",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService/2/openapi.yaml",
+      "habitat": true,
+      "path": "/transfers",
+      "method": "post",
+      "code": "202",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService/3/openapi.yaml",
+      "habitat": true,
+      "path": "/transactions",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService/3/openapi.yaml",
+      "habitat": true,
+      "path": "/transactions/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value",
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService/3/openapi.yaml",
+      "habitat": true,
+      "path": "/transfers",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService/3/openapi.yaml",
+      "habitat": true,
+      "path": "/transfers",
+      "method": "post",
+      "code": "202",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService-v4/4/openapi.yaml",
+      "habitat": true,
+      "path": "/transfers",
+      "method": "post",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "adyen.com",
+      "spec": "APIs/adyen.com/TransferService-v4/4/openapi.yaml",
+      "habitat": true,
+      "path": "/transfers",
+      "method": "post",
+      "code": "202",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "acquirerId"
+      ]
+    },
+    {
+      "provider": "agco-ats.com",
+      "spec": "APIs/agco-ats.com/v1/openapi.yaml",
+      "habitat": false,
+      "path": "/api/v2/activities",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "Limit"
+      ],
+      "s_fields": [
+        "Source"
+      ]
+    },
+    {
+      "provider": "agco-ats.com",
+      "spec": "APIs/agco-ats.com/v1/openapi.yaml",
+      "habitat": false,
+      "path": "/api/v2/activities",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "Limit"
+      ],
+      "s_fields": [
+        "Source"
+      ]
+    },
+    {
+      "provider": "agco-ats.com",
+      "spec": "APIs/agco-ats.com/v1/openapi.yaml",
+      "habitat": false,
+      "path": "/api/v2/activityRuns",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "Limit"
+      ],
+      "s_fields": [
+        "Source"
+      ]
+    },
+    {
+      "provider": "agco-ats.com",
+      "spec": "APIs/agco-ats.com/v1/openapi.yaml",
+      "habitat": false,
+      "path": "/api/v2/activityRuns",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "Limit"
+      ],
+      "s_fields": [
+        "Source"
+      ]
+    },
+    {
+      "provider": "agco-ats.com",
+      "spec": "APIs/agco-ats.com/v1/openapi.yaml",
+      "habitat": false,
+      "path": "/api/v2/jobRuns",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "Limit"
+      ],
+      "s_fields": [
+        "Source"
+      ]
+    },
+    {
+      "provider": "agco-ats.com",
+      "spec": "APIs/agco-ats.com/v1/openapi.yaml",
+      "habitat": false,
+      "path": "/api/v2/jobRuns",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "Limit"
+      ],
+      "s_fields": [
+        "Source"
+      ]
+    },
+    {
+      "provider": "agco-ats.com",
+      "spec": "APIs/agco-ats.com/v1/openapi.yaml",
+      "habitat": false,
+      "path": "/api/v2/jobs",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "Limit"
+      ],
+      "s_fields": [
+        "Source"
+      ]
+    },
+    {
+      "provider": "agco-ats.com",
+      "spec": "APIs/agco-ats.com/v1/openapi.yaml",
+      "habitat": false,
+      "path": "/api/v2/jobs",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "Limit"
+      ],
+      "s_fields": [
+        "Source"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor/{id}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor/{id}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor/{id}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor/{id}",
+      "method": "put",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor/{id}",
+      "method": "put",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "alertersystem.com",
+      "spec": "APIs/alertersystem.com/1.7.0/openapi.yaml",
+      "habitat": false,
+      "path": "/api/monitor/{id}",
+      "method": "put",
+      "code": "200",
+      "x_fields": [
+        "webResponseSecondsLimit"
+      ],
+      "s_fields": [
+        "resourceOwner"
+      ]
+    },
+    {
+      "provider": "amentum.space",
+      "spec": "APIs/amentum.space/aviation_radiation/1.5.0/openapi.yaml",
+      "habitat": false,
+      "path": "/route/ambient_dose",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "origin"
+      ]
+    },
+    {
+      "provider": "amentum.space",
+      "spec": "APIs/amentum.space/aviation_radiation/1.5.0/openapi.yaml",
+      "habitat": false,
+      "path": "/route/effective_dose",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "value"
+      ],
+      "s_fields": [
+        "origin"
+      ]
+    },
+    {
+      "provider": "anchore.io",
+      "spec": "APIs/anchore.io/0.1.20/openapi.yaml",
+      "habitat": false,
+      "path": "/images/by_id/{imageId}/vuln/{vtype}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "base_score",
+        "exploitability_score",
+        "impact_score",
+        "base_score",
+        "exploitability_score"
+      ],
+      "s_fields": [
+        "feed",
+        "feed_group"
+      ]
+    },
+    {
+      "provider": "anchore.io",
+      "spec": "APIs/anchore.io/0.1.20/openapi.yaml",
+      "habitat": false,
+      "path": "/images/{imageDigest}/vuln/{vtype}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "base_score",
+        "exploitability_score",
+        "impact_score",
+        "base_score",
+        "exploitability_score"
+      ],
+      "s_fields": [
+        "feed",
+        "feed_group"
+      ]
+    },
+    {
+      "provider": "anchore.io",
+      "spec": "APIs/anchore.io/0.1.20/openapi.yaml",
+      "habitat": false,
+      "path": "/query/vulnerabilities",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "base_score",
+        "exploitability_score",
+        "impact_score",
+        "base_score",
+        "exploitability_score"
+      ],
+      "s_fields": [
+        "source"
+      ]
+    },
+    {
+      "provider": "apacta.com",
+      "spec": "APIs/apacta.com/0.0.42/openapi.yaml",
+      "habitat": false,
+      "path": "/companies/{company_id}/integration_feature_settings",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "integration_feature_id"
+      ]
+    },
+    {
+      "provider": "apacta.com",
+      "spec": "APIs/apacta.com/0.0.42/openapi.yaml",
+      "habitat": false,
+      "path": "/companies/{company_id}/integration_settings",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "integration_setting_id"
+      ]
+    },
+    {
+      "provider": "apacta.com",
+      "spec": "APIs/apacta.com/0.0.42/openapi.yaml",
+      "habitat": false,
+      "path": "/expense_files",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "file_original_name"
+      ]
+    },
+    {
+      "provider": "apacta.com",
+      "spec": "APIs/apacta.com/0.0.42/openapi.yaml",
+      "habitat": false,
+      "path": "/invoices",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "total_cost_price",
+        "limit"
+      ],
+      "s_fields": [
+        "integration_id"
+      ]
+    },
+    {
+      "provider": "apacta.com",
+      "spec": "APIs/apacta.com/0.0.42/openapi.yaml",
+      "habitat": false,
+      "path": "/invoices/{invoice_id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "total_cost_price"
+      ],
+      "s_fields": [
+        "integration_id"
+      ]
+    },
+    {
+      "provider": "apacta.com",
+      "spec": "APIs/apacta.com/0.0.42/openapi.yaml",
+      "habitat": false,
+      "path": "/users/{user_id}/integration_settings",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "integration_setting_id"
+      ]
+    },
+    {
+      "provider": "apacta.com",
+      "spec": "APIs/apacta.com/0.0.42/openapi.yaml",
+      "habitat": false,
+      "path": "/vendor_product_price_files",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "original_file_name"
+      ]
+    },
+    {
+      "provider": "api2cart.com",
+      "spec": "APIs/api2cart.com/1.1/openapi.yaml",
+      "habitat": false,
+      "path": "/order.find.json",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price",
+        "price",
+        "price_inc_tax",
+        "tax_value",
+        "total_price"
+      ],
+      "s_fields": [
+        "channel_id"
+      ]
+    },
+    {
+      "provider": "api2cart.com",
+      "spec": "APIs/api2cart.com/1.1/openapi.yaml",
+      "habitat": false,
+      "path": "/order.info.json",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price",
+        "price",
+        "price_inc_tax",
+        "tax_value",
+        "total_price"
+      ],
+      "s_fields": [
+        "channel_id"
+      ]
+    },
+    {
+      "provider": "api2cart.com",
+      "spec": "APIs/api2cart.com/1.1/openapi.yaml",
+      "habitat": false,
+      "path": "/order.list.json",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price",
+        "price",
+        "price_inc_tax",
+        "tax_value",
+        "total_price"
+      ],
+      "s_fields": [
+        "channel_id"
+      ]
+    },
+    {
+      "provider": "api2cart.com",
+      "spec": "APIs/api2cart.com/1.1/openapi.yaml",
+      "habitat": false,
+      "path": "/order.shipment.info.json",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price"
+      ],
+      "s_fields": [
+        "shipment_provider"
+      ]
+    },
+    {
+      "provider": "api2cart.com",
+      "spec": "APIs/api2cart.com/1.1/openapi.yaml",
+      "habitat": false,
+      "path": "/order.shipment.list.json",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price"
+      ],
+      "s_fields": [
+        "shipment_provider"
+      ]
+    },
+    {
+      "provider": "api2cart.com",
+      "spec": "APIs/api2cart.com/1.1/openapi.yaml",
+      "habitat": false,
+      "path": "/order.transaction.list.json",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "amount",
+        "settlement_amount"
+      ],
+      "s_fields": [
+        "gateway"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/car/dealer/inventory/active",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt"
+      ],
+      "s_fields": [
+        "data_source",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/car/recall/{vin}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt"
+      ],
+      "s_fields": [
+        "data_source",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/history/car/uk/{vrm}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "ref_price_dt"
+      ],
+      "s_fields": [
+        "data_source",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/history/car/{vin}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "ref_price_dt"
+      ],
+      "s_fields": [
+        "data_source",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/listing/car/auction/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt",
+        "score"
+      ],
+      "s_fields": [
+        "data_source",
+        "first_seen_at_source_date",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/listing/car/fsbo/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt",
+        "score"
+      ],
+      "s_fields": [
+        "data_source",
+        "first_seen_at_source_date",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/listing/car/uk/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt",
+        "score"
+      ],
+      "s_fields": [
+        "data_source",
+        "first_seen_at_source_date",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/listing/car/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt",
+        "score"
+      ],
+      "s_fields": [
+        "data_source",
+        "first_seen_at_source_date",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/listing/heavy-equipment/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price"
+      ],
+      "s_fields": [
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/listing/motorcycle/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price"
+      ],
+      "s_fields": [
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/listing/rv/uk/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price"
+      ],
+      "s_fields": [
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/listing/rv/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price"
+      ],
+      "s_fields": [
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/search/car/active",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt"
+      ],
+      "s_fields": [
+        "data_source",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/search/car/auction/active",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt"
+      ],
+      "s_fields": [
+        "data_source",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/search/car/fsbo/active",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt"
+      ],
+      "s_fields": [
+        "data_source",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/search/car/incentive/oem",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt"
+      ],
+      "s_fields": [
+        "data_source",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/search/car/recents",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt"
+      ],
+      "s_fields": [
+        "data_source",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/search/car/uk/active",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt"
+      ],
+      "s_fields": [
+        "data_source",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/search/car/uk/recents",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "loan_apr",
+        "price",
+        "price_change_percent",
+        "ref_price_dt"
+      ],
+      "s_fields": [
+        "data_source",
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/search/heavy-equipment/active",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price"
+      ],
+      "s_fields": [
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/search/motorcycle/active",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price"
+      ],
+      "s_fields": [
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/search/rv/active",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price"
+      ],
+      "s_fields": [
+        "source"
+      ]
+    },
+    {
+      "provider": "apigee.net",
+      "spec": "APIs/apigee.net/marketcheck-cars/2.01/openapi.yaml",
+      "habitat": false,
+      "path": "/search/rv/uk/active",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price"
+      ],
+      "s_fields": [
+        "origin",
+        "source"
+      ]
+    },
+    {
+      "provider": "appcenter.ms",
+      "spec": "APIs/appcenter.ms/v0.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v0.1/apps/{owner_name}/{app_name}/billing/aggregated",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price",
+        "price"
+      ],
+      "s_fields": [
+        "paymentSource",
+        "paymentSource"
+      ]
+    },
+    {
+      "provider": "appcenter.ms",
+      "spec": "APIs/appcenter.ms/v0.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v0.1/orgs/{orgName}/billing/aggregated",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "price",
+        "price"
+      ],
+      "s_fields": [
+        "paymentSource",
+        "paymentSource"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appPreviewSets",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appPreviewSets/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appPreviewSets/{id}/appPreviews",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appScreenshotSets",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appScreenshotSets/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appScreenshotSets/{id}/appScreenshots",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appStoreReviewDetails",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appStoreReviewDetails/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appStoreReviewDetails/{id}",
+      "method": "patch",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appStoreReviewDetails/{id}/appStoreReviewAttachments",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appStoreVersionLocalizations/{id}/appPreviewSets",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit",
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appStoreVersionLocalizations/{id}/appScreenshotSets",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit",
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/appStoreVersions/{id}/appStoreReviewDetail",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit"
+      ],
+      "s_fields": [
+        "sourceFileChecksum"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/apps/{id}/betaAppLocalizations",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit",
+        "limit",
+        "limit",
+        "limit",
+        "limit"
+      ],
+      "s_fields": [
+        "feedbackEmail"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/apps/{id}/betaGroups",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "publicLinkLimit",
+        "limit",
+        "limit",
+        "limit"
+      ],
+      "s_fields": [
+        "feedbackEnabled"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/betaAppLocalizations",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit",
+        "limit",
+        "limit",
+        "limit",
+        "limit"
+      ],
+      "s_fields": [
+        "feedbackEmail"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/betaAppLocalizations",
+      "method": "post",
+      "code": "201",
+      "x_fields": [
+        "limit",
+        "limit",
+        "limit",
+        "limit",
+        "limit"
+      ],
+      "s_fields": [
+        "feedbackEmail"
+      ]
+    },
+    {
+      "provider": "apple.com",
+      "spec": "APIs/apple.com/app-store-connect/1.4.1/openapi.yaml",
+      "habitat": false,
+      "path": "/v1/betaAppLocalizations/{id}",
+      "method": "get",
+      "code": "200",
+      "x_fields": [
+        "limit",
+        "limit",
+        "limit",
+        "limit",
+        "limit"
+      ],
+      "s_fields": [
+        "feedbackEmail"
+      ]
+    }
+  ],
+  "note": "Hits are CANDIDATES from the frozen automated detector; the pipeline-set vs subject-keyed call is conservative (ambiguous->OUT) but each verbatim hit must be manually adjudicated (Step-2 correctness check) \u2014 borderline `s` re-reads to subject_keyed and the hit drops. is_substrate undercounts only (unresolved $ref / >8MB specs skipped, logged as parse-coverage); it never inflates.",
+  "limitation": "Static parse; specs >8MB skipped; $ref resolved locally only; oneOf/anyOf branches not exhaustively expanded. An OpenAPI response object is NOT identical to an agent-consumed tool return in a loop \u2014 Step-3 caveat applies to any medium hit."
+}

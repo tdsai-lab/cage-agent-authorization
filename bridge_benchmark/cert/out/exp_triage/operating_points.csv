@@ -1,0 +1,11 @@
+backend,operating_point,gate,auto_frac,in_budget_fraud,in_budget_fraud_conditional,human_load
+lipschitz,certified_autonomy_sound_frontier,certified_lipschitz,0.084,0.0,0.0,0.916
+lipschitz,certified_autonomy_default,certified_lipschitz,0.71,0.0131,0.4118,0.29
+lipschitz,volume_matched_point_default,point,0.71,0.0147,0.4598,0.29
+lipschitz,volume_matched_point_frontier,point,0.084,0.0064,0.0243,0.916
+lipschitz,high_volume_point,point,0.8,0.0162,0.5712,0.2
+smoothed,certified_autonomy_sound_frontier,certified_smoothed,0.0,0.0,0.0,1.0
+smoothed,certified_autonomy_default,certified_smoothed,0.3707,0.0027,0.0441,0.6293
+smoothed,volume_matched_point_default,point,0.3707,0.0207,0.5323,0.6293
+smoothed,volume_matched_point_frontier,point,0.0,0.0,0.0,1.0
+smoothed,high_volume_point,point,0.8,0.0263,0.9265,0.2

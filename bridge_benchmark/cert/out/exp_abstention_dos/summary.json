@@ -1,0 +1,137 @@
+{
+  "experiment": "T2-9 abstention-DoS (attacking the price of soundness)",
+  "n_per_batch": 4000,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "eps_full": 0.1,
+  "policy": {
+    "theta_base": 0.488808,
+    "delta": 0.08,
+    "eps": 0.1
+  },
+  "attack": [
+    {
+      "selection_strength": 0.25,
+      "abstain_benign_mean": 0.40549999999999997,
+      "abstain_benign_std": 0.0030207614933986378,
+      "abstain_adv_mean": 0.5516666666666666,
+      "abstain_adv_std": 0.006583860738367901,
+      "inflation_factor_mean": 1.360432532378539,
+      "inflation_factor_std": 0.009197821730710248,
+      "cert_false_allow_benign": 0.0,
+      "cert_false_allow_adv": 0.0
+    },
+    {
+      "selection_strength": 0.5,
+      "abstain_benign_mean": 0.40549999999999997,
+      "abstain_benign_std": 0.0030207614933986378,
+      "abstain_adv_mean": 0.6975833333333333,
+      "abstain_adv_std": 0.005867755580761353,
+      "inflation_factor_mean": 1.720307996594391,
+      "inflation_factor_std": 0.00758072350252709,
+      "cert_false_allow_benign": 0.0,
+      "cert_false_allow_adv": 0.0
+    },
+    {
+      "selection_strength": 0.75,
+      "abstain_benign_mean": 0.40549999999999997,
+      "abstain_benign_std": 0.0030207614933986378,
+      "abstain_adv_mean": 0.8431666666666667,
+      "abstain_adv_std": 0.0032808366141715696,
+      "inflation_factor_mean": 2.0794146213214693,
+      "inflation_factor_std": 0.013912932624756057,
+      "cert_false_allow_benign": 0.0,
+      "cert_false_allow_adv": 0.0
+    },
+    {
+      "selection_strength": 1.0,
+      "abstain_benign_mean": 0.40549999999999997,
+      "abstain_benign_std": 0.0030207614933986378,
+      "abstain_adv_mean": 0.989,
+      "abstain_adv_std": 0.0013385315336841164,
+      "inflation_factor_mean": 2.4391010855786064,
+      "inflation_factor_std": 0.01866574686046642,
+      "cert_false_allow_benign": 0.0,
+      "cert_false_allow_adv": 0.0
+    }
+  ],
+  "baseline_strong_attack": {
+    "strength": 1.0,
+    "abstain_benign": 0.401,
+    "abstain_adv": 0.9896666666666668,
+    "inflation_factor": 2.467996674979219
+  },
+  "mitigations": [
+    {
+      "mitigation": "rate_limit",
+      "param": "budget_frac=0.5",
+      "abstain_adv_after": 0.5,
+      "inflation_after": 1.2468827930174562,
+      "cost": "dropped_frac=0.490",
+      "cert_false_allow": 0.0
+    },
+    {
+      "mitigation": "rate_limit",
+      "param": "budget_frac=0.3",
+      "abstain_adv_after": 0.3,
+      "inflation_after": 0.7481296758104737,
+      "cost": "dropped_frac=0.690",
+      "cert_false_allow": 0.0
+    },
+    {
+      "mitigation": "rate_limit",
+      "param": "budget_frac=0.15",
+      "abstain_adv_after": 0.15,
+      "inflation_after": 0.37406483790523687,
+      "cost": "dropped_frac=0.840",
+      "cert_false_allow": 0.0
+    },
+    {
+      "mitigation": "adaptive_eps",
+      "param": "eps=0.1",
+      "abstain_adv_after": 0.9896666666666668,
+      "inflation_after": 2.467996674979219,
+      "cost": "residual_exposure_vs_full_eps=0.0000",
+      "cert_false_allow": 0.0
+    },
+    {
+      "mitigation": "adaptive_eps",
+      "param": "eps=0.08",
+      "abstain_adv_after": 0.96575,
+      "inflation_after": 2.408354114713217,
+      "cost": "residual_exposure_vs_full_eps=0.0239",
+      "cert_false_allow": 0.0
+    },
+    {
+      "mitigation": "adaptive_eps",
+      "param": "eps=0.06",
+      "abstain_adv_after": 0.9315000000000001,
+      "inflation_after": 2.3229426433915212,
+      "cost": "residual_exposure_vs_full_eps=0.0582",
+      "cert_false_allow": 0.0
+    },
+    {
+      "mitigation": "adaptive_eps",
+      "param": "eps=0.04",
+      "abstain_adv_after": 0.8489166666666667,
+      "inflation_after": 2.1169991687448046,
+      "cost": "residual_exposure_vs_full_eps=0.1408",
+      "cert_false_allow": 0.0
+    },
+    {
+      "mitigation": "adaptive_eps",
+      "param": "eps=0.02",
+      "abstain_adv_after": 0.7478333333333333,
+      "inflation_after": 1.864921030756442,
+      "cost": "residual_exposure_vs_full_eps=0.2418",
+      "cert_false_allow": 0.0
+    }
+  ],
+  "soundness_invariant": {
+    "cert_false_allow_max_over_all_conditions": 0.0,
+    "note": "0.0 => soundness invariant under the DoS attack and under both mitigations."
+  }
+}

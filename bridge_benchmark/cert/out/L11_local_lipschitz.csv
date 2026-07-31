@@ -1,0 +1,4 @@
+domain,eps,L_used_global,L_emp_global_secant,raw_grad_cont_mean,raw_grad_cont_p95,L_loc_cert_mean,stable_branch_frac,R_allow_global_L1,R_allow_local,R_recovery_gain,C_allow_local,U_allow_local,cert_false_allow_global,cert_false_allow_local
+finance,0.002,1.0,0.4378,0.9787,0.9876,0.9931,0.3195,0.5375,0.5375,0.0,nan,0.0,0.0,0.0
+finance,0.03,1.0,0.4378,0.979,0.9875,1.0,0.0,0.5375,0.5375,0.0,0.0,0.0,0.0,0.0
+finance,0.1,1.0,0.4378,0.98,0.9877,1.0,0.0,0.2625,0.2625,0.0,0.0,0.0,0.0,0.0

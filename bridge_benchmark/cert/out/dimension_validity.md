@@ -1,0 +1,14 @@
+# Dimension validity — certificate non-vacuity vs continuous dimension k
+
+K=8, d=1, eps=0.1, sigma=0.1, tau=0.9, n_mc=1200, n=6000/k.
+
+| k | K | n_records | C_pct | R_pct | U_pct | clean_acc | attack_false_allow | C_allow | R_allow | U_allow | cert_false_allow | runtime_seconds |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2 | 8 | 6000 | 9.5 | 21.8 | 31.8 | 0.9967 | 0.94 | 0.0 | 0.425 | 0.0 | 0.0 | 15.0 |
+| 5 | 8 | 6000 | 8.0 | 24.3 | 37.2 | 0.9883 | 0.9 | 0.0 | 0.375 | 0.0 | 0.0 | 12.2 |
+| 10 | 8 | 6000 | 9.1 | 24.5 | 27.8 | 0.9925 | 1.0 | 0.0 | 0.6 | 0.0 | 0.0 | 8.7 |
+| 20 | 8 | 6000 | 9.7 | 22.9 | 25.8 | 0.9791 | 0.98 | 0.0 | 0.425 | 0.0 | 0.0 | 13.2 |
+| 50 | 8 | 6000 | 8.5 | 22.3 | 35.7 | 0.9749 | 0.94 | 0.0 | 0.4 | 0.0 | 0.0 | 14.4 |
+| 100 | 8 | 6000 | 9.5 | 22.1 | 27.9 | 0.9206 | 1.0 | 0.075 | 0.425 | 0.0 | 0.2273 | 28.7 |
+
+**Regime of validity:** R_allow ∈ [0.38, 0.60] across k∈[2, 5, 10, 20, 50, 100]; C_allow max=0.07, cert_false_allow max=0.23 (sound at every k). Soundness is dimension-independent; non-vacuity is what k stresses.

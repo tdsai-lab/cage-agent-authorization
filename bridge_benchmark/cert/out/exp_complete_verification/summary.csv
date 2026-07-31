@@ -1,0 +1,10 @@
+domain,backend,R_allow_mean,R_allow_std,cert_false_allow,mean_solve_ms,polytope_slack,mean_branches,n_eval_total
+finance,complete_verif,1.0,0.0,0.0,1777.639,1.25488,9.0,360
+finance,randomized_smoothing,0.317,0.117,0.0,61.077,1.25488,9.0,360
+finance,lipschitz,0.3235,0.0994,0.0,7.152,1.25488,9.0,360
+sre,complete_verif,1.0,0.0,0.0,1630.798,1.25488,9.0,360
+sre,randomized_smoothing,0.3332,0.149,0.0,83.764,1.25488,9.0,360
+sre,lipschitz,0.3461,0.1604,0.0,11.317,1.25488,9.0,360
+ops,complete_verif,1.0,0.0,0.0085,1763.205,1.25488,9.0,360
+ops,randomized_smoothing,0.342,0.1372,0.0,132.001,1.25488,9.0,360
+ops,lipschitz,0.3677,0.0954,0.0,16.594,1.25488,9.0,360

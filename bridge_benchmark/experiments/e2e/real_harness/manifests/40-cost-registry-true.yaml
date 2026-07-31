@@ -1,0 +1,9 @@
+# A7 TRUE cost binding: tier strict, cap 0.50 (the fresh/oracle value).
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cost-registry
+  namespace: cage-system
+data:
+  tier: "strict"
+  cost_cap: "0.50"

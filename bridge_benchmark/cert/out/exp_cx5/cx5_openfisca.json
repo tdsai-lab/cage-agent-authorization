@@ -1,0 +1,230 @@
+{
+  "experiment": "EXP-CX5 \u2014 independent-policy case study (OpenFisca BRS zone ceilings)",
+  "source_policy": "OpenFisca-France Bail R\u00e9el Solidaire plafonds_par_zones",
+  "provenance": {
+    "repo": "github.com/openfisca/openfisca-france",
+    "commit": "a9d8dcbe900e26932ec557a4a9ae7869f7a10c62",
+    "path": "external/corpora/openfisca_openfisca-france/openfisca_france/parameters/prestations_sociales/bail_reel_solidaire/plafonds_par_zones",
+    "year": "2025-01-01",
+    "legal_refs": [
+      "Article R255-1 CCH",
+      "Arr\u00eat\u00e9 du 11/12/2023, Annexe"
+    ]
+  },
+  "eligibility_criterion": "PLAN_CX5 (i)-(iv): numeric field (resources) vs categorical-varying threshold (zone), third-party authored for operations, in the affine fragment (scalar threshold).",
+  "s_semantics": "zone = subject/region categorical (not pipeline-provenance) \u2014 deployed-threshold existence anchor per the claim ladder.",
+  "normalization": {
+    "cap_mode": "max_ceiling",
+    "cap_eur": 120598.0
+  },
+  "theta_eur": {
+    "zone_A": {
+      "1": 38508.0,
+      "2": 57555.0,
+      "3": 75447.0,
+      "4": 90078.0,
+      "5": 107173.0,
+      "6": 120598.0
+    },
+    "zone_Abis": {
+      "1": 38508.0,
+      "2": 57555.0,
+      "3": 75447.0,
+      "4": 90078.0,
+      "5": 107173.0,
+      "6": 120598.0
+    },
+    "zone_B1": {
+      "1": 38508.0,
+      "2": 57555.0,
+      "3": 69183.0,
+      "4": 82871.0,
+      "5": 98101.0,
+      "6": 110396.0
+    },
+    "zone_B2": {
+      "1": 33479.0,
+      "2": 44710.0,
+      "3": 53766.0,
+      "4": 64910.0,
+      "5": 76357.0,
+      "6": 86055.0
+    },
+    "zone_C": {
+      "1": 33479.0,
+      "2": 44710.0,
+      "3": 53766.0,
+      "4": 64910.0,
+      "5": 76357.0,
+      "6": 86055.0
+    }
+  },
+  "boundary_exists": true,
+  "deltas_by_size": {
+    "1": {
+      "distinct_levels": 2,
+      "raw_gap_eur": 5029.0,
+      "norm_gap": 0.0417,
+      "adjacent_norm_gaps": [
+        0.0417
+      ]
+    },
+    "2": {
+      "distinct_levels": 2,
+      "raw_gap_eur": 12845.0,
+      "norm_gap": 0.10651,
+      "adjacent_norm_gaps": [
+        0.10651
+      ]
+    },
+    "3": {
+      "distinct_levels": 3,
+      "raw_gap_eur": 21681.0,
+      "norm_gap": 0.17978,
+      "adjacent_norm_gaps": [
+        0.12784,
+        0.05194
+      ]
+    },
+    "4": {
+      "distinct_levels": 3,
+      "raw_gap_eur": 25168.0,
+      "norm_gap": 0.20869,
+      "adjacent_norm_gaps": [
+        0.14893,
+        0.05976
+      ]
+    },
+    "5": {
+      "distinct_levels": 3,
+      "raw_gap_eur": 30816.0,
+      "norm_gap": 0.25553,
+      "adjacent_norm_gaps": [
+        0.1803,
+        0.07523
+      ]
+    },
+    "6": {
+      "distinct_levels": 3,
+      "raw_gap_eur": 34543.0,
+      "norm_gap": 0.28643,
+      "adjacent_norm_gaps": [
+        0.20184,
+        0.0846
+      ]
+    }
+  },
+  "n": 20000,
+  "seed": 0,
+  "eps_list": [
+    0.03,
+    0.1
+  ],
+  "results": {
+    "0.03": {
+      "counts": {
+        "A": 2991,
+        "B": 474,
+        "C": 700,
+        "R": 6835,
+        "U": 9000
+      },
+      "pr": {
+        "A": 0.14955,
+        "B": 0.0237,
+        "C": 0.035,
+        "R": 0.34175,
+        "U": 0.45
+      },
+      "pr_C": 0.035,
+      "R_allow": 0.34175,
+      "point_vs_neighborhood": {
+        "n_c_witnesses": 700,
+        "point_grants": 700,
+        "neighborhood_grants": 0,
+        "point_unsafe_under_swap": 700
+      },
+      "min_delta_eps_check": {
+        "observed_norm_deltas": [
+          0.0417,
+          0.0519,
+          0.0598,
+          0.0752,
+          0.0846,
+          0.1065,
+          0.1278,
+          0.1489,
+          0.1803,
+          0.2018
+        ],
+        "eps": 0.03,
+        "min_delta_eps_per_gap": [
+          0.03,
+          0.03,
+          0.03,
+          0.03,
+          0.03,
+          0.03,
+          0.03,
+          0.03,
+          0.03,
+          0.03
+        ],
+        "note": "C-interval length per witness = min(\u03b4,\u03b5); observed \u03b4 not swept (third-party rule frozen)."
+      }
+    },
+    "0.1": {
+      "counts": {
+        "A": 2991,
+        "B": 1871,
+        "C": 1773,
+        "R": 4365,
+        "U": 9000
+      },
+      "pr": {
+        "A": 0.14955,
+        "B": 0.09355,
+        "C": 0.08865,
+        "R": 0.21825,
+        "U": 0.45
+      },
+      "pr_C": 0.08865,
+      "R_allow": 0.21825,
+      "point_vs_neighborhood": {
+        "n_c_witnesses": 1773,
+        "point_grants": 1773,
+        "neighborhood_grants": 0,
+        "point_unsafe_under_swap": 1773
+      },
+      "min_delta_eps_check": {
+        "observed_norm_deltas": [
+          0.0417,
+          0.0519,
+          0.0598,
+          0.0752,
+          0.0846,
+          0.1065,
+          0.1278,
+          0.1489,
+          0.1803,
+          0.2018
+        ],
+        "eps": 0.1,
+        "min_delta_eps_per_gap": [
+          0.0417,
+          0.0519,
+          0.0598,
+          0.0752,
+          0.0846,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "note": "C-interval length per witness = min(\u03b4,\u03b5); observed \u03b4 not swept (third-party rule frozen)."
+      }
+    }
+  },
+  "verdict": "POSITIVE CASE STUDY: a real, deployed, THIRD-PARTY-authored provenance-conditioned numeric threshold (OpenFisca-France BRS income ceilings by zone, commit a9d8dcbe900e) exhibits the joint-gap substrate. A provenance-conditioned boundary EXISTS (zone-varying ceiling, real gap up to \u20ac34543); Category-C witnesses arise naturally (Pr(C)=0.035 at \u03b5=0.03); the exact neighborhood certificate blocks them (point gate grants the zone-swap exploit, neighborhood cert refuses) \u2014 the substrate is NOT authored by us. Framing: zone is a subject/region categorical (criterion (ii)), not a pipeline-provenance key \u2014 a deployed-threshold existence anchor, complementary to the pipeline-provenance null."
+}

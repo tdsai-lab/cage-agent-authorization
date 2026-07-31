@@ -1,0 +1,7 @@
+domain,sampling_scheme,policy_provenance,opa_version,policy_hash,idiom_present,min_delta,min_delta_over_eps,n_registered_states,n_structural_states,n,eps,sigma,tau,n_mc,confidence_fwer,A,B,C,R,U,C_prevalence,C_allow_certified,U_allow_certified,R_allow_certified,exact_R_allow,exact_C_allow,exact_U_allow,exact_cert_false_allow,cert_recovery_vs_exact,oracle_cert_false_allow,naive_C_falseallow,uncertified_C_allow_learned
+finance,natural,authored_rego,1.17.1,9346478737a97681,True,0.02,0.2,6,8,400,0.1,0.1,0.9,1500,0.999,52,13,50,137,148,0.125,0.0,0.0,0.0438,1.0,0.0,0.0,0.0,0.0438,0.0,1.0,1.0
+finance,boundary,authored_rego,1.17.1,9346478737a97681,True,0.02,0.2,6,8,400,0.1,0.1,0.9,1500,0.999,122,35,48,0,195,0.12,0.0,0.0,nan,nan,0.0,0.0,0.0,nan,0.0,1.0,1.0
+sre,natural,authored_rego,1.17.1,1121eb9e0e633a62,True,0.02,0.2,6,8,400,0.1,0.1,0.9,1500,0.999,62,21,43,127,147,0.1075,0.0,0.0,0.063,1.0,0.0,0.0,0.0,0.063,0.0,1.0,1.0
+sre,boundary,authored_rego,1.17.1,1121eb9e0e633a62,True,0.02,0.2,6,8,400,0.1,0.1,0.9,1500,0.999,117,24,54,0,205,0.135,0.0,0.0,nan,nan,0.0,0.0,0.0,nan,0.0,1.0,1.0
+ops,natural,authored_rego,1.17.1,eb3e820b56e57217,True,0.02,0.2,6,8,400,0.1,0.1,0.9,1500,0.999,45,25,48,143,139,0.12,0.0,0.0,0.0699,1.0,0.0,0.0,0.0,0.0699,0.0,1.0,1.0
+ops,boundary,authored_rego,1.17.1,eb3e820b56e57217,True,0.02,0.2,6,8,400,0.1,0.1,0.9,1500,0.999,115,36,37,0,212,0.0925,0.0,0.0,nan,nan,0.0,0.0,0.0,nan,0.0,1.0,1.0

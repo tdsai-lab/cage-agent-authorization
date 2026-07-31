@@ -1,0 +1,10 @@
+# A7 second-adapter registry: a CONTINUOUS cost-score cap by tier, resolved from a separate ConfigMap
+# (the same TOCTOU surface as P3). STALE: serves lax (cap 0.80) while the true tier is strict (cap 0.50).
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cost-registry
+  namespace: cage-system
+data:
+  tier: "lax"
+  cost_cap: "0.80"

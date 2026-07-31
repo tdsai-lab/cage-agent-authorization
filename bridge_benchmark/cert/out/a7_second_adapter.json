@@ -1,0 +1,73 @@
+{
+  "experiment": "A7 \u2014 second independent adapter (k8s cost admission) reproduces the taxonomy",
+  "adapter": "k8s Deployment manifest \u2192 (tier, cost-score) \u2192 real Kyverno admission",
+  "theta_strict": 0.5,
+  "theta_loose": 0.8,
+  "eps": 0.1,
+  "taxonomy_over_cost": {
+    "U": 39,
+    "A": 61,
+    "B": 0,
+    "C": 20,
+    "R": 80
+  },
+  "C_band": [
+    0.4,
+    0.5
+  ],
+  "engine_vs_analytic_agreement": 1.0,
+  "validation_checks": 18,
+  "disagreements": [],
+  "real_kyverno_C_witnesses": 6,
+  "witness_probes": [
+    {
+      "cost": 0.401,
+      "clean": true,
+      "swap": true,
+      "eps": true,
+      "joint": false,
+      "engine_category": "C"
+    },
+    {
+      "cost": 0.4206,
+      "clean": true,
+      "swap": true,
+      "eps": true,
+      "joint": false,
+      "engine_category": "C"
+    },
+    {
+      "cost": 0.4402,
+      "clean": true,
+      "swap": true,
+      "eps": true,
+      "joint": false,
+      "engine_category": "C"
+    },
+    {
+      "cost": 0.4598,
+      "clean": true,
+      "swap": true,
+      "eps": true,
+      "joint": false,
+      "engine_category": "C"
+    },
+    {
+      "cost": 0.4794,
+      "clean": true,
+      "swap": true,
+      "eps": true,
+      "joint": false,
+      "engine_category": "C"
+    },
+    {
+      "cost": 0.499,
+      "clean": true,
+      "swap": true,
+      "eps": true,
+      "joint": false,
+      "engine_category": "C"
+    }
+  ],
+  "noncomposition": true
+}

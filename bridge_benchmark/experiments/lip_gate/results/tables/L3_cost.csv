@@ -1,0 +1,6 @@
+backend,epsilon,n_mc,mean_ms,p50_ms,p95_ms,relative_cost
+opa_exact_oracle,0.1,0,12.6282,12.5222,14.9394,1.61
+mlp_smoothing,0.1,1500,6.8883,6.7935,6.9715,0.88
+mlp_smoothing,0.1,2000,8.0119,7.9482,8.4282,1.02
+mlp_smoothing,0.1,10000,46.0364,48.0002,55.658,5.87
+lipgate_deterministic,0.1,0,7.8463,7.802,8.0694,1.0

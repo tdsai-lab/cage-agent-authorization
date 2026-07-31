@@ -1,0 +1,11 @@
+file,has_category_conditioned_threshold,evidence
+policy.rego,False,numeric_comparison
+lib_0.rego,False,
+policy.rego,False,numeric_comparison
+lib_0.rego,False,
+lib_1.rego,False,
+policy.rego,False,numeric_comparison
+lib_0.rego,False,
+lib_1.rego,False,
+policy.rego,False,
+policy.rego,False,numeric_comparison

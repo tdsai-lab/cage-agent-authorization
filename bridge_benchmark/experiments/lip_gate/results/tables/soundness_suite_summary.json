@@ -1,0 +1,14 @@
+{
+  "domain": "finance",
+  "n_rows": 26,
+  "studies": [
+    "G1",
+    "G2",
+    "G3",
+    "G4"
+  ],
+  "max_cert_false_allow": 0.0,
+  "soundness_invariant_holds": true,
+  "R_allow_varies": true,
+  "claim": "soundness invariant (cert_false_allow=0 across all M, alpha, (sigma,tau,eps), and base gates); only utility R_allow moves."
+}

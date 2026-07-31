@@ -1,0 +1,24 @@
+# Generated artifacts. The aggregated result files under bridge_benchmark/cert/out/ that ship with
+# this artifact are deliberately NOT ignored — they are the precomputed tables.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# regenerable benchmark records
+bridge_benchmark/data/*.jsonl
+bridge_benchmark/data/**/*.jsonl
+
+# licensed data that must not be redistributed (see bridge_benchmark/data/README.md)
+bridge_benchmark/data/raw/
+
+# third-party clones
+external/
+
+# large regenerated outputs
+bridge_benchmark/cert/out/**/raw/
+bridge_benchmark/cert/out/**/cache/
+bridge_benchmark/cert/out/**/*.jsonl
+
+# OPA binary (downloaded, ~53 MB)
+bridge_benchmark/experiments/opa_gate/bin/

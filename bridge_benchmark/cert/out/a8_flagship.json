@@ -1,0 +1,50 @@
+{
+  "experiment": "A8 \u2014 external-harness flagship (certified gate mediates a 2nd heterogeneous MCP server)",
+  "mcp_server": {
+    "name": "secure-filesystem-server",
+    "version": "0.2.0"
+  },
+  "server_write_tools": [
+    "write_file",
+    "edit_file",
+    "create_directory",
+    "move_file"
+  ],
+  "quotas_mb": {
+    "strict": 1.0,
+    "lax": 2.0
+  },
+  "eps": 0.1,
+  "witness_mb": 1.5,
+  "safe_mb": 0.5,
+  "rows": [
+    {
+      "arm": "no_gate",
+      "requested_mb": 1.5,
+      "mcp_write_called": true,
+      "gate_blocked": false,
+      "file_written": true,
+      "file_mb": 1.5,
+      "unsafe_side_effect": true
+    },
+    {
+      "arm": "certified_gate",
+      "requested_mb": 1.5,
+      "mcp_write_called": false,
+      "gate_blocked": true,
+      "file_written": false,
+      "file_mb": 0.0,
+      "unsafe_side_effect": false
+    },
+    {
+      "arm": "certified_gate",
+      "requested_mb": 0.5,
+      "mcp_write_called": true,
+      "gate_blocked": false,
+      "file_written": true,
+      "file_mb": 0.5,
+      "unsafe_side_effect": false,
+      "case": "safe_nonvacuity"
+    }
+  ]
+}

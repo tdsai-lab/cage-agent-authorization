@@ -1,0 +1,42 @@
+# A7 second-adapter policy: a CONTINUOUS cost-score cap by tier (x |> theta(s)), theta from the
+# cost-registry ConfigMap via context.apiCall. Deny if the Deployment's cage-cost-score annotation
+# exceeds the tier cap. This gives a real continuous channel (so a genuine Category-C instantiates) on
+# a second, independent real substrate (k8s admission), distinct from the IEEE-CIS/Marble adapter.
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: cost-cap-by-tier
+spec:
+  validationFailureAction: Enforce
+  background: false
+  rules:
+    - name: enforce-cost-cap-by-tier
+      match:
+        any:
+          - resources:
+              kinds: [Deployment]
+              namespaces: [payments]
+              selector:
+                matchLabels: { cage-adapter: cost }
+      context:
+        - name: registry
+          configMap:
+            name: cost-registry
+            namespace: cage-system
+        - name: cap
+          variable:
+            jmesPath: 'to_number(registry.data.cost_cap)'
+            default: 0.50
+        - name: score
+          variable:
+            jmesPath: 'to_number(request.object.metadata.annotations."cage-cost-score")'
+            default: 0.0
+      validate:
+        message: >-
+          cost-score {{ score }} exceeds the cap {{ cap }} for tier '{{ registry.data.tier }}'.
+        deny:
+          conditions:
+            any:
+              - key: '{{ score }}'
+                operator: GreaterThan
+                value: '{{ cap }}'

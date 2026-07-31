@@ -1,0 +1,235 @@
+{
+  "experiment": "M3 = R2 \u2014 NAB fscale held-out selection (S29 protocol on NAB)",
+  "eps": 0.1,
+  "delta": 0.08,
+  "fscale_grid": [
+    2.0,
+    3.0,
+    4.0,
+    6.0
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "d": 1,
+  "d_extra": 2,
+  "quick": false,
+  "selection_rule": "largest fscale with cert_false_allow==0 on the SELECTION half; report on EVAL half",
+  "per_seed": [
+    {
+      "seed": 0,
+      "theta_base": 0.333911,
+      "selection_grid": [
+        {
+          "fscale": 2.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        },
+        {
+          "fscale": 3.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        },
+        {
+          "fscale": 4.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        },
+        {
+          "fscale": 6.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        }
+      ],
+      "sel_sound_fscales": [
+        2.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "selected_fscale_d1": 6.0,
+      "eval_cert_false_allow_d1": 0.0,
+      "eval_R_allow_d1": 1.0,
+      "eval_clean_acc": 0.855,
+      "eval_sound_d1": true,
+      "d2_grid": [
+        {
+          "fscale": 2.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 1.0
+        },
+        {
+          "fscale": 3.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 1.0
+        },
+        {
+          "fscale": 4.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 1.0
+        },
+        {
+          "fscale": 6.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 1.0
+        }
+      ],
+      "sound_fscales_d2": [
+        2.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "selected_fscale_d2": 6.0
+    },
+    {
+      "seed": 1,
+      "theta_base": 0.33392,
+      "selection_grid": [
+        {
+          "fscale": 2.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        },
+        {
+          "fscale": 3.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        },
+        {
+          "fscale": 4.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        },
+        {
+          "fscale": 6.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        }
+      ],
+      "sel_sound_fscales": [
+        2.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "selected_fscale_d1": 6.0,
+      "eval_cert_false_allow_d1": 0.0,
+      "eval_R_allow_d1": 1.0,
+      "eval_clean_acc": 0.849,
+      "eval_sound_d1": true,
+      "d2_grid": [
+        {
+          "fscale": 2.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 1.0
+        },
+        {
+          "fscale": 3.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 1.0
+        },
+        {
+          "fscale": 4.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 1.0
+        },
+        {
+          "fscale": 6.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 1.0
+        }
+      ],
+      "sound_fscales_d2": [
+        2.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "selected_fscale_d2": 6.0
+    },
+    {
+      "seed": 2,
+      "theta_base": 0.33343,
+      "selection_grid": [
+        {
+          "fscale": 2.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        },
+        {
+          "fscale": 3.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        },
+        {
+          "fscale": 4.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        },
+        {
+          "fscale": 6.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        }
+      ],
+      "sel_sound_fscales": [
+        2.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "selected_fscale_d1": 6.0,
+      "eval_cert_false_allow_d1": 0.0,
+      "eval_R_allow_d1": 1.0,
+      "eval_clean_acc": 0.833,
+      "eval_sound_d1": true,
+      "d2_grid": [
+        {
+          "fscale": 2.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 0.975
+        },
+        {
+          "fscale": 3.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 1.0
+        },
+        {
+          "fscale": 4.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 1.0
+        },
+        {
+          "fscale": 6.0,
+          "eval_cert_false_allow_d2": 0.0,
+          "eval_R_allow_d2": 1.0
+        }
+      ],
+      "sound_fscales_d2": [
+        2.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "selected_fscale_d2": 6.0
+    }
+  ],
+  "all_eval_sound_d1": true,
+  "selection_rule_binds": false,
+  "eval_cert_false_allow_max_d1": 0.0,
+  "eval_R_allow_mean_d1": 1.0,
+  "selected_fscales_d1": [
+    6.0,
+    6.0,
+    6.0
+  ],
+  "sound_fscales_d2_per_seed": [
+    6.0,
+    6.0,
+    6.0
+  ],
+  "verdict": "SELECTION OBJECTION RESOLVED on NAB: the held-out-selected fscale (d=1 selections [6.0, 6.0, 6.0]) keeps cert_false_allow=0 on the untouched EVAL half for every seed (max 0.0), eval R_allow mean 1.000; no soundness cliff appears in the grid on NAB (every fscale is sound on the selection half), so the rule does not bind but soundness generalizes to eval. d=2 note: sound fscales per seed [6.0, 6.0, 6.0] (the d\u22652 threat-model operating point)."
+}

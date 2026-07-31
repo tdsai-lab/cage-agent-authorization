@@ -1,0 +1,13 @@
+domain,attack_mode,n_attack,learned_adaptive_false_allow,certified_adaptive_false_allow,C_allow,U_allow,R_allow,cert_false_allow,n_attack_success
+finance_compliance,random,450,0.06,0.0,0.0,0.0,0.5067,0.0,27
+finance_compliance,ring_grid,450,0.0133,0.0,0.0,0.0,0.5067,0.0,6
+finance_compliance,coordinate_search,450,0.0133,0.0,0.0,0.0,0.5067,0.0,6
+finance_compliance,pgd_like,450,0.0133,0.0,0.0,0.0,0.5067,0.0,6
+sre_monitoring,random,450,0.3222,0.0,0.0,0.0,0.28,0.0,145
+sre_monitoring,ring_grid,450,0.1489,0.0,0.0,0.0,0.28,0.0,67
+sre_monitoring,coordinate_search,450,0.1489,0.0,0.0,0.0,0.28,0.0,67
+sre_monitoring,pgd_like,450,0.1489,0.0,0.0,0.0,0.28,0.0,67
+ops_security,random,450,0.1267,0.0,0.0,0.0,0.24,0.0,57
+ops_security,ring_grid,450,0.0378,0.0,0.0,0.0,0.24,0.0,17
+ops_security,coordinate_search,450,0.0378,0.0,0.0,0.0,0.24,0.0,17
+ops_security,pgd_like,450,0.0378,0.0,0.0,0.0,0.24,0.0,17

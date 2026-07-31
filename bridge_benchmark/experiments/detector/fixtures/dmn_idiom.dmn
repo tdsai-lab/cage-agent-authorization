@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Fixture: the continuous provenance-conditioned threshold idiom in a DMN decision table.
+     The amount-limit threshold (<= 1000 / <= 5000 / <= 20000) is SELECTED BY the payment Channel
+     (a discrete, pipeline-set field) -> op(amount, theta(channel)) -> a single channel swap
+     repositions the boundary, the Category-C joint-gap precondition. -->
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="amount_limit" name="AmountLimit"
+             namespace="https://example.org/aml">
+  <decision id="d_limit" name="AmountWithinLimit">
+    <decisionTable id="dt_limit" hitPolicy="UNIQUE">
+      <input id="i_channel">
+        <inputExpression typeRef="string"><text>Channel</text></inputExpression>
+      </input>
+      <input id="i_amount">
+        <inputExpression typeRef="number"><text>Amount</text></inputExpression>
+      </input>
+      <output id="o_ok" typeRef="boolean"/>
+      <rule id="r1">
+        <inputEntry><text>"wire"</text></inputEntry>
+        <inputEntry><text>&lt;= 1000</text></inputEntry>
+        <outputEntry><text>true</text></outputEntry>
+      </rule>
+      <rule id="r2">
+        <inputEntry><text>"card"</text></inputEntry>
+        <inputEntry><text>&lt;= 5000</text></inputEntry>
+        <outputEntry><text>true</text></outputEntry>
+      </rule>
+      <rule id="r3">
+        <inputEntry><text>"internal"</text></inputEntry>
+        <inputEntry><text>&lt;= 20000</text></inputEntry>
+        <outputEntry><text>true</text></outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

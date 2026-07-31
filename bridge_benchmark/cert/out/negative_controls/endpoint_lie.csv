@@ -1,0 +1,6 @@
+fabrication_gap,n,mean_distance_to_true_state,inside_certified_budget,gate_allow_on_fake,certified_claim_applicable,unsafe_if_endpoint_lies
+0.05,120,0.05,True,0.0,1.0,0.0
+0.1,120,0.1,True,0.0,1.0,0.0
+0.2,120,0.2,False,0.0,0.0,0.0
+0.4,120,0.4,False,0.2833,0.0,0.2833
+0.8,120,0.6777,False,1.0,0.0,1.0

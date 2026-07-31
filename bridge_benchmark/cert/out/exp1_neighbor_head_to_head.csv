@@ -1,0 +1,7 @@
+row,cell,attack_false_allow_mean,attack_false_allow_std,attack_false_allow_C_mean,attack_false_allow_C_std,clean_acc_mean,clean_acc_std,Rallow_mean,Rallow_std,cert_false_allow_mean
+no_gate,baseline,1.0,0.0,1.0,0.0,0.805,0.0,1.0,0.0,0.7883
+learned_point,implicit × point,0.9916,0.0,1.0,0.0,0.9933,0.0,1.0,0.0,0.736
+verified_point_predicate,explicit × point (NEW),1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,0.7371
+exact_rung1,explicit × neighborhood,0.0,0.0,0.0,0.0,0.4067,0.0,1.0,0.0,0.0
+certified_rs,implicit × neighborhood,0.0,0.0,0.0,0.0,0.225,0.0,0.1417,0.0,0.0
+certified_lip,implicit × neighborhood,0.0028,0.0,0.0091,0.0,0.2917,0.0,0.4488,0.0,0.0172

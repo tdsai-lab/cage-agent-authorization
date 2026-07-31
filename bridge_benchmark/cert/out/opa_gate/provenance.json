@@ -1,0 +1,50 @@
+[
+  {
+    "domain": "finance",
+    "sampling_scheme": "natural",
+    "policy_provenance": "authored_rego",
+    "policy_source": "bridge_benchmark/experiments/opa_gate/policies/authored/finance.rego",
+    "opa_version": "1.17.1",
+    "policy_hash": "9346478737a97681"
+  },
+  {
+    "domain": "finance",
+    "sampling_scheme": "boundary",
+    "policy_provenance": "authored_rego",
+    "policy_source": "bridge_benchmark/experiments/opa_gate/policies/authored/finance.rego",
+    "opa_version": "1.17.1",
+    "policy_hash": "9346478737a97681"
+  },
+  {
+    "domain": "sre",
+    "sampling_scheme": "natural",
+    "policy_provenance": "authored_rego",
+    "policy_source": "bridge_benchmark/experiments/opa_gate/policies/authored/sre.rego",
+    "opa_version": "1.17.1",
+    "policy_hash": "1121eb9e0e633a62"
+  },
+  {
+    "domain": "sre",
+    "sampling_scheme": "boundary",
+    "policy_provenance": "authored_rego",
+    "policy_source": "bridge_benchmark/experiments/opa_gate/policies/authored/sre.rego",
+    "opa_version": "1.17.1",
+    "policy_hash": "1121eb9e0e633a62"
+  },
+  {
+    "domain": "ops",
+    "sampling_scheme": "natural",
+    "policy_provenance": "authored_rego",
+    "policy_source": "bridge_benchmark/experiments/opa_gate/policies/authored/ops.rego",
+    "opa_version": "1.17.1",
+    "policy_hash": "eb3e820b56e57217"
+  },
+  {
+    "domain": "ops",
+    "sampling_scheme": "boundary",
+    "policy_provenance": "authored_rego",
+    "policy_source": "bridge_benchmark/experiments/opa_gate/policies/authored/ops.rego",
+    "opa_version": "1.17.1",
+    "policy_hash": "eb3e820b56e57217"
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "frozen_spec": {
+    "detector_sha256": "4620bb6be4d8911be5c8dd63e83fef770280e86f57a07040045b7263925c23a3",
+    "idiom_predicate": "op(f_num, theta) with theta=theta(s); f_num a numeric INPUT ref; theta NON-scalar selected by a DISCRETE key s (function call / dict-index-by-variable / conditional keyed on a discrete field); op in {<,<=,>,>=}; s has >=2 distinct threshold values.",
+    "compare_ops": [
+      "<",
+      "<=",
+      ">",
+      ">="
+    ],
+    "languages": [
+      "rego(ast)",
+      "kyverno(yaml)",
+      "cloud_custodian(yaml)",
+      "sentinel(heuristic)"
+    ]
+  },
+  "calibration": {
+    "tp": 4,
+    "fp": 0,
+    "tn": 1,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "per_file": [
+    {
+      "language": "rego",
+      "idiom_present": true,
+      "f_num": "risk_score",
+      "s_field": "tool",
+      "thetas": [
+        0.488808,
+        0.568808
+      ],
+      "op": "<",
+      "source": "bridge_benchmark/experiments/opa_gate/policies/authored/ieee_fraud.rego",
+      "confidence": 1.0,
+      "evidence": "ast:function_call",
+      "numeric_threshold": true
+    },
+    {
+      "language": "rego",
+      "idiom_present": true,
+      "f_num": "risk_score",
+      "s_field": "tool",
+      "thetas": [
+        0.62,
+        0.58,
+        0.6,
+        0.04,
+        0.0,
+        -0.05,
+        -0.1
+      ],
+      "op": "<",
+      "source": "bridge_benchmark/experiments/opa_gate/policies/authored/finance.rego",
+      "confidence": 1.0,
+      "evidence": "ast:function_call",
+      "numeric_threshold": true
+    },
+    {
+      "language": "rego",
+      "idiom_present": true,
+      "f_num": "signal",
+      "s_field": "tool",
+      "thetas": [
+        0.62,
+        0.58,
+        0.6,
+        0.04,
+        0.0,
+        -0.05,
+        -0.1
+      ],
+      "op": "<",
+      "source": "bridge_benchmark/experiments/opa_gate/policies/authored/sre.rego",
+      "confidence": 1.0,
+      "evidence": "ast:function_call",
+      "numeric_threshold": true
+    },
+    {
+      "language": "rego",
+      "idiom_present": true,
+      "f_num": "login_risk",
+      "s_field": "tool",
+      "thetas": [
+        0.62,
+        0.58,
+        0.6,
+        0.04,
+        0.0,
+        -0.05,
+        -0.1
+      ],
+      "op": "<",
+      "source": "bridge_benchmark/experiments/opa_gate/policies/authored/ops.rego",
+      "confidence": 1.0,
+      "evidence": "ast:function_call",
+      "numeric_threshold": true
+    },
+    {
+      "language": "rego",
+      "idiom_present": false,
+      "f_num": null,
+      "s_field": null,
+      "thetas": null,
+      "op": null,
+      "source": "bridge_benchmark/experiments/opa_gate/policies/authored/constant_threshold_control.rego",
+      "confidence": 1.0,
+      "evidence": "no_provenance_threshold",
+      "numeric_threshold": false
+    }
+  ]
+}

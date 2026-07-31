@@ -1,0 +1,260 @@
+{
+  "experiment": "PLAN_2 P2 \u2014 out-of-budget adversary / breaking radius",
+  "certificate": "robust-oracle cert for B_{1,0.10} (model-free); shipped gate is conservative approx",
+  "eps_cert": 0.1,
+  "d_cert": 1,
+  "domains": [
+    {
+      "domain": "financial_compliance",
+      "n_records": 6000,
+      "n_cert_allowed": 1271,
+      "eps_cert": 0.1,
+      "d_cert": 1,
+      "in_budget_cfa": 0.0,
+      "sweep_eps_radius": {
+        "grid": [
+          0.1,
+          0.11,
+          0.125,
+          0.15,
+          0.175,
+          0.2,
+          0.25,
+          0.3,
+          0.4,
+          0.5
+        ],
+        "cfa": [
+          0.0,
+          0.0464,
+          0.1046,
+          0.1825,
+          0.2557,
+          0.3352,
+          0.4705,
+          0.5948,
+          0.8245,
+          0.9788
+        ],
+        "breaking_radius_eps": 0.11
+      },
+      "sweep_d_radius": {
+        "grid": [
+          1,
+          2,
+          3
+        ],
+        "cfa": [
+          0.0,
+          0.1259,
+          0.1259
+        ],
+        "breaking_radius_d": 2
+      },
+      "sweep_joint_d2_eps": {
+        "grid": [
+          0.1,
+          0.11,
+          0.125,
+          0.15,
+          0.175,
+          0.2,
+          0.25,
+          0.3,
+          0.4,
+          0.5
+        ],
+        "cfa": [
+          0.1259,
+          0.1558,
+          0.1983,
+          0.2667,
+          0.336,
+          0.4083,
+          0.535,
+          0.6656,
+          0.8867,
+          1.0
+        ]
+      },
+      "mechanism_placement": [
+        {
+          "mechanism": "wrong_provenance_binding",
+          "applied": 1271,
+          "P_unsafe_given_cert": 0.0,
+          "frac_out_of_budget": 0.0,
+          "d_mean": 1.0,
+          "max_d": 1,
+          "eps_p50": 0.0,
+          "eps_p95": 0.0
+        },
+        {
+          "mechanism": "stale_cache",
+          "applied": 1271,
+          "P_unsafe_given_cert": 0.0142,
+          "frac_out_of_budget": 0.9835,
+          "d_mean": 0.0,
+          "max_d": 0,
+          "eps_p50": 0.267,
+          "eps_p95": 0.4272
+        },
+        {
+          "mechanism": "schema_skew",
+          "applied": 1271,
+          "P_unsafe_given_cert": 0.0889,
+          "frac_out_of_budget": 0.8631,
+          "d_mean": 0.0,
+          "max_d": 0,
+          "eps_p50": 0.4131,
+          "eps_p95": 1.0979
+        },
+        {
+          "mechanism": "cache_key_collision",
+          "applied": 1271,
+          "P_unsafe_given_cert": 0.3249,
+          "frac_out_of_budget": 1.0,
+          "d_mean": 0.0,
+          "max_d": 0,
+          "eps_p50": 0.8268,
+          "eps_p95": 1.197
+        },
+        {
+          "mechanism": "compound_d2_prov_x1",
+          "applied": 1271,
+          "P_unsafe_given_cert": 0.0,
+          "frac_out_of_budget": 1.0,
+          "d_mean": 2.0,
+          "max_d": 2,
+          "eps_p50": 0.0,
+          "eps_p95": 0.0
+        }
+      ]
+    },
+    {
+      "domain": "sre_monitoring",
+      "n_records": 6000,
+      "n_cert_allowed": 397,
+      "eps_cert": 0.1,
+      "d_cert": 1,
+      "in_budget_cfa": 0.0,
+      "sweep_eps_radius": {
+        "grid": [
+          0.1,
+          0.11,
+          0.125,
+          0.15,
+          0.175,
+          0.2,
+          0.25,
+          0.3,
+          0.4,
+          0.5
+        ],
+        "cfa": [
+          0.0,
+          0.0831,
+          0.1889,
+          0.3526,
+          0.4736,
+          0.5693,
+          0.7229,
+          0.8438,
+          0.9622,
+          0.9975
+        ],
+        "breaking_radius_eps": 0.11
+      },
+      "sweep_d_radius": {
+        "grid": [
+          1,
+          2,
+          3
+        ],
+        "cfa": [
+          0.0,
+          0.2972,
+          0.2972
+        ],
+        "breaking_radius_d": 2
+      },
+      "sweep_joint_d2_eps": {
+        "grid": [
+          0.1,
+          0.11,
+          0.125,
+          0.15,
+          0.175,
+          0.2,
+          0.25,
+          0.3,
+          0.4,
+          0.5
+        ],
+        "cfa": [
+          0.2972,
+          0.3375,
+          0.4181,
+          0.5365,
+          0.6247,
+          0.6977,
+          0.8237,
+          0.9169,
+          0.9798,
+          1.0
+        ]
+      },
+      "mechanism_placement": [
+        {
+          "mechanism": "wrong_provenance_binding",
+          "applied": 397,
+          "P_unsafe_given_cert": 0.0,
+          "frac_out_of_budget": 0.0,
+          "d_mean": 1.0,
+          "max_d": 1,
+          "eps_p50": 0.0,
+          "eps_p95": 0.0
+        },
+        {
+          "mechanism": "stale_cache",
+          "applied": 397,
+          "P_unsafe_given_cert": 0.0176,
+          "frac_out_of_budget": 0.9824,
+          "d_mean": 0.0,
+          "max_d": 0,
+          "eps_p50": 0.2581,
+          "eps_p95": 0.4161
+        },
+        {
+          "mechanism": "schema_skew",
+          "applied": 397,
+          "P_unsafe_given_cert": 0.0277,
+          "frac_out_of_budget": 0.7909,
+          "d_mean": 0.0,
+          "max_d": 0,
+          "eps_p50": 0.2724,
+          "eps_p95": 0.7608
+        },
+        {
+          "mechanism": "cache_key_collision",
+          "applied": 397,
+          "P_unsafe_given_cert": 0.2443,
+          "frac_out_of_budget": 1.0,
+          "d_mean": 0.0,
+          "max_d": 0,
+          "eps_p50": 0.7886,
+          "eps_p95": 1.1603
+        },
+        {
+          "mechanism": "compound_d2_prov_x1",
+          "applied": 397,
+          "P_unsafe_given_cert": 0.0,
+          "frac_out_of_budget": 1.0,
+          "d_mean": 2.0,
+          "max_d": 2,
+          "eps_p50": 0.0,
+          "eps_p95": 0.0
+        }
+      ]
+    }
+  ]
+}

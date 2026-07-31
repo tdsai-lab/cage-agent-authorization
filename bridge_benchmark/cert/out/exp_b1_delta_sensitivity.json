@@ -1,0 +1,200 @@
+{
+  "experiment": "EXP-B1 \u2014 \u03b4-sensitivity of C prevalence (real datasets, min(\u03b4,\u03b5) law test)",
+  "priority": "B",
+  "reuses": "ieee_cis_policy.analytic_category, nab_policy.analytic_category (analytic taxonomy only)",
+  "eps": 0.1,
+  "deltas": [
+    0.02,
+    0.05,
+    0.08,
+    0.15,
+    0.3
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "results": {
+    "ieee_cis": {
+      "theta_base": 0.488808,
+      "eps": 0.1,
+      "n_seeds": 3,
+      "table": [
+        {
+          "delta": 0.02,
+          "min_delta_eps": 0.02,
+          "pr_C_mean": 0.011267,
+          "pr_C_std": 0.006654,
+          "pr_by_cat_mean": {
+            "A": 0.008321,
+            "B": 0.118179,
+            "C": 0.011267,
+            "R": 0.568422,
+            "U": 0.293812
+          },
+          "exact_cert_false_allow_max": 0.0,
+          "exact_cert_allow_rate_mean": 0.568422
+        },
+        {
+          "delta": 0.05,
+          "min_delta_eps": 0.05,
+          "pr_C_mean": 0.02217,
+          "pr_C_std": 0.013441,
+          "pr_by_cat_mean": {
+            "A": 0.019762,
+            "B": 0.107276,
+            "C": 0.02217,
+            "R": 0.568422,
+            "U": 0.282371
+          },
+          "exact_cert_false_allow_max": 0.0,
+          "exact_cert_allow_rate_mean": 0.568422
+        },
+        {
+          "delta": 0.08,
+          "min_delta_eps": 0.08,
+          "pr_C_mean": 0.033428,
+          "pr_C_std": 0.020249,
+          "pr_by_cat_mean": {
+            "A": 0.029388,
+            "B": 0.096018,
+            "C": 0.033428,
+            "R": 0.568422,
+            "U": 0.272745
+          },
+          "exact_cert_false_allow_max": 0.0,
+          "exact_cert_allow_rate_mean": 0.568422
+        },
+        {
+          "delta": 0.15,
+          "min_delta_eps": 0.1,
+          "pr_C_mean": 0.040474,
+          "pr_C_std": 0.024299,
+          "pr_by_cat_mean": {
+            "A": 0.043282,
+            "B": 0.088971,
+            "C": 0.040474,
+            "R": 0.568422,
+            "U": 0.25885
+          },
+          "exact_cert_false_allow_max": 0.0,
+          "exact_cert_allow_rate_mean": 0.568422
+        },
+        {
+          "delta": 0.3,
+          "min_delta_eps": 0.1,
+          "pr_C_mean": 0.040474,
+          "pr_C_std": 0.024299,
+          "pr_by_cat_mean": {
+            "A": 0.079296,
+            "B": 0.088971,
+            "C": 0.040474,
+            "R": 0.568422,
+            "U": 0.222838
+          },
+          "exact_cert_false_allow_max": 0.0,
+          "exact_cert_allow_rate_mean": 0.568422
+        }
+      ],
+      "law_check": {
+        "monotone_up_to_eps": true,
+        "saturation_rel_span_above_eps": 0.0,
+        "pearson_corr_prC_vs_min_delta_eps": 1.0,
+        "tracks_law": true
+      },
+      "exact_cert_false_allow_max": 0.0
+    },
+    "nab": {
+      "theta_base": 0.33343,
+      "eps": 0.1,
+      "n_seeds": 3,
+      "table": [
+        {
+          "delta": 0.02,
+          "min_delta_eps": 0.02,
+          "pr_C_mean": 0.001599,
+          "pr_C_std": 0.000196,
+          "pr_by_cat_mean": {
+            "A": 0.037016,
+            "B": 0.237505,
+            "C": 0.001599,
+            "R": 0.460905,
+            "U": 0.262975
+          },
+          "exact_cert_false_allow_max": 0.0,
+          "exact_cert_allow_rate_mean": 0.460905
+        },
+        {
+          "delta": 0.05,
+          "min_delta_eps": 0.05,
+          "pr_C_mean": 0.011821,
+          "pr_C_std": 0.00224,
+          "pr_by_cat_mean": {
+            "A": 0.061046,
+            "B": 0.227283,
+            "C": 0.011821,
+            "R": 0.460905,
+            "U": 0.238945
+          },
+          "exact_cert_false_allow_max": 0.0,
+          "exact_cert_allow_rate_mean": 0.460905
+        },
+        {
+          "delta": 0.08,
+          "min_delta_eps": 0.08,
+          "pr_C_mean": 0.109118,
+          "pr_C_std": 0.020079,
+          "pr_by_cat_mean": {
+            "A": 0.077756,
+            "B": 0.129986,
+            "C": 0.109118,
+            "R": 0.460905,
+            "U": 0.222235
+          },
+          "exact_cert_false_allow_max": 0.0,
+          "exact_cert_allow_rate_mean": 0.460905
+        },
+        {
+          "delta": 0.15,
+          "min_delta_eps": 0.1,
+          "pr_C_mean": 0.190814,
+          "pr_C_std": 0.036006,
+          "pr_by_cat_mean": {
+            "A": 0.131058,
+            "B": 0.04829,
+            "C": 0.190814,
+            "R": 0.460905,
+            "U": 0.168933
+          },
+          "exact_cert_false_allow_max": 0.0,
+          "exact_cert_allow_rate_mean": 0.460905
+        },
+        {
+          "delta": 0.3,
+          "min_delta_eps": 0.1,
+          "pr_C_mean": 0.190814,
+          "pr_C_std": 0.036006,
+          "pr_by_cat_mean": {
+            "A": 0.153307,
+            "B": 0.04829,
+            "C": 0.190814,
+            "R": 0.460905,
+            "U": 0.146684
+          },
+          "exact_cert_false_allow_max": 0.0,
+          "exact_cert_allow_rate_mean": 0.460905
+        }
+      ],
+      "law_check": {
+        "monotone_up_to_eps": true,
+        "saturation_rel_span_above_eps": 0.0,
+        "pearson_corr_prC_vs_min_delta_eps": 0.9564,
+        "tracks_law": true
+      },
+      "exact_cert_false_allow_max": 0.0
+    }
+  },
+  "verdict": "VERIFIED PREDICTION: Pr(C) tracks min(\u03b4,\u03b5) on both real datasets (monotone to \u03b4=\u03b5, saturates above) and the exact certificate stays sound (cert_false_allow=0) at every \u03b4 \u2192 the C rate is a \u03b4-parameterised prediction of Theorem 1, not a single-\u03b4 artifact.",
+  "conditionality_note": "Prevalence UNDER a provenance-conditioned threshold gap \u03b4, tracking min(\u03b4,\u03b5) \u2014 NOT deployed prevalence. Natural sampling on the real gate pool; the C rate scales with the boundary density \u00d7 min(\u03b4,\u03b5)."
+}

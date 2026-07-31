@@ -1,0 +1,5 @@
+gate,n,R_allow,C_allow,U_allow,A_allow,B_allow,cert_false_allow
+none,600,1.0,1.0,1.0,1.0,1.0,0.8
+rule,600,1.0,1.0,0.0,1.0,1.0,0.75
+learned,600,1.0,1.0,0.0,0.9917,1.0,0.7495
+certified,600,0.2,0.0,0.0,0.0,0.0,0.0

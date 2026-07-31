@@ -1,0 +1,16 @@
+# Optional backends. Everything here is skip-guarded: without it the affected tests skip and the
+# affected REPRODUCE.md rows are the ones tagged `gpu` / `zen`.
+
+# Deterministic 1-Lipschitz certified backend (the PRIMARY certified backend of the paper).
+# GPU strongly recommended; CPU works but is slow. Install torch for your CUDA version first,
+# e.g.  pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cu128
+torch==2.8.0
+orthogonium==0.0.4
+
+# GoRules ZEN/JDM decision engine (Experiment B2 — second real policy engine).
+zen-engine==0.53.0
+
+# Not installable with pip — see setup.sh for the checks and the download instructions:
+#   opa 1.17.1          -> bridge_benchmark/experiments/opa_gate/bin/opa
+#   ollama + qwen2.5:7b-instruct, qwen2.5:32b, qwen3.6:latest   (real-LLM rows only)
+#   kind + kyverno      (the deployed end-to-end harness rows only)

@@ -1,0 +1,4264 @@
+{
+  "experiment": "NEW_EXPS Tier-2 #6 \u2014 MCP registry-scale typed-return substrate scan",
+  "corpus": "third-party MCP registries: smithery, glama",
+  "execution": "none (zero-execution: published registry-API tool schemas parsed as JSON; no server installed / npx'd / run \u2014 that is the declined introspect.py path)",
+  "frozen_detector_sha256": "221aa906dca8a79e5ad3d47abfad1756d93a6ea44a825a0a21e241834b9b57f6",
+  "criteria": "substrate(return) = typed return with >=1 continuous_x AND >=1 pipeline_set_s; continuous_x = numeric & operational-lexicon & not quantized; pipeline_set_s = discrete transport/provenance-assigned; subject_keyed (entity attribute) EXCLUDED; ambiguous discrete -> subject_keyed (conservative).",
+  "max_servers_cap_per_registry": 800,
+  "n_servers": 1085,
+  "n_tools": 5002,
+  "typed_returns": 622,
+  "untyped_returns": 4380,
+  "typed_return_coverage": 0.1244,
+  "n_typed_with_continuous_x": 147,
+  "n_typed_with_pipeline_set_s": 70,
+  "n_substrate_hits": 31,
+  "substrate_rate_over_typed": 0.049839,
+  "wilson95_over_typed": [
+    0.035331,
+    0.069874
+  ],
+  "substrate_rate_over_all_tools": 0.006198,
+  "wilson95_over_all_tools": [
+    0.00437,
+    0.008783
+  ],
+  "per_registry": {
+    "smithery": {
+      "n_servers_scanned": 285,
+      "n_servers_available": 6662,
+      "capped": true,
+      "n_tools": 5002,
+      "typed_returns": 622,
+      "continuous_x": 147,
+      "pipeline_set_s": 70,
+      "substrate_hits": 31
+    },
+    "glama": {
+      "n_servers_scanned": 800,
+      "n_servers_available": null,
+      "note": "public API serves no tool schemas (tools:[]); counts+coverage only",
+      "n_tools": 0,
+      "typed_returns": 0,
+      "continuous_x": 0,
+      "pipeline_set_s": 0,
+      "substrate_hits": 0
+    }
+  },
+  "funnel": "Pr[native C|corpus] = Pr[substrate] x Pr[theta-cond|substrate] x Pr[\u0394/\u03b5|cond]",
+  "funnel_location_of_null": "n/a \u2014 candidate substrate present; adjudicate (Stage 2)",
+  "outcome": "SUBSTRATE_PRESENT_candidate_hits",
+  "fetch": {
+    "net": 78,
+    "cache": 220,
+    "fail": 0,
+    "offline": false
+  },
+  "substrate_hits": [
+    {
+      "registry": "smithery",
+      "server": "contrastcyber/contrastapi",
+      "n_tools": 54,
+      "typed_returns": 52,
+      "continuous_x": 33,
+      "pipeline_set_s": 12,
+      "substrate": 5,
+      "evidence": [
+        {
+          "tool": "threat_report",
+          "return_fields": [
+            {
+              "name": "ip",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "ptr",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "country",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "summary",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "asn_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "tor_exit",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "risk_score",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "threat_level",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "is_datacenter",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "cloud_provider",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "severity_label",
+              "type": "string",
+              "label": "subject_keyed"
+            }
+          ]
+        },
+        {
+          "tool": "seo_audit",
+          "return_fields": [
+            {
+              "name": "score",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "domain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "summary",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "h1_count",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "h2_count",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "h3_count",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "fetched_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "status_code",
+              "type": "integer",
+              "label": "quantized"
+            },
+            {
+              "name": "images_total",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "cache_respected",
+              "type": "boolean",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "json_ld_present",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "title_untrusted",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "images_missing_alt",
+              "type": "integer",
+              "label": "quantized"
+            },
+            {
+              "name": "external_link_count",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "internal_link_count",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meta_description_untrusted",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "ip_lookup",
+          "return_fields": [
+            {
+              "name": "ip",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "asn",
+              "type": "integer",
+              "label": "quantized"
+            },
+            {
+              "name": "ptr",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "country",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "summary",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "asn_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "tor_exit",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "risk_score",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "is_datacenter",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "cloud_provider",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "severity_label",
+              "type": "string",
+              "label": "subject_keyed"
+            }
+          ]
+        },
+        {
+          "tool": "cve_lookup",
+          "return_fields": [
+            {
+              "name": "cve_id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "cwe_id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "cvss_v2",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "cvss_v3",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "summary",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "modified",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "severity",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "patch_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "published",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "first_seen_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "cvss_v2_vector",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "total_products",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "patch_available",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "total_references",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "first_seen_source",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "severity_consensus",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "vulnerability_status",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "severity_disagreement",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "total_references_unique",
+              "type": "integer",
+              "label": "continuous_x"
+            }
+          ]
+        },
+        {
+          "tool": "get_cvss_details",
+          "return_fields": [
+            {
+              "name": "vector",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "summary",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "version",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "base_score",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "base_severity",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "temporal_score",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "environmental_score",
+              "type": "number",
+              "label": "continuous_x"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "registry": "smithery",
+      "server": "cyanheads/arxiv-mcp-server",
+      "n_tools": 4,
+      "typed_returns": 4,
+      "continuous_x": 2,
+      "pipeline_set_s": 1,
+      "substrate": 1,
+      "evidence": [
+        {
+          "tool": "arxiv_read_paper",
+          "return_fields": [
+            {
+              "name": "title",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "source",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "content",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "pdf_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "paper_id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "truncated",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "abstract_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "total_characters",
+              "type": "number",
+              "label": "continuous_x"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "registry": "smithery",
+      "server": "cyanheads/hn-mcp-server",
+      "n_tools": 4,
+      "typed_returns": 4,
+      "continuous_x": 4,
+      "pipeline_set_s": 1,
+      "substrate": 1,
+      "evidence": [
+        {
+          "tool": "hn_get_stories",
+          "return_fields": [
+            {
+              "name": "feed",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "total",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "offset",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "hasMore",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "by",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "id",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "time",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "score",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "descendants",
+              "type": "number",
+              "label": "other"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "registry": "smithery",
+      "server": "cyanheads/pubmed-mcp-server",
+      "n_tools": 9,
+      "typed_returns": 9,
+      "continuous_x": 7,
+      "pipeline_set_s": 3,
+      "substrate": 2,
+      "evidence": [
+        {
+          "tool": "pubmed_search_articles",
+          "return_fields": [
+            {
+              "name": "query",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "offset",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "searchUrl",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "doi",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "pmid",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "pmcId",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "pmcUrl",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "authors",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "pubDate",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "pubmedUrl",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "totalFound",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "author",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "journal",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "species",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "language",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "maxDate",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "minDate",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "dateType",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "hasAbstract",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "freeFullText",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "effectiveQuery",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "pubmed_find_related",
+          "return_fields": [
+            {
+              "name": "pmid",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "score",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "source",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "authors",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "pubDate",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "sourcePmid",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "totalFound",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "relationship",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "registry": "smithery",
+      "server": "memestack/mcp",
+      "n_tools": 19,
+      "typed_returns": 19,
+      "continuous_x": 17,
+      "pipeline_set_s": 12,
+      "substrate": 12,
+      "evidence": [
+        {
+          "tool": "search_images",
+          "return_fields": [
+            {
+              "name": "total",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "get_image",
+          "return_fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "size",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "alt_text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "mime_type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "updated_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumb_width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "thumb_height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "quality_score",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "text_in_image",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            }
+          ]
+        },
+        {
+          "tool": "find_similar",
+          "return_fields": [
+            {
+              "name": "count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "similarity",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "relevance_score",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "find_related",
+          "return_fields": [
+            {
+              "name": "count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "similarity",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "relevance_score",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "browse_images",
+          "return_fields": [
+            {
+              "name": "total",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "get_leaderboard",
+          "return_fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "has_avatar",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "approved_image_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "period",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "browse_by_tag",
+          "return_fields": [
+            {
+              "name": "name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "slug",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "total",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "image_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "browse_by_category",
+          "return_fields": [
+            {
+              "name": "name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "slug",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "get_mutation_group",
+          "return_fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "size",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "alt_text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "mime_type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "updated_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumb_width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "thumb_height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "quality_score",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "text_in_image",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "total_variants",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "search_text_in_image",
+          "return_fields": [
+            {
+              "name": "total",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "find_meme_for_text",
+          "return_fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "reverse_image_search",
+          "return_fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "site",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "site_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_origin",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_external_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "attribution_required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "attribution_recommended",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "page_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "zap_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "like_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "save_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "similarity",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "canonical_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumbnail_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "zap_total_sats",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "relevance_score",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "meme_template_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "uploader_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "phash",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "mime_type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "size_bytes",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "html",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "plain",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "markdown",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "registry": "smithery",
+      "server": "nausika/nausika",
+      "n_tools": 19,
+      "typed_returns": 19,
+      "continuous_x": 10,
+      "pipeline_set_s": 9,
+      "substrate": 8,
+      "evidence": [
+        {
+          "tool": "nausika_seasonal_forecast",
+          "return_fields": [
+            {
+              "name": "model",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "end_date",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "start_date",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "timezone",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "_disclaimer",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "license",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "license_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "distance_km",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "nausika_tides",
+          "return_fields": [
+            {
+              "name": "mode",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "note",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "datum",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "disclaimer",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "resolution_km",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "units",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "interval",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "distance_nm",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "_disclaimer",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "data_source",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "time",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "level_m",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "license",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "license_url",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "nausika_search_places",
+          "return_fields": [
+            {
+              "name": "count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "osm_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "wikidata_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "wikipedia_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "phone",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": null,
+              "label": "other"
+            },
+            {
+              "name": "credit",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": null,
+              "label": "other"
+            },
+            {
+              "name": "status",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "alt_text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "large_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumb_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "sort_order",
+              "type": "integer",
+              "label": "quantized"
+            },
+            {
+              "name": "attribution_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "website",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "category",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "max_loa_m",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "wikipedia",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "avg_rating",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "own_rating",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "distance_km",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "elevation_m",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "vhf_channel",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "wikidata_id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "is_favorited",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "rating_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "opening_hours",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "port_of_entry",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "coverage_score",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "name_canonical",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "osm_primary_id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "osm_primary_type",
+              "type": null,
+              "label": "other"
+            },
+            {
+              "name": "data_origin_unverified",
+              "type": "boolean",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "radius_km",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "license",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "license_url",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "nausika_get_place",
+          "return_fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "osm_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "wikidata_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "wikipedia_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "phone",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "width",
+              "type": null,
+              "label": "other"
+            },
+            {
+              "name": "credit",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "height",
+              "type": null,
+              "label": "other"
+            },
+            {
+              "name": "status",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "caption",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "alt_text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "large_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "thumb_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "sort_order",
+              "type": "integer",
+              "label": "quantized"
+            },
+            {
+              "name": "attribution_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "website",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "category",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "max_loa_m",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "wikipedia",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "avg_rating",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "own_rating",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "distance_km",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "elevation_m",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "vhf_channel",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "wikidata_id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "license",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "license_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "is_favorited",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "rating_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "raw_osm_tags",
+              "type": null,
+              "label": "other"
+            },
+            {
+              "name": "opening_hours",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "port_of_entry",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "coverage_score",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "name_canonical",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "osm_primary_id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "osm_primary_type",
+              "type": null,
+              "label": "other"
+            },
+            {
+              "name": "data_origin_unverified",
+              "type": "boolean",
+              "label": "pipeline_set_s"
+            }
+          ]
+        },
+        {
+          "tool": "nausika_sea_route",
+          "return_fields": [
+            {
+              "name": "units",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "distance",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "_disclaimer",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "speed_knots",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "license",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "license_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "dest_snap_nm",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "optimization",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "snap_warning",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "units",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "length",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "origin_snap_nm",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "waypoints_count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "lat",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "lon",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "lat",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "lon",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "place_name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "lat",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "lon",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "dest_snap_distance_nm",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "origin_snap_distance_nm",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "estimated_duration_hours",
+              "type": "number",
+              "label": "continuous_x"
+            }
+          ]
+        },
+        {
+          "tool": "nausika_geocode",
+          "return_fields": [
+            {
+              "name": "mode",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "count",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "query",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "source",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "country",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "category",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "distance_m",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "similarity",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "source_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "license",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "license_url",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "nausika_describe_place_schema",
+          "return_fields": [
+            {
+              "name": "type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "dedupKey",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "maxCount",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "validation",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "acceptedSources",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "forbiddenSources",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "requestedType",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "appliesTo",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "bypassedBy",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "errorBehavior",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "field",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "rationale",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "requirement",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "label": "other"
+            }
+          ]
+        },
+        {
+          "tool": "nausika_is_water",
+          "return_fields": [
+            {
+              "name": "source",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "is_water",
+              "type": "boolean",
+              "label": "other"
+            },
+            {
+              "name": "latitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "license",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "source_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "license_url",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "distance_to_coast_m",
+              "type": "number",
+              "label": "continuous_x"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "registry": "smithery",
+      "server": "spencerdgarrett/TRIALPATH",
+      "n_tools": 14,
+      "typed_returns": 14,
+      "continuous_x": 10,
+      "pipeline_set_s": 2,
+      "substrate": 1,
+      "evidence": [
+        {
+          "tool": "get_credit_transactions",
+          "return_fields": [
+            {
+              "name": "count",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "id",
+              "type": "integer",
+              "label": "quantized"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "tier",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "refRoute",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "amountUsd",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "refUsageId",
+              "type": "number",
+              "label": "other"
+            },
+            {
+              "name": "amountMicros",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "balanceAfterUsd",
+              "type": "number",
+              "label": "continuous_x"
+            },
+            {
+              "name": "balanceAfterMicros",
+              "type": "number",
+              "label": "continuous_x"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "registry": "smithery",
+      "server": "surprise-buddy/mcp-server",
+      "n_tools": 5,
+      "typed_returns": 1,
+      "continuous_x": 1,
+      "pipeline_set_s": 1,
+      "substrate": 1,
+      "evidence": [
+        {
+          "tool": "find_gifts",
+          "return_fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "shop",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "price",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "category",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "currency",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "image_url",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "price_cents",
+              "type": "integer",
+              "label": "continuous_x"
+            },
+            {
+              "name": "product_url",
+              "type": "string",
+              "label": "pipeline_set_s"
+            },
+            {
+              "name": "why_it_fits",
+              "type": "string",
+              "label": "other"
+            },
+            {
+              "name": "country_code",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "favorite_color",
+              "type": "string",
+              "label": "subject_keyed"
+            },
+            {
+              "name": "shop_display_name",
+              "type": "string",
+              "label": "subject_keyed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "note": "Smithery serves real inputSchema/outputSchema per tool; a bare {'type':'object'} outputSchema with no properties is UNTYPED (the reference-corpus mode) and cannot be substrate. Glama's public API serves no tool schemas -> its servers are recorded typed_return=absent (honest; never inflates substrate). Any hit is a CANDIDATE from the frozen automated detector and would need Stage-2 manual adjudication (pipeline-set vs subject-keyed), exactly as in openapi_adjudicate.py.",
+  "limitation": "Zero-execution: we parse published schemas, not runtime returns; dynamically-built outputSchemas and servers whose registry omits an outputSchema are undercounted (an honest undercount of typed returns, logged as coverage \u2014 never inflates substrate). Smithery paginates with a page cap; the cap and total-available are logged. Glama contributes counts only. Live third-party introspection remains DECLINED (supply-chain risk > bonus-experiment upside)."
+}

@@ -1,0 +1,14 @@
+# Core requirements — the learned gate, the certificate evaluation, the real-data adapters.
+# The analytic core (bridge_benchmark/generators/, cert/certificate_oracles.py, cert/fragment.py,
+# the frozen detectors and scans) needs NONE of these: it is pure Python standard library.
+#
+# Python 3.12 is what the reported results were produced with (3.11+ expected to work).
+# Versions are the exact ones used; loosen them if your platform requires it.
+
+numpy==2.4.2
+scipy==1.17.1
+scikit-learn==1.8.0
+pandas==2.3.2
+matplotlib==3.10.7
+PyYAML==6.0.2
+pytest==8.4.2

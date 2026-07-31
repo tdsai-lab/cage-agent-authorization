@@ -1,0 +1,41 @@
+{
+  "_doc": "Source manifest for the Azure Key Vault key-size policy family (Experiment 1, external EXISTENCE result). policy_provenance = third_party_logic_reimplemented: the decision logic (keyType selects the applicable minimum keySize threshold) is faithful to Microsoft-authored Azure built-in policy definitions, but re-expressed as a small evaluator here rather than executed through Azure Policy. We do NOT claim third-party executable, and we do NOT claim continuous C-witness prevalence (keySize is integer-quantized).",
+  "policy_provenance": "third_party_logic_reimplemented",
+  "source_name": "Azure built-in Key Vault policy family (key-size / key-type)",
+  "author": "Microsoft",
+  "source_repo": "Azure/azure-policy (built-in policy definitions)",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/azure/key-vault/policy-reference",
+    "https://github.com/Azure/azure-policy/tree/master/built-in-policies/policyDefinitions/Key%20Vault"
+  ],
+  "license": "MIT (Azure/azure-policy samples); built-in definitions documented under Microsoft Docs terms",
+  "date_accessed": "2026-06-10",
+  "validated_idiom": "keyType -> minimum keySize threshold (a category-conditioned numeric threshold x >= theta(s)).",
+  "candidate_policy_definitions": [
+    {
+      "display_name": "Keys using RSA cryptography should have a specified minimum key size",
+      "policy_definition_id": "/providers/Microsoft.Authorization/policyDefinitions/82067dbb-e53b-4e06-b631-546d197452d9",
+      "parameter": "minimumRSAKeySize",
+      "applies_to_keyType": ["RSA", "RSA-HSM"],
+      "documented_threshold_values": [2048, 3072, 4096],
+      "category_conditioned_threshold": true
+    },
+    {
+      "display_name": "Key Vault keys should have an expiration date / symmetric (oct) key minimum size (operational policy family)",
+      "policy_definition_id": "Key Vault key-size policy family (oct/oct-HSM)",
+      "parameter": "minimumKeySize",
+      "applies_to_keyType": ["oct", "oct-HSM"],
+      "documented_threshold_values": [128, 192, 256, 512],
+      "category_conditioned_threshold": true
+    },
+    {
+      "display_name": "Keys using elliptic-curve cryptography should have the specified curve names",
+      "policy_definition_id": "/providers/Microsoft.Authorization/policyDefinitions/ff25f3c8-b739-4538-9d07-3d6d25cfb255",
+      "parameter": "allowedECNames",
+      "applies_to_keyType": ["EC", "EC-HSM"],
+      "documented_threshold_values": [],
+      "category_conditioned_threshold": false,
+      "note": "EC policies constrain curve NAME (discrete), not a numeric key-size threshold -> NOT the numeric idiom; counted as a parsed-but-not-validated candidate."
+    }
+  ]
+}

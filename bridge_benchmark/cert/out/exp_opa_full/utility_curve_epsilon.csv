@@ -1,0 +1,13 @@
+domain,backend,tau,eps,R_allow_mean,R_allow_std,cert_false_allow_mean,n_seeds
+finance,smoothing,0.9,0.05,0.3537,0.0315,0.0,3
+finance,smoothing,0.9,0.1,0.0681,0.0203,0.0,3
+finance,lipschitz,0.9,0.05,0.441,0.0583,0.0,3
+finance,lipschitz,0.9,0.1,0.3601,0.0945,0.0,3
+sre,smoothing,0.9,0.05,0.3535,0.0363,0.0,3
+sre,smoothing,0.9,0.1,0.0453,0.0223,0.0,3
+sre,lipschitz,0.9,0.05,0.5062,0.0697,0.0,3
+sre,lipschitz,0.9,0.1,0.3998,0.0934,0.0,3
+ops,smoothing,0.9,0.05,0.3591,0.0127,0.0,3
+ops,smoothing,0.9,0.1,0.0715,0.0175,0.0,3
+ops,lipschitz,0.9,0.05,0.4659,0.0671,0.0,3
+ops,lipschitz,0.9,0.1,0.3927,0.0938,0.0,3

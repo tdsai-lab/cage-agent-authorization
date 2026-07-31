@@ -1,0 +1,416 @@
+{
+  "prereg": {
+    "frozen_phase1_detector_sha256": "4620bb6be4d8911be5c8dd63e83fef770280e86f57a07040045b7263925c23a3",
+    "frozen_idiom_predicate": "op(f_num, theta) with theta=theta(s); f_num a numeric INPUT ref; theta NON-scalar selected by a DISCRETE key s (function call / dict-index-by-variable / conditional keyed on a discrete field); op in {<,<=,>,>=}; s has >=2 distinct threshold values.",
+    "rescan_adds": "format parsers only (openfisca ast, json rules); predicate unchanged",
+    "two_axes": [
+      "structural_idiom",
+      "s_semantics(provenance_upstream|subject_self_reported|static_config)"
+    ],
+    "funnel": "Pr[C_security|corpus] = idiom_rate(structural) * Pr[provenance_upstream|idiom]",
+    "corpora": [
+      {
+        "name": "openfisca_france",
+        "habitat": "H2_legislation",
+        "source": "github.com/openfisca/openfisca-france",
+        "commit": "a9d8dcbe900e"
+      },
+      {
+        "name": "jube_aml",
+        "habitat": "H1_fraud_engine",
+        "source": "github.com/jube-home/aml-fraud-transaction-monitoring",
+        "commit": "1b9777fa71a2"
+      },
+      {
+        "name": "tazama_rule_executer",
+        "habitat": "H1_fraud_engine",
+        "source": "github.com/tazama-lf/rule-executer",
+        "commit": "2d9799023681"
+      },
+      {
+        "name": "dmn_tck",
+        "habitat": "H3_decision_tables",
+        "source": "github.com/dmn-tck/tck",
+        "commit": "370ceb5e01b2"
+      },
+      {
+        "name": "kogito_examples",
+        "habitat": "H3_decision_tables",
+        "source": "github.com/apache/incubator-kie-kogito-examples",
+        "commit": "6fc9f6653c1b"
+      }
+    ]
+  },
+  "prereg_hash": "29497a63603701b8",
+  "decision": "STRUCTURAL_PRESENT_PROVENANCE_NULL",
+  "results": [
+    {
+      "corpus": "openfisca_france",
+      "habitat": "H2_legislation",
+      "commit": "a9d8dcbe900e",
+      "n_policies": 132,
+      "files_with_structural_idiom": 9,
+      "idiom_rate_structural": 0.06818,
+      "files_with_provenance_upstream": 0,
+      "provenance_upstream_rate": 0.0,
+      "Pr_C_security_given_corpus": 0.0,
+      "s_semantics_counts": {
+        "subject_self_reported": 11,
+        "static_config": 6
+      },
+      "note": "",
+      "sample_hits": [
+        {
+          "language": "openfisca_python",
+          "source": "external/corpora/openfisca_openfisca-france/openfisca_france/model/caracteristiques_socio_demographiques/logement.py",
+          "structural_idiom": true,
+          "f_num": "(eligibility_input)",
+          "s_field": "region",
+          "op": "<",
+          "s_semantics": "subject_self_reported",
+          "evidence": "ast:enum_keyed_threshold + comparison_in_file"
+        },
+        {
+          "language": "openfisca_python",
+          "source": "external/corpora/openfisca_openfisca-france/openfisca_france/model/patrimoine/livret_epargne_populaire.py",
+          "structural_idiom": true,
+          "f_num": "(eligibility_input)",
+          "s_field": "residence",
+          "op": "<",
+          "s_semantics": "subject_self_reported",
+          "evidence": "ast:enum_keyed_threshold + comparison_in_file"
+        },
+        {
+          "language": "openfisca_python",
+          "source": "external/corpora/openfisca_openfisca-france/openfisca_france/model/prestations/aides_logement.py",
+          "structural_idiom": true,
+          "f_num": "(eligibility_input)",
+          "s_field": "zone_apl",
+          "op": "<",
+          "s_semantics": "subject_self_reported",
+          "evidence": "ast:enum_keyed_threshold + comparison_in_file"
+        },
+        {
+          "language": "openfisca_python",
+          "source": "external/corpora/openfisca_openfisca-france/openfisca_france/model/prestations/aides_logement.py",
+          "structural_idiom": true,
+          "f_num": "(eligibility_input)",
+          "s_field": "type_aide",
+          "op": "<",
+          "s_semantics": "subject_self_reported",
+          "evidence": "ast:enum_keyed_threshold + comparison_in_file"
+        },
+        {
+          "language": "openfisca_python",
+          "source": "external/corpora/openfisca_openfisca-france/openfisca_france/model/prestations/aides_logement.py",
+          "structural_idiom": true,
+          "f_num": "(eligibility_input)",
+          "s_field": "categorie",
+          "op": "<",
+          "s_semantics": "subject_self_reported",
+          "evidence": "ast:enum_keyed_threshold + comparison_in_file"
+        },
+        {
+          "language": "openfisca_python",
+          "source": "external/corpora/openfisca_openfisca-france/openfisca_france/model/prestations/aides_logement.py",
+          "structural_idiom": true,
+          "f_num": "(eligibility_input)",
+          "s_field": "statut_couple",
+          "op": "<",
+          "s_semantics": "subject_self_reported",
+          "evidence": "ast:enum_keyed_threshold + comparison_in_file"
+        },
+        {
+          "language": "openfisca_python",
+          "source": "external/corpora/openfisca_openfisca-france/openfisca_france/model/prestations/aides_logement.py",
+          "structural_idiom": true,
+          "f_num": "(eligibility_input)",
+          "s_field": "subcommune_depcom",
+          "op": "<",
+          "s_semantics": "static_config",
+          "evidence": "ast:enum_keyed_threshold + comparison_in_file"
+        },
+        {
+          "language": "openfisca_python",
+          "source": "external/corpora/openfisca_openfisca-france/openfisca_france/model/prestations/aides_logement.py",
+          "structural_idiom": true,
+          "f_num": "(eligibility_input)",
+          "s_field": "commune_depcom",
+          "op": "<",
+          "s_semantics": "static_config",
+          "evidence": "ast:enum_keyed_threshold + comparison_in_file"
+        },
+        {
+          "language": "openfisca_python",
+          "source": "external/corpora/openfisca_openfisca-france/openfisca_france/model/prestations/logement_social.py",
+          "structural_idiom": true,
+          "f_num": "(eligibility_input)",
+          "s_field": "categorie_menage",
+          "op": "<",
+          "s_semantics": "subject_self_reported",
+          "evidence": "ast:enum_keyed_threshold + comparison_in_file"
+        },
+        {
+          "language": "openfisca_python",
+          "source": "external/corpora/openfisca_openfisca-france/openfisca_france/model/prestations/logement_social.py",
+          "structural_idiom": true,
+          "f_num": "(eligibility_input)",
+          "s_field": "zone_logement_social",
+          "op": "<",
+          "s_semantics": "subject_self_reported",
+          "evidence": "ast:enum_keyed_threshold + comparison_in_file"
+        }
+      ]
+    },
+    {
+      "corpus": "jube_aml",
+      "habitat": "H1_fraud_engine",
+      "commit": "1b9777fa71a2",
+      "n_policies": 62,
+      "files_with_structural_idiom": 0,
+      "idiom_rate_structural": 0.0,
+      "files_with_provenance_upstream": 0,
+      "provenance_upstream_rate": 0.0,
+      "Pr_C_security_given_corpus": 0.0,
+      "s_semantics_counts": {},
+      "note": "engine code; rules are runtime-configured (not committed) -> code scan undercounts",
+      "sample_hits": []
+    },
+    {
+      "corpus": "tazama_rule_executer",
+      "habitat": "H1_fraud_engine",
+      "commit": "2d9799023681",
+      "n_policies": 4,
+      "files_with_structural_idiom": 0,
+      "idiom_rate_structural": 0.0,
+      "files_with_provenance_upstream": 0,
+      "provenance_upstream_rate": 0.0,
+      "Pr_C_security_given_corpus": 0.0,
+      "s_semantics_counts": {},
+      "note": "engine code; typologies/rules runtime-configured (not committed)",
+      "sample_hits": []
+    },
+    {
+      "corpus": "dmn_tck",
+      "habitat": "H3_decision_tables",
+      "commit": "370ceb5e01b2",
+      "n_policies": 162,
+      "files_with_structural_idiom": 8,
+      "idiom_rate_structural": 0.04938,
+      "files_with_provenance_upstream": 0,
+      "provenance_upstream_rate": 0.0,
+      "Pr_C_security_given_corpus": 0.0,
+      "s_semantics_counts": {
+        "subject_self_reported": 3,
+        "static_config": 11
+      },
+      "note": "OMG DMN TCK conformance suite (standard-conformant decision tables)",
+      "sample_hits": [
+        {
+          "language": "dmn",
+          "source": "external/corpora/dmn-tck_tck/TestCases/compliance-level-2/0108-first-hitpolicy/0108-first-hitpolicy.dmn",
+          "structural_idiom": true,
+          "f_num": "Age",
+          "s_field": "RiskCategory",
+          "op": ">=",
+          "s_semantics": "subject_self_reported",
+          "evidence": "dmn:decisionTable \u03b8\u2208[12.0, 18.0] keyed by 'RiskCategory'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/dmn-tck_tck/TestCases/compliance-level-2/0109-ruleOrder-hitpolicy/0109-ruleOrder-hitpolicy.dmn",
+          "structural_idiom": true,
+          "f_num": "Age",
+          "s_field": "RiskCategory",
+          "op": ">=",
+          "s_semantics": "subject_self_reported",
+          "evidence": "dmn:decisionTable \u03b8\u2208[12.0, 18.0] keyed by 'RiskCategory'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/dmn-tck_tck/TestCases/compliance-level-2/0117-multi-any-hitpolicy/0117-multi-any-hitpolicy.dmn",
+          "structural_idiom": true,
+          "f_num": "Age",
+          "s_field": "RiskCategory",
+          "op": ">=",
+          "s_semantics": "subject_self_reported",
+          "evidence": "dmn:decisionTable \u03b8\u2208[18.0, 19.0] keyed by 'RiskCategory'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/dmn-tck_tck/TestCases/compliance-level-3/0004-lending/0004-lending.dmn",
+          "structural_idiom": true,
+          "f_num": "ApplicationRiskScore",
+          "s_field": "ExistingCustomer",
+          "op": "<",
+          "s_semantics": "static_config",
+          "evidence": "dmn:decisionTable \u03b8\u2208[80.0, 100.0, 110.0, 130.0] keyed by 'ExistingCustomer'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/dmn-tck_tck/TestCases/compliance-level-3/0004-lending/0004-lending.dmn",
+          "structural_idiom": true,
+          "f_num": "ApplicationRiskScore",
+          "s_field": "ExistingCustomer",
+          "op": "<",
+          "s_semantics": "static_config",
+          "evidence": "dmn:decisionTable \u03b8\u2208[100.0, 120.0, 130.0] keyed by 'ExistingCustomer'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/dmn-tck_tck/TestCases/compliance-level-3/0004-lending/0004-lending.dmn",
+          "structural_idiom": true,
+          "f_num": "CreditScore",
+          "s_field": "ExistingCustomer",
+          "op": "<",
+          "s_semantics": "static_config",
+          "evidence": "dmn:decisionTable \u03b8\u2208[580.0, 590.0, 600.0, 610.0, 615.0, 625.0] keyed by 'ExistingCustomer'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/dmn-tck_tck/TestCases/compliance-level-3/0087-chapter-11-example/0087-chapter-11-example.dmn",
+          "structural_idiom": true,
+          "f_num": "Application Risk Score",
+          "s_field": "Existing Customer",
+          "op": "<",
+          "s_semantics": "static_config",
+          "evidence": "dmn:decisionTable \u03b8\u2208[100.0, 120.0, 130.0] keyed by 'Existing Customer'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/dmn-tck_tck/TestCases/compliance-level-3/0087-chapter-11-example/0087-chapter-11-example.dmn",
+          "structural_idiom": true,
+          "f_num": "Credit Score",
+          "s_field": "Existing Customer",
+          "op": "<",
+          "s_semantics": "static_config",
+          "evidence": "dmn:decisionTable \u03b8\u2208[580.0, 590.0, 600.0, 610.0, 615.0, 625.0] keyed by 'Existing Customer'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/dmn-tck_tck/TestCases/compliance-level-3/0087-chapter-11-example/0087-chapter-11-example.dmn",
+          "structural_idiom": true,
+          "f_num": "Application Risk Score",
+          "s_field": "Existing Customer",
+          "op": "<",
+          "s_semantics": "static_config",
+          "evidence": "dmn:decisionTable \u03b8\u2208[80.0, 100.0, 110.0, 130.0] keyed by 'Existing Customer'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/dmn-tck_tck/TestExamples/calc-discount/A.1.dmn",
+          "structural_idiom": true,
+          "f_num": "age",
+          "s_field": "priority",
+          "op": "<",
+          "s_semantics": "static_config",
+          "evidence": "dmn:decisionTable \u03b8\u2208[2.0, 16.0] keyed by 'priority'"
+        }
+      ]
+    },
+    {
+      "corpus": "kogito_examples",
+      "habitat": "H3_decision_tables",
+      "commit": "6fc9f6653c1b",
+      "n_policies": 52,
+      "files_with_structural_idiom": 6,
+      "idiom_rate_structural": 0.11538,
+      "files_with_provenance_upstream": 0,
+      "provenance_upstream_rate": 0.0,
+      "Pr_C_security_given_corpus": 0.0,
+      "s_semantics_counts": {
+        "subject_self_reported": 5,
+        "static_config": 3
+      },
+      "note": "Kogito/Drools shipped DMN examples (loan/credit/eligibility decision tables)",
+      "sample_hits": [
+        {
+          "language": "dmn",
+          "source": "external/corpora/kogito_examples/kogito-quarkus-examples/dmn-drools-quarkus-metrics/src/main/resources/org/kie/kogito/examples/LoanEligibility.dmn",
+          "structural_idiom": true,
+          "f_num": "((Client.existing payments + Loan.installment) / Client.salary) * 100",
+          "s_field": "Client.salary",
+          "op": "<=",
+          "s_semantics": "subject_self_reported",
+          "evidence": "dmn:decisionTable \u03b8\u2208[20.0, 25.0, 35.0] keyed by 'Client.salary'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/kogito_examples/kogito-quarkus-examples/dmn-tracing-quarkus/src/main/resources/LoanEligibility.dmn",
+          "structural_idiom": true,
+          "f_num": "((Client.existing payments + Loan.installment) / Client.salary) * 100",
+          "s_field": "Client.salary",
+          "op": "<=",
+          "s_semantics": "subject_self_reported",
+          "evidence": "dmn:decisionTable \u03b8\u2208[20.0, 25.0, 35.0] keyed by 'Client.salary'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/kogito_examples/kogito-quarkus-examples/dmn-tracing-quarkus/src/main/resources/Prequalification.dmn",
+          "structural_idiom": true,
+          "f_num": "Credit Score",
+          "s_field": "LTV",
+          "op": ">=",
+          "s_semantics": "static_config",
+          "evidence": "dmn:decisionTable \u03b8\u2208[620.0, 640.0, 680.0, 700.0] keyed by 'LTV'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/kogito_examples/kogito-quarkus-examples/dmn-tracing-quarkus/src/main/resources/Prequalification.dmn",
+          "structural_idiom": true,
+          "f_num": "LTV",
+          "s_field": "Credit Score",
+          "op": "<=",
+          "s_semantics": "static_config",
+          "evidence": "dmn:decisionTable \u03b8\u2208[0.6, 0.8] keyed by 'Credit Score'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/kogito_examples/kogito-quarkus-examples/dmn-tracing-quarkus/src/main/resources/Prequalification.dmn",
+          "structural_idiom": true,
+          "f_num": "Credit Score",
+          "s_field": "LTV",
+          "op": ">=",
+          "s_semantics": "static_config",
+          "evidence": "dmn:decisionTable \u03b8\u2208[620.0, 660.0, 720.0, 740.0] keyed by 'LTV'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/kogito_examples/kogito-quarkus-examples/trusty-tracing-quarkus-devservices/src/main/resources/LoanEligibility.dmn",
+          "structural_idiom": true,
+          "f_num": "((Client.existing payments + Loan.installment) / Client.salary) * 100",
+          "s_field": "Client.salary",
+          "op": "<=",
+          "s_semantics": "subject_self_reported",
+          "evidence": "dmn:decisionTable \u03b8\u2208[20.0, 25.0, 35.0] keyed by 'Client.salary'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/kogito_examples/kogito-springboot-examples/dmn-drools-springboot-metrics/src/main/resources/org/kie/kogito/examples/LoanEligibility.dmn",
+          "structural_idiom": true,
+          "f_num": "((Client.existing payments + Loan.installment) / Client.salary) * 100",
+          "s_field": "Client.salary",
+          "op": "<=",
+          "s_semantics": "subject_self_reported",
+          "evidence": "dmn:decisionTable \u03b8\u2208[20.0, 25.0, 35.0] keyed by 'Client.salary'"
+        },
+        {
+          "language": "dmn",
+          "source": "external/corpora/kogito_examples/kogito-springboot-examples/dmn-tracing-springboot/src/main/resources/LoanEligibility.dmn",
+          "structural_idiom": true,
+          "f_num": "((Client.existing payments + Loan.installment) / Client.salary) * 100",
+          "s_field": "Client.salary",
+          "op": "<=",
+          "s_semantics": "subject_self_reported",
+          "evidence": "dmn:decisionTable \u03b8\u2208[20.0, 25.0, 35.0] keyed by 'Client.salary'"
+        }
+      ]
+    }
+  ],
+  "h0_scoping_control": {
+    "corpus": "H0_k8s_admission(scoping_control)",
+    "n_policies": 1424,
+    "idiom_rate_structural": 0.0,
+    "provenance_upstream_rate": 0.0
+  }
+}

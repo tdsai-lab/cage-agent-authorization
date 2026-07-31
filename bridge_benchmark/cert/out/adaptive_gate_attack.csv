@@ -1,0 +1,13 @@
+domain,category,n,learned_adaptive_false_allow,certified_adaptive_false_allow,naive_C_falseallow,C_allow,R_allow,U_allow,cert_false_allow
+finance_compliance,C,200,0.005,0.0,1.0,,,,0.0
+finance_compliance,R,200,0.0,0.0,,,,,0.0
+finance_compliance,U,200,0.045,0.0,,,,,0.0
+finance_compliance,ALL,600,0.0167,0.0,1.0,0.0,0.495,0.0,0.0
+sre_monitoring,C,200,0.12,0.0,1.0,,,,0.0
+sre_monitoring,R,200,0.0,0.0,,,,,0.0
+sre_monitoring,U,200,0.33,0.0,,,,,0.0
+sre_monitoring,ALL,600,0.15,0.0,1.0,0.0,0.28,0.0,0.0
+ops_security,C,200,0.035,0.0,1.0,,,,0.0
+ops_security,R,200,0.0,0.0,,,,,0.0
+ops_security,U,200,0.095,0.0,,,,,0.0
+ops_security,ALL,600,0.0433,0.0,1.0,0.0,0.23,0.0,0.0

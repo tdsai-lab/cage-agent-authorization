@@ -1,0 +1,13 @@
+policy_family,policy_provenance,source_note_id,sampling_mode,epsilon,n,R_pct,C_pct,U_pct,A_pct,B_pct,D_pct,C_count,mean_delta_over_epsilon,median_delta_over_epsilon
+psd2_low_value,regulatory_grounded_authored_policy,psd2_sca_low_value,natural,0.03,400,0.34,0.0275,0.3725,0.2575,0.0025,0.0,11,8.8384,11.1111
+psd2_low_value,regulatory_grounded_authored_policy,psd2_sca_low_value,natural,0.1,400,0.2575,0.0975,0.3725,0.2575,0.015,0.0,39,2.5,3.3333
+psd2_low_value,regulatory_grounded_authored_policy,psd2_sca_low_value,boundary,0.03,400,0.145,0.035,0.5325,0.275,0.0125,0.0,14,9.3254,11.1111
+psd2_low_value,regulatory_grounded_authored_policy,psd2_sca_low_value,boundary,0.1,400,0.0425,0.11,0.5325,0.275,0.04,0.0,44,2.8219,3.3333
+psd2_tra,regulatory_grounded_authored_policy,psd2_sca_tra,natural,0.03,400,0.16,0.0425,0.5525,0.24,0.005,0.0,17,6.9935,8.3333
+psd2_tra,regulatory_grounded_authored_policy,psd2_sca_tra,natural,0.1,400,0.1025,0.08,0.5525,0.24,0.025,0.0,32,3.2813,2.5
+psd2_tra,regulatory_grounded_authored_policy,psd2_sca_tra,boundary,0.03,400,0.125,0.045,0.5025,0.32,0.0075,0.0,18,8.5494,8.3333
+psd2_tra,regulatory_grounded_authored_policy,psd2_sca_tra,boundary,0.1,400,0.02,0.1075,0.5025,0.32,0.05,0.0,43,3.1357,4.1667
+aml_ctr,regulatory_grounded_authored_policy,aml_ctr_us,natural,0.03,400,0.345,0.0225,0.52,0.1025,0.01,0.0,9,4.4444,4.4444
+aml_ctr,regulatory_grounded_authored_policy,aml_ctr_us,natural,0.1,400,0.2725,0.065,0.52,0.1025,0.04,0.0,26,1.2948,1.3333
+aml_ctr,regulatory_grounded_authored_policy,aml_ctr_us,boundary,0.03,400,0.24,0.0375,0.5125,0.195,0.015,0.0,15,4.2963,4.4444
+aml_ctr,regulatory_grounded_authored_policy,aml_ctr_us,boundary,0.1,400,0.06,0.1525,0.5125,0.195,0.08,0.0,61,1.2404,1.3333

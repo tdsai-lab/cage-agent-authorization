@@ -1,0 +1,8 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata: {name: replica-const}
+spec:
+  validation:
+    cel:
+      expressions:
+        - expression: "object.spec.replicas <= 5"

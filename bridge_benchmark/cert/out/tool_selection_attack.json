@@ -1,0 +1,28 @@
+{
+  "experiment": "IDEA #3 \u2014 tool-selection poisoning as a controlled limit",
+  "eps": 0.1,
+  "note": "gate certifies Allow(z,a) post-return per-action, NOT tool selection",
+  "K": 12,
+  "k": 4,
+  "n_records": 6000,
+  "regimes": [
+    {
+      "regime": "within_group",
+      "n_dangerous_misselections": 1816,
+      "poison_boost": 1.0,
+      "retrieval_asr": 1.0,
+      "P_unsafe_no_gate": 1.0,
+      "P_unsafe_certified": 0.0,
+      "cert_allow_rate": 0.0
+    },
+    {
+      "regime": "cross_action",
+      "n_dangerous_misselections": 1816,
+      "poison_boost": 1.0,
+      "retrieval_asr": 1.0,
+      "P_unsafe_no_gate": 1.0,
+      "P_unsafe_certified": 0.3117,
+      "cert_allow_rate": 0.3117
+    }
+  ]
+}

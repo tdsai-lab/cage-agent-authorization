@@ -1,0 +1,135 @@
+{
+  "experiment": "IDEA #4 \u2014 low-dim policy-state projection vs raw high-dim returns",
+  "eps": 0.1,
+  "sigma": 0.1,
+  "tau": 0.85,
+  "n_mc": 600,
+  "cells": [
+    {
+      "k_active": 5,
+      "k_raw": 20,
+      "K": 20,
+      "n_records": 2500,
+      "n_cert_eval": 120,
+      "l1_selected": 8,
+      "gates": {
+        "dense": {
+          "fidelity": 0.9333,
+          "cert_allow_rate": 0.0917,
+          "cert_false_allow": 0.0,
+          "abstention": 0.9083,
+          "R_allow": 0.3793,
+          "n_fields_used": 20
+        },
+        "noise_trained": {
+          "fidelity": 0.975,
+          "cert_allow_rate": 0.1083,
+          "cert_false_allow": 0.0,
+          "abstention": 0.8917,
+          "R_allow": 0.4483,
+          "n_fields_used": 20
+        },
+        "bottleneck": {
+          "fidelity": 0.95,
+          "cert_allow_rate": 0.1333,
+          "cert_false_allow": 0.0,
+          "abstention": 0.8667,
+          "R_allow": 0.5517,
+          "n_fields_used": 8
+        },
+        "oracle_proj": {
+          "fidelity": 0.975,
+          "cert_allow_rate": 0.1167,
+          "cert_false_allow": 0.0,
+          "abstention": 0.8833,
+          "R_allow": 0.4828,
+          "n_fields_used": 5
+        }
+      }
+    },
+    {
+      "k_active": 5,
+      "k_raw": 50,
+      "K": 20,
+      "n_records": 2500,
+      "n_cert_eval": 120,
+      "l1_selected": 19,
+      "gates": {
+        "dense": {
+          "fidelity": 0.85,
+          "cert_allow_rate": 0.1083,
+          "cert_false_allow": 0.0,
+          "abstention": 0.8917,
+          "R_allow": 0.3939,
+          "n_fields_used": 50
+        },
+        "noise_trained": {
+          "fidelity": 0.95,
+          "cert_allow_rate": 0.1833,
+          "cert_false_allow": 0.0,
+          "abstention": 0.8167,
+          "R_allow": 0.6667,
+          "n_fields_used": 50
+        },
+        "bottleneck": {
+          "fidelity": 0.9167,
+          "cert_allow_rate": 0.15,
+          "cert_false_allow": 0.0,
+          "abstention": 0.85,
+          "R_allow": 0.5455,
+          "n_fields_used": 19
+        },
+        "oracle_proj": {
+          "fidelity": 0.9917,
+          "cert_allow_rate": 0.1667,
+          "cert_false_allow": 0.0,
+          "abstention": 0.8333,
+          "R_allow": 0.6061,
+          "n_fields_used": 5
+        }
+      }
+    },
+    {
+      "k_active": 5,
+      "k_raw": 100,
+      "K": 20,
+      "n_records": 2500,
+      "n_cert_eval": 120,
+      "l1_selected": 25,
+      "gates": {
+        "dense": {
+          "fidelity": 0.7417,
+          "cert_allow_rate": 0.0917,
+          "cert_false_allow": 0.0167,
+          "abstention": 0.9083,
+          "R_allow": 0.2812,
+          "n_fields_used": 100
+        },
+        "noise_trained": {
+          "fidelity": 0.8667,
+          "cert_allow_rate": 0.175,
+          "cert_false_allow": 0.0,
+          "abstention": 0.825,
+          "R_allow": 0.6562,
+          "n_fields_used": 100
+        },
+        "bottleneck": {
+          "fidelity": 0.9417,
+          "cert_allow_rate": 0.125,
+          "cert_false_allow": 0.0,
+          "abstention": 0.875,
+          "R_allow": 0.4688,
+          "n_fields_used": 25
+        },
+        "oracle_proj": {
+          "fidelity": 0.9833,
+          "cert_allow_rate": 0.1167,
+          "cert_false_allow": 0.0,
+          "abstention": 0.8833,
+          "R_allow": 0.4375,
+          "n_fields_used": 5
+        }
+      }
+    }
+  ]
+}

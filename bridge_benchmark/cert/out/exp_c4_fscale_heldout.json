@@ -1,0 +1,269 @@
+{
+  "experiment": "EXP-C4/B4 \u2014 fscale held-out selection (selection-split hyperparameter choice)",
+  "priority": "C",
+  "reuses": "d_sweep (T2-8) build_synthetic/build_opa/train_lipgate_generic/certify_lip_at_d",
+  "eps": 0.1,
+  "fscale_grid": [
+    2.0,
+    3.0,
+    4.0,
+    6.0
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "d": 1,
+  "quick": false,
+  "tracks": [
+    "synthetic",
+    "opa:finance"
+  ],
+  "selection_rule": "largest fscale with cert_false_allow==0 on the SELECTION half; report on EVAL half",
+  "per_seed": [
+    {
+      "seed": 0,
+      "selection_grid": [
+        {
+          "fscale": 2.0,
+          "sel_cert_false_allow": 0.1,
+          "sel_R_allow": 0.45
+        },
+        {
+          "fscale": 3.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.675
+        },
+        {
+          "fscale": 4.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.775
+        },
+        {
+          "fscale": 6.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.925
+        }
+      ],
+      "selected_fscale": 6.0,
+      "sel_sound_fscales": [
+        3.0,
+        4.0,
+        6.0
+      ],
+      "eval_cert_false_allow": 0.0,
+      "eval_R_allow": 0.9,
+      "eval_clean_acc": 0.932,
+      "eval_sound": true
+    },
+    {
+      "seed": 1,
+      "selection_grid": [
+        {
+          "fscale": 2.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.55
+        },
+        {
+          "fscale": 3.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.85
+        },
+        {
+          "fscale": 4.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.925
+        },
+        {
+          "fscale": 6.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 1.0
+        }
+      ],
+      "selected_fscale": 6.0,
+      "sel_sound_fscales": [
+        2.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "eval_cert_false_allow": 0.0,
+      "eval_R_allow": 1.0,
+      "eval_clean_acc": 0.9447,
+      "eval_sound": true
+    },
+    {
+      "seed": 2,
+      "selection_grid": [
+        {
+          "fscale": 2.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.5
+        },
+        {
+          "fscale": 3.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.675
+        },
+        {
+          "fscale": 4.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.875
+        },
+        {
+          "fscale": 6.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.975
+        }
+      ],
+      "selected_fscale": 6.0,
+      "sel_sound_fscales": [
+        2.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "eval_cert_false_allow": 0.0,
+      "eval_R_allow": 1.0,
+      "eval_clean_acc": 0.9393,
+      "eval_sound": true
+    },
+    {
+      "seed": 0,
+      "selection_grid": [
+        {
+          "fscale": 2.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.0256
+        },
+        {
+          "fscale": 3.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.4872
+        },
+        {
+          "fscale": 4.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.5897
+        },
+        {
+          "fscale": 6.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.7692
+        }
+      ],
+      "selected_fscale": 6.0,
+      "sel_sound_fscales": [
+        2.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "eval_cert_false_allow": 0.0,
+      "eval_R_allow": 0.85,
+      "eval_clean_acc": 0.9333,
+      "eval_sound": true
+    },
+    {
+      "seed": 1,
+      "selection_grid": [
+        {
+          "fscale": 2.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.1842
+        },
+        {
+          "fscale": 3.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.4737
+        },
+        {
+          "fscale": 4.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.6579
+        },
+        {
+          "fscale": 6.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.8421
+        }
+      ],
+      "selected_fscale": 6.0,
+      "sel_sound_fscales": [
+        2.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "eval_cert_false_allow": 0.0,
+      "eval_R_allow": 0.7692,
+      "eval_clean_acc": 0.9,
+      "eval_sound": true
+    },
+    {
+      "seed": 2,
+      "selection_grid": [
+        {
+          "fscale": 2.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.125
+        },
+        {
+          "fscale": 3.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.575
+        },
+        {
+          "fscale": 4.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.8
+        },
+        {
+          "fscale": 6.0,
+          "sel_cert_false_allow": 0.0,
+          "sel_R_allow": 0.9
+        }
+      ],
+      "selected_fscale": 6.0,
+      "sel_sound_fscales": [
+        2.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "eval_cert_false_allow": 0.0,
+      "eval_R_allow": 0.725,
+      "eval_clean_acc": 0.9167,
+      "eval_sound": true
+    }
+  ],
+  "track_summary": {
+    "synthetic": {
+      "selected_fscales": [
+        6.0,
+        6.0,
+        6.0
+      ],
+      "eval_cert_false_allow_max": 0.0,
+      "eval_R_allow_mean": 0.9667,
+      "all_eval_sound": true,
+      "selection_rule_binds": true
+    },
+    "opa:finance": {
+      "selected_fscales": [
+        6.0,
+        6.0,
+        6.0
+      ],
+      "eval_cert_false_allow_max": 0.0,
+      "eval_R_allow_mean": 0.7814,
+      "all_eval_sound": true,
+      "selection_rule_binds": false
+    }
+  },
+  "eval_cert_false_allow_max": 0.0,
+  "eval_R_allow_mean": 0.874,
+  "all_eval_sound": true,
+  "verdict": "SELECTION OBJECTION RESOLVED: fscale chosen by the largest-cfa=0-on-SELECTION rule keeps cert_false_allow=0 on the untouched EVAL split (all tracks/seeds); the rule genuinely EXCLUDES the fscale(s) that break soundness on the SELECTION half (binds on ['synthetic']: at least one seed drops an fscale with sel cfa>0), and eval confirms cfa=0 with non-vacuous R_allow \u21d2 the fscale headline is not outcome-conditioned."
+}

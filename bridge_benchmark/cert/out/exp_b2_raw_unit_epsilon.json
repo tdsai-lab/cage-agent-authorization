@@ -1,0 +1,220 @@
+{
+  "experiment": "EXP-B2 \u2014 raw-unit \u03b5 audit (what does \u2016\u00b7\u2016\u2082\u2264\u03b5 mean in dollars/CPU%?)",
+  "priority": "B",
+  "eps": 0.1,
+  "anchors": [
+    0.5,
+    0.95,
+    0.99
+  ],
+  "ieee_cis": {
+    "caps": {
+      "amount_cap": 1104.0,
+      "dist_cap": 2111.0,
+      "c_cap": 107.2579,
+      "d_cap": 436.3333,
+      "v_cap": 1.1
+    },
+    "rows": [
+      {
+        "field": "amount_norm (TransactionAmt)",
+        "unit": "USD",
+        "anchor_quantile": 0.5,
+        "raw_value": 68.769,
+        "normalized_value": 0.6058,
+        "raw_move_up_for_eps": 70.8353,
+        "raw_move_down_for_eps": 35.1491,
+        "raw_interval_width": 105.9844,
+        "kind": "log"
+      },
+      {
+        "field": "amount_norm (TransactionAmt)",
+        "unit": "USD",
+        "anchor_quantile": 0.95,
+        "raw_value": 445.0,
+        "normalized_value": 0.8705,
+        "raw_move_up_for_eps": 452.8166,
+        "raw_move_down_for_eps": 224.6912,
+        "raw_interval_width": 677.5078,
+        "kind": "log"
+      },
+      {
+        "field": "amount_norm (TransactionAmt)",
+        "unit": "USD",
+        "anchor_quantile": 0.99,
+        "raw_value": 1104.0,
+        "normalized_value": 1.0,
+        "raw_move_up_for_eps": -0.0,
+        "raw_move_down_for_eps": 556.6901,
+        "raw_interval_width": 556.6901,
+        "kind": "log"
+      },
+      {
+        "field": "dist1_norm",
+        "unit": "dist-units",
+        "anchor_quantile": 0.5,
+        "raw_value": 8.0,
+        "normalized_value": 0.287,
+        "raw_move_up_for_eps": 10.3514,
+        "raw_move_down_for_eps": 4.8143,
+        "raw_interval_width": 15.1656,
+        "kind": "log"
+      },
+      {
+        "field": "dist1_norm",
+        "unit": "dist-units",
+        "anchor_quantile": 0.95,
+        "raw_value": 846.0,
+        "normalized_value": 0.8806,
+        "raw_move_up_for_eps": 974.1797,
+        "raw_move_down_for_eps": 453.0746,
+        "raw_interval_width": 1427.2543,
+        "kind": "log"
+      },
+      {
+        "field": "dist1_norm",
+        "unit": "dist-units",
+        "anchor_quantile": 0.99,
+        "raw_value": 2040.0,
+        "normalized_value": 0.9955,
+        "raw_move_up_for_eps": 71.0,
+        "raw_move_down_for_eps": 1091.7653,
+        "raw_interval_width": 1162.7653,
+        "kind": "log"
+      },
+      {
+        "field": "dist2_norm",
+        "unit": "dist-units",
+        "anchor_quantile": 0.5,
+        "raw_value": 37.0,
+        "normalized_value": 0.4752,
+        "raw_move_up_for_eps": 43.7058,
+        "raw_move_down_for_eps": 20.3268,
+        "raw_interval_width": 64.0327,
+        "kind": "log"
+      },
+      {
+        "field": "dist2_norm",
+        "unit": "dist-units",
+        "anchor_quantile": 0.95,
+        "raw_value": 1001.0,
+        "normalized_value": 0.9026,
+        "raw_move_up_for_eps": 1110.0,
+        "raw_move_down_for_eps": 535.9867,
+        "raw_interval_width": 1645.9867,
+        "kind": "log"
+      },
+      {
+        "field": "dist2_norm",
+        "unit": "dist-units",
+        "anchor_quantile": 0.99,
+        "raw_value": 2367.48,
+        "normalized_value": 1.0,
+        "raw_move_up_for_eps": -256.48,
+        "raw_move_down_for_eps": 1386.2244,
+        "raw_interval_width": 1129.7444,
+        "kind": "log"
+      },
+      {
+        "field": "c_mean_norm",
+        "unit": "C-agg",
+        "anchor_quantile": 0.5,
+        "raw_value": 0.9286,
+        "normalized_value": 0.0087,
+        "raw_move_up_for_eps": 10.7258,
+        "raw_move_down_for_eps": 10.7258,
+        "raw_interval_width": 21.4516,
+        "kind": "linear"
+      },
+      {
+        "field": "c_mean_norm",
+        "unit": "C-agg",
+        "anchor_quantile": 0.95,
+        "raw_value": 16.2857,
+        "normalized_value": 0.1518,
+        "raw_move_up_for_eps": 10.7258,
+        "raw_move_down_for_eps": 10.7258,
+        "raw_interval_width": 21.4516,
+        "kind": "linear"
+      },
+      {
+        "field": "c_mean_norm",
+        "unit": "C-agg",
+        "anchor_quantile": 0.99,
+        "raw_value": 107.2579,
+        "normalized_value": 1.0,
+        "raw_move_up_for_eps": 10.7258,
+        "raw_move_down_for_eps": 10.7258,
+        "raw_interval_width": 21.4516,
+        "kind": "linear"
+      },
+      {
+        "field": "risk_score",
+        "unit": "probability (dimensionless)",
+        "anchor_quantile": null,
+        "raw_value": null,
+        "normalized_value": null,
+        "raw_move_up_for_eps": 0.1,
+        "raw_move_down_for_eps": 0.1,
+        "raw_interval_width": 0.2,
+        "kind": "identity"
+      }
+    ]
+  },
+  "nab": {
+    "rows": [
+      {
+        "field": "cpu_util_norm",
+        "unit": "CPU %",
+        "anchor_quantile": 0.5,
+        "raw_value": 29.836,
+        "normalized_value": 0.2984,
+        "raw_move_up_for_eps": 10.0,
+        "raw_move_down_for_eps": 10.0,
+        "raw_interval_width": 20.0,
+        "kind": "linear"
+      },
+      {
+        "field": "cpu_util_norm",
+        "unit": "CPU %",
+        "anchor_quantile": 0.95,
+        "raw_value": 92.8805,
+        "normalized_value": 0.9288,
+        "raw_move_up_for_eps": 10.0,
+        "raw_move_down_for_eps": 10.0,
+        "raw_interval_width": 20.0,
+        "kind": "linear"
+      },
+      {
+        "field": "cpu_util_norm",
+        "unit": "CPU %",
+        "anchor_quantile": 0.99,
+        "raw_value": 99.342,
+        "normalized_value": 0.9934,
+        "raw_move_up_for_eps": 10.0,
+        "raw_move_down_for_eps": 10.0,
+        "raw_interval_width": 20.0,
+        "kind": "linear"
+      },
+      {
+        "field": "delta_norm",
+        "unit": "CPU %/step",
+        "anchor_quantile": null,
+        "raw_value": null,
+        "normalized_value": null,
+        "raw_move_up_for_eps": 20.0,
+        "raw_move_down_for_eps": 20.0,
+        "raw_interval_width": 40.0,
+        "kind": "linear-span"
+      }
+    ]
+  },
+  "headline": {
+    "amount_eps_move_at_median_usd": 70.8353,
+    "amount_eps_move_at_p95_usd": 452.8166,
+    "amount_eps_move_at_p99_usd": 556.6901,
+    "p99_over_median_ratio": 7.9,
+    "reading": "A normalized \u03b5=0.1 step in amount_norm is ~$70.8353 at the median TransactionAmt, ~$452.8166 at p95, and ~$556.6901 at p99 (~7.9\u00d7 the median) \u2014 the log scaling makes \u03b5 a SMALL dollar move on typical transactions and a several-hundred-dollar swing only in the heavy tail (where the norm saturates at the p99 cap, so the move is downward). 'Small numerical corruption' is accurate for the bulk; the honest caveat is the tail, where per-field \u03b5 (EXP-A6) is the mitigation."
+  },
+  "note": "Pure post-processing of the Appendix-D normalization; no model/gate/LLM. Log-normalized fields (amount, distance) have an \u03b5-move that GROWS with the operating point (log compression); linear/clip fields (CPU%, C/D/V means) have a constant \u03b5-move = \u03b5\u00b7cap."
+}

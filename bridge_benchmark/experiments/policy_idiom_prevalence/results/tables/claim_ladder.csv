@@ -1,0 +1,4 @@
+claim,evidence,provenance,caveat,numbers
+Third-party existence of idiom,Azure Key Vault key size,third_party_logic_reimplemented,"keySize is quantized (existence anchor, not continuous substrate)",keyType->keySize; validated instances 7; idiom_rate_family 0.6667
+Continuous mechanism,PSD2/AML source-locked policies,regulatory_grounded_authored_policy,executable policy authored from sourced thresholds (not third-party executable),natural C% psd2_low_value 9.8%/psd2_tra 8.0%/aml_ctr 6.5%; certified_C_allow 0.0; cert_false_allow 0.0
+Certified defense,OPA/Rego benchmark (Track C),authored_provenance_conditioned_rego,"node-level, learned-gate certificate",C ~10-12% under OPA; certified C_allow=U_allow=cert_false_allow=0 (see cert/out/opa_gate)

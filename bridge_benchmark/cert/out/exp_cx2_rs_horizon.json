@@ -1,0 +1,1322 @@
+{
+  "experiment": "EXP-CX2 \u2014 deployment-horizon confidence for randomized smoothing",
+  "source": "NEW_EXP_OPA_CHECK.md (P0)",
+  "eps": 0.1,
+  "sigma": 0.1,
+  "tau": 0.9,
+  "alpha_total": 0.01,
+  "n_mc_fixed": 2000,
+  "horizons": [
+    1000,
+    10000,
+    100000,
+    1000000
+  ],
+  "domains": [
+    "finance",
+    "sre",
+    "ops"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_train": 5000,
+  "n_eval": 800,
+  "max_R_certified": 200,
+  "schemes": [
+    "per_record_const",
+    "bonferroni",
+    "alpha_spending",
+    "adaptive_mc",
+    "lip_fallback"
+  ],
+  "results": {
+    "finance": {
+      "per_seed": [
+        {
+          "domain": "finance",
+          "seed": 0,
+          "n_R": 200,
+          "n_mc_fixed": 2000,
+          "fixed_schemes": {
+            "per_record_const": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.125,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.125,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.125,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.125,
+                "lifetime_bound": 1.0
+              }
+            ],
+            "bonferroni": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 1e-05,
+                "R_allow": 0.035,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 1e-06,
+                "R_allow": 0.02,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 1e-07,
+                "R_allow": 0.01,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 1e-08,
+                "R_allow": 0.005,
+                "lifetime_bound": 0.01
+              }
+            ],
+            "alpha_spending": [
+              {
+                "T": 1000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-09,
+                "R_allow_early": 0.21,
+                "R_allow_late": 0.005,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-11,
+                "R_allow_early": 0.21,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-13,
+                "R_allow_early": 0.21,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-15,
+                "R_allow_early": 0.21,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ]
+          },
+          "adaptive_mc": [
+            {
+              "T": 1000,
+              "alpha_per_decision": 1e-05,
+              "R_allow": 0.285,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.715,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 10000,
+              "alpha_per_decision": 1e-06,
+              "R_allow": 0.26,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.74,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 100000,
+              "alpha_per_decision": 1e-07,
+              "R_allow": 0.245,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.755,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 1000000,
+              "alpha_per_decision": 1e-08,
+              "R_allow": 0.215,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.785,
+              "lifetime_bound": 0.01
+            }
+          ],
+          "lip_fallback": {
+            "R_allow": 0.535,
+            "lifetime_bound": 0.0,
+            "n_mc": 0,
+            "mean_ms": 6.797,
+            "horizon_invariant": true
+          }
+        },
+        {
+          "domain": "finance",
+          "seed": 1,
+          "n_R": 200,
+          "n_mc_fixed": 2000,
+          "fixed_schemes": {
+            "per_record_const": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.07,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.07,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.07,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.07,
+                "lifetime_bound": 1.0
+              }
+            ],
+            "bonferroni": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 1e-05,
+                "R_allow": 0.025,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 1e-06,
+                "R_allow": 0.02,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 1e-07,
+                "R_allow": 0.01,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 1e-08,
+                "R_allow": 0.005,
+                "lifetime_bound": 0.01
+              }
+            ],
+            "alpha_spending": [
+              {
+                "T": 1000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-09,
+                "R_allow_early": 0.1,
+                "R_allow_late": 0.005,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-11,
+                "R_allow_early": 0.1,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-13,
+                "R_allow_early": 0.1,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-15,
+                "R_allow_early": 0.1,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ]
+          },
+          "adaptive_mc": [
+            {
+              "T": 1000,
+              "alpha_per_decision": 1e-05,
+              "R_allow": 0.16,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.84,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 10000,
+              "alpha_per_decision": 1e-06,
+              "R_allow": 0.145,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.855,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 100000,
+              "alpha_per_decision": 1e-07,
+              "R_allow": 0.13,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.87,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 1000000,
+              "alpha_per_decision": 1e-08,
+              "R_allow": 0.115,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.885,
+              "lifetime_bound": 0.01
+            }
+          ],
+          "lip_fallback": {
+            "R_allow": 0.72,
+            "lifetime_bound": 0.0,
+            "n_mc": 0,
+            "mean_ms": 6.404,
+            "horizon_invariant": true
+          }
+        },
+        {
+          "domain": "finance",
+          "seed": 2,
+          "n_R": 200,
+          "n_mc_fixed": 2000,
+          "fixed_schemes": {
+            "per_record_const": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.1,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.1,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.1,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.1,
+                "lifetime_bound": 1.0
+              }
+            ],
+            "bonferroni": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 1e-05,
+                "R_allow": 0.065,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 1e-06,
+                "R_allow": 0.03,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 1e-07,
+                "R_allow": 0.01,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 1e-08,
+                "R_allow": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ],
+            "alpha_spending": [
+              {
+                "T": 1000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-09,
+                "R_allow_early": 0.15,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-11,
+                "R_allow_early": 0.15,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-13,
+                "R_allow_early": 0.15,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-15,
+                "R_allow_early": 0.15,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ]
+          },
+          "adaptive_mc": [
+            {
+              "T": 1000,
+              "alpha_per_decision": 1e-05,
+              "R_allow": 0.205,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.795,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 10000,
+              "alpha_per_decision": 1e-06,
+              "R_allow": 0.205,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.795,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 100000,
+              "alpha_per_decision": 1e-07,
+              "R_allow": 0.2,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.8,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 1000000,
+              "alpha_per_decision": 1e-08,
+              "R_allow": 0.19,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.81,
+              "lifetime_bound": 0.01
+            }
+          ],
+          "lip_fallback": {
+            "R_allow": 0.66,
+            "lifetime_bound": 0.0,
+            "n_mc": 0,
+            "mean_ms": 7.789,
+            "horizon_invariant": true
+          }
+        }
+      ],
+      "bonferroni_R_allow_by_T": {
+        "1000": 0.0417,
+        "10000": 0.0233,
+        "100000": 0.01,
+        "1000000": 0.0033
+      },
+      "lip_R_allow": 0.6383
+    },
+    "sre": {
+      "per_seed": [
+        {
+          "domain": "sre",
+          "seed": 0,
+          "n_R": 200,
+          "n_mc_fixed": 2000,
+          "fixed_schemes": {
+            "per_record_const": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.145,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.145,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.145,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.145,
+                "lifetime_bound": 1.0
+              }
+            ],
+            "bonferroni": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 1e-05,
+                "R_allow": 0.065,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 1e-06,
+                "R_allow": 0.025,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 1e-07,
+                "R_allow": 0.005,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 1e-08,
+                "R_allow": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ],
+            "alpha_spending": [
+              {
+                "T": 1000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-09,
+                "R_allow_early": 0.185,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-11,
+                "R_allow_early": 0.185,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-13,
+                "R_allow_early": 0.185,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-15,
+                "R_allow_early": 0.185,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ]
+          },
+          "adaptive_mc": [
+            {
+              "T": 1000,
+              "alpha_per_decision": 1e-05,
+              "R_allow": 0.295,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.705,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 10000,
+              "alpha_per_decision": 1e-06,
+              "R_allow": 0.275,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.725,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 100000,
+              "alpha_per_decision": 1e-07,
+              "R_allow": 0.25,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.75,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 1000000,
+              "alpha_per_decision": 1e-08,
+              "R_allow": 0.24,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.76,
+              "lifetime_bound": 0.01
+            }
+          ],
+          "lip_fallback": {
+            "R_allow": 0.525,
+            "lifetime_bound": 0.0,
+            "n_mc": 0,
+            "mean_ms": 5.066,
+            "horizon_invariant": true
+          }
+        },
+        {
+          "domain": "sre",
+          "seed": 1,
+          "n_R": 200,
+          "n_mc_fixed": 2000,
+          "fixed_schemes": {
+            "per_record_const": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.09,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.09,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.09,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.09,
+                "lifetime_bound": 1.0
+              }
+            ],
+            "bonferroni": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 1e-05,
+                "R_allow": 0.04,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 1e-06,
+                "R_allow": 0.03,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 1e-07,
+                "R_allow": 0.01,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 1e-08,
+                "R_allow": 0.005,
+                "lifetime_bound": 0.01
+              }
+            ],
+            "alpha_spending": [
+              {
+                "T": 1000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-09,
+                "R_allow_early": 0.125,
+                "R_allow_late": 0.005,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-11,
+                "R_allow_early": 0.125,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-13,
+                "R_allow_early": 0.125,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-15,
+                "R_allow_early": 0.125,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ]
+          },
+          "adaptive_mc": [
+            {
+              "T": 1000,
+              "alpha_per_decision": 1e-05,
+              "R_allow": 0.17,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.83,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 10000,
+              "alpha_per_decision": 1e-06,
+              "R_allow": 0.14,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.86,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 100000,
+              "alpha_per_decision": 1e-07,
+              "R_allow": 0.125,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.875,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 1000000,
+              "alpha_per_decision": 1e-08,
+              "R_allow": 0.125,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.875,
+              "lifetime_bound": 0.01
+            }
+          ],
+          "lip_fallback": {
+            "R_allow": 0.64,
+            "lifetime_bound": 0.0,
+            "n_mc": 0,
+            "mean_ms": 5.02,
+            "horizon_invariant": true
+          }
+        },
+        {
+          "domain": "sre",
+          "seed": 2,
+          "n_R": 200,
+          "n_mc_fixed": 2000,
+          "fixed_schemes": {
+            "per_record_const": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.11,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.11,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.11,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.11,
+                "lifetime_bound": 1.0
+              }
+            ],
+            "bonferroni": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 1e-05,
+                "R_allow": 0.06,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 1e-06,
+                "R_allow": 0.02,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 1e-07,
+                "R_allow": 0.005,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 1e-08,
+                "R_allow": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ],
+            "alpha_spending": [
+              {
+                "T": 1000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-09,
+                "R_allow_early": 0.17,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-11,
+                "R_allow_early": 0.17,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-13,
+                "R_allow_early": 0.17,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-15,
+                "R_allow_early": 0.17,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ]
+          },
+          "adaptive_mc": [
+            {
+              "T": 1000,
+              "alpha_per_decision": 1e-05,
+              "R_allow": 0.21,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.79,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 10000,
+              "alpha_per_decision": 1e-06,
+              "R_allow": 0.21,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.79,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 100000,
+              "alpha_per_decision": 1e-07,
+              "R_allow": 0.2,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.8,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 1000000,
+              "alpha_per_decision": 1e-08,
+              "R_allow": 0.185,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.815,
+              "lifetime_bound": 0.01
+            }
+          ],
+          "lip_fallback": {
+            "R_allow": 0.55,
+            "lifetime_bound": 0.0,
+            "n_mc": 0,
+            "mean_ms": 5.052,
+            "horizon_invariant": true
+          }
+        }
+      ],
+      "bonferroni_R_allow_by_T": {
+        "1000": 0.055,
+        "10000": 0.025,
+        "100000": 0.0067,
+        "1000000": 0.0017
+      },
+      "lip_R_allow": 0.5717
+    },
+    "ops": {
+      "per_seed": [
+        {
+          "domain": "ops",
+          "seed": 0,
+          "n_R": 200,
+          "n_mc_fixed": 2000,
+          "fixed_schemes": {
+            "per_record_const": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.12,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.12,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.12,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.12,
+                "lifetime_bound": 1.0
+              }
+            ],
+            "bonferroni": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 1e-05,
+                "R_allow": 0.055,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 1e-06,
+                "R_allow": 0.025,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 1e-07,
+                "R_allow": 0.005,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 1e-08,
+                "R_allow": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ],
+            "alpha_spending": [
+              {
+                "T": 1000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-09,
+                "R_allow_early": 0.18,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-11,
+                "R_allow_early": 0.18,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-13,
+                "R_allow_early": 0.18,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-15,
+                "R_allow_early": 0.18,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ]
+          },
+          "adaptive_mc": [
+            {
+              "T": 1000,
+              "alpha_per_decision": 1e-05,
+              "R_allow": 0.275,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.725,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 10000,
+              "alpha_per_decision": 1e-06,
+              "R_allow": 0.255,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.745,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 100000,
+              "alpha_per_decision": 1e-07,
+              "R_allow": 0.23,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.77,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 1000000,
+              "alpha_per_decision": 1e-08,
+              "R_allow": 0.22,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.78,
+              "lifetime_bound": 0.01
+            }
+          ],
+          "lip_fallback": {
+            "R_allow": 0.55,
+            "lifetime_bound": 0.0,
+            "n_mc": 0,
+            "mean_ms": 5.177,
+            "horizon_invariant": true
+          }
+        },
+        {
+          "domain": "ops",
+          "seed": 1,
+          "n_R": 200,
+          "n_mc_fixed": 2000,
+          "fixed_schemes": {
+            "per_record_const": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.045,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.045,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.045,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.045,
+                "lifetime_bound": 1.0
+              }
+            ],
+            "bonferroni": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 1e-05,
+                "R_allow": 0.03,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 1e-06,
+                "R_allow": 0.025,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 1e-07,
+                "R_allow": 0.015,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 1e-08,
+                "R_allow": 0.005,
+                "lifetime_bound": 0.01
+              }
+            ],
+            "alpha_spending": [
+              {
+                "T": 1000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-09,
+                "R_allow_early": 0.07,
+                "R_allow_late": 0.005,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-11,
+                "R_allow_early": 0.07,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-13,
+                "R_allow_early": 0.07,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-15,
+                "R_allow_early": 0.07,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ]
+          },
+          "adaptive_mc": [
+            {
+              "T": 1000,
+              "alpha_per_decision": 1e-05,
+              "R_allow": 0.155,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.845,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 10000,
+              "alpha_per_decision": 1e-06,
+              "R_allow": 0.14,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.86,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 100000,
+              "alpha_per_decision": 1e-07,
+              "R_allow": 0.13,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.87,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 1000000,
+              "alpha_per_decision": 1e-08,
+              "R_allow": 0.115,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.885,
+              "lifetime_bound": 0.01
+            }
+          ],
+          "lip_fallback": {
+            "R_allow": 0.77,
+            "lifetime_bound": 0.0,
+            "n_mc": 0,
+            "mean_ms": 4.997,
+            "horizon_invariant": true
+          }
+        },
+        {
+          "domain": "ops",
+          "seed": 2,
+          "n_R": 200,
+          "n_mc_fixed": 2000,
+          "fixed_schemes": {
+            "per_record_const": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.13,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.13,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.13,
+                "lifetime_bound": 1.0
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 0.001,
+                "R_allow": 0.13,
+                "lifetime_bound": 1.0
+              }
+            ],
+            "bonferroni": [
+              {
+                "T": 1000,
+                "alpha_per_decision": 1e-05,
+                "R_allow": 0.045,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_per_decision": 1e-06,
+                "R_allow": 0.025,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_per_decision": 1e-07,
+                "R_allow": 0.01,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_per_decision": 1e-08,
+                "R_allow": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ],
+            "alpha_spending": [
+              {
+                "T": 1000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-09,
+                "R_allow_early": 0.155,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 10000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-11,
+                "R_allow_early": 0.155,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 100000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-13,
+                "R_allow_early": 0.155,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              },
+              {
+                "T": 1000000,
+                "alpha_early": 0.006079271018540266,
+                "alpha_late": 6.079271018540266e-15,
+                "R_allow_early": 0.155,
+                "R_allow_late": 0.0,
+                "lifetime_bound": 0.01
+              }
+            ]
+          },
+          "adaptive_mc": [
+            {
+              "T": 1000,
+              "alpha_per_decision": 1e-05,
+              "R_allow": 0.215,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.785,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 10000,
+              "alpha_per_decision": 1e-06,
+              "R_allow": 0.2,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.8,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 100000,
+              "alpha_per_decision": 1e-07,
+              "R_allow": 0.2,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.8,
+              "lifetime_bound": 0.01
+            },
+            {
+              "T": 1000000,
+              "alpha_per_decision": 1e-08,
+              "R_allow": 0.2,
+              "median_n_mc": 8000,
+              "p95_n_mc": 8000,
+              "fallback_rate": 0.8,
+              "lifetime_bound": 0.01
+            }
+          ],
+          "lip_fallback": {
+            "R_allow": 0.655,
+            "lifetime_bound": 0.0,
+            "n_mc": 0,
+            "mean_ms": 4.971,
+            "horizon_invariant": true
+          }
+        }
+      ],
+      "bonferroni_R_allow_by_T": {
+        "1000": 0.0433,
+        "10000": 0.025,
+        "100000": 0.01,
+        "1000000": 0.0017
+      },
+      "lip_R_allow": 0.6583
+    }
+  },
+  "verdict": "KILL-CRITERION MET (as pre-registered): under a fixed MC budget the RS lifetime correction (Bonferroni \u03b1_total/T) drives R_allow down as T grows \u2014 RS goes toward vacuous beyond a small horizon, so RS must be scoped to bounded batches / offline decisions. The deterministic 1-Lipschitz certificate is horizon-INVARIANT (no \u03b1, no MC) and stays the PRIMARY runtime backend; adaptive MC can buy back utility only at a growing sample cost (median/p95 n_mc reported)."
+}

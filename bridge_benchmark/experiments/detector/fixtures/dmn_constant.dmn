@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Negative fixture: a CONSTANT numeric threshold. The amount limit is <= 1000 in every rule; only the
+     output verdict changes. There is no theta(s) -> not the idiom (must be silent). -->
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="amount_limit_const" name="AmountLimitConst"
+             namespace="https://example.org/aml">
+  <decision id="d_limit" name="AmountWithinLimit">
+    <decisionTable id="dt_limit" hitPolicy="UNIQUE">
+      <input id="i_channel">
+        <inputExpression typeRef="string"><text>Channel</text></inputExpression>
+      </input>
+      <input id="i_amount">
+        <inputExpression typeRef="number"><text>Amount</text></inputExpression>
+      </input>
+      <output id="o_ok" typeRef="string"/>
+      <rule id="r1">
+        <inputEntry><text>"wire"</text></inputEntry>
+        <inputEntry><text>&lt;= 1000</text></inputEntry>
+        <outputEntry><text>"allow"</text></outputEntry>
+      </rule>
+      <rule id="r2">
+        <inputEntry><text>"card"</text></inputEntry>
+        <inputEntry><text>&lt;= 1000</text></inputEntry>
+        <outputEntry><text>"review"</text></outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
