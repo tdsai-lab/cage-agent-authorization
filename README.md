@@ -1,7 +1,6 @@
 # CAGE — Certified Authorization under Typed-Return Uncertainty for Tool-Using Agents
 
-Code for the paper *CAGE: Certified Authorization under Typed-Return Uncertainty for Tool-Using
-Agents*.
+Code for the paper [*CAGE: Certified Authorization under Typed-Return Uncertainty for Tool-Using Agents*](https://arxiv.org/abs/2607.29190).
 
 Tool-using LLM agents act on **typed tool returns** — records pairing provenance and categorical
 fields `s` with numerical values `x`. Runtime permission systems generally evaluate only the observed
