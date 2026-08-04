@@ -99,11 +99,12 @@ script prints its expected path and upstream URL when a corpus is missing.
 ## Citation
 
 ```bibtex
-@inproceedings{cage2026,
-  title     = {{CAGE}: Certified Authorization under Typed-Return Uncertainty for Tool-Using Agents},
-  author    = {TODO: author list},
-  booktitle = {TODO: venue},
-  year      = {2026}
+@misc{delattre2026cage,
+      title={CAGE: Certified Authorization under Typed-Return Uncertainty for Tool-Using Agents}, 
+      author={Blaise Delattre and Cong Wang and Yang Cao},
+      year={2026},
+      eprint={2607.29190},
+      archivePrefix={arXiv},
 }
 ```
 
